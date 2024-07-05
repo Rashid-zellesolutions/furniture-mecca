@@ -320,6 +320,11 @@
     .banner-link-container{
         display: none;
     }
+
+    .rotating-message{
+        font-size: 10px;
+    }
+
     .on-tab-deliver-to{
         display: flex;
         align-items: center;
@@ -327,7 +332,7 @@
     }
 
     .on-tab-deliver-to img{
-        width: 32px;
+        width: 25px;
         height: 18px;
     }
     .on-tab-deliver-to span{
@@ -335,18 +340,28 @@
         align-items: center;
         color: var(--text-color);
         font-weight: 400;
-        font-size: 12px;
+        font-size: 10px;
         gap: 5px;
     }
     .on-tab-deliver-to span a{
         color: var(--text-color);
     }
+
+
 }
 
 
 /* Main Haider Media Query */
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 550px){
+
+    .mobile-view-logo-div img{
+        width: 160px;
+        height: 36px;
+    } 
+}
+
+@media only screen and (max-width: 1100px){
     .header{
         display: none;
     }

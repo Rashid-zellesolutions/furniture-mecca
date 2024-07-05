@@ -67,7 +67,7 @@ const Home = () => {
       <ImageHeading img={InspirationImage} alt={'inspiration'}/>
       <GetTheScop />
       <CustomerServicePanel />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
