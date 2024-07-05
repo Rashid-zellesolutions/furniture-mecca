@@ -1,0 +1,42 @@
+.moduler-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.soda-banner{
+    display: flex;
+    width: 100%;
+}
+
+
+.soda-banner img{
+    width: 100%;
+}
+
+.financing-banner{
+    display: flex;
+    width: 100%;
+}
+
+.financing-banner img{
+    width: 50%;
+}
+
+.installment-banner{
+    display: flex;
+    width: 100%;
+}
+
+.installment-banner img{
+    width: 100%;
+}
+
+.bed-banner{
+    display: flex;
+    width: 100%;
+}
+
+.bed-banner img{
+    width: 100%;
+}

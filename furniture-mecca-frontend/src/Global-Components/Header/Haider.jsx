@@ -1,0 +1,112 @@
+import React, {useState, useEffect} from 'react'
+import './Haider.css';
+import logo from '../../Assets/Logo/m_logo_360 2.png'
+import searchIcon from '../../Assets/icons/search.png';
+import NearStoreIcon from '../../Assets/icons/home.png';
+import HeartIcon from '../../Assets/icons/like.png';
+import cartIcon from '../../Assets/icons/cart2.png';
+import profileIcon from '../../Assets/icons/profile.png'
+import deliverTo from '../../Assets/icons/delivery.png'
+import locationIcon from '../../Assets/icons/location-red.png';
+import navToggler from '../../Assets/icons/Union.png'
+import searchRed from '../../Assets/icons/search-red.png'
+import Nav from '../Navbar/Nav';
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
+import MobileMenu from '../Navbar/MobileMenu/MobileMenu';
+
+const Haider = () => {
+  const [toggleMenu, setToggleMenu] = useState()
+  const [currentIndex, setCurrentIndex] = useState(0);
+    const dynamicHeading = [0, 1, 2]
+    useEffect(() => {
+        const intervelId = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % dynamicHeading.length)
+        }, 5000)
+        return () => clearInterval(intervelId);
+    }, [])
+
+  return (
+    <div className='haider-main-container'>
+      {/* Banner Responsive */}
+      <div className='furniture-mecca-promotional-banner'>
+        <div className='rotating-message'>
+          {currentIndex === 1 ? <span>Need help ordering? <a className='toll-free-ancor' href='#'> Call 860-812-1111 </a> </span> 
+          : currentIndex === 2 ? <span>Learn about my <a className='toll-free-ancor' href='#'>Financing Options</a> </span> 
+          : <span>Shop Bob's everyday low prices!</span>}
+        </div>
+        <div className='banner-link-container'>
+          <a href='#'>Stores</a>
+          <a href='#'>Orders</a>
+          <a href='#'>Financing</a>
+          <a href='#'>Help</a>
+        </div>
+        <div className='on-tab-deliver-to'>
+            <img src={deliverTo} alt="delivery" />
+            <span> Deliver to : <a href='#'> 06042</a> </span>
+        </div>
+      </div>
+
+      <div className='header'>
+        <div className='logo-container'>
+          <img src={logo} alt="logo" />
+        </div>
+        <div className='search-bar-container'>
+          <div className='search-bar-div'>
+            <input type='search' placeholder='Search every thing' />
+            <img src={searchIcon} alt="search icon" />
+          </div>
+        </div>
+        <div className='nearby-address-container'>
+          <div className='nearby-address-div'>
+              <div className='icon-and-nearby-city'>
+                <img src={NearStoreIcon} alt='near by' />
+                <div className='near-by-city-time'>
+                  <p>Nearest Store</p>
+                  <span>
+                    <a href='#'>Manchester - CT </a><p> (Opens at 10:00 AM)</p>
+                  </span>
+                </div>
+                <span className='deliver-to'>
+                  <p>Deliver to</p>
+                  <span>06042</span>
+                </span>
+              </div>
+          </div>
+        </div>
+        <div className='header-icons-container'>
+          <img src={profileIcon} alt="profile" />
+          <img src={HeartIcon} alt="heart" />
+          <img src={cartIcon} alt="cart" />
+        </div>
+      </div>
+
+      {/* Mobile View Header */}
+      <div className='mobile-view-header'>
+        <div className='mobile-view-logo-and-icon'>
+          <div className='toggle-and-profile-div'>
+              <img src={navToggler} alt="togle button"  />
+              <img src={profileIcon} alt="profile"  />
+          </div>
+          <div className='mobile-view-logo-div'>
+              <img src={logo} alt='logo' />
+          </div>
+          <div className='mobile-view-card-and-location'>
+              <img src={locationIcon} alt="location" />
+              <img src={cartIcon} alt="cart" />
+          </div>
+        </div>
+        <div className='movile-view-search-bar-div'>
+          <div className='movile-view-search-bar'>
+            <input type='search' placeholder="Search all things Bob's" />
+            <img src={searchRed} alt="search" />
+          </div>
+        </div>
+      </div>
+            {toggleMenu ? <MobileMenu /> : <Nav />}
+    </div>
+    
+  )
+}
+
+export default Haider

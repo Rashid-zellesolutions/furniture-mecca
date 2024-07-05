@@ -1,0 +1,33 @@
+.products-slider-main-container{
+    display: flex;
+    width: 100%;
+    padding: 60px 100px;
+}
+
+.products-slider{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 20px;
+}
+
+/* Custom scrollbar styling for Webkit browsers */
+.products-slider::-webkit-scrollbar {
+    height: 8px; 
+}
+
+.products-slider::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+.products-slider::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+}
+
+.products-slider::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

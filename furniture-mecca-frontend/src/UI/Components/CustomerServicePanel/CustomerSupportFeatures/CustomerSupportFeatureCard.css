@@ -1,0 +1,89 @@
+.customer-support-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+    font-family: var(--work-sans-font);
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0 0 0;
+    height: 150px;
+}
+
+.customer-support-card button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.customer-support-card button img{
+    width: 30px;
+    height: 30px;
+}
+
+.customer-support-card-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.customer-support-card-heading img{
+    width: 36px;
+    height: 36px;
+}
+
+.customer-support-card-heading h3{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 20px 0px 10px 0px;
+}
+
+.customer-support-card-description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(200%);
+    max-height: 0px;
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    transition: max-height 0.5s ease-in-out;
+    padding: 10px 0px;
+}
+
+.customer-support-card-description h3{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 12px 0px;
+}
+
+.customer-support-card-description a{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--text-color);
+}
+
+.customer-support-card.expended .customer-support-card-heading{
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.customer-support-card.expended .customer-support-card-description{
+    transform: translateY(-10%);
+    max-height: 100px;
+    transition: all 0.5s ease-in-out;
+}
+
+.customer-support-card .customer-support-card-description{
+    transform: translateY(200%);
+    max-height: 0;
+    transition: all 0.5s ease-in-out;
+}
+

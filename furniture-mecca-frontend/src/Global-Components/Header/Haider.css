@@ -1,0 +1,359 @@
+.haider-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.furniture-mecca-promotional-banner{
+    display: flex;
+    width: 100%;
+    height: 42px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 60px 12px 60px;
+    font-family: var(--work-sans-font);
+    background-color: #F0F0F0;
+}
+
+.rotating-message{
+    color: var(--text-color);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.toll-free-ancor{
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.banner-link-container{
+    display: flex;
+    width: 253px;
+    align-items: center;
+    gap: 20px;
+}
+
+.banner-link-container a{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+    text-decoration: none;
+    font-family: var(--work-sans-font);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    height: 75px;
+    padding: 0 60px;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    padding: 0px 41.2px 0px 0;
+}
+
+.with-logo-profile-icon{
+    display: none;
+}
+
+.with-logo-profile-icon img{
+    height: 22px;
+    width: 22px;
+}
+
+.logo-container img{
+    width: 200px;
+    height: 40px;
+}
+
+.search-bar-container{
+    display: flex;
+    align-items: center;
+    padding: 19.5px 16px 21.5px 16px;
+    width: 100%;
+}
+
+.search-bar-div{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 36px;
+    padding: 12px 12px 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    gap: 5px;
+}
+
+.search-bar-div input{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    font-family: var(--work-sans-font);
+}
+
+.search-bar-div img{
+    width: 22px;
+    height: 22px;
+}
+
+.nearby-address-container{
+    display: flex;
+    align-items: center;
+    width: 105%;
+    /* background-color: green; */
+    padding: 25px 10px;
+}
+
+.nearby-address-div{
+    padding: 10px 15px;
+}
+
+.icon-and-nearby-city{
+    display: flex;
+    align-items: center;
+}
+
+.icon-and-nearby-city img{
+    width: 25px;
+    height: 19px;
+}
+
+.near-by-city-time{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px 0px 15px;
+    /* width: 80%; */
+    border-right: 1px solid var(--border-color);
+}
+
+.near-by-city-time p{
+    color: var(--text-color);
+    font-family: var(--work-sans-font);
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.near-by-city-time span{
+    display: flex;
+    gap: 5px;
+    font-family: var(--work-sans-font);
+}
+
+.near-by-city-time span a{
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.deliver-to{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+    /* width: 20%; */
+}
+
+.deliver-to p{
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--text-color);
+    font-family: var(--work-sans-font);
+}
+
+.deliver-to span{
+    text-decoration: underline;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 600;
+    color: var(--text-color);
+    font-family: var(--work-sans-font);
+}
+
+.header-icons-container{
+    display: flex;
+    align-items: center;
+    width: 45%;
+    gap: 16px;
+    justify-content: end;
+    padding-right: 0px;
+}
+
+.header-icons-container img:nth-child(1){
+    width: 22px;
+    height: 22px;
+    margin-top: 8px;
+}
+
+.header-icons-container img:nth-child(2){
+    width: 31px;
+    height: 27px;
+}
+
+.header-icons-container img:nth-child(3){
+    width: 24px;
+    height: 24px;
+}
+
+.header-nav-container{
+    display: flex;
+    width: 100%;
+}
+
+.on-tab-deliver-to{
+    display: none;
+}
+
+/* Mobile View Header */
+
+.mobile-view-header{
+    display: none;
+}
+
+.mobile-view-logo-and-icon{
+    display: flex;
+    width: 100%;
+    /* padding: 10px; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-and-profile-div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.toggle-and-profile-div img:nth-child(1){
+    width: 20px;
+    height: 14px;
+}
+
+.toggle-and-profile-div img:nth-child(2){
+    width: 22px;
+    height: 22px;
+}
+
+.mobile-view-logo-div{
+    display: flex;
+}
+
+.mobile-view-logo-div img{
+    /* width: 340px; */
+    width: 100%;
+    height: 55px;
+}
+
+
+.mobile-view-card-and-location{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.mobile-view-card-and-location img:nth-child(1){
+    width: 22px;
+    height: 22px;
+}
+
+.mobile-view-card-and-location img:nth-child(2){
+    width: 22px;
+    height: 22px;
+}
+
+.movile-view-search-bar-div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.movile-view-search-bar{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--border-color);
+    padding: 10px 15px;
+    border-radius: 2px;
+}
+
+.movile-view-search-bar input{
+    width: 100%;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    font-family: var(--work-sans-font);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.movile-view-search-bar img{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+/* .mobile-view-toggle-button{
+    width: 20px;
+    height: 14px;
+} */
+
+
+
+/* Promotional Banner Media Query */
+
+@media only screen and (max-width: 700px){
+    .furniture-mecca-promotional-banner{
+        padding: 12px 10px 12px 10px;
+    }
+    
+    .banner-link-container{
+        display: none;
+    }
+    .on-tab-deliver-to{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .on-tab-deliver-to img{
+        width: 32px;
+        height: 18px;
+    }
+    .on-tab-deliver-to span{
+        display: flex;
+        align-items: center;
+        color: var(--text-color);
+        font-weight: 400;
+        font-size: 12px;
+        gap: 5px;
+    }
+    .on-tab-deliver-to span a{
+        color: var(--text-color);
+    }
+}
+
+
+/* Main Haider Media Query */
+
+@media only screen and (max-width: 700px){
+    .header{
+        display: none;
+    }
+
+    .mobile-view-header{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+}

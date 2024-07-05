@@ -1,0 +1,51 @@
+.customer-services-panel-main-container{
+    display: flex;
+    width: 100%;
+    padding: 50px 80px;
+
+}
+
+.customer-services-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    font-family: var(--work-sans-font);
+    color: var(--text-color);
+}
+
+.customer-services-container h3{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.customer-services-container p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-top: 15px;
+}
+
+.customer-support-features{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width: 100%;
+    padding-top: 30px;
+}
+
+@media only screen and (max-width: 700px){
+
+    .customer-services-panel-main-container{
+        display: flex;
+        width: 100%;
+        padding: 20px 20px;
+    }
+
+    .customer-support-features{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 100%;
+        /* padding-top: 30px; */
+    }
+}

@@ -1,0 +1,33 @@
+.shop-via-banner{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: var(--banner-bg-color);
+    padding: 18px 10px;
+}
+
+.close{
+    display: none;
+}
+
+.text-div{
+    display: flex;
+    width: 100%;  
+    align-items: center;
+    justify-content: center; 
+}
+
+.shop-via-banner span{
+    font-size: 15px;
+    font-weight: 500;
+    /* width: 100%; */
+    font-family: var(--work-sans-font);
+    color: var(--text-color);
+}
+
+.shop-via-banner span a{
+    color: var(--text-color);
+    font-weight: 600;
+}
+

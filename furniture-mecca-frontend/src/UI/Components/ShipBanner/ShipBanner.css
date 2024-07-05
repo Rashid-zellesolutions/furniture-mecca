@@ -1,0 +1,11 @@
+.banner-div{
+    display: flex;
+    width: 100%;
+    /* top: -40px; */
+    background-color: blue;
+}
+
+.banner-div img{
+    width: 100%;
+    top: -40px;
+}

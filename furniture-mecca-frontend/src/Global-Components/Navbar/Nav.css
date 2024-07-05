@@ -1,0 +1,110 @@
+.navbar{
+    display: flex;
+    width: 100%;
+    height: 57px;
+    /* background-color: gray; */
+    padding: 21px 100px 0px 80px;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navar-links-container{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: start; */
+    width: 100%;
+    padding-left: 0px;
+    margin: 0px;
+    font-family: var(--work-sans-font);
+    /* background-color: green; */
+}
+
+.nav-item{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 15px;
+    border-bottom: 3px solid white;
+    
+}
+
+.nav-link{
+    text-decoration: none;
+    color: var(--text-color);
+    position: relative;
+}
+
+.nav-item:hover{
+    border-bottom: 3px solid var(--active-nav-item-color);
+}
+
+/* Mobile Navbar CSS */
+
+/* Custom scrollbar styling for Webkit browsers */
+.mobile-navbar::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-navbar{
+    display: none;
+}
+
+
+/* Drop Down */
+
+.dropdown{
+    position: absolute;
+    margin-top: 20px;
+    left: 0;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--bg-color);
+    z-index: 2222222;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+@media only screen and (max-width: 700px){
+    .nav-item{
+        display: none;
+    }
+
+    .navbar{
+        border: none;
+        padding: 0px 10px;
+        height: auto;
+        display: flex;
+        width: 100%;
+
+    }
+
+    .mobile-navbar{
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 5px;
+        padding: 10px 0;
+        border-radius: 4px;
+    }
+
+    .mobile-nav-link{
+        flex: 0 0 auto;
+        font-size: 12px;
+        background-color: var(--mobile-nav-item-bg);
+        font-weight: 400;
+        line-height: 12px;
+        padding: 10px;
+        width: 150px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mobile-nav-link a{
+        color: var(--text-color);
+        text-decoration: none;
+    }
+    
+}

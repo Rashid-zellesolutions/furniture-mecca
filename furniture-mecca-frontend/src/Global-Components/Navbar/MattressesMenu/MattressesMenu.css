@@ -1,0 +1,87 @@
+.mattresses-main-div{
+    display: flex;
+    width: 100%;
+    align-items: start;
+    /* justify-content: space-between; */
+    /* height: 50vh; */
+    padding: 50px 40px 50px 80px;
+    /* background-color: blue; */
+    gap: 15px;
+    background-color: var(--bg-color);
+    z-index: 22222;
+}
+
+.menu-links{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+    padding: 10px 0px;
+}
+
+.living-room-heading{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 15px;
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    color: var(--text-color);
+
+
+}
+
+.living-room-heading::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 25%;
+    transform: translateY(-50%);
+    width: 10px; /* Width of the rectangle */
+    height: 10px; /* Height of the rectangle */
+    background-color: var(--text-color); /* Color of the rectangle */
+}
+
+.mattres-links{
+    padding: 5px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 14.52px;
+    color: var(--text-color);
+}
+
+.mattres-links a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.mattres-links a:hover{
+    color: var(--hover-font-color);
+    text-decoration: underline;
+}
+
+.mattresses-images-div{
+    display: flex;
+    width: 80%;
+    padding: 10px 0px;
+    gap: 15px;
+    /* background-color: blue; */
+}
+
+.mattress-image img{
+    width: 280px;
+    height: 180px;
+}
+
+.image-title{
+    color: var(--text-color);
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 700;
+}
+.price{
+    color: var(--text-color);
+    font-size: 13px;
+    line-height: 14.52px;
+    font-weight: 400;
+}
