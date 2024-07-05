@@ -26,18 +26,7 @@ import Shopvia from '../../Components/ShopViaBanner/Shopvia';
 
 
 const Home = () => {
-  // const [winWidth, setWinWidth] = useState(window.innerWidth)
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setWinWidth(winWidth.innerWidth)
-  //   }
-
-  //   window.addEventListener('resize', handleResize);
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize)
-  //   }
-  // }, [])
+  
   const productCardData = [
     {   heading: 'Tuxedo', productImageHeading: 'tuxedo Power Reclining Sofa', 
         productImagePrice: '$999', productImageAbout: "Bob's everyday low price", 
