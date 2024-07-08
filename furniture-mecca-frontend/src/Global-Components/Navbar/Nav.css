@@ -108,3 +108,21 @@
     }
     
 }
+
+
+/* Tab Size Media Query 1100 Pixuls */
+@media only screen and (max-width: 1100px){
+    .navbar{
+        padding: 21px 20px 0px 20px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .navbar{
+        display: none;
+    }
+    .mobile-navbar{
+        display: flex;
+        
+    }
+}

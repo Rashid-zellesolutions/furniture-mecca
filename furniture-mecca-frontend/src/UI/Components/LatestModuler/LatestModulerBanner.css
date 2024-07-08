@@ -10,9 +10,20 @@
 }
 
 
-.soda-banner img{
+.soda-image{
     width: 100%;
 }
+
+.mobile-soda-banner{
+    display: none; 
+    width: 100%;
+}
+
+.mobile-view-financing-banner{
+    display: none;
+}
+
+
 
 .financing-banner{
     display: flex;
@@ -39,4 +50,45 @@
 
 .bed-banner img{
     width: 100%;
+}
+
+.mobile-view-bed-banner{
+    display: none;
+}
+
+@media only screen and (max-width: 700px){
+    .soda-image{
+        display: none;
+    }
+    .mobile-soda-banner{
+        display: flex;
+        width: 100%;
+    }
+    .financing-banner{
+        display: none;
+    }
+
+    .mobile-view-financing-banner{
+        display: flex;
+        width: 100%;
+    }
+    .mobile-view-financing-banner img{
+        width: 100%;
+    }
+
+    .installment-banner{
+        display: none;
+    }
+
+    .bed-banner{
+        display: none;
+    }
+
+    .mobile-view-bed-banner{
+        display: flex;
+        width: 100%;
+    }
+    .mobile-view-bed-banner img{
+        width: 100%;
+    }
 }

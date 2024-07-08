@@ -3,6 +3,9 @@ import './Slider.css';
 import imageOne from '../../Assets/to-be-change/hp-fourth_hero_dr_desktop_1_3200x1388.png';
 import imageTwo from '../../Assets/to-be-change/hp-fourth_hero_mat_desktop_1b_3200x1388.png';
 import imageThree from '../../Assets/to-be-change/hp-fourth_hero_mo_desktop_1_3200x1388 (1).png';
+import smallSizeImageOne from '../../Assets/images/sofa3.png'
+import smallSizeImageTwo from '../../Assets/images/sofa1.png'
+import smallSizeImageThree from '../../Assets/images/sofa2.png'
 import ArrowLeft from '../../Assets/icons/arrow-left.png';
 import ArrowRight from '../../Assets/icons/arrow-right.png';
 
@@ -13,6 +16,12 @@ const Slider = () => {
         { img: imageTwo },
         { img: imageThree },
     ];
+
+    const mobileViewSLider = [
+        {img: smallSizeImageOne},
+        {img: smallSizeImageTwo},
+        {img: smallSizeImageThree}
+    ]
 
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
@@ -36,6 +45,11 @@ const Slider = () => {
                 {slides.map((slide, index) => (
                     <div className='slide' key={index}>
                         <img src={slide.img} alt={`slide ${index + 1}`} />
+                    </div>
+                ))}
+                {mobileViewSLider.map((mobileSlide, index) => (
+                    <div className='mobile-slide'>
+                        <img src={mobileSlide.img} alt={`slide ${index + 1}`} />
                     </div>
                 ))}
             </div>

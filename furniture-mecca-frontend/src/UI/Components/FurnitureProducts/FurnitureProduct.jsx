@@ -31,8 +31,6 @@ const FurnitureProduct = () => {
         { name: "O'Brian Chair", price: '$598', code: 'SKU: 1775-46-45', dimention: '175cm x 175cm x60cm', material: 'Wood', btnText: 'Buy Now', img: ChairThreeImage },
     ];
 
-    const productPerPage = 3;
-
     const halfLength = Math.floor(products.length /2)
     const itemsPerSlide = 2;
     const totalSlides = Math.ceil(products.length / itemsPerSlide / 2);
@@ -93,24 +91,21 @@ const FurnitureProduct = () => {
                 {index < totalSlides - 1 && <button onClick={handleNext} className="product-arrow arrow-right"><img src={ArrowRight} alt="Next" /></button>}
             </div>
             <div className='mobile-view-product-slider'>
-                {index > 0 && <button onClick={handlePrev} className="product-arrow arrow-left"><img src={ArrowLeft} alt="Previous" /></button>}
                 <div className='mobile-view-row'>
-                    {products.slice(0, products.length).map((mobileViewProduct, i) => (
-                        <div className='mobile-view-column'>
-                            <img src={mobileViewProduct.img} alt={mobileViewProduct.name} />
-                            <div className='mobile-view-product-details-container'>
-                            <p className='price'>{mobileViewProduct.price}</p>
-                                <h3 className='mobile-view-heading'>{mobileViewProduct.name}</h3>
-                                <p className='mobile-view-code'>{mobileViewProduct.code}</p>
-                                <p className='mobile-view-dimension'>Dimension:  {mobileViewProduct.dimention}</p>
-                                <p className='mobile-view-material'>Material:  {mobileViewProduct.material}</p>
-                                <button>{mobileViewProduct.btnText}</button>
+                    {products.map((item, i) => {
+                        return <div className='mobile-view-product'>
+                            <img src={item.img} alt={item.name} />
+                            <div className='mobile-view-product-detail'>
+                                <p className='mobile-view-code-and-price'>{item.code} <span>{item.price}</span></p>
+                                <h3>{item.name}</h3>
+                                <p>{item.code}</p>
+                                <p>Dimension : {item.dimention}</p>
+                                <p>Material : {item.material}</p>
+                                <button>Buy Now</button>
                             </div>
                         </div>
-                    ))}
+                    })}
                 </div>
-
-                {index < totalSlides - 1 && <button onClick={handleNext} className="product-arrow arrow-right"><img src={ArrowRight} alt="Next" /></button>}
             </div>
         </div>
     );

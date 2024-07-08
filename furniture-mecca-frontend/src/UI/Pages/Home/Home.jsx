@@ -26,6 +26,11 @@ import Shopvia from '../../Components/ShopViaBanner/Shopvia';
 
 
 const Home = () => {
+  // const [isTabSize, setIsTabSize] = useState(false);
+  // const tabNavbar = () => {
+  //   setIsTabSize(!isTabSize)
+  //   console.log('tab navbar clicked')
+  // }
   
   const productCardData = [
     {   heading: 'Tuxedo', productImageHeading: 'tuxedo Power Reclining Sofa', 

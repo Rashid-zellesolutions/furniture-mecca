@@ -4,23 +4,10 @@ import FurnitureDropdown from './FurnitureMenu/FurnitureDropdown';
 import MattressesMenu from './MattressesMenu/MattressesMenu';
 import { GiHamburgerMenu, GiHumanCannonball } from "react-icons/gi";
 
-const Nav = () => {
+const Nav = ({navLinks}) => {
 
     const [dropdownOpen, setDropdownOpen] = useState(null);
     const [activeIndex, setActiveIndex] = useState(null)
-    const navLinks = [
-        {name: "Furniture", link: '#', hasDropdown: true},
-        {name: "Mattresses", link: '#', hasDropdown: true},
-        {name: "Kids & Teens", link: '#', hasDropdown: false},
-        {name: "Home Office", link: '#', hasDropdown: false},
-        {name: "Out Door", link: '#', hasDropdown: true},
-        {name: "Rugs", link: '#', hasDropdown: false},
-        {name: "Home Decor", link: '#', hasDropdown: false},
-        {name: "Outlets", link: '#', hasDropdown: false},
-        {name: "New Arrivals", link: '#', hasDropdown: false},
-        {name: "Inspiration", link: '#', hasDropdown: false},
-        
-    ]
 
     const handleMouseEnter = (index) => {
         setDropdownOpen(index)

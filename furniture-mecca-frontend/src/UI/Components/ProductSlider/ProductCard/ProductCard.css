@@ -1,12 +1,12 @@
 
 .product{
-    flex: 0 0 auto;
     width: 450px;
+    flex: 1 0 auto;
 }
 
 .product-img{
-    width: 450px;
-    height: 433px;
+    /* width: 450px; */
+    height: 300px;
     overflow: hidden;
     position: relative;
 }
@@ -86,7 +86,12 @@
     padding: 12px 32px;
     border-radius: 5px;
     margin-left: 10px;
-    margin-top: 85px;
+    margin-top: 20px;
     margin-bottom: 15px;
     cursor: pointer;
+}
+
+
+@media only screen and (max-width: 700px){
+
 }

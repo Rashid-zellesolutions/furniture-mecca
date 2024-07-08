@@ -121,4 +121,4 @@ const FurnitureDropdown = () => {
   )
 }
 
-export default FurnitureDropdown
+export default FurnitureDropdown;

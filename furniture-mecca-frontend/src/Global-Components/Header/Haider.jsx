@@ -14,9 +14,11 @@ import Nav from '../Navbar/Nav';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import MobileMenu from '../Navbar/MobileMenu/MobileMenu';
+import TabMenu from '../Navbar/TabMenu/TabMenu';
 
 const Haider = () => {
-  const [toggleMenu, setToggleMenu] = useState()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isTabMenuOpen, setIsTabMenuOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
     const dynamicHeading = [0, 1, 2]
     useEffect(() => {
@@ -25,6 +27,27 @@ const Haider = () => {
         }, 5000)
         return () => clearInterval(intervelId);
     }, [])
+
+    const handleTabMenu = () => {
+      setIsTabMenuOpen(!isTabMenuOpen)
+    }
+    const handleMobileMenu = () => {
+      setIsMobileMenuOpen(!isMobileMenuOpen)
+    }
+
+    const navLinks = [
+      {name: "Furniture", link: '#', hasDropdown: true},
+      {name: "Mattresses", link: '#', hasDropdown: true},
+      {name: "Kids & Teens", link: '#', hasDropdown: true},
+      {name: "Home Office", link: '#', hasDropdown: true},
+      {name: "Out Door", link: '#', hasDropdown: true},
+      {name: "Rugs", link: '#', hasDropdown: true},
+      {name: "Home Decor", link: '#', hasDropdown: true},
+      {name: "Outlets", link: '#', hasDropdown: true},
+      {name: "New Arrivals", link: '#', hasDropdown: true},
+      {name: "Inspiration", link: '#', hasDropdown: true},
+      
+  ]
 
   return (
     <div className='haider-main-container'>
@@ -44,6 +67,7 @@ const Haider = () => {
         <div className='on-tab-deliver-to'>
             <img src={deliverTo} alt="delivery" />
             <span> Deliver to : <a href='#'> 06042</a> </span>
+            <img src={locationIcon} alt="location" className='promotion-banner-location' />
         </div>
       </div>
 
@@ -81,18 +105,40 @@ const Haider = () => {
         </div>
       </div>
 
+      {/* Tablate Haider */}
+      <div className='tab-view-header'>
+        <div className='tab-view-header-containt'>
+          <div className='header-view-toggle-and-profile-div'>
+              <img src={navToggler} alt="togle button" onClick={handleTabMenu} className='tab-view-humburger-icon' />
+              <img src={profileIcon} alt="profile" />
+          </div>
+          <div className='tab-view-logo-and-searchbar'>
+            <img src={logo} alt='logo' />
+            <div className='tab-view-searchbar-container'>
+              <input type='search' placeholder="Search all things Bob's" />
+              <img src={searchRed} alt="search" />
+            </div>
+          </div>
+          <div className='tab-view-card-and-location'>
+                <img src={locationIcon} alt="location" />
+                <img src={cartIcon} alt="cart" />
+          </div>
+        </div>
+      </div>
+
       {/* Mobile View Header */}
       <div className='mobile-view-header'>
         <div className='mobile-view-logo-and-icon'>
           <div className='toggle-and-profile-div'>
-              <img src={navToggler} alt="togle button"  />
-              <img src={profileIcon} alt="profile"  />
+              <img src={navToggler} alt="togle button" onClick={handleMobileMenu} />
+              <img src={profileIcon} alt="profile" className='mobile-view-profile-icon' />
           </div>
           <div className='mobile-view-logo-div'>
               <img src={logo} alt='logo' />
           </div>
           <div className='mobile-view-card-and-location'>
-              <img src={locationIcon} alt="location" />
+              <img src={profileIcon} alt="profile" className='mobile-view-card-location-profile' />
+              <img src={locationIcon} alt="location" className='movile-view-location' />
               <img src={cartIcon} alt="cart" />
           </div>
         </div>
@@ -103,7 +149,7 @@ const Haider = () => {
           </div>
         </div>
       </div>
-            {toggleMenu ? <MobileMenu /> : <Nav />}
+            {isMobileMenuOpen ? <MobileMenu /> : isTabMenuOpen ? <TabMenu isNavbarVisible={isTabMenuOpen} setIsNavbarVisible={setIsTabMenuOpen} navLinks={navLinks} /> : <Nav navLinks={navLinks} />}
     </div>
     
   )
