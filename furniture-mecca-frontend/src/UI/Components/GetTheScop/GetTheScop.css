@@ -93,7 +93,9 @@
     display: none;
 }
 
-@media only screen and (max-width: 700px){
+
+
+@media only screen and (max-width: 1100px){
     .get-the-scop-main-container{
         display: none;
     }
@@ -163,4 +165,17 @@
     }
 
 
+}
+
+@media only screen and (max-width: 360px){
+    .mobile-view-scoop-email-input{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 10px;
+    }
+
+    .mobile-view-scoop-email-input input{
+        width: 80%;
+    }
 }

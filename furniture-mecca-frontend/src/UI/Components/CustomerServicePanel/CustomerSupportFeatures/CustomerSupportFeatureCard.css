@@ -15,6 +15,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    transition: transform 0.3s;
 }
 
 .customer-support-card button img{
@@ -33,6 +34,11 @@
 
 .customer-support-card-heading img{
     width: 36px;
+    height: 36px;
+}
+
+.customer-support-card-heading img:nth-child(3){
+    width: 50px;
     height: 36px;
 }
 
@@ -85,5 +91,107 @@
     transform: translateY(200%);
     max-height: 0;
     transition: all 0.5s ease-in-out;
+}
+
+
+.mobile-view-customer-support-card{
+    display: none;
+}
+
+.togle-button{
+    transform: rotate(45deg);
+}
+.desktop-togle-button{
+    transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 700px){
+    .customer-support-card{
+        display: none;
+    }
+    .mobile-view-customer-support-card{
+        display: flex;
+    }
+    .mobile-view-customer-support-feature{
+        display: flex;
+        padding: 30px 0;
+    }
+    .mobile-view-customer-support-heading{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px;
+        position: relative;
+        height: 80px;
+        width: 100%;
+        transition: height 0.1s ease-in-out;
+        border-bottom: 1px solid var(--border-color);
+        overflow: hidden;
+        transition: height 0.5s ease-in-out;
+    }
+
+    .mobile-view-customer-support-heading span{
+        display: flex;
+        gap: 20px;
+    }
+    .mobile-view-customer-support-heading span h3{
+        font-size: 18px;
+        color: var(--text-color);
+    }
+    .mobile-view-customer-support-heading span img{
+        height: 35px;
+        width: 35px;
+    }
+
+    .mobile-view-icon-div{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        width: 100%;
+        
+    }
+
+
+
+
+
+    .mobile-view-icon-div img:nth-child(2){
+        width: 35px;
+        height: 35px;
+        transition: transform 0.3s;
+        cursor: pointer;
+    }
+
+    .mobile-view-customer-support-card-description{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        width: 60%;
+    }
+
+    .mobile-view-customer-support-card-description a{
+        color: var(--text-color);
+    }
+    
+    .mobile-view-customer-support-card.expended .mobile-view-customer-support-heading{
+        height: max-content;
+        transition: height 0.1s ease-in-out;
+    }
+
+    .mobile-view-customer-support-card .mobile-view-customer-support-heading{
+        height: 80px;
+        transition: height 0.1s ease-in-out;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .mobile-view-customer-support-heading span h3{
+        font-size: 13px;
+        color: var(--text-color);
+    }
+    .mobile-view-customer-support-heading span img{
+        height: 25px;
+        width: 25px;
+    }
 }
 

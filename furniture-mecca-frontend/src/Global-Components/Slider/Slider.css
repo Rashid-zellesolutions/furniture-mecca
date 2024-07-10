@@ -33,8 +33,14 @@
     cursor: pointer;
     user-select: none;
     z-index: 2;
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
+}
+
+.arrow img:hover{
+    width: 35px;
+    height: 35px;
+    transition: all 0.3s ease-in-out;
 }
 
 .left-arrow img {
@@ -69,8 +75,14 @@
     }
     
     .arrow img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .arrow img:hover{
         width: 35px;
         height: 35px;
+        transition: all 0.3s ease-in-out;
     }
 }
 

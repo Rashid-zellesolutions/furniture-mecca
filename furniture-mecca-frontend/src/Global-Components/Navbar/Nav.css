@@ -11,20 +11,19 @@
 .navar-links-container{
     display: flex;
     justify-content: space-between;
-    /* align-items: start; */
     width: 100%;
     padding-left: 0px;
     margin: 0px;
     font-family: var(--work-sans-font);
-    /* background-color: green; */
 }
 
 .nav-item{
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
-    line-height: 15px;
+    line-height: 19.2px;
+    letter-spacing: 1.6px;
     border-bottom: 3px solid white;
-    
+    padding: 0 10px;
 }
 
 .nav-link{
@@ -33,9 +32,14 @@
     position: relative;
 }
 
+.nav-item.nav-item.active .nav-link{
+    color: var(--active-nav-item-color);
+}
+
 .nav-item:hover{
     border-bottom: 3px solid var(--active-nav-item-color);
 }
+
 
 /* Mobile Navbar CSS */
 
@@ -53,7 +57,7 @@
 
 .dropdown{
     position: absolute;
-    margin-top: 20px;
+    margin-top: 15px;
     left: 0;
     width: 100%;
     transition: all 0.3s ease-in-out;
@@ -62,7 +66,39 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    overflow-y: scroll;
+}
+
+/* Desktop Responsiveness */
+@media only screen and (max-width: 1300px){
+    .navbar{
+        padding: 21px 20px 0px 20px;
+    }
+    .nav-link{
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .nav-link{
+        font-size: 11px;
+    }
+}
+
+
+/* Tab Size Media Query 1100 Pixuls */
+
+@media only screen and (max-width: 1100px){
+    
+}
+
+@media only screen and (max-width: 900px){
+    .navbar{
+        display: none;
+    }
+    .mobile-navbar{
+        display: flex;
+        
+    }
 }
 
 @media only screen and (max-width: 700px){
@@ -107,22 +143,4 @@
         text-decoration: none;
     }
     
-}
-
-
-/* Tab Size Media Query 1100 Pixuls */
-@media only screen and (max-width: 1100px){
-    .navbar{
-        padding: 21px 20px 0px 20px;
-    }
-}
-
-@media only screen and (max-width: 900px){
-    .navbar{
-        display: none;
-    }
-    .mobile-navbar{
-        display: flex;
-        
-    }
 }

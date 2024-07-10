@@ -94,7 +94,10 @@
     color: var(--text-color);
 }
 
-
+.tab-sub-menu-link-item a{
+    color: var(--text-color);
+    text-decoration: none;
+}
 
 .sub-menu-link-items-container{
     display: flex;

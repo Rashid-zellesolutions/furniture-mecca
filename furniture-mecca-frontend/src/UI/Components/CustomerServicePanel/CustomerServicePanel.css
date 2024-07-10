@@ -34,7 +34,11 @@
     padding-top: 30px;
 }
 
-@media only screen and (max-width: 700px){
+/* .mobile-view-customer-support-feature{
+    display: none;
+} */
+
+@media only screen and (max-width: 1100px){
 
     .customer-services-panel-main-container{
         display: flex;
@@ -44,8 +48,18 @@
 
     .customer-support-features{
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto auto auto;
         width: 100%;
         /* padding-top: 30px; */
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .customer-support-features{
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        gap: 20px;
+        padding: 30px 0;
     }
 }

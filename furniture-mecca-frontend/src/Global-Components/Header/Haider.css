@@ -458,7 +458,7 @@
 }
 
 /* large screen 1300px desktop size */
-@media only screen and (max-width: 1300px){
+@media only screen and (max-width: 1310px){
     .near-by-city-time{
         display: none;
     }

@@ -54,7 +54,7 @@ const FurnitureProduct = () => {
 
                 <div
                     className="row"
-                    style={{ transform: `translateX(-${index * 100}%)` }}
+                    style={{ transform: `translateX(-${index * 80}%)` }}
                 >
                     {products.slice(0, halfLength).map((product, i) => (
                         <div key={i} className="column">
@@ -72,7 +72,7 @@ const FurnitureProduct = () => {
                 </div>
                 <div
                     className="row"
-                    style={{ transform: `translateX(-${index * 100}%)` }}
+                    style={{ transform: `translateX(-${index * 80}%)` }}
                 >
                     {products.slice(halfLength, products.length).map((product, i) => (
                         <div key={i} className="column">

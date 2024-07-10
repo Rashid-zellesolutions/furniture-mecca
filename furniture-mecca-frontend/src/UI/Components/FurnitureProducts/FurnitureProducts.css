@@ -123,8 +123,15 @@
 } 
 
 .product-arrow img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.product-arrow img:hover{
     width: 35px;
     height: 35px;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Mobile view slider style */
@@ -186,6 +193,23 @@
         gap: 10px;
         width: 100%;
         padding: 10px 0;
+    }
+    .mobile-view-row::-webkit-scrollbar {
+        height: 8px; 
+    }
+    
+    .mobile-view-row::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+        border-radius: 10px;
+    }
+    
+    .mobile-view-row::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 10px;
+    }
+    
+    .mobile-view-row::-webkit-scrollbar-thumb:hover {
+        background: #555; 
     }
 
     .mobile-view-product{

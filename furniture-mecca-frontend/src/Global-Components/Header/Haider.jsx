@@ -36,16 +36,15 @@ const Haider = () => {
     }
 
     const navLinks = [
-      {name: "Furniture", link: '#', hasDropdown: true},
+      {name: "Living Room", link: '#', hasDropdown: true},
+      {name: "Bedroom", link: '#', hasDropdown: true},
+      {name: "Dining Room", link: '#', hasDropdown: true},
       {name: "Mattresses", link: '#', hasDropdown: true},
-      {name: "Kids & Teens", link: '#', hasDropdown: true},
-      {name: "Home Office", link: '#', hasDropdown: true},
-      {name: "Out Door", link: '#', hasDropdown: true},
-      {name: "Rugs", link: '#', hasDropdown: true},
-      {name: "Home Decor", link: '#', hasDropdown: true},
+      {name: "Kids", link: '#', hasDropdown: true},
+      {name: "Accent Furniture / Rugs", link: '#', hasDropdown: true},
+      {name: "Small Spaces", link: '#', hasDropdown: true},
       {name: "Outlets", link: '#', hasDropdown: true},
-      {name: "New Arrivals", link: '#', hasDropdown: true},
-      {name: "Inspiration", link: '#', hasDropdown: true},
+      {name: "Tent Sale", link: '#', hasDropdown: true},
       
   ]
 
@@ -130,7 +129,7 @@ const Haider = () => {
       <div className='mobile-view-header'>
         <div className='mobile-view-logo-and-icon'>
           <div className='toggle-and-profile-div'>
-              <img src={navToggler} alt="togle button" onClick={handleMobileMenu} />
+              <img src={navToggler} alt="togle button" onClick={handleTabMenu} />
               <img src={profileIcon} alt="profile" className='mobile-view-profile-icon' />
           </div>
           <div className='mobile-view-logo-div'>

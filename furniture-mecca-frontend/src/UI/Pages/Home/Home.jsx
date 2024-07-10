@@ -15,22 +15,19 @@ import HeroImage from '../../../Assets/to-be-change/hp-fourth_hero_mat_desktop_1
 import mobileViewImage from '../../../Assets/to-be-change/mobile-viewimg.png'
 import HelpCenterBanner from '../../Components/HelpCenterBAnner/HelpCenterBanner';
 
-import InspirationImage from '../../../Assets/to-be-change/Inspiration-HP-1 2.png'
+import InspirationImage from '../../../Assets/images/Inspiration-Slider.jpg'
 import GetTheScop from '../../Components/GetTheScop/GetTheScop';
 import CustomerServicePanel from '../../Components/CustomerServicePanel/CustomerServicePanel';
 import Footer from '../../../Global-Components/Footer/Footer';
 import FurnitureProduct from '../../Components/FurnitureProducts/FurnitureProduct';
 import Slider from '../../../Global-Components/Slider/Slider';
 import Shopvia from '../../Components/ShopViaBanner/Shopvia';
+import AllStores from '../../Components/AllStoresLocation/AllStores';
 
 
 
 const Home = () => {
-  // const [isTabSize, setIsTabSize] = useState(false);
-  // const tabNavbar = () => {
-  //   setIsTabSize(!isTabSize)
-  //   console.log('tab navbar clicked')
-  // }
+  
   
   const productCardData = [
     {   heading: 'Tuxedo', productImageHeading: 'tuxedo Power Reclining Sofa', 
@@ -70,9 +67,10 @@ const Home = () => {
       <ImageHeading img={HeroImage} alt={'hero'} />
       <HelpCenterBanner />
       <ImageHeading img={InspirationImage} alt={'inspiration'}/>
+      <AllStores />
       <GetTheScop />
       <CustomerServicePanel />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

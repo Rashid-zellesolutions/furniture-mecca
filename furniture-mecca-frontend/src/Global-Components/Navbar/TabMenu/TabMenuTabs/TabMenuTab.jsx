@@ -6,7 +6,7 @@ import furnitureMenuImage from '../../../../Assets/furniture-menu-images/furnitu
 import furnitureMenuImageTwo from '../../../../Assets/furniture-menu-images/furniture-menu-image-two.jpg';
 import TabMenuTabLinks from './TabMenuTabLinks/TabMenuTabLinks';
 
-const TabMenuTab = ({name, closeMenu}) => {
+const TabMenuTab = ({name, ind, closeMenu}) => {
 
     const [isSubNavOpen, setIsSubNavOpen] = useState(false)
     const [activeIndex, setActiveIndex] = useState(null)
@@ -18,10 +18,11 @@ const TabMenuTab = ({name, closeMenu}) => {
         setActiveIndex(index);
         setIsSubNavOpen(true);
         console.log("active index is", activeIndex)
+        console.log("inner active index ", activeInnerIndex)
     }
 
-    const handleActiveIndex = (innerIndex) => {
-        setActiveInnerIndex(innerIndex)
+    const handleActiveIndex = (index) => {
+        setActiveInnerIndex(index)
     }
 
     const tabSubMenu = [
@@ -101,7 +102,6 @@ const TabMenuTab = ({name, closeMenu}) => {
     ]
 
     const handleSubMenuLinksClose = () => {
-        // setActiveIndex(null)
         setActiveInnerIndex(null)
         setIsSubNavOpen(false)
     }
@@ -118,7 +118,6 @@ const TabMenuTab = ({name, closeMenu}) => {
       <div className={`tab-sub-menu-link ${isSubNavOpen ? 'hide-sub-menu-link' : ''}`}>
         {tabSubMenu.map((item, index) => {
             return <div key={index}  onClick={() => {
-                // handleActiveIndex(index);
                 handleTabSubNavLinkOpen(index)
             }} 
             >
@@ -126,7 +125,6 @@ const TabMenuTab = ({name, closeMenu}) => {
                     {item.furnitureSubData.map((innerItem, innerIndex) => {
                         return <h3  onClick={() => {
                             handleActiveIndex(innerIndex);
-                            // handleTabSubNavLinkOpen(index)
                         }} 
                         key={innerIndex} className='tab-sub-menu-link-item'>{innerItem.subDataName} 
                         <span> <FaChevronRight size={17} /> </span>
@@ -136,6 +134,12 @@ const TabMenuTab = ({name, closeMenu}) => {
                 </span> : <></>}
             </div>
         })}
+        {/* {tabSubMenu[ind].furnitureSubData.map((item, index) => {
+            return <h3 onClick={() => {
+                handleActiveIndex(index);
+                handleTabSubNavLinkOpen(index)
+            }}>{item.subDataName}</h3>
+        }) } */}
         <div className='tab-sub-menu-images-container'>
             <div className='tab-sub-menu-image-and-title'>
                 <img src={furnitureMenuImage} alt='img' />
@@ -147,7 +151,7 @@ const TabMenuTab = ({name, closeMenu}) => {
             </div>
         </div>
       </div>
-      {activeIndex !== null && activeInnerIndex && (
+      {activeIndex !== null && activeInnerIndex !== null && (
         <div className="sub-menu-sub-links">
           <TabMenuTabLinks closeSubMenuLinks={handleSubMenuLinksClose} 
           tabSublinksData={tabSubMenu} ind={activeIndex} innerInd={activeInnerIndex} name={tabSubMenu[activeIndex].furnitureSubData[activeInnerIndex].subDataName} />

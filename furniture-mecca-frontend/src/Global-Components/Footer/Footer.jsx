@@ -9,6 +9,9 @@ import youtube from '../../Assets/icons/youtube.png'
 import location from '../../Assets/icons/location.png'
 import call from '../../Assets/icons/call.png'
 import mail from '../../Assets/icons/mail.png'
+import TabFooter from '../TabAndMobileFooter/TabFooter';
+import filledStart from '../../Assets/icons/Star 3.png';
+import unfilledStart from '../../Assets/icons/Star 5.png';
 
 const Footer = () => {
 
@@ -167,63 +170,78 @@ const Footer = () => {
         ]},
     ]
 
+    const stars = [
+        {icon: filledStart},
+        {icon: filledStart},
+        {icon: filledStart},
+        {icon: filledStart},
+        {icon: unfilledStart},
+    ]
+
 
   return (
-    <div className='footer-main-container'>
-      <div className='footer-nav'>
-        {footerNavLinks.map((items, index) => {
-            return <div key={index} className='footer-nav-links'>
-            <h3 className='footer-nav-link-heading'>{items.heading}</h3>
-            {items.navItems.map((item, innerIndex) => {
-                return <FooterNav link={item.link} linkName={item.name} />
-            })}
-        </div>
-        })}
-      </div>
-    <div className='footer-contact-section'>
-        <div className='footer-social-and-address-container'>
-            <div className='social-icons'>
-                {socialIcons.map((item, index) => {
-                    return <a href={item.link}>
-                        <img src={item.icon} alt={item.name} />
-                    </a>
-                })}
-            </div>
-            <div className='rating-container'>
-                <img src={footerRedFurnitureMecca} alt="img" />
-                <div className='rating-stars-container'>
-                    <h3>FURNITURE MECCA</h3>
-                    <span>1 2 3 4 5</span>
-                    <p>847 Google Reviews</p>
-                </div>
-            </div>
-            <div className='location-phone-main-container'>
-                {locationPhoneMail.map((item, index) => {
-                    return <span className='icon-and-name'>
-                        <img src={item.icon} alt={item.name} />
-                        <a href={item.link}>{item.name}</a>
-                    </span>
-                })}
-            </div>
-        </div>
-        <div className='footer-customer-care-and-about-furniture-mecca'>
-            {footerCustomerCareAndAbout.map((items, index) => {
-                return <div key={index} className='footer-care-and-about'>
-                    <h3>{items.heading}</h3>
-                    {items.navLinks.map((innerItem, innerIndex) => {
-                        return <a className='footer-care-and-about-links' key={innerIndex} href={innerItem}>{innerItem.name}</a>
+    <>
+        <div className='footer-main-container'>
+            <div className='footer-nav'>
+                {footerNavLinks.map((items, index) => {
+                    return <div key={index} className='footer-nav-links'>
+                    <h3 className='footer-nav-link-heading'>{items.heading}</h3>
+                    {items.navItems.map((item, innerIndex) => {
+                        return <FooterNav link={item.link} linkName={item.name} />
                     })}
                 </div>
-            })}
+                })}
+            </div>
+            <div className='footer-contact-section'>
+                <div className='footer-social-and-address-container'>
+                    <div className='social-icons'>
+                        {socialIcons.map((item, index) => {
+                            return <a href={item.link}>
+                                <img src={item.icon} alt={item.name} />
+                            </a>
+                        })}
+                    </div>
+                    <div className='rating-container'>
+                        <img src={footerRedFurnitureMecca} alt="img" />
+                        <div className='rating-stars-container'>
+                            <h3>FURNITURE MECCA</h3>
+                            <span className='rating-stars'>{stars.map((item, i) => {
+                                return <img src={item.icon} alt='start' />
+                            })}</span>
+                            <p>847 Google Reviews</p>
+                        </div>
+                    </div>
+                    <div className='location-phone-main-container'>
+                        {locationPhoneMail.map((item, index) => {
+                            return <span className='icon-and-name'>
+                                <img src={item.icon} alt={item.name} />
+                                <a href={item.link}>{item.name}</a>
+                            </span>
+                        })}
+                    </div>
+                </div>
+                <div className='footer-customer-care-and-about-furniture-mecca'>
+                    {footerCustomerCareAndAbout.map((items, index) => {
+                        return <div key={index} className='footer-care-and-about'>
+                            <h3>{items.heading}</h3>
+                            {items.navLinks.map((innerItem, innerIndex) => {
+                                return <a className='footer-care-and-about-links' key={innerIndex} href={innerItem}>{innerItem.name}</a>
+                            })}
+                        </div>
+                    })}
+                </div>
+            </div>
+            <div className='footer-rights-reserved-container'>
+                <p>2020 - 2024 Furniture Mecca. All Rights Reserved</p>
+                <p>
+                    <a href='#'>Designed & Managed By Zelle Solutions</a>
+                </p>
+            </div>
         </div>
-    </div>
-    <div className='footer-rights-reserved-container'>
-        <p>2020 - 2024 Furniture Mecca. All Rights Reserved</p>
-        <p>
-            <a href='#'>Designed & Managed By Zelle Solutions</a>
-        </p>
-    </div>
-    </div>
+        <div className='mobile-view-footer-main-div'>
+            <TabFooter />
+        </div>
+    </>
   )
 }
 
