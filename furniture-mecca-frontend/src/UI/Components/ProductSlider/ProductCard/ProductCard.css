@@ -81,7 +81,8 @@
     color: white;
     font-size: 14px;
     line-height: 16px;
-    border: 1px solid var(--button-color);
+    
+    border: 2px solid var(--button-color);
     width: fit-content;
     padding: 12px 32px;
     border-radius: 5px;
@@ -89,6 +90,14 @@
     margin-top: 20px;
     margin-bottom: 15px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.product-details button:hover{
+    background-color: transparent;
+    border: 2px solid var(--active-nav-item-color);
+    color: var(--active-nav-item-color);
+    font-weight: 500;
 }
 
 

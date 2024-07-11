@@ -23,6 +23,8 @@ import FurnitureProduct from '../../Components/FurnitureProducts/FurnitureProduc
 import Slider from '../../../Global-Components/Slider/Slider';
 import Shopvia from '../../Components/ShopViaBanner/Shopvia';
 import AllStores from '../../Components/AllStoresLocation/AllStores';
+import BlogSlider from '../../Components/BlogSlider/BlogSlider';
+import NearStorePopUp from '../../Components/NearStorePopUp/NearStorePopUp';
 
 
 
@@ -49,6 +51,7 @@ const Home = () => {
 ]
   return (
     <div className='home-page-main-container'>
+      <NearStorePopUp />
       <Haider />
       <Shopvia />
       <Slider />
@@ -66,7 +69,8 @@ const Home = () => {
       <ProductSlider cardData={productCardData} />
       <ImageHeading img={HeroImage} alt={'hero'} />
       <HelpCenterBanner />
-      <ImageHeading img={InspirationImage} alt={'inspiration'}/>
+      {/* <ImageHeading img={InspirationImage} alt={'inspiration'}/> */}
+      <BlogSlider />
       <AllStores />
       <GetTheScop />
       <CustomerServicePanel />

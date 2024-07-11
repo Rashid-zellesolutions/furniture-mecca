@@ -68,6 +68,7 @@
 .logo-container img{
     width: 200px;
     height: 40px;
+    cursor: pointer;
 }
 
 .search-bar-container{
@@ -101,6 +102,7 @@
 .search-bar-div img{
     width: 22px;
     height: 22px;
+    cursor: pointer;
 }
 
 .nearby-address-container{
@@ -122,6 +124,8 @@
 .icon-and-nearby-city img{
     width: 25px;
     height: 19px;
+    cursor: pointer;
+    position: relative;
 }
 
 .near-by-city-time{
@@ -176,6 +180,7 @@
 .header-icons-container{
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 45%;
     gap: 16px;
     justify-content: end;
@@ -186,16 +191,19 @@
     width: 22px;
     height: 22px;
     margin-top: 8px;
+    cursor: pointer;
 }
 
 .header-icons-container img:nth-child(2){
     width: 31px;
     height: 27px;
+    cursor: pointer;
 }
 
 .header-icons-container img:nth-child(3){
     width: 24px;
     height: 24px;
+    cursor: pointer;
 }
 
 .header-nav-container{
@@ -229,11 +237,13 @@
 .toggle-and-profile-div img:nth-child(1){
     width: 20px;
     height: 14px;
+    cursor: pointer;
 }
 
 .toggle-and-profile-div img:nth-child(2){
     width: 22px;
     height: 22px;
+    cursor: pointer;
 }
 
 .mobile-view-logo-div{
@@ -243,6 +253,7 @@
 .mobile-view-logo-div img{
     width: 100%;
     height: 55px;
+    cursor: pointer;
 }
 
 
@@ -255,11 +266,13 @@
 .mobile-view-card-and-location img:nth-child(1){
     width: 22px;
     height: 22px;
+    cursor: pointer;
 }
 
 .mobile-view-card-and-location img:nth-child(2){
     width: 22px;
     height: 22px;
+    cursor: pointer;
 }
 
 .movile-view-search-bar-div{
@@ -294,6 +307,7 @@
 .movile-view-search-bar img{
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
 /* TAblate View Styling */
@@ -322,11 +336,13 @@
 .header-view-toggle-and-profile-div img:nth-child(1){
     width: 24px;
     height: 16px;
+    cursor: pointer;
 }
 
 .header-view-toggle-and-profile-div img:nth-child(2){
     width: 22px;
     height: 22px;
+    cursor: pointer;
 }
 
 .tab-view-logo-and-searchbar{
@@ -340,6 +356,7 @@
 
 .tab-view-logo-and-searchbar img{
     height: 40px;
+    cursor: pointer;
 }
 
 .tab-view-searchbar-container{
@@ -364,6 +381,7 @@
 .tab-view-searchbar-container img{
     width: 22px;
     height: 22px;
+    cursor: pointer;
 }
 
 .tab-view-card-and-location{

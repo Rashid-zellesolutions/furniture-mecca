@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './LatestModulerBanner.css';
-import SodaBanner from '../../../Assets/to-be-change/soda 1.png';
+import SodaBannerOne from '../../../Assets/to-be-change/soda-1.png';
+import SodaBannerTwo from '../../../Assets/to-be-change/soda-2.png';
 import SodaMobileViewBanner from '../../../Assets/images/Rectangle 679.png'
 import mobileViewBanner from '../../../Assets/to-be-change/mobile-viewimg.png'
 import PaypalBannerOne from '../../../Assets/to-be-change/download 51.png';
@@ -16,7 +17,8 @@ const LatestModulerBanner = () => {
   return (
     <div className='moduler-container'>
       <div className='soda-banner'>
-        <img src={SodaBanner} alt="soda banner" className='soda-image' />
+        <img src={SodaBannerOne} alt="soda banner" className='soda-image' />
+        <img src={SodaBannerTwo} alt="soda banner" className='soda-image' />
         <img src={SodaMobileViewBanner} alt="mobile soda" className='mobile-soda-banner' />
       </div>
       <div className='financing-banner'>

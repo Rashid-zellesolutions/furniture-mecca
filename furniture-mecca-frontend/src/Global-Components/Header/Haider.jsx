@@ -15,6 +15,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import MobileMenu from '../Navbar/MobileMenu/MobileMenu';
 import TabMenu from '../Navbar/TabMenu/TabMenu';
+import NearStorePopUp from '../../UI/Components/NearStorePopUp/NearStorePopUp';
 
 const Haider = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -47,6 +48,10 @@ const Haider = () => {
       {name: "Tent Sale", link: '#', hasDropdown: true},
       
   ]
+  const [nearStorePopUp, setNearStorePopUp] = useState(false)
+  const handleNearStorePopUp = () => {
+    setNearStorePopUp(!nearStorePopUp)
+  }
 
   return (
     <div className='haider-main-container'>
@@ -83,7 +88,8 @@ const Haider = () => {
         <div className='nearby-address-container'>
           <div className='nearby-address-div'>
               <div className='icon-and-nearby-city'>
-                <img src={NearStoreIcon} alt='near by' />
+                <img src={NearStoreIcon} alt='near by' onClick={handleNearStorePopUp} />
+                <NearStorePopUp isOpen={nearStorePopUp} setIsOpen={setNearStorePopUp} />
                 <div className='near-by-city-time'>
                   <p>Nearest Store</p>
                   <span>

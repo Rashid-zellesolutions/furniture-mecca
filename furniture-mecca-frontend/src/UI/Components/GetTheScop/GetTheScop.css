@@ -62,13 +62,21 @@
     background-color: var(--button-color);
     width: 180px;
     height: 50px;
-    border: none;
+    border: 2px solid var(--button-color);
     outline: none;
     font-size: 15px;
     font-weight: 600;
     color: white;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 
+}
+
+.get-the-scop-input button:hover{
+    background-color: transparent;
+    border: 2px solid var(--active-nav-item-color);
+    color: var(--active-nav-item-color);
+    font-weight: 600;
 }
 
 .get-the-scop-form p{

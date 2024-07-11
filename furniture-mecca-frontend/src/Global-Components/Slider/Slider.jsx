@@ -16,6 +16,7 @@ const Slider = () => {
         { img: imageTwo },
         { img: imageThree },
     ];
+    const infiniteSlides = [...slides, ...slides];
 
     const mobileViewSLider = [
         {img: smallSizeImageOne},
@@ -32,7 +33,7 @@ const Slider = () => {
     };
 
     useEffect(() => {
-        const interval = setInterval(nextSlide, 5000);
+        const interval = setInterval(nextSlide, 3000);
         return () => clearInterval(interval);
     }, []);
 
@@ -42,7 +43,7 @@ const Slider = () => {
                 <img src={ArrowLeft} alt="arrow left" />
             </div>
             <div className='slides-container' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-                {slides.map((slide, index) => (
+                {infiniteSlides.map((slide, index) => (
                     <div className='slide' key={index}>
                         <img src={slide.img} alt={`slide ${index + 1}`} />
                     </div>
