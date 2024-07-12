@@ -16,6 +16,7 @@ import { IoMdClose } from "react-icons/io";
 import MobileMenu from '../Navbar/MobileMenu/MobileMenu';
 import TabMenu from '../Navbar/TabMenu/TabMenu';
 import NearStorePopUp from '../../UI/Components/NearStorePopUp/NearStorePopUp';
+import { MdOutlineStars } from "react-icons/md";
 
 const Haider = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -52,6 +53,37 @@ const Haider = () => {
   const handleNearStorePopUp = () => {
     setNearStorePopUp(!nearStorePopUp)
   }
+
+  const storeDetailsData = [
+    {
+        city: 'Philadelphia', miles: '0.8 Miles', openUntil: '(Open Until 06: 30 PM)', openUntilIcon: <MdOutlineStars size={20} />,
+        address: 'E Venango st, Philadelphia, PA 19134', addressCity: 'Philadelphia, Pennsylvania, 101', call: '267-639-6801',
+        outlet: 'Outlet', outletLink: '#', direction: 'Directions', directionLink: '#', appointment: 'Book Appointment', appointmentLink: '#', openHours: 'Store Hours', hours: [
+            {day: 'Sunday', time: '06: 30 PM'},
+            {day: 'Monday', time: '06: 30 PM'},
+            {day: 'Tuesday', time: '06: 30 PM'},
+            {day: 'Wednesday', time: '06: 30 PM'},
+            {day: 'Thursday', time: '06: 30 PM'},
+            {day: 'Friday', time: '06: 30 PM'},
+            {day: 'Saturday', time: '06: 30 PM'},
+        ],
+        virtualTour: 'Virtual Tour', virtualTourLink: '#', storeDetails: 'Store DEtails', storeDetailsLink: '#'
+    },
+    {
+      city: 'Philadelphia', miles: '0.8 Miles', openUntil: '(Open Until 06: 30 PM)', openUntilIcon: <MdOutlineStars size={20} />,
+      address: 'E Venango st, Philadelphia, PA 19134', addressCity: 'Philadelphia, Pennsylvania, 101', call: '267-639-6801',
+      outlet: 'Outlet', outletLink: '#', direction: 'Directions', directionLink: '#', appointment: 'Book Appointment', appointmentLink: '#', openHours: 'Store Hours', hours: [
+          {day: 'Sunday', time: '06: 30 PM'},
+          {day: 'Monday', time: '06: 30 PM'},
+          {day: 'Tuesday', time: '06: 30 PM'},
+          {day: 'Wednesday', time: '06: 30 PM'},
+          {day: 'Thursday', time: '06: 30 PM'},
+          {day: 'Friday', time: '06: 30 PM'},
+          {day: 'Saturday', time: '06: 30 PM'},
+      ],
+      virtualTour: 'Virtual Tour', virtualTourLink: '#', storeDetails: 'Store DEtails', storeDetailsLink: '#'
+  }
+]
 
   return (
     <div className='haider-main-container'>

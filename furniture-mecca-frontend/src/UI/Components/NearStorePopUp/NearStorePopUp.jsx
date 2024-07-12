@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './NearStorePopUp.css';
-import closePopUpIcon from '../../../Assets/icons/cancel.png';
 import NearStore from '../../../Assets/icons/home.png';
 import { IoCloseOutline } from "react-icons/io5";
 import searchIcon from '../../../Assets/icons/search.png';
@@ -11,7 +10,140 @@ import { MdOutlineStars } from "react-icons/md";
 const NearStorePopUp = ({isOpen, setIsOpen}) => {
     // const [issideOpen, setIsSideOpen] = useState(isOpen)
     const [storeOpen, setStoreOpen] = useState(false)
-    const handleStoreHoursDetails = () => {}
+    const [storeOpenIndex, setOpenStoreIndex] = useState(-1);
+    const handleStoreHoursDetails = (index) => {
+        setOpenStoreIndex(storeOpenIndex === index ? -1 : index)
+    };
+
+    const storeDetailsData = [
+        {
+            city: 'E Venango', miles: '0.8 Miles', openUntil: '(Open Until 06: 30 PM)', openUntilIcon: <MdOutlineStars size={20} />,
+            address: 'E Venango st, Philadelphia, PA 19134', addressCity: 'Philadelphia, Pennsylvania, 101', call: '267-639-6801',
+            outlet: 'Outlet', outletLink: '#', direction: 'Directions', directionLink: '#', appointment: 'Book Appointment', appointmentLink: '#', openHours: 'Store Hours', hours: [
+                {day: 'Sunday', time: '06: 30 PM'},
+                {day: 'Monday', time: '06: 30 PM'},
+                {day: 'Tuesday', time: '06: 30 PM'},
+                {day: 'Wednesday', time: '06: 30 PM'},
+                {day: 'Thursday', time: '06: 30 PM'},
+                {day: 'Friday', time: '06: 30 PM'},
+                {day: 'Saturday', time: '06: 30 PM'},
+            ],
+            virtualTour: 'Virtual Tour', virtualTourLink: '#', storeDetails: 'Store DEtails', storeDetailsLink: '#'
+        },
+        {
+            city: 'W Hunting Park', miles: '0.8 Miles', openUntil: '(Open Until 06: 30 PM)', openUntilIcon: <MdOutlineStars size={20} />,
+            address: '1430 W Hunting Park Ave Philadelphia,', addressCity: 'Pennsylvania, 19140', call: '267-297-8558',
+            outlet: 'Outlet', outletLink: '#', direction: 'Directions', directionLink: '#', appointment: 'Book Appointment', appointmentLink: '#', openHours: 'Store Hours', hours: [
+                {day: 'Sunday', time: '06: 30 PM'},
+                {day: 'Monday', time: '06: 30 PM'},
+                {day: 'Tuesday', time: '06: 30 PM'},
+                {day: 'Wednesday', time: '06: 30 PM'},
+                {day: 'Thursday', time: '06: 30 PM'},
+                {day: 'Friday', time: '06: 30 PM'},
+                {day: 'Saturday', time: '06: 30 PM'},
+            ],
+            virtualTour: 'Virtual Tour', virtualTourLink: '#', storeDetails: 'Store DEtails', storeDetailsLink: '#'
+        },
+        {
+            city: 'Upper Darby', miles: '0.8 Miles', openUntil: '(Open Until 06: 30 PM)', openUntilIcon: <MdOutlineStars size={20} />,
+            address: 'St #4232, Upper Darby Philadelphia,', addressCity: 'Pennsylvania, 19082', call: '610-352-3500',
+            outlet: 'Outlet', outletLink: '#', direction: 'Directions', directionLink: '#', appointment: 'Book Appointment', appointmentLink: '#', openHours: 'Store Hours', hours: [
+                {day: 'Sunday', time: '06: 30 PM'},
+                {day: 'Monday', time: '06: 30 PM'},
+                {day: 'Tuesday', time: '06: 30 PM'},
+                {day: 'Wednesday', time: '06: 30 PM'},
+                {day: 'Thursday', time: '06: 30 PM'},
+                {day: 'Friday', time: '06: 30 PM'},
+                {day: 'Saturday', time: '06: 30 PM'},
+            ],
+            virtualTour: 'Virtual Tour', virtualTourLink: '#', storeDetails: 'Store DEtails', storeDetailsLink: '#'
+        },
+        {
+            city: 'Baltimore Ave', miles: '0.8 Miles', openUntil: '(Open Until 06: 30 PM)', openUntilIcon: <MdOutlineStars size={20} />,
+            address: '130 E Baltimore Ave, Lansdowne Philladelphia,', addressCity: 'Pennsylvania, 19050', call: '267-297-8558',
+            outlet: 'Outlet', outletLink: '#', direction: 'Directions', directionLink: '#', appointment: 'Book Appointment', appointmentLink: '#', openHours: 'Store Hours', hours: [
+                {day: 'Sunday', time: '06: 30 PM'},
+                {day: 'Monday', time: '06: 30 PM'},
+                {day: 'Tuesday', time: '06: 30 PM'},
+                {day: 'Wednesday', time: '06: 30 PM'},
+                {day: 'Thursday', time: '06: 30 PM'},
+                {day: 'Friday', time: '06: 30 PM'},
+                {day: 'Saturday', time: '06: 30 PM'},
+            ],
+            virtualTour: 'Virtual Tour', virtualTourLink: '#', storeDetails: 'Store DEtails', storeDetailsLink: '#'
+        },
+        {
+            city: 'W BrookDale', miles: '0.8 Miles', openUntil: '(Open Until 06: 30 PM)', openUntilIcon: <MdOutlineStars size={20} />,
+            address: '611 W Brookdale St, Allentown, Pennsylvania,', addressCity: 'Pennsylvania, 18103', call: '484-460-7056',
+            outlet: 'Outlet', outletLink: '#', direction: 'Directions', directionLink: '#', appointment: 'Book Appointment', appointmentLink: '#', openHours: 'Store Hours', hours: [
+                {day: 'Sunday', time: '06: 30 PM'},
+                {day: 'Monday', time: '06: 30 PM'},
+                {day: 'Tuesday', time: '06: 30 PM'},
+                {day: 'Wednesday', time: '06: 30 PM'},
+                {day: 'Thursday', time: '06: 30 PM'},
+                {day: 'Friday', time: '06: 30 PM'},
+                {day: 'Saturday', time: '06: 30 PM'},
+            ],
+            virtualTour: 'Virtual Tour', virtualTourLink: '#', storeDetails: 'Store DEtails', storeDetailsLink: '#'
+        },
+        {
+            city: 'Lancaster Ave', miles: '0.8 Miles', openUntil: '(Open Until 06: 30 PM)', openUntilIcon: <MdOutlineStars size={20} />,
+            address: '5648 Lancaster Ave Philadelphia,', addressCity: 'Pennsylvania, 19131', call: '215-877-1200',
+            outlet: 'Outlet', outletLink: '#', direction: 'Directions', directionLink: '#', appointment: 'Book Appointment', appointmentLink: '#', openHours: 'Store Hours', hours: [
+                {day: 'Sunday', time: '06: 30 PM'},
+                {day: 'Monday', time: '06: 30 PM'},
+                {day: 'Tuesday', time: '06: 30 PM'},
+                {day: 'Wednesday', time: '06: 30 PM'},
+                {day: 'Thursday', time: '06: 30 PM'},
+                {day: 'Friday', time: '06: 30 PM'},
+                {day: 'Saturday', time: '06: 30 PM'},
+            ],
+            virtualTour: 'Virtual Tour', virtualTourLink: '#', storeDetails: 'Store DEtails', storeDetailsLink: '#'
+        },
+        {
+            city: 'Delmar Dr', miles: '0.8 Miles', openUntil: '(Open Until 06: 30 PM)', openUntilIcon: <MdOutlineStars size={20} />,
+            address: '1830 Delmar Dr, Folcroft, Pennsylvania,', addressCity: 'Pennsylvania, 19032', call: '215-422-3883',
+            outlet: 'Outlet', outletLink: '#', direction: 'Directions', directionLink: '#', appointment: 'Book Appointment', appointmentLink: '#', openHours: 'Store Hours', hours: [
+                {day: 'Sunday', time: '06: 30 PM'},
+                {day: 'Monday', time: '06: 30 PM'},
+                {day: 'Tuesday', time: '06: 30 PM'},
+                {day: 'Wednesday', time: '06: 30 PM'},
+                {day: 'Thursday', time: '06: 30 PM'},
+                {day: 'Friday', time: '06: 30 PM'},
+                {day: 'Saturday', time: '06: 30 PM'},
+            ],
+            virtualTour: 'Virtual Tour', virtualTourLink: '#', storeDetails: 'Store DEtails', storeDetailsLink: '#'
+        },
+        {
+            city: 'Penn St Reading', miles: '0.8 Miles', openUntil: '(Open Until 06: 30 PM)', openUntilIcon: <MdOutlineStars size={20} />,
+            address: '408 Penn St Reading, Pennsylvania, 19602', addressCity: 'Pennsylvania, 19602', call: '484-869-5338',
+            outlet: 'Outlet', outletLink: '#', direction: 'Directions', directionLink: '#', appointment: 'Book Appointment', appointmentLink: '#', openHours: 'Store Hours', hours: [
+                {day: 'Sunday', time: '06: 30 PM'},
+                {day: 'Monday', time: '06: 30 PM'},
+                {day: 'Tuesday', time: '06: 30 PM'},
+                {day: 'Wednesday', time: '06: 30 PM'},
+                {day: 'Thursday', time: '06: 30 PM'},
+                {day: 'Friday', time: '06: 30 PM'},
+                {day: 'Saturday', time: '06: 30 PM'},
+            ],
+            virtualTour: 'Virtual Tour', virtualTourLink: '#', storeDetails: 'Store DEtails', storeDetailsLink: '#'
+        },
+        {
+            city: 'Ewing Township', miles: '0.8 Miles', openUntil: '(Open Until 06: 30 PM)', openUntilIcon: <MdOutlineStars size={20} />,
+            address: '1600 N Olden Ave, Ewing Township, NJ 08638', addressCity: 'NJ 08638', call: '609-392-2800',
+            outlet: 'Outlet', outletLink: '#', direction: 'Directions', directionLink: '#', appointment: 'Book Appointment', appointmentLink: '#', openHours: 'Store Hours', hours: [
+                {day: 'Sunday', time: '06: 30 PM'},
+                {day: 'Monday', time: '06: 30 PM'},
+                {day: 'Tuesday', time: '06: 30 PM'},
+                {day: 'Wednesday', time: '06: 30 PM'},
+                {day: 'Thursday', time: '06: 30 PM'},
+                {day: 'Friday', time: '06: 30 PM'},
+                {day: 'Saturday', time: '06: 30 PM'},
+            ],
+            virtualTour: 'Virtual Tour', virtualTourLink: '#', storeDetails: 'Store DEtails', storeDetailsLink: '#'
+        }
+    ]
+
   return (
     <div className={`near-store-pop-up ${isOpen ? 'show' : ''}`}>
         <div className='near-store-container'>
@@ -20,7 +152,7 @@ const NearStorePopUp = ({isOpen, setIsOpen}) => {
                 <i>
                     <img src={NearStore} alt='near' />
                 </i>
-                <h3>Find a Mecca</h3>
+                <h3>Find a Store</h3>
                 <div className='pop-up-header-search'>
                     <input type='search' placeholder='Search by Zip Code or City & State' />
                     <img src={searchIcon} alt='search' />
@@ -40,43 +172,76 @@ const NearStorePopUp = ({isOpen, setIsOpen}) => {
                     <img src={NearStore} alt='near' />
                     <h3>Your Store</h3>
                 </div>
-                <div className='pop-up-city-and-distance'>
+                {storeDetailsData.map((items, index) => {
+                    return <div key={index}  >
+                            <div className={`pop-up-city-and-distance ${storeOpenIndex === index ? 'rotate-btn' : ''}`}>
+                            <span>
+                                <img src={AddBtn} alt='add' onClick={() => handleStoreHoursDetails(index)} />
+                                <h3>{items.city}</h3>
+                            </span>
+                            <p> {items.miles} </p>
+                        </div>
+                        <div className='pop-up-store-open-time'>
+                    <p>{items.openUntil}</p>
                     <span>
-                        <img src={AddBtn} alt='add' onClick={handleStoreHoursDetails} />
-                        <h3>Manchester</h3>
-                    </span>
-                    <p>0.8 Miles</p>
-                </div>
-                <div className='pop-up-store-open-time'>
-                    <p>(Open until 8: 00 PM)</p>
-                    <span>
-                        <MdOutlineStars size={20} />
+                        {items.openUntilIcon}
                     </span>
                 </div>
                 <div className='pop-up-complete-address'>
-                    <p>428 Tolland Turnpike,</p>
-                    <p>Manchester, CT, 06042</p>
-                    <p><span>Call</span> (860) 645-3208</p>
-                    <a href='#'>Outlet</a>
-                    <a href='#'>Directions</a> 
+                    <p>{items.address}</p>
+                    <p>{items.addressCity}</p>
+                    <p><span>Call</span> {items.call}</p>
+                    <a href={items.outletLink}>{items.outlet}</a>
+                    <a href={items.directionLink}>{items.direction}</a> 
                 </div>
-                <div className={`pop-up-store-open-days-and-time ${storeOpen ? 'open-store' : ''}`}>
-                    <a href='#'>Book appointment</a>
+                <div className={`pop-up-store-open-days-and-time ${storeOpenIndex === index ? 'open-store' : ''}`}>
+                    <a href={items.appointmentLink}>{items.appointment}</a>
                     <div className='store-hours-detail'>
-                        <p>Store Hours</p>
+                        <p>{items.openHours}</p>
                         <div className='store-hours'>
-                            <p> <span>Sunday</span> <span>11:00 AM - 7:00 PM</span> </p>
-                            <p> <span>Monday</span> <span>10:00 AM - 8:00 PM</span> </p>
-                            <p> <span>Tuesday</span> <span>10:00 AM - 8:00 PM</span> </p>
-                            <p> <span>Wednesday</span> <span>10:00 AM - 8:00 PM</span> </p>
-                            <p> <span>Thursday</span> <span>10:00 AM - 8:00 PM</span> </p>
-                            <p> <span>Friday</span> <span>10:00 AM - 8:00 PM</span> </p>
-                            <p> <span>Saturday</span> <span>10:00 AM - 8:00 PM</span> </p>
+                        {items.hours && items.hours.map((hoursItem, index) => {
+                            return <p> <span>{hoursItem.day}</span> <span>{hoursItem.time}</span> </p>
+                        })}
                         </div>
-                        <a href='#'>Virtual Tour</a>
-                        <a href='#'>Store Details</a>
+                        <a href={items.virtualTourLink}>{items.virtualTour}</a>
+                        <a href={items.storeDetailsLink}>{items.storeDetails}</a>
                     </div>
                 </div>
+                    </div>
+                })}
+                {/* <div className={`pop-up-city-and-distance ${storeOpen ? 'rotate-btn' : ''}`}>
+                    <span>
+                        <img src={AddBtn} alt='add' onClick={handleStoreHoursDetails} />
+                        <h3>{city}</h3>
+                    </span>
+                    <p> {miles} </p>
+                </div> */}
+                {/* <div className='pop-up-store-open-time'>
+                    <p>{openUntil}</p>
+                    <span>
+                        {openUntilIcon}
+                    </span>
+                </div>
+                <div className='pop-up-complete-address'>
+                    <p>{address}</p>
+                    <p>{addressCity}</p>
+                    <p><span>Call</span> {call}</p>
+                    <a href={outletLink}>{outlet}</a>
+                    <a href={directionLink}>{direction}</a> 
+                </div>
+                <div className={`pop-up-store-open-days-and-time ${storeOpen ? 'open-store' : ''}`}>
+                    <a href={appointmentLink}>{appointment}</a>
+                    <div className='store-hours-detail'>
+                        <p>{openHours}</p>
+                        <div className='store-hours'>
+                        {hours && hours.map((hoursItem, index) => {
+                            return <p> <span>{hoursItem.day}</span> <span>{hoursItem.time}</span> </p>
+                        })}
+                        </div>
+                        <a href={virtualTourLink}>{virtualTour}</a>
+                        <a href={storeDetailsLink}>{storeDetails}</a>
+                    </div>
+                </div> */}
             </div>
         </div>
     </div>
