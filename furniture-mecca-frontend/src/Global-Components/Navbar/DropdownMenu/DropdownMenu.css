@@ -1,11 +1,15 @@
 .mattresses-main-div{
     display: flex;
-    width: 100%;
-    align-items: start;
+    /* width: 100%; */
+    /* align-items: center; */
+    justify-content: center;
     padding: 50px 40px 50px 80px;
     gap: 15px;
     background-color: var(--bg-color);
     z-index: 22222;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
 }
 
 .menu-links{
@@ -67,12 +71,21 @@
     width: 80%;
     padding: 10px 0px;
     gap: 15px;
-    /* background-color: blue; */
+    position: relative;
+}
+
+.mattress-image{
+    position:  relative;
 }
 
 .mattress-image img{
     width: 280px;
     height: 180px;
+    transition: all 0.5s ease-in-out;
+}
+
+.mattress-image img:hover{
+    transform: scale(1.1);
 }
 
 .image-title{

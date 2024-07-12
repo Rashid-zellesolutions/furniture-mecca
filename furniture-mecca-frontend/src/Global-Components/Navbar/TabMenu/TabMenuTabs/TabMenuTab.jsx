@@ -134,7 +134,7 @@ const TabMenuTab = ({name, ind, closeMenu}) => {
                 </span> : <></>}
             </div>
         })}
-        {/* {tabSubMenu[ind].furnitureSubData.map((item, index) => {
+        {/* {tabSubMenu[ind].furnitureSubData.map((item, index) => {wh
             return <h3 onClick={() => {
                 handleActiveIndex(index);
                 handleTabSubNavLinkOpen(index)
