@@ -26,6 +26,32 @@ import AllStores from '../../Components/AllStoresLocation/AllStores';
 import BlogSlider from '../../Components/BlogSlider/BlogSlider';
 import NearStorePopUp from '../../Components/NearStorePopUp/NearStorePopUp';
 
+// Soda Banner Images
+import sodaBannerOne from '../../../Assets/to-be-change/soda-1.png'
+import sodaBannerTwo from '../../../Assets/to-be-change/soda-2.png';
+import sodaBanner from '../../../Assets/to-be-change/mobile-viewimg.png';
+
+// PayPal Images
+import payPalBannerOne from '../../../Assets/to-be-change/download 51.png'
+import payPalBannerTwo from '../../../Assets/to-be-change/download 52.png';
+import payPalMobileBanner from '../../../Assets/images/Group 382.png'
+import installmentBanner from '../../../Assets/to-be-change/New-Long-Financing-2048x160 1.png';
+
+// Category Images
+
+import newArrivalImage from '../../../Assets/category/new-arrival.png';
+import livingRoomImage from '../../../Assets/category/living-room.png';
+import diningImage from '../../../Assets/category/dining.png';
+import bedroomImage from '../../../Assets/category/badroom.png';
+import outDoorImage from '../../../Assets/category/out-door.png';
+import recliningImage from '../../../Assets/category/reclining.png';
+import SectionaSofa from '../../../Assets/to-be-change/sectional-sofa.png';
+import Mattresses from '../../../Assets/to-be-change/mattresses.png';
+import HomeOffice from '../../../Assets/to-be-change/home-office.png';
+import KidsRoom from '../../../Assets/to-be-change/kids-room.png';
+import AreaRugs from '../../../Assets/to-be-change/area-rugs.png';
+import HomeDecor from '../../../Assets/to-be-change/home-decor.png';
+import Outlet from '../../../Assets/to-be-change/outlet.png';
 
 
 const Home = () => {
@@ -34,7 +60,7 @@ const Home = () => {
   const productCardData = [
     {   heading: 'Tuxedo', productImageHeading: 'tuxedo Power Reclining Sofa', 
         productImagePrice: '$999', productImageAbout: "Bob's everyday low price", 
-        btnText: 'Shop Tuxedo', img : tuxedoChair, 
+        btnText: 'Shop Tuxedo', img : tuxedoChair, productLink: '#',
         para: `With smooth, comfy seating, built-in charging ports AND cupholders, 
         my Tuxedo collection is dressed to impress!`
     },
@@ -49,6 +75,24 @@ const Home = () => {
         headrest, zero-gravity recline, and charging ports!`
     }
 ]
+
+const categoryCardData = [
+  {title: "New Arrival", img: newArrivalImage, link: '#'},
+  {title: "Living Room", img: livingRoomImage, link: '#'},
+  {title: "Dining", img: diningImage, link: '#'},
+  {title: "Bedroom", img: bedroomImage, link: '#'},
+  {title: "Outdoor", img: outDoorImage, link: '#'},
+  {title: "Reclining Furniture", img: recliningImage, link: '#'},
+  {title: "Sectional Sofas", img: SectionaSofa, link: '#'},
+  {title: "Mattresses", img: Mattresses, link: '#'},
+  {title: "Home Office", img: HomeOffice, link: '#'},
+  {title: "Kids Room", img: KidsRoom, link: '#'},
+  {title: "Area Rugs", img: AreaRugs, link: '#'},
+  {title: "Home Decor", img: HomeDecor, link: '#'},
+  {title: "Outlet", img: Outlet, link: '#'},
+]
+
+
   return (
     <div className='home-page-main-container'>
       <NearStorePopUp />
@@ -56,8 +100,8 @@ const Home = () => {
       <Shopvia />
       <Slider />
       <ShipBanner />
-      <Category />
-      <LatestModulerBanner />
+      <Category title={'Shop by Category'} categoryCardData={categoryCardData} />
+      <LatestModulerBanner customWidth={true} />
       <FurnitureProduct />
       <ImageHeading img={HeroImage} alt={'bed image'} />
       <ProductSlider cardData={productCardData} />

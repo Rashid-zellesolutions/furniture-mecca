@@ -48,7 +48,7 @@ const BlogSlider = () => {
             <button className='blog-slider-arrow left' onClick={handlePrev}>
                     <img src={arrowLeft} alt='left' />
                 </button>
-                <div className='blog-slider' style={{transform: `translateX(-${currentIndex * 33.33}%)`}}
+                <div className='blog-slider' style={{transform: `translateX(-${currentIndex * 37}%)`}}
                 onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
                     {infiniteSliderData.map((item, index) => (
                         <a href={item.link} className='blog-card' key={index}>

@@ -1,7 +1,11 @@
 .moduler-container{
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
+}
+
+.moduler-container.show{
+    display: flex;
 }
 
 .soda-banner{
@@ -92,4 +96,43 @@
     .mobile-view-bed-banner img{
         width: 100%;
     }
+}
+
+/* full width container */
+
+.full-width-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.full-width-container.hide{
+    display: none;
+}
+
+.dining-image-div{
+    display: flex;
+    width: 100%;
+}
+
+.dining-image-div img{
+    width: 100%;
+}
+
+.dining-paypal-div{
+    display: flex;
+    width: 100%;
+}
+
+.dining-paypal-div img{
+    width: 50%;
+}
+
+.dining-installment-div{
+    display: flex;
+    width: 100%;
+}
+
+.dining-installment-div img{
+    width: 100%;
 }

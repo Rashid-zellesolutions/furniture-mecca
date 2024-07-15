@@ -15,6 +15,7 @@ const ProductSlider = ({cardData}) => {
                       productImageHeading={item.productImageHeading}
                       productImagePrice={item.productImagePrice}
                       productImageAbout={item.productImageAbout}
+                      productLink={item.productLink}
                     />
         })}
         </div>

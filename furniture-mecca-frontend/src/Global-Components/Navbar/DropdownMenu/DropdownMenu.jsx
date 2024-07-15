@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './DropdownMenu.css';
 
 
 const DropdownMenu = ({navHeading, dropDownNavData, dropDownNavImages }) => {
+    // const [isActive, setIsActive] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(null);
+    const [outerIndex, setOuterIndex] = useState(null)
+    const [innerIndex, setInnerIndex] = useState(null)
+    const handleActiveIndex = (index) => {
+        setActiveIndex(index);
+        // setIsActive(!isActive);
+    }
 
+    const handleAccentActiveItems = (i, index) => {
+        setOuterIndex(i)
+        setInnerIndex(index);
+    }
     
   return (
     <div className='mattresses-main-div'>
@@ -12,8 +24,8 @@ const DropdownMenu = ({navHeading, dropDownNavData, dropDownNavImages }) => {
                         <h3 className='living-room-heading'>{item.headingOne}</h3>
                         <div className='mattresses-links-div'>
                             <p>
-                                {item.innerLinks.map((it, i) => {
-                                    return <p className='mattres-links'>
+                                {item.innerLinks.map((it, index) => {
+                                    return <p className={`mattres-links ${outerIndex === i && innerIndex === index ? 'active' : ''}`} onClick={() => handleAccentActiveItems(i, index)}>
                                         <a href={it.link}>{it.name}</a>
                                     </p>
                                 })}
@@ -27,7 +39,7 @@ const DropdownMenu = ({navHeading, dropDownNavData, dropDownNavImages }) => {
                         <h3 className='living-room-heading'>{navHeading}</h3>
                         <div className='mattresses-links-div'>
                             {dropDownNavData[0].links.map((item, index) => {
-                                return <p className='mattres-links' key={index}>
+                                return <p className={`mattres-links ${activeIndex === index ? 'active' : ''}`} key={index} onClick={() => handleActiveIndex(index)}>
                                     <a href={item.link}>{item.name}</a>
                                 </p>
                             })}
@@ -39,7 +51,7 @@ const DropdownMenu = ({navHeading, dropDownNavData, dropDownNavImages }) => {
             {dropDownNavData[0].Images.map((item, index) => {
                 return <div key={index} className='mattress-image'>
                     <img src={item.img} alt={item.title} />
-                    <p className='image-title'>{item.title}</p>
+                    <p className='image-title'> <a href={item.link}> {item.title}</a> </p>
                     <p className='price'>{item.price}</p>
                 </div>
             })}

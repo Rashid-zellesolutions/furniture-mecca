@@ -105,6 +105,8 @@ const TabMenuTab = ({name, ind, closeMenu}) => {
         setActiveInnerIndex(null)
         setIsSubNavOpen(false)
     }
+
+    
     
   return (
     <div className='tab-sub-menu'>
@@ -116,30 +118,34 @@ const TabMenuTab = ({name, ind, closeMenu}) => {
         </div>
       </div>
       <div className={`tab-sub-menu-link ${isSubNavOpen ? 'hide-sub-menu-link' : ''}`}>
-        {tabSubMenu.map((item, index) => {
+        {tabSubMenu[ind] && tabSubMenu.map((item, index) => {
             return <div key={index}  onClick={() => {
                 handleTabSubNavLinkOpen(index)
-            }} 
+            }}
             >
-                {item.name === name ? <span className='sub-menu-link-items-container'>
+                {/* {item.name === name ? */}
+                <span className='sub-menu-link-items-container'>
                     {item.furnitureSubData.map((innerItem, innerIndex) => {
                         return <h3  onClick={() => {
                             handleActiveIndex(innerIndex);
                         }} 
-                        key={innerIndex} className='tab-sub-menu-link-item'>{innerItem.subDataName} 
+                        key={innerIndex} className='tab-sub-menu-link-item' > {innerItem.subDataName} 
                         <span> <FaChevronRight size={17} /> </span>
                         </h3>
                     })}
                     
-                </span> : <></>}
+                 </span> 
+                {/*: <>
+                <h3>Rashid Ali</h3>
+                </>} */}
             </div>
         })}
-        {/* {tabSubMenu[ind].furnitureSubData.map((item, index) => {wh
+        {/* {tabSubMenu[ind] && tabSubMenu[ind].furnitureSubData.map((item, index) => {
             return <h3 onClick={() => {
                 handleActiveIndex(index);
                 handleTabSubNavLinkOpen(index)
             }}>{item.subDataName}</h3>
-        }) } */}
+        })} */}
         <div className='tab-sub-menu-images-container'>
             <div className='tab-sub-menu-image-and-title'>
                 <img src={furnitureMenuImage} alt='img' />

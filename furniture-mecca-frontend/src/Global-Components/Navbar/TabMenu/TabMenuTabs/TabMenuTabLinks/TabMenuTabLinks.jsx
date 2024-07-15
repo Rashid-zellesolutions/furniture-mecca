@@ -4,7 +4,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 const TabMenuTabLinks = ({name, closeSubMenuLinks, ind, innerInd, tabSublinksData}) => {
   
-  console.log("tab menu links", tabSublinksData[ind].furnitureSubData[innerInd].furnitureLinks[ind].name)
+  // console.log("tab menu links", tabSublinksData[ind].furnitureSubData[innerInd].furnitureLinks[innerInd].name)
   console.log("index of ", ind)
   
   return (

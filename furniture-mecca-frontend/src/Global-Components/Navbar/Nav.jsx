@@ -38,9 +38,9 @@ const Nav = ({navLinks}) => {
                 {name: 'Outlets', link: '#'},
             ],
             Images: [
-                {title: "Cashton Sofa and Loveseat", price: '$799', img: cashtonImage},
-                {title: "Cyrilk Sectional with Pull Out Bed", price: '$799', img: cyrilkImage},
-                {title: "Medellin Sofa and Loveseat", price: '$1299', img: medellinImage},
+                {title: "Cashton Sofa and Loveseat", price: '$799', link: '#', img: cashtonImage},
+                {title: "Cyrilk Sectional with Pull Out Bed", price: '$799', link: '#',  img: cyrilkImage},
+                {title: "Medellin Sofa and Loveseat", price: '$1299', link: '#',  img: medellinImage},
             ]
         }
     ]
@@ -64,9 +64,9 @@ const Nav = ({navLinks}) => {
                 {name: 'Outlets', link: '#'},
             ],
             Images: [
-                {title: "Cashton Sofa and Loveseat", price: '$799', img: cashtonImage},
-                {title: "Cyrilk Sectional with Pull Out Bed", price: '$799', img: cyrilkImage},
-                {title: "Medellin Sofa and Loveseat", price: '$1299', img: medellinImage},
+                {title: "Cashton Sofa and Loveseat", price: '$799', link: '#',  img: cashtonImage},
+                {title: "Cyrilk Sectional with Pull Out Bed", price: '$799', link: '#',  img: cyrilkImage},
+                {title: "Medellin Sofa and Loveseat", price: '$1299', link: '#',  img: medellinImage},
             ]
         }
         
@@ -85,9 +85,9 @@ const Nav = ({navLinks}) => {
                 {name: 'Servers, Buffets & China Cabinets', link: '#'},
             ],
             Images: [
-                {title: "Cashton Sofa and Loveseat", price: '$799', img: cashtonImage},
-                {title: "Cyrilk Sectional with Pull Out Bed", price: '$799', img: cyrilkImage},
-                {title: "Medellin Sofa and Loveseat", price: '$1299', img: medellinImage},
+                {title: "Cashton Sofa and Loveseat", price: '$799', link: '#',  img: cashtonImage},
+                {title: "Cyrilk Sectional with Pull Out Bed", price: '$799', link: '#',  img: cyrilkImage},
+                {title: "Medellin Sofa and Loveseat", price: '$1299', link: '#',  img: medellinImage},
             ]
         }
     ]
@@ -108,9 +108,9 @@ const Nav = ({navLinks}) => {
                 {name: 'Outlet', link: '#'},
             ],
             Images: [
-                {title: "Cashton Sofa and Loveseat", price: '$799', img: cashtonImage},
-                {title: "Cyrilk Sectional with Pull Out Bed", price: '$799', img: cyrilkImage},
-                {title: "Medellin Sofa and Loveseat", price: '$1299', img: medellinImage},
+                {title: "Cashton Sofa and Loveseat", price: '$799', link: '#',  img: cashtonImage},
+                {title: "Cyrilk Sectional with Pull Out Bed", price: '$799', link: '#',  img: cyrilkImage},
+                {title: "Medellin Sofa and Loveseat", price: '$1299', link: '#',  img: medellinImage},
             ]
         }
     ]
@@ -126,9 +126,9 @@ const Nav = ({navLinks}) => {
                 {name: 'Outlet', link: '#'},
             ],
             Images: [
-                {title: "Cashton Sofa and Loveseat", price: '$799', img: cashtonImage},
-                {title: "Cyrilk Sectional with Pull Out Bed", price: '$799', img: cyrilkImage},
-                {title: "Medellin Sofa and Loveseat", price: '$1299', img: medellinImage},
+                {title: "Cashton Sofa and Loveseat", price: '$799', link: '#',  img: cashtonImage},
+                {title: "Cyrilk Sectional with Pull Out Bed", price: '$799', link: '#',  img: cyrilkImage},
+                {title: "Medellin Sofa and Loveseat", price: '$1299', link: '#',  img: medellinImage},
             ]
         }
     ]
@@ -155,8 +155,8 @@ const Nav = ({navLinks}) => {
                 
             ],
             Images: [
-                {title: "Cashton Sofa and Loveseat", price: '$799', img: cashtonImage},
-                {title: "Cyrilk Sectional with Pull Out Bed", price: '$799', img: cyrilkImage},
+                {title: "Cashton Sofa and Loveseat", price: '$799', link: '#',  img: cashtonImage},
+                {title: "Cyrilk Sectional with Pull Out Bed", price: '$799', link: '#',  img: cyrilkImage},
             ]
         }
     ]
@@ -170,9 +170,9 @@ const Nav = ({navLinks}) => {
                 {name: 'Small Spaces Dining Rooms', link: '#'},
             ],
             Images: [
-                {title: "Cashton Sofa and Loveseat", price: '$799', img: cashtonImage},
-                {title: "Cyrilk Sectional with Pull Out Bed", price: '$799', img: cyrilkImage},
-                {title: "Medellin Sofa and Loveseat", price: '$1299', img: medellinImage},
+                {title: "Cashton Sofa and Loveseat", price: '$799', link: '#',  img: cashtonImage},
+                {title: "Cyrilk Sectional with Pull Out Bed", price: '$799', link: '#',  img: cyrilkImage},
+                {title: "Medellin Sofa and Loveseat", price: '$1299', link: '#',  img: medellinImage},
             ]
         }
     ]
@@ -189,9 +189,9 @@ const Nav = ({navLinks}) => {
                 {name: 'Last Call', link: '#'},
             ],
             Images: [
-                {title: "Cashton Sofa and Loveseat", price: '$799', img: cashtonImage},
-                {title: "Cyrilk Sectional with Pull Out Bed", price: '$799', img: cyrilkImage},
-                {title: "Medellin Sofa and Loveseat", price: '$1299', img: medellinImage},
+                {title: "Cashton Sofa and Loveseat", price: '$799', link: '#',  img: cashtonImage},
+                {title: "Cyrilk Sectional with Pull Out Bed", price: '$799', link: '#',  img: cyrilkImage},
+                {title: "Medellin Sofa and Loveseat", price: '$1299', link: '#',  img: medellinImage},
             ]
         }
     ]

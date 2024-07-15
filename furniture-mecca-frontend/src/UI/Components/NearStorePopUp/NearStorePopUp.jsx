@@ -207,7 +207,7 @@ const NearStorePopUp = ({isOpen, setIsOpen}) => {
                         <a href={items.storeDetailsLink}>{items.storeDetails}</a>
                     </div>
                 </div>
-                    </div>
+            </div>
                 })}
                 {/* <div className={`pop-up-city-and-distance ${storeOpen ? 'rotate-btn' : ''}`}>
                     <span>

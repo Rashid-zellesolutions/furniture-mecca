@@ -78,10 +78,8 @@
 .product-details button{
     padding: 12px 32px;
     background-color: var(--button-color);
-    color: white;
     font-size: 14px;
     line-height: 16px;
-    
     border: 2px solid var(--button-color);
     width: fit-content;
     padding: 12px 32px;
@@ -93,11 +91,22 @@
     transition: all 0.3s ease-in-out;
 }
 
+.product-details button a{
+    color: white;
+    text-decoration: none;
+}
+
 .product-details button:hover{
     background-color: transparent;
     border: 2px solid var(--active-nav-item-color);
     color: var(--active-nav-item-color);
     font-weight: 500;
+}
+
+.product-details button:hover a{
+    color: var(--active-nav-item-color);
+    font-weight: 600;
+    
 }
 
 

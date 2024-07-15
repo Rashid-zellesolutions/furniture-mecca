@@ -66,6 +66,11 @@
     text-decoration: underline;
 }
 
+.mattres-links.active a{
+    color: var(--active-nav-item-color);
+    font-weight: 600;
+}
+
 .mattresses-images-div{
     display: flex;
     width: 80%;
@@ -82,15 +87,17 @@
     width: 280px;
     height: 180px;
     transition: all 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 .mattress-image img:hover{
     transform: scale(1.1);
+
 }
 
-.image-title{
+.image-title a{
     color: var(--text-color);
-    font-size: 15px;
+    font-size: 13px;
     line-height: 22px;
     font-weight: 700;
 }
