@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import './TabMenuTab.css'
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
-// import { FaChevronRight } from "react-icons/fa6";
-import furnitureMenuImage from '../../../../Assets/furniture-menu-images/furniture-menu-image.avif'
-import furnitureMenuImageTwo from '../../../../Assets/furniture-menu-images/furniture-menu-image-two.jpg';
+import furnitureMenuImage from '../../../../Assets/menu-images/furniture-menu-image.avif'
+import furnitureMenuImageTwo from '../../../../Assets/menu-images/furniture-menu-image-two.jpg';
 import TabMenuTabLinks from './TabMenuTabLinks/TabMenuTabLinks';
 
-const TabMenuTab = ({name, ind, closeMenu}) => {
+const TabMenuTab = ({name, ind, closeMenu, headingLink}) => {
 
     const [isSubNavOpen, setIsSubNavOpen] = useState(false)
     const [activeIndex, setActiveIndex] = useState(null)
@@ -113,7 +112,7 @@ const TabMenuTab = ({name, ind, closeMenu}) => {
       <div className={`sub-nav-header ${isSubNavOpen ? 'hide-sub-nav-header' : ''}`}>
         <span className='back-to-main-menu'><FaChevronLeft size={17} onClick={closeMenu}  /></span>
         <div className='sub-menu-heading-container'>
-            <h3>{name}</h3>
+            <h3> <a href={headingLink}>{name}</a></h3>
             <span><a href='#'> Shop all</a> | <a href='#'> Shop via Chat</a></span>
         </div>
       </div>

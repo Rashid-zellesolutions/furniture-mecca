@@ -1,16 +1,18 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import './Nav.css';
 import DropdownMenu from './DropdownMenu/DropdownMenu';
 import FurnitureDropdown from './FurnitureMenu/FurnitureDropdown';
 import { GiHamburgerMenu, GiHumanCannonball } from "react-icons/gi";
-import cashtonImage from '../../Assets/Mattress-navlink-images/Cashton.jpg'
-import cyrilkImage from '../../Assets/Mattress-navlink-images/Cyrilk-.jpg'
-import medellinImage from '../../Assets/Mattress-navlink-images/medellin.jpg'
+import cashtonImage from '../../Assets/menu-images/Cashton.jpg'
+import cyrilkImage from '../../Assets/menu-images/Cyrilk-.jpg'
+import medellinImage from '../../Assets/menu-images/medellin.jpg'
+import { useLocation } from 'react-router-dom';
 
 const Nav = ({navLinks}) => {
 
     const [dropdownOpen, setDropdownOpen] = useState(null);
     const [activeIndex, setActiveIndex] = useState(null)
+    const location = useLocation()
 
     const handleMouseEnter = (index) => {
         setDropdownOpen(index)
@@ -21,6 +23,9 @@ const Nav = ({navLinks}) => {
     const handleActiveItemIndex = (index) => {
         setActiveIndex(index)
     }
+    useEffect(() => {
+        setActiveIndex(location.pathname)
+    }, [location])
 
     // drop Down Data
     const livingroomLinks = [
@@ -75,7 +80,7 @@ const Nav = ({navLinks}) => {
 
     const diningroomLinks = [
         {
-            heading: 'Dining Room',
+            heading: 'Dining Room', link: '/dining-room',
             links: [
                 {name: 'Dining Room Sets', link: '#'},
                 {name: 'Pub Heights Dining Sets', link: '#'},
@@ -203,7 +208,7 @@ const Nav = ({navLinks}) => {
         {navLinks.map((item, index) => {
             return <h3 key={index} onMouseEnter={() => item.hasDropdown && handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave} onClick={() => handleActiveItemIndex(index)}
-            className={`nav-item ${activeIndex === index ? 'active' : ''}`}>
+            className={`nav-item ${activeIndex === item.link ? 'active' : ''}`}>
                 <a href={item.link} className='nav-link'> {item.name} </a>
                 {dropdownOpen === index && (
                     <div className='dropdown'>

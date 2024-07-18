@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import './BlogSlider.css';
 import arrowLeft from '../../../Assets/icons/arrow-left.png';
 import arrowRight from '../../../Assets/icons/arrow-right.png';
-import blogImage from '../../../Assets/images/06.png';
-import blogOneImg from '../../../Assets/images/blog-one.webp'
-import blogTwoImage from '../../../Assets/images/blog-two.webp';
-import blogTheeImage from '../../../Assets/images/blog-three.webp'
+import blogOneImg from '../../../Assets/blogs-images/blog-one.webp'
+import blogTwoImage from '../../../Assets/blogs-images/blog-two.webp';
+import blogTheeImage from '../../../Assets/blogs-images/blog-three.webp';
 
 const BlogSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0)

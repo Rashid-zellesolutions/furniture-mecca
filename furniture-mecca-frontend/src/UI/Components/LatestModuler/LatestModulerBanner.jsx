@@ -14,7 +14,7 @@ import mobileViewFullBed from '../../../Assets/images/Rectangle 703.png'
 
 import diningImage from '../../../Assets/images/Dining-Room-Desk-1 1.png'
 
-const LatestModulerBanner = ({images, customWidth}) => {
+const LatestModulerBanner = ({images, customWidth, mainImage, }) => {
   
   return (
     <>
@@ -43,7 +43,7 @@ const LatestModulerBanner = ({images, customWidth}) => {
       </div>
       <div className={`full-width-container ${customWidth ? 'hide' : ''}`}>
         <div className='dining-image-div'>
-          <img src={diningImage} alt='dining image' />
+          <img src={mainImage} alt='dining image' />
         </div>
         <div className='dining-paypal-div'>
             <img src={PaypalBannerOne} alt='paypal one' />

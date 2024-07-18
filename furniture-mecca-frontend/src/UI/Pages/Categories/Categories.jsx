@@ -7,19 +7,29 @@ import Category from '../../Components/Category/Category';
 import CustomerServicePanel from '../../Components/CustomerServicePanel/CustomerServicePanel';
 import Footer from '../../../Global-Components/Footer/Footer';
 import LatestModulerBanner from '../../Components/LatestModuler/LatestModulerBanner';
+import NewArrival from '../../Components/NewArrivals/NewArrival';
+import imageOne from '../../../Assets/global-images/tatun-pub.jpg';
+import imageTwo from '../../../Assets/global-images/Enzo-bedrrom-set.webp'
+import imageThree from '../../../Assets/global-images/Ian-bedroom-set.webp';
+import MultiProductSlider from '../../Components/MultiProductSLider/MultiProductSlider';
 
-// Paypal images
-import payPalBannerOne from '../../../Assets/to-be-change/download 51.png'
-import payPalBannerTwo from '../../../Assets/to-be-change/download 52.png'
-import installmentBanner from '../../../Assets/to-be-change/New-Long-Financing-2048x160 1.png';
+const Categories = ({categoriesMainImage, categoryCardData, newArrival}) => {
 
-const Categories = () => {
+  const sliderImages = [
+    imageOne,
+    imageTwo,
+    imageThree,
+    // Add more images as needed
+  ];
+
   return (
     <div>
       <Haider />
       <Shopvia />
-      <LatestModulerBanner customWidth={false} />
-      <Category title={'Dining Room Furniture'} />
+      <LatestModulerBanner customWidth={false} mainImage={categoriesMainImage} />
+      <Category title={'Dining Room Furniture'} categoryData={categoryCardData} />
+      <MultiProductSlider />
+      {newArrival ? <NewArrival /> : <></>}
       <CustomerServicePanel />
       <Footer />
     </div>

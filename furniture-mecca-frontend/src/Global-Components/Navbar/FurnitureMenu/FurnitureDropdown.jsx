@@ -1,7 +1,7 @@
 import React from 'react'
 import './furnitureDropDown.css';
-import imageOne from '../../../Assets/furniture-menu-images/furniture-menu-image.avif';
-import imageTwo from '../../../Assets/furniture-menu-images/furniture-menu-image-two.jpg';
+import imageOne from '../../../Assets/menu-images/furniture-menu-image.avif';
+import imageTwo from '../../../Assets/menu-images/furniture-menu-image-two.jpg';
 
 const FurnitureDropdown = () => {
 

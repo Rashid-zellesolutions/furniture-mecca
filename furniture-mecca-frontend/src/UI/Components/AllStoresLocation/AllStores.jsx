@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import './AllStores.css';
-import storeImage from '../../../Assets/images/06.png';
+import venangoStoreImage from '../../../Assets/all-stores-location-images/venango-store.jpg';
+import huntingParkStoreImage from '../../../Assets/all-stores-location-images/hunting-park-store.jpg';
+import upperDarbyStoreImage from '../../../Assets/all-stores-location-images/darby-store.jpg';
+import baltimoreStoreImage from '../../../Assets/all-stores-location-images/baltimore-store.jpg';
+import delmarStoreImage from '../../../Assets/all-stores-location-images/delmar-store.jpg';
+import oldenStoreImage from '../../../Assets/all-stores-location-images/oldeng-store.jpg'
+import pennStoreImage from '../../../Assets/all-stores-location-images/penn-st-store.jpg';
+import lancasterStoreImage from '../../../Assets/all-stores-location-images/lancaster-store.jpg'
+import brookdaleStoreImage from '../../../Assets/all-stores-location-images/brookdale-store.jpg';
 import addBtn from '../../../Assets/icons/add-icon.png';
 
 const AllStores = () => {
@@ -9,15 +17,15 @@ const AllStores = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [modalIndex, setModalIndex] = useState(0);
     const stores = [
-        {img: storeImage, address: '101 E. Venango St, Philadelphia', number: '+121 5352 1600', direction: 'Direction', directionLink: '#'},
-        {img: storeImage, address: '1430 W Hunting Park Ave Philadelphia ', number: '+126 7297 8558', direction: 'Direction', directionLink: '#'},
-        {img: storeImage, address: '501 S. 69th Street Upper Darby', number: '+161 0352 3500', direction: 'Direction', directionLink: '#'},
-        {img: storeImage, address: '130 E Baltimore Ave, Lansdowne PA', number: '+148 4462 0281', direction: 'Direction', directionLink: '#'},
-        {img: storeImage, address: '1830 Delmar Drive, Folcroft PA', number: '+121 5422 3883', direction: 'Direction', directionLink: '#'},
-        {img: storeImage, address: '1600 N Olden Ave. Ewing', number: '+160 9392 2800', direction: 'Direction', directionLink: '#'},
-        {img: storeImage, address: '408 Penn St Reading', number: '+148 4869 5337', direction: 'Direction', directionLink: '#'},
-        {img: storeImage, address: '5648 Lancaster Ave Philadelphia,', number: '+121 5877 1200', direction: 'Direction', directionLink: '#'},
-        {img: storeImage, address: '611 W Brookdale St, Allentown', number: '+148 4221 8230', direction: 'Direction', directionLink: '#'},
+        {img: venangoStoreImage, address: '101 E. Venango St, Philadelphia', number: '+121 5352 1600', direction: 'Direction', directionLink: '#'},
+        {img: huntingParkStoreImage, address: '1430 W Hunting Park Ave Philadelphia ', number: '+126 7297 8558', direction: 'Direction', directionLink: '#'},
+        {img: upperDarbyStoreImage, address: '501 S. 69th Street Upper Darby', number: '+161 0352 3500', direction: 'Direction', directionLink: '#'},
+        {img: baltimoreStoreImage, address: '130 E Baltimore Ave, Lansdowne PA', number: '+148 4462 0281', direction: 'Direction', directionLink: '#'},
+        {img: delmarStoreImage, address: '1830 Delmar Drive, Folcroft PA', number: '+121 5422 3883', direction: 'Direction', directionLink: '#'},
+        {img: oldenStoreImage, address: '1600 N Olden Ave. Ewing', number: '+160 9392 2800', direction: 'Direction', directionLink: '#'},
+        {img: pennStoreImage, address: '408 Penn St Reading', number: '+148 4869 5337', direction: 'Direction', directionLink: '#'},
+        {img: lancasterStoreImage, address: '5648 Lancaster Ave Philadelphia,', number: '+121 5877 1200', direction: 'Direction', directionLink: '#'},
+        {img: brookdaleStoreImage, address: '611 W Brookdale St, Allentown', number: '+148 4221 8230', direction: 'Direction', directionLink: '#'},
     ]
 
     const nextSlide = () => {
@@ -70,8 +78,6 @@ const AllStores = () => {
             <div className='all-stores-slider' style={{transform: `translateX(-${currentIndex * 100}%)`}}>
               {stores.map((item, index) => {
                 return <div className='slides' key={index}>
-                  {/* <img src={item.img} alt='store img' />
-                  <p>{item.address}</p> */}
                   <div className="image-wrapper">
                     <img src={item.img} alt='store img' />
                     <p className="address-text">{item.address}</p>
@@ -86,7 +92,7 @@ const AllStores = () => {
           <button className='modal-close-btn'>
             <img src={addBtn} alt='add btn' onClick={closeModal}/>
           </button>
-          <img src={storeImage} alt='store' />
+          <img src={stores[modalIndex].img} alt='store' />
           <div className='store-modal-buttons'>
             <button> {stores[modalIndex].number} </button>
             <button> <a href={stores[modalIndex].directionLink}>{stores[modalIndex].direction}</a></button>

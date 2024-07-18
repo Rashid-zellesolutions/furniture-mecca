@@ -11,8 +11,6 @@ import locationIcon from '../../Assets/icons/location-red.png';
 import navToggler from '../../Assets/icons/Union.png'
 import searchRed from '../../Assets/icons/search-red.png'
 import Nav from '../Navbar/Nav';
-import { GiHamburgerMenu } from "react-icons/gi";
-import { IoMdClose } from "react-icons/io";
 import MobileMenu from '../Navbar/MobileMenu/MobileMenu';
 import TabMenu from '../Navbar/TabMenu/TabMenu';
 import NearStorePopUp from '../../UI/Components/NearStorePopUp/NearStorePopUp';
@@ -38,15 +36,15 @@ const Haider = () => {
     }
 
     const navLinks = [
-      {name: "Living Room", link: '#', hasDropdown: true},
-      {name: "Bedroom", link: '#', hasDropdown: true},
-      {name: "Dining Room", link: '#', hasDropdown: true},
-      {name: "Mattresses", link: '#', hasDropdown: true},
-      {name: "Kids", link: '#', hasDropdown: true},
-      {name: "Accent Furniture / Rugs", link: '#', hasDropdown: true},
-      {name: "Small Spaces", link: '#', hasDropdown: true},
-      {name: "Outlets", link: '#', hasDropdown: true},
-      {name: "Tent Sale", link: '#', hasDropdown: true},
+      {name: "Living Room", link: '/living-room', hasDropdown: true},
+      {name: "Bedroom", link: '/bedroom', hasDropdown: true},
+      {name: "Dining Room", link: '/dining-room', hasDropdown: true},
+      {name: "Mattresses", link: '/mattresses', hasDropdown: true},
+      {name: "Kids", link: '/kids', hasDropdown: true},
+      {name: "Accent Furniture / Rugs", link: '/accent-furniture-and-rugs', hasDropdown: true},
+      {name: "Small Spaces", link: '/small-spaces', hasDropdown: true},
+      {name: "Outlets", link: '/outlets', hasDropdown: true},
+      {name: "Tent Sale", link: '/tent-sale', hasDropdown: true},
       
   ]
   const [nearStorePopUp, setNearStorePopUp] = useState(false)
@@ -109,7 +107,9 @@ const Haider = () => {
 
       <div className='header'>
         <div className='logo-container'>
-          <img src={logo} alt="logo" />
+          <a href='/'>
+            <img src={logo} alt="logo" />
+          </a>
         </div>
         <div className='search-bar-container'>
           <div className='search-bar-div'>

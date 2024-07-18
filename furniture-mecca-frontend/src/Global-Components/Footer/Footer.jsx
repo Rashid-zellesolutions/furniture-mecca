@@ -1,7 +1,7 @@
 import React from 'react'
 import './Footer.css';
 import FooterNav from './FooterNav/FooterNav';
-import footerRedFurnitureMecca from '../../Assets/to-be-change/furniture-mecca-red.jpeg'
+import footerRedFurnitureMecca from '../../Assets/global-images/furniture-mecca-red.jpeg'
 import facebook from '../../Assets/icons/facebook.png'
 import tiktok from '../../Assets/icons/tiktok.png'
 import insta from '../../Assets/icons/instagram.png'

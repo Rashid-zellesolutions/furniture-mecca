@@ -1,0 +1,57 @@
+import React from 'react'
+import './NewArrival.css';
+import goldenDiningRoomSet from '../../../Assets/images/Dining-Room-Set-in-Gold-02 1.png'
+import blackDiningRoomSet from '../../../Assets/images/Dining-room-set-black.png'
+import whiteDiningRoomSet from '../../../Assets/images/dining-room-set-white.png'
+import cart from '../../../Assets/icons/cart.png'
+import { FaEye } from "react-icons/fa";
+
+const NewArrival = () => {
+
+    const cardData = [
+        {
+            cardImage: goldenDiningRoomSet, pieces: '8 Pieces', title: 'Trellis Room Set', price: '$599', addCartLink: '#', 
+            addCartIcon: cart, addCart: 'add to cart', viewAllLink: '#', viewIcon: <FaEye  size={20}/>, viewAll: "View All" 
+        },
+        {
+            cardImage: blackDiningRoomSet, pieces: '5 Pieces', title: 'Trellis Room Set', price: '$599', addCartLink: '#', 
+            addCartIcon: cart, addCart: 'add to cart', viewAllLink: '#', viewIcon: <FaEye  size={20}/>, viewAll: "View All" 
+        },
+        {
+            cardImage: whiteDiningRoomSet, pieces: '4 Pieces', title: 'Trellis Room Set', price: '$599', addCartLink: '#', 
+            addCartIcon: cart, addCart: 'add to cart', viewAllLink: '#', viewIcon: <FaEye  size={20}/>, viewAll: "View All" 
+        },
+    ]
+  return (
+    <div className='new-arrival-main'>
+      <div className='new-arrival-heading-div'>
+        <a href='#'>New Arrivals</a>
+        <a href='#'>View All</a>
+      </div>
+      <div className='new-arrival-cards'>
+        {cardData.map((items, index) => {
+            return <div key={index} className='card'>
+            <div className='card-header'>
+                <img src={items.cardImage} alt='img' />
+                <span className='pieces-text'>{items.pieces}</span>
+                <span className='title-and-price'><p>{items.title}</p> <p>{items.price}</p></span>
+            </div>
+            <div className='card-buttons'>
+                <a href={items.addCartLink}>
+                    <img src={items.addCartIcon} alt='img' />
+                    <p>{items.addCart}</p>
+                </a>
+                <a href={items.viewAllLink}>
+                    {items.viewIcon}
+                    <p>{items.viewAll}</p>
+                </a>
+            </div>
+        </div>
+        })}
+        
+      </div>
+    </div>
+  )
+}
+
+export default NewArrival

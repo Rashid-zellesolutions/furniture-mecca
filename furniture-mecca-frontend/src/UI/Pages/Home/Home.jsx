@@ -92,6 +92,8 @@ const categoryCardData = [
   {title: "Outlet", img: Outlet, link: '#'},
 ]
 
+const name = "Rashid"
+
 
   return (
     <div className='home-page-main-container'>
@@ -100,7 +102,7 @@ const categoryCardData = [
       <Shopvia />
       <Slider />
       <ShipBanner />
-      <Category title={'Shop by Category'} categoryCardData={categoryCardData} />
+      <Category title={'Shop by Category'} categoryData={categoryCardData} />
       <LatestModulerBanner customWidth={true} />
       <FurnitureProduct />
       <ImageHeading img={HeroImage} alt={'bed image'} />

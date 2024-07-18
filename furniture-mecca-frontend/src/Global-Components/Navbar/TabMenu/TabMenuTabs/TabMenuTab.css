@@ -57,6 +57,15 @@
     line-height: 18px;
 }
 
+.sub-menu-heading-container h3 a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.sub-menu-heading-container h3 a:hover{
+    color: var(--active-nav-item-color);
+}
+
 .sub-menu-heading-container span a{
     color: var(--text-color);
     

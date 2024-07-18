@@ -36,7 +36,7 @@ const TabMenu = ({navLinks}) => {
       </div>
       {activeIndex !== null && (
         <div className="sub-menu">
-          <TabMenuTab closeMenu={handleCloseSubMenu} ind={activeIndex} name={navLinks[activeIndex].name} />
+          <TabMenuTab closeMenu={handleCloseSubMenu} ind={activeIndex} headingLink={navLinks[activeIndex].link} name={navLinks[activeIndex].name} />
         </div>
       )}
     </div>

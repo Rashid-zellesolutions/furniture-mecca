@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './Slider.css';
-import imageOne from '../../Assets/to-be-change/hp-fourth_hero_dr_desktop_1_3200x1388.png';
-import imageTwo from '../../Assets/to-be-change/hp-fourth_hero_mat_desktop_1b_3200x1388.png';
-import imageThree from '../../Assets/to-be-change/hp-fourth_hero_mo_desktop_1_3200x1388 (1).png';
-import smallSizeImageOne from '../../Assets/images/sofa3.png'
-import smallSizeImageTwo from '../../Assets/images/sofa1.png'
-import smallSizeImageThree from '../../Assets/images/sofa2.png'
+import imageOne from '../../Assets/slider-images/slider-image-1.png';
+import imageTwo from '../../Assets/slider-images/slider-image-2.png';
+import imageThree from '../../Assets/slider-images/slider-image-3.png';
+import smallSizeImageOne from '../../Assets/slider-images/sofa3.png'
+import smallSizeImageTwo from '../../Assets/slider-images/sofa1.png'
+import smallSizeImageThree from '../../Assets/slider-images/sofa2.png'
 import ArrowLeft from '../../Assets/icons/arrow-left.png';
 import ArrowRight from '../../Assets/icons/arrow-right.png';
 
