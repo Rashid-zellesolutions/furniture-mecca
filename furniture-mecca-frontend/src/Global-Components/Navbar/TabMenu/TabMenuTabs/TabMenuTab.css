@@ -68,7 +68,6 @@
 
 .sub-menu-heading-container span a{
     color: var(--text-color);
-    
 }
 
 .tab-sub-menu-link{
@@ -92,7 +91,6 @@
     color: var(--text-color);
     cursor: pointer;
     gap: 10px;
-    /* background-color: orange; */
 }
 
 .tab-sub-menu-link-item span{
@@ -102,7 +100,6 @@
     align-items: center;
     border-radius: 30px;
     color: var(--text-color);
-    
 }
 
 .tab-sub-menu-link-item a{
@@ -115,7 +112,6 @@
     flex-direction: column;
     width: 100%;
     gap: 10px;
-    /* background-color: orange; */
 }
 
 

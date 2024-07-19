@@ -2,10 +2,15 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 60px;
-    /* gap: 30px; */
+    padding: 40px 100px 0 100px;
     font-family: var(--work-sans-font);
     color: var(--text-color);
+}
+
+@media only screen and (max-width: 1200px){
+    .blog-main-container{
+        padding: 20px 30px;
+    }
 }
 
 
@@ -81,7 +86,6 @@
     position: relative;
     width: 100%;
     display: flex;
-    
     overflow: hidden;
 }
 
@@ -102,8 +106,6 @@
     text-decoration: none;
     color: var(--text-color);
 }
-
-
 
 .blog-card img {
     width: 100%;

@@ -11,13 +11,11 @@ import locationIcon from '../../Assets/icons/location-red.png';
 import navToggler from '../../Assets/icons/Union.png'
 import searchRed from '../../Assets/icons/search-red.png'
 import Nav from '../Navbar/Nav';
-import MobileMenu from '../Navbar/MobileMenu/MobileMenu';
 import TabMenu from '../Navbar/TabMenu/TabMenu';
 import NearStorePopUp from '../../UI/Components/NearStorePopUp/NearStorePopUp';
 import { MdOutlineStars } from "react-icons/md";
 
 const Haider = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isTabMenuOpen, setIsTabMenuOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
     const dynamicHeading = [0, 1, 2]
@@ -30,9 +28,6 @@ const Haider = () => {
 
     const handleTabMenu = () => {
       setIsTabMenuOpen(!isTabMenuOpen)
-    }
-    const handleMobileMenu = () => {
-      setIsMobileMenuOpen(!isMobileMenuOpen)
     }
 
     const navLinks = [
@@ -150,7 +145,7 @@ const Haider = () => {
               <img src={profileIcon} alt="profile" />
           </div>
           <div className='tab-view-logo-and-searchbar'>
-            <img src={logo} alt='logo' />
+            <a href='/'><img src={logo} alt='logo' /></a>
             <div className='tab-view-searchbar-container'>
               <input type='search' placeholder="Search all things Bob's" />
               <img src={searchRed} alt="search" />
@@ -171,7 +166,7 @@ const Haider = () => {
               <img src={profileIcon} alt="profile" className='mobile-view-profile-icon' />
           </div>
           <div className='mobile-view-logo-div'>
-              <img src={logo} alt='logo' />
+              <a href='/'><img src={logo} alt='logo' /></a>
           </div>
           <div className='mobile-view-card-and-location'>
               <img src={profileIcon} alt="profile" className='mobile-view-card-location-profile' />
@@ -186,7 +181,7 @@ const Haider = () => {
           </div>
         </div>
       </div>
-            {isMobileMenuOpen ? <MobileMenu /> : isTabMenuOpen ? <TabMenu isNavbarVisible={isTabMenuOpen} setIsNavbarVisible={setIsTabMenuOpen} navLinks={navLinks} /> : <Nav navLinks={navLinks} />}
+            {isTabMenuOpen ? <TabMenu isNavbarVisible={isTabMenuOpen} setIsNavbarVisible={setIsTabMenuOpen} navLinks={navLinks} /> : <Nav navLinks={navLinks} />}
     </div>
     
   )

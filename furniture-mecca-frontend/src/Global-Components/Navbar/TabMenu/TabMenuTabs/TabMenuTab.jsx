@@ -122,7 +122,6 @@ const TabMenuTab = ({name, ind, closeMenu, headingLink}) => {
                 handleTabSubNavLinkOpen(index)
             }}
             >
-                {/* {item.name === name ? */}
                 <span className='sub-menu-link-items-container'>
                     {item.furnitureSubData.map((innerItem, innerIndex) => {
                         return <h3  onClick={() => {
@@ -133,18 +132,9 @@ const TabMenuTab = ({name, ind, closeMenu, headingLink}) => {
                         </h3>
                     })}
                     
-                 </span> 
-                {/*: <>
-                <h3>Rashid Ali</h3>
-                </>} */}
+                 </span>
             </div>
         })}
-        {/* {tabSubMenu[ind] && tabSubMenu[ind].furnitureSubData.map((item, index) => {
-            return <h3 onClick={() => {
-                handleActiveIndex(index);
-                handleTabSubNavLinkOpen(index)
-            }}>{item.subDataName}</h3>
-        })} */}
         <div className='tab-sub-menu-images-container'>
             <div className='tab-sub-menu-image-and-title'>
                 <img src={furnitureMenuImage} alt='img' />

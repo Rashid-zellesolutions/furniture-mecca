@@ -4,7 +4,6 @@
     height: 100vh;
     font-family: var(--work-sans-font);
     background-color: #fff;
-    
 }
 
 .tab-menu-items{
@@ -71,9 +70,6 @@
 .hide{
     display: none;
 }
-
-
-
 
 /* bottom last div */
 .tab-menu-extra-options{

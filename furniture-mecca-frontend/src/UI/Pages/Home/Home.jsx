@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Category from '../../Components/Category/Category';
-import Haider from '../../../Global-Components/Header/Haider';
 import ShipBanner from '../../Components/ShipBanner/ShipBanner';
 import LatestModulerBanner from '../../Components/LatestModuler/LatestModulerBanner';
 import ProductSlider from '../../Components/ProductSlider/ProductSlider';
 import ImageHeading from '../../Components/ImageHeading/ImageHeading';
+
 
 import tuxedoChair from '../../../Assets/to-be-change/Rectangle 691.png'
 import vikingImage from '../../../Assets/to-be-change/viking.jpg'
@@ -12,30 +12,14 @@ import journeyImage from '../../../Assets/to-be-change/journey.jpg'
 
 // images for heading
 import HeroImage from '../../../Assets/to-be-change/hp-fourth_hero_mat_desktop_1b_3200x1388.png';
-import mobileViewImage from '../../../Assets/to-be-change/mobile-viewimg.png'
-import HelpCenterBanner from '../../Components/HelpCenterBAnner/HelpCenterBanner';
-
-import InspirationImage from '../../../Assets/images/Inspiration-Slider.jpg'
 import GetTheScop from '../../Components/GetTheScop/GetTheScop';
 import CustomerServicePanel from '../../Components/CustomerServicePanel/CustomerServicePanel';
-import Footer from '../../../Global-Components/Footer/Footer';
 import FurnitureProduct from '../../Components/FurnitureProducts/FurnitureProduct';
 import Slider from '../../../Global-Components/Slider/Slider';
 import Shopvia from '../../Components/ShopViaBanner/Shopvia';
 import AllStores from '../../Components/AllStoresLocation/AllStores';
 import BlogSlider from '../../Components/BlogSlider/BlogSlider';
 import NearStorePopUp from '../../Components/NearStorePopUp/NearStorePopUp';
-
-// Soda Banner Images
-import sodaBannerOne from '../../../Assets/to-be-change/soda-1.png'
-import sodaBannerTwo from '../../../Assets/to-be-change/soda-2.png';
-import sodaBanner from '../../../Assets/to-be-change/mobile-viewimg.png';
-
-// PayPal Images
-import payPalBannerOne from '../../../Assets/to-be-change/download 51.png'
-import payPalBannerTwo from '../../../Assets/to-be-change/download 52.png';
-import payPalMobileBanner from '../../../Assets/images/Group 382.png'
-import installmentBanner from '../../../Assets/to-be-change/New-Long-Financing-2048x160 1.png';
 
 // Category Images
 
@@ -62,7 +46,7 @@ const Home = () => {
         productImagePrice: '$999', productImageAbout: "Bob's everyday low price", 
         btnText: 'Shop Tuxedo', img : tuxedoChair, productLink: '#',
         para: `With smooth, comfy seating, built-in charging ports AND cupholders, 
-        my Tuxedo collection is dressed to impress!`
+        my Tuxedo collection is dressed to impress! the viking`
     },
     {   heading: 'Viking', btnText: 'Shop Viking', productImageHeading: 'Viking Power Reclining Sofa', 
         productImagePrice: '$999', productImageAbout: "Bob's everyday low price", img : vikingImage, 
@@ -92,13 +76,12 @@ const categoryCardData = [
   {title: "Outlet", img: Outlet, link: '#'},
 ]
 
-const name = "Rashid"
+ 
 
 
   return (
     <div className='home-page-main-container'>
       <NearStorePopUp />
-      <Haider />
       <Shopvia />
       <Slider />
       <ShipBanner />
@@ -108,19 +91,10 @@ const name = "Rashid"
       <ImageHeading img={HeroImage} alt={'bed image'} />
       <ProductSlider cardData={productCardData} />
       <ImageHeading img={HeroImage} alt={'bed image'} />
-      <ProductSlider cardData={productCardData} />
-      <ImageHeading img={HeroImage} alt={'hero'} />
-      <ProductSlider cardData={productCardData} />
-      <ImageHeading img={HeroImage} alt={'heor'} />
-      <ProductSlider cardData={productCardData} />
-      <ImageHeading img={HeroImage} alt={'hero'} />
-      <HelpCenterBanner />
-      {/* <ImageHeading img={InspirationImage} alt={'inspiration'}/> */}
-      <BlogSlider />
-      <AllStores />
       <GetTheScop />
+      <BlogSlider />
       <CustomerServicePanel />
-      <Footer />
+      <AllStores />
     </div>
   )
 }

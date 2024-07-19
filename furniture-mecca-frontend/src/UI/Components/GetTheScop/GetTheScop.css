@@ -117,8 +117,6 @@
     }
 }
 
-
-
 @media only screen and (max-width: 1100px){
     .get-the-scop-main-container{
         display: none;
@@ -184,11 +182,8 @@
         border-radius: 5px;
         background-color: #484F59;
         border: 1px solid #484F59;
-        color: white;
-        
+        color: white; 
     }
-
-
 }
 
 @media only screen and (max-width: 360px){

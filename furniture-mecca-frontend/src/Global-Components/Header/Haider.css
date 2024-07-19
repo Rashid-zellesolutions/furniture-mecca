@@ -392,11 +392,6 @@
     padding-left: 20px;
 }
 
-
-
-
-
-
 /* Promotional Banner Media Query */
 .promotion-banner-location{
     display: none;
@@ -455,8 +450,6 @@
     .on-tab-deliver-to span a{
         color: var(--text-color);
     }
-
-
 }
 
 @media only screen and (max-width: 359px){
@@ -464,7 +457,6 @@
         display: none;
     }
 }
-
 
 /* Main Haider Media Query */
 

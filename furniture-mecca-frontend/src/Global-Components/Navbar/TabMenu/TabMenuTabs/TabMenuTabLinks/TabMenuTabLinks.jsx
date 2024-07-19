@@ -1,12 +1,9 @@
 import React from 'react'
 import './TabMenuTabLinks.css'
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { FaChevronLeft } from "react-icons/fa6";
 
 const TabMenuTabLinks = ({name, closeSubMenuLinks, ind, innerInd, tabSublinksData}) => {
-  
-  // console.log("tab menu links", tabSublinksData[ind].furnitureSubData[innerInd].furnitureLinks[innerInd].name)
-  console.log("index of ", ind)
-  
+
   return (
     <div className='tab-sub-menu-links'>
       <div className={`sub-nav-header `}>

@@ -12,6 +12,7 @@ import mail from '../../Assets/icons/mail.png'
 import TabFooter from '../TabAndMobileFooter/TabFooter';
 import filledStart from '../../Assets/icons/Star 3.png';
 import unfilledStart from '../../Assets/icons/Star 5.png';
+import nearStore from '../../Assets/all-stores-location-images/venango-store.jpg';
 
 const Footer = () => {
 
@@ -221,6 +222,13 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='footer-customer-care-and-about-furniture-mecca'>
+                    <div className='footer-nearby-store'>
+                        <h3>Nearest Store</h3>
+                        <div className='nearby-store-image'>
+                            <p>101 E. Venango st, Philadelphi</p>
+                            <img src={nearStore} alt='img' />
+                        </div>
+                    </div>
                     {footerCustomerCareAndAbout.map((items, index) => {
                         return <div key={index} className='footer-care-and-about'>
                             <h3>{items.heading}</h3>

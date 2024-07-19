@@ -6,14 +6,12 @@ import imageThree from '../../../Assets/global-images/Ian-bedroom-set.webp';
 
 const BestSallerSlider = () => {
 
-    const sliderImagesOne = [
-        imageOne,
-        imageTwo,
-        imageThree
-    ]
-
-    const [currentIndex, setCurrentIndex] = useState(0);
-
+  const sliderImagesOne = [
+    imageOne,
+    imageTwo,
+    imageThree
+  ]
+  const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % sliderImagesOne.length);

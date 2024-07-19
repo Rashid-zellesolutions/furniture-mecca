@@ -13,8 +13,6 @@
 }
 
 .near-store-pop-up.show{
-    /* display: flex; */
-    /* width: 100%; */
     visibility: visible;
     opacity: 1;
     transition: all 0.3s ease-in-out;
@@ -43,7 +41,6 @@
 }
 
 .pop-up-header{
-    /* background-color: rgb(247, 247, 247); */
     background-color: #F0F0F0;
     display: flex;
     flex-direction: column;
@@ -55,7 +52,6 @@
     justify-content: center;
     padding: 10px 15px;
     color: var(--text-color);
-    /* gap: 15px; */
 }
 
 .pop-up-header span{
@@ -108,7 +104,6 @@
     font-size: 16px;
     line-height: 24px;
     font-family: var(--work-sans-font);
-    /* font-weight: 600; */
 }
 
 .pop-up-header-search img{
@@ -232,7 +227,6 @@
 .pop-up-complete-address{
     display: flex;
     flex-direction: column;
-    /* width: 200px; */
     color: var(--text-color);
     padding: 10px 0 0 50px;
 }

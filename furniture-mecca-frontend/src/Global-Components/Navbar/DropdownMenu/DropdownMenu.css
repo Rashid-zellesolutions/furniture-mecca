@@ -1,8 +1,7 @@
 .mattresses-main-div{
     display: flex;
-    /* width: 100%; */
-    /* align-items: center; */
     justify-content: center;
+    /* align-items: center; */
     padding: 50px 40px 50px 80px;
     gap: 15px;
     background-color: var(--bg-color);
@@ -27,8 +26,6 @@
     padding-left: 20px;
     padding-bottom: 15px;
     color: var(--text-color);
-
-
 }
 
 .living-room-heading::before {
@@ -37,9 +34,9 @@
     left: 0;
     top: 25%;
     transform: translateY(-50%);
-    width: 10px; /* Width of the rectangle */
-    height: 10px; /* Height of the rectangle */
-    background-color: var(--text-color); /* Color of the rectangle */
+    width: 10px; 
+    height: 10px; 
+    background-color: var(--text-color); 
 }
 
 .mattresses-links-div{
@@ -97,15 +94,15 @@
 
 .image-title a{
     color: var(--text-color);
-    font-size: 13px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 21.6px;
     font-weight: 700;
 }
 .price{
     color: var(--text-color);
-    font-size: 13px;
-    line-height: 14.52px;
-    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.8px;
+    font-weight: 700;
 }
 
 @media only screen and (max-width: 1300px){
@@ -143,8 +140,6 @@
     .image-title{
         color: var(--text-color);
         font-size: 10px;
-        /* line-height: 22px;
-        font-weight: 700; */
     }
     .price{
         color: var(--text-color);

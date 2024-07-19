@@ -1,11 +1,10 @@
 import './App.css';
 import './index.css';
-import { BrowserRouter, Routes, Route  } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
 import Categories from './UI/Pages/Categories/Categories';
 import Home from './UI/Pages/Home/Home';
+import { IoIosArrowDropup } from "react-icons/io";
 
-import paypalOneBanner from './Assets/to-be-change/download 51.png'
-import paypalTwoBanner from './Assets/to-be-change/download 52.png'
 import diningRoomMainImage from './Assets/images/Dining-Room-Desk-1 1.png'
 import bedroomMainImage from './Assets/images/Bedroom-Desk-1.jpg'
 
@@ -22,6 +21,8 @@ import KidsRoom from './Assets/to-be-change/kids-room.png';
 import AreaRugs from './Assets/to-be-change/area-rugs.png';
 import HomeDecor from './Assets/to-be-change/home-decor.png';
 import Outlet from './Assets/to-be-change/outlet.png';
+import Haider from './Global-Components/Header/Haider';
+import Footer from './Global-Components/Footer/Footer';
 
 
 function App() {
@@ -41,16 +42,34 @@ function App() {
     {title: "Outlet", img: Outlet, link: '#'},
   ]
 
+  const handleClickTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route exact path='/' element={<Home />} />
-        <Route path='/dining-room' element={<Categories categoriesMainImage={diningRoomMainImage} 
-          categoryCardData={categoryCardData} newArrival={true} />} />
-        <Route path='/bedroom' element={<Categories categoriesMainImage={bedroomMainImage} 
-          categoryCardData={categoryCardData} newArrival={false} />} />
-      </Routes>
-    </BrowserRouter>
+    <Router>
+      <div>
+        <Haider />
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route 
+            path='/dining-room' 
+            element={<Categories categoriesMainImage={diningRoomMainImage} categoryCardData={categoryCardData} newArrival={true} />} 
+          />
+          <Route 
+            path='/bedroom' 
+            element={<Categories categoriesMainImage={bedroomMainImage} categoryCardData={categoryCardData} newArrival={false} />} 
+          />
+        </Routes>
+        <Footer />
+        <button onClick={handleClickTop} className='scroll-to-top-button'>
+          <IoIosArrowDropup size={30} />
+        </button>
+      </div>
+    </Router>
   );
 }
 

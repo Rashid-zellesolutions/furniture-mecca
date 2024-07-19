@@ -26,9 +26,7 @@
 
 .new-arrival-cards{
     display: flex;
-    /* display: grid; */
     flex: 0 0 35.33%;
-    /* grid-template-columns: repeat(3, 1fr); */
     width: 100%;
     gap: 10px;
     padding: 10px 0;
@@ -64,14 +62,11 @@
     font-weight: 700;
     color: white;
     left: 10px;
-    /* transform: translateY(100%); */
 }
 
 .title-and-price{
     position: absolute;
-    /* bottom: 10%; */
     bottom: 0;
-    /* transform: translateY(100%); */
     display: flex;
     width: 100%;
     background: rgb(0, 0, 0, 0.5);

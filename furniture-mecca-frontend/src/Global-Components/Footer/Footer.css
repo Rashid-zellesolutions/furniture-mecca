@@ -105,8 +105,6 @@
     gap: 20px;
     margin-top: 20px;
     cursor: pointer;
-    /* padding: 0px 0px 20px 0px; */
-    
 }
 
 .icon-and-name img{
@@ -128,9 +126,59 @@
 
 .footer-customer-care-and-about-furniture-mecca{
     display: flex;
-    width: 40%;
+    width: 70%;
     justify-content: space-between;
+    padding-left: 20px;
 
+}
+
+.footer-nearby-store{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nearby-store h3{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
+    color: var(--footer-nav-heading);
+    margin-bottom: 20px;
+
+}
+
+.nearby-store-image{
+    position: relative;
+    width: 180px;
+    height: 180px;
+}
+
+.nearby-store-image::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    z-index: 1;
+}
+
+
+.nearby-store-image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.nearby-store-image p{
+    position: absolute;
+    top: 70%;
+    z-index: 2;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: center;
 }
 
 .footer-care-and-about{
@@ -139,11 +187,11 @@
 }
 
 .footer-care-and-about h3{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 30px;
-    color: white;
-    padding: 0 0 15px 0;
+    color: var(--footer-nav-heading);
+    margin-bottom: 20px;
 }
 
 .footer-care-and-about-links{

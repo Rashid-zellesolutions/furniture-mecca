@@ -13,7 +13,6 @@
     width: 100%;
 }
 
-
 .soda-image{
     width: 50%;
     cursor: pointer;
@@ -27,8 +26,6 @@
 .mobile-view-financing-banner{
     display: none;
 }
-
-
 
 .financing-banner{
     display: flex;

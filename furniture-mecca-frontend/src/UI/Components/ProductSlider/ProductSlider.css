@@ -1,7 +1,23 @@
 .products-slider-main-container{
     display: flex;
+    flex-direction: column;
+    gap: 15px;
     width: 100%;
     padding: 60px 100px;
+}
+
+.feature-product-heading{
+    color: var(--text-color);
+    font-family: var(--work-sans-font);
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 1200px){
+    .products-slider-main-container{
+        padding: 20px 30px;
+    }
 }
 
 .products-slider{

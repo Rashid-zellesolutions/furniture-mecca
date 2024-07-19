@@ -3,11 +3,9 @@ import './LatestModulerBanner.css';
 import SodaBannerOne from '../../../Assets/to-be-change/soda-1.png';
 import SodaBannerTwo from '../../../Assets/to-be-change/soda-2.png';
 import SodaMobileViewBanner from '../../../Assets/images/Rectangle 679.png'
-import mobileViewBanner from '../../../Assets/to-be-change/mobile-viewimg.png'
 import PaypalBannerOne from '../../../Assets/to-be-change/download 51.png';
 import PaypalBannerTwo from '../../../Assets/to-be-change/download 52.png';
 import MobileViewPaypalBanner from '../../../Assets/images/Group 382.png';
-import PaymentMethodBanner from '../../Components/PaypalBanner/PaymentMethodBanner';
 import installmentBanner from '../../../Assets/to-be-change/New-Long-Financing-2048x160 1.png';
 import fullBed from '../../../Assets/to-be-change/hp-fourth_hero_mat_desktop_1b_3200x1388.png';
 import mobileViewFullBed from '../../../Assets/images/Rectangle 703.png'

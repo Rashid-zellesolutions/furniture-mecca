@@ -51,13 +51,11 @@ const BlogSlider = () => {
                 onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
                     {infiniteSliderData.map((item, index) => (
                         <a href={item.link} className='blog-card' key={index}>
-                            {/* <div > */}
-                                <img src={item.img} alt='blog img' />
-                                <div className='blog-para-and-category'>
-                                    <p>{item.para}</p>
-                                    <span>{item.category}</span>
-                                </div>
-                            {/* </div> */}
+                            <img src={item.img} alt='blog img' />
+                            <div className='blog-para-and-category'>
+                                <p>{item.para}</p>
+                                <span>{item.category}</span>
+                            </div>
                         </a>
                     ))}
                 </div>

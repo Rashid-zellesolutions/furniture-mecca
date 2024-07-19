@@ -27,8 +27,6 @@
     transition: all 0.3s ease-in-out;
 }
 
-
-
 .first-section-show.hide{
     opacity: 0;
     visibility: hidden;
@@ -54,12 +52,6 @@
     width: 150px;
     height: 120px;
 }
-
-.first-section-heading
-
-
-
-
 
 .footer-first-section-containt{
     display: flex;
@@ -87,6 +79,7 @@
     justify-content: end;
     cursor: pointer;
 }
+
 .hide-on-large{
     display: none;
 }
@@ -159,7 +152,6 @@
     font-size: 22px;
     font-weight: 600;
     line-height: 32px;
-    /* font-family: var(--work-sans-font); */
 }
 
 @media only screen and (max-width: 330px){
@@ -251,8 +243,6 @@
     transition: all 0.3s ease-in-out;
 }
 
-
-
 .first-section-containt{
     display: flex;
     visibility: hidden;
@@ -287,9 +277,59 @@
 .footer-links{
     display: flex;
     justify-content: end;
-    width: 100%;
+    width: 70%;
     gap: 20px;
 }
+
+.footer-nearby-store{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nearby-store h3{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
+    color: var(--footer-nav-heading);
+    margin-bottom: 20px;
+
+}
+
+.nearby-store-image{
+    position: relative;
+    width: 180px;
+    height: 180px;
+}
+
+.nearby-store-image::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    z-index: 1;
+}
+
+
+.nearby-store-image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.nearby-store-image p{
+    position: absolute;
+    top: 70%;
+    z-index: 2;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: center;
+}
+
 
 .footer-links-containt{
     display: flex;
@@ -326,13 +366,19 @@
     }
 }
 
+/* Footer poster div */
+
 .mobile-view-footer-poster-div{
     display: flex;
-    width: 100%;
     padding: 20px;
     background-color: black;
     border-radius: 5px;
-    gap: 20px;
+    gap: 10px;
+}
+
+.footer-banner-img{
+    width: 120px;
+    height: 120px;
 }
 
 .mobile-view-banner-containt{
@@ -345,8 +391,8 @@
 .mobile-view-banner-containt h3{
     color: white;
     font-family: var(--work-sans-font);
-    font-size: 1.5rem;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 22px;
 }
 
 .rating-span{
@@ -356,16 +402,14 @@
 }
 
 .rating-span img{
-    width: 20px;
-    height: 20px;
-    /* margin-top: 20px; */
+    width: 10px;
+    height: 10px;
 }
 
 
 .mobile-view-banner-containt p{
     color: white;
     font-family: var(--work-sans-font);
-    /* margin-top: 20px; */
     font-size: 18px;
     
 }
@@ -381,19 +425,18 @@
     .mobile-view-banner-containt h3{
         color: white;
         font-family: var(--work-sans-font);
-        font-size: 1.5rem;
-        line-height: 32px;
+        font-size: 16px;
+        line-height:18px;
     }
     .rating-span img{
-        width: 15px;
-        height: 15px;
+        width: 10px;
+        height: 10px;
     }
-    
     
     .mobile-view-banner-containt p{
         color: white;
         font-family: var(--work-sans-font);
-        font-size: 15px;
+        font-size: 12px;
         
     }
 }
@@ -418,12 +461,10 @@
         height: 10px;
     }
     
-    
     .mobile-view-banner-containt p{
         color: white;
         font-family: var(--work-sans-font);
         font-size: 13px;
-        
     }
 
     .mobile-view-banner-containt{
@@ -473,7 +514,6 @@
     font-size: 13px;
     font-weight: 400;
     line-height: 14px;
-    /* letter-spacing: 1px; */
     font-family: var(--work-sans-font);
 }
 
@@ -502,7 +542,6 @@
         justify-content: center;
         padding: 40px 0px !important;
     }
-    
 }
 
 .mobile-view-footer-social-icons img{
@@ -546,7 +585,6 @@
 .mobile-view-right-reserved a{
     color: white;
     text-decoration: none;
-    /* font-size: 13px; */
 }
 
 @media only screen and (max-width: 555px){
@@ -574,16 +612,13 @@
     .rating-span img{
         width: 20px;
         height: 20px;
-        /* margin-top: 20px; */
     }
     
     
     .mobile-view-banner-containt p{
         color: white;
         font-family: var(--work-sans-font);
-        /* margin-top: 20px; */
-        font-size: 18px;
-        
+        font-size: 18px;   
     }
 }
 
@@ -591,6 +626,7 @@
     .mobile-view-footer-poster-div img{
         width: 80px;
     }
+
     .mobile-view-banner-containt h3{
         color: white;
         font-family: var(--work-sans-font);
@@ -607,16 +643,12 @@
     .rating-span img{
         width: 20px;
         height: 20px;
-        /* margin-top: 20px; */
     }
-    
     
     .mobile-view-banner-containt p{
         color: white;
         font-family: var(--work-sans-font);
-        /* margin-top: 20px; */
         font-size: 14px;
-        
     }
 }
 

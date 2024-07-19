@@ -29,8 +29,18 @@
     transition: transform 0.3s ease-in-out;
 }
 
+.slider-inner-div{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
 .slider-one .my-slides {
-    flex: 0 0 100%; /* Each slide takes full container height */
+    width: 100%;
+    height: 250px;
+    flex: 0 0 250px; /* Each slide takes full container height */
 }
 
 .slider-one img {

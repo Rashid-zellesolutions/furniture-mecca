@@ -22,7 +22,7 @@ const GetTheScop = () => {
           </div>
         </div>
         <div className='get-the-scop-banner'>
-          <img src={banner} alt="banner" />
+            <img src={banner} alt="banner" />
         </div>
       </div>
       <div className='mobile-view-scop-main-container'>

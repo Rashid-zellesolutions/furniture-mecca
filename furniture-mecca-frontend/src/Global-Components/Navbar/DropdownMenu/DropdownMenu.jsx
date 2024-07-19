@@ -2,14 +2,12 @@ import React, { useState } from 'react'
 import './DropdownMenu.css';
 
 
-const DropdownMenu = ({navHeading, dropDownNavData, dropDownNavImages }) => {
-    // const [isActive, setIsActive] = useState(false);
+const DropdownMenu = ({navHeading, dropDownNavData}) => {
     const [activeIndex, setActiveIndex] = useState(null);
     const [outerIndex, setOuterIndex] = useState(null)
     const [innerIndex, setInnerIndex] = useState(null)
     const handleActiveIndex = (index) => {
         setActiveIndex(index);
-        // setIsActive(!isActive);
     }
 
     const handleAccentActiveItems = (i, index) => {

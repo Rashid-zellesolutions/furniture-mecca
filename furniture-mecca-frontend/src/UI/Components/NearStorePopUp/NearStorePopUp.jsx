@@ -8,8 +8,6 @@ import AddBtn from '../../../Assets/icons/add-icon.png';
 import { MdOutlineStars } from "react-icons/md";
 
 const NearStorePopUp = ({isOpen, setIsOpen}) => {
-    // const [issideOpen, setIsSideOpen] = useState(isOpen)
-    const [storeOpen, setStoreOpen] = useState(false)
     const [storeOpenIndex, setOpenStoreIndex] = useState(-1);
     const handleStoreHoursDetails = (index) => {
         setOpenStoreIndex(storeOpenIndex === index ? -1 : index)
@@ -209,39 +207,7 @@ const NearStorePopUp = ({isOpen, setIsOpen}) => {
                 </div>
             </div>
                 })}
-                {/* <div className={`pop-up-city-and-distance ${storeOpen ? 'rotate-btn' : ''}`}>
-                    <span>
-                        <img src={AddBtn} alt='add' onClick={handleStoreHoursDetails} />
-                        <h3>{city}</h3>
-                    </span>
-                    <p> {miles} </p>
-                </div> */}
-                {/* <div className='pop-up-store-open-time'>
-                    <p>{openUntil}</p>
-                    <span>
-                        {openUntilIcon}
-                    </span>
-                </div>
-                <div className='pop-up-complete-address'>
-                    <p>{address}</p>
-                    <p>{addressCity}</p>
-                    <p><span>Call</span> {call}</p>
-                    <a href={outletLink}>{outlet}</a>
-                    <a href={directionLink}>{direction}</a> 
-                </div>
-                <div className={`pop-up-store-open-days-and-time ${storeOpen ? 'open-store' : ''}`}>
-                    <a href={appointmentLink}>{appointment}</a>
-                    <div className='store-hours-detail'>
-                        <p>{openHours}</p>
-                        <div className='store-hours'>
-                        {hours && hours.map((hoursItem, index) => {
-                            return <p> <span>{hoursItem.day}</span> <span>{hoursItem.time}</span> </p>
-                        })}
-                        </div>
-                        <a href={virtualTourLink}>{virtualTour}</a>
-                        <a href={storeDetailsLink}>{storeDetails}</a>
-                    </div>
-                </div> */}
+                
             </div>
         </div>
     </div>
@@ -249,5 +215,3 @@ const NearStorePopUp = ({isOpen, setIsOpen}) => {
 }
 
 export default NearStorePopUp
-
-{/* <button onClick={() => setIsOpen(!isOpen)}>close</button> */}

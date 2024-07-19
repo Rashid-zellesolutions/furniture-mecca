@@ -44,8 +44,6 @@ const AllStores = () => {
         setModalIndex(index);
         setCardClicked(true)
       }
-      // setModalIndex(index);
-      // setCardClicked(true);
     }
     const closeModal = () => {
       console.log('Closing modal');

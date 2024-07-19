@@ -22,24 +22,19 @@
     font-weight: 600;
     line-height: 19.2px;
     letter-spacing: 1.6px;
-    border-bottom: 3px solid white;
     padding: 0 10px;
 }
 
 .nav-link{
     text-decoration: none;
-    color: var(--text-color);
+    /* color: var(--text-color); */
+    color: #484F59;
     position: relative;
 }
 
 .nav-item.nav-item.active .nav-link{
     color: var(--active-nav-item-color);
 }
-
-.nav-item:hover{
-    border-bottom: 3px solid var(--active-nav-item-color);
-}
-
 
 /* Mobile Navbar CSS */
 
@@ -60,13 +55,24 @@
     margin-top: 15px;
     left: 0;
     width: 100%;
-    transition: all 0.3s ease-in-out;
     background-color: var(--bg-color);
     z-index: 2222222;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    opacity: 0;
+    animation: fade-in 1s forwards;
 }
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 /* Desktop Responsiveness */
 @media only screen and (max-width: 1300px){

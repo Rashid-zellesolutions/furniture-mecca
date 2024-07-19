@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './TabFooter.css';
 import redFurnitureMecca from '../../Assets/global-images/furniture-mecca-red.jpeg'
+import nearStore from '../../Assets/all-stores-location-images/venango-store.jpg'
 import filledStar from '../../Assets/icons/Star 3.png';
 import unFilledStart from '../../Assets/icons/Star 5.png';
 import locationIcon from '../../Assets/icons/location.png'
@@ -13,6 +14,8 @@ import youtubeIcon from '../../Assets/icons/youtube.png';
 import instaIcon from '../../Assets/icons/instagram.png';
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import addBtn from '../../Assets/icons/add-icon.png';
+
+
 
 const TabFooter = () => {
 
@@ -116,6 +119,13 @@ const TabFooter = () => {
                     </div>
                 </div>
                 <div className={`footer-links`}>
+                    <div className='footer-nearby-store'>
+                        <h3>Nearest Store</h3>
+                        <div className='nearby-store-image'>
+                            <p>101 E. Venango st, Philadelphi</p>
+                            <img src={nearStore} alt='img' />
+                        </div>
+                    </div>
                     <div className='footer-links-containt'>
                         <h3>Customer Care</h3>
                             <a href='#'>Contact Us</a>
