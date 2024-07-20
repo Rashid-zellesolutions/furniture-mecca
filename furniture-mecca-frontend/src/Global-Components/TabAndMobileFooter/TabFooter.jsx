@@ -37,11 +37,32 @@ const TabFooter = () => {
 
     ]
 
+    const customerCare = [
+        {item: 'Contact Us', link: '#'},
+        {item: 'Financing', link: '#'},
+        {item: 'Shipping & Delivery', link: '#'},
+        {item: 'Terms & Conditions', link: '#'},
+    ]
+
+    const aboutUs = [
+        {item: 'About Us', link: '#'},
+        {item: 'Careers', link: '#'},
+        {item: 'Store Locator', link: '#'},
+        {item: 'Reviews', link: '#'},
+        {item: 'My Account', link: '#'},
+    ]
+
     const socialIcons = [
-        {socialIcon: facebookIcon},
-        {socialIcon: tiktokIcon},
-        {socialIcon: youtubeIcon},
-        {socialIcon: instaIcon},
+        {socialIcon: facebookIcon, socialLink: '#'},
+        {socialIcon: tiktokIcon, socialLink: '#'},
+        {socialIcon: youtubeIcon, socialLink: '#'},
+        {socialIcon: instaIcon, socialLink: '#'},
+    ]
+
+    const contactData = [
+        {icon: locationIcon, title: 'Philadelphia', link: '#'},
+        {icon: callIcon, title: '215 352 1600', link: '#'},
+        {icon: mailIcon, title: 'meccacustomercare@gmail.com', link: '#'}
     ]
 
     const handleDetailsToggle = () => {
@@ -105,7 +126,79 @@ const TabFooter = () => {
             </div>
         </div>
         <div className='footer-second-section'>
-            <div className='footer-rating-and-links'>
+            <div className='footer-banner-and-links'>
+                <div className='social-icon-and-banner'>
+                    <div className='footer-social-icons'>
+                        {socialIcons.map((item, index) => {
+                            return <a key={index} href={item.socialLink}>
+                                <img src={item.socialIcon} alt="icon" />
+                            </a>
+                        })}
+                    </div>
+                    <div className='footer-banner'>
+                        <img src={redFurnitureMecca} alt='img' className='company-name-image' />
+                        <div className='banner-content'>
+                            <h3>Furniture Mecca</h3>
+                            <div className='rating-starts-container'>
+                                {stars.map((item, index) => {
+                                    return <img src={item.icon} alt='start' />
+                                })}
+                            </div>
+                            <p>847 Google Reviews</p>
+                        </div>
+                    </div>
+                    <div className='contact-container'>
+                        {contactData.map((item, index) => {
+                            return <span key={index}>
+                                <img src={item.icon} alt='img' />
+                                <a href={item.link}>{item.title}</a>
+                            </span>
+                        })}
+                    </div>
+                </div>
+                <div className='footer-about-and-contact-links'>
+                    <div className='footer-nearby-store'>
+                        <h3>Nearest Store</h3>
+                        <div className='nearby-store-image'>
+                            <p>101 E. Venango st, Philadelphi</p>
+                            <img src={nearStore} alt='img' />
+                        </div>
+                    </div>
+                    <div className='footer-customer-care'>
+                        <h3>Customer Care</h3>
+                        <div className='customer-care-links'>
+                            {customerCare.map((item, index) => {
+                                return <a key={index} href={item.link}>{item.item}</a>
+                            })}
+                        </div>
+                    </div>
+                    <div className='footer-customer-care'>
+                        <h3>About Furniture Mecca</h3>
+                        <div className='customer-care-links'>
+                            {aboutUs.map((item, index) => {
+                                return <a key={index} href={item.link}>{item.item}</a>
+                            })}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='terms-and-rights'>
+                <p>
+                © 2020 - 2024 Furniture Mecca. All Rights Reserved.
+                </p>
+                <p> Designed & Managed By <a href='#'>Zelle Solutions</a></p>
+            </div>
+            <div className='mobile-view-terms-and-rights'>
+                <div className='ship-and-terms'>
+                    <p>Shipping & Delivery</p>
+                    <p>Terms & Condition</p>
+                </div>
+                <p>Designed & maintained by</p>
+                <a href='#'>Zelle Solutions</a>
+            </div>
+
+            {/* <div className='footer-rating-and-links'>
+
                 <div className='mobile-view-footer-poster-div'>
                     <img src={redFurnitureMecca} alt="img" className='footer-banner-img' />
                     <div className='mobile-view-banner-containt'>
@@ -118,6 +211,7 @@ const TabFooter = () => {
                         <p>847 Google Reviews</p>
                     </div>
                 </div>
+
                 <div className={`footer-links`}>
                     <div className='footer-nearby-store'>
                         <h3>Nearest Store</h3>
@@ -142,24 +236,27 @@ const TabFooter = () => {
                             <a href='#'>My Account</a>
                     </div>
                 </div>
-            </div>
-                <div className='mobile-view-footer-contact-section'>
+            </div> */}
+
+                {/* <div className='mobile-view-footer-contact-section'>
                     <span> <img src={locationIcon} alt="location" /> <a href='#'>Philadelphia</a> </span>
                     <span> <img src={callIcon} alt="location" /> <a href='#'>215 352 1600</a> </span>
                     <span> <img src={mailIcon} alt="location" /> <a href='#'>meccacustomercare@gamil.com</a> </span>
-                </div>
-                <div className='mobile-view-footer-social-icons'>
+                </div> */}
+
+                {/* <div className='mobile-view-footer-social-icons'>
                     {socialIcons.map((item, i) => {
                         return <img src={item.socialIcon} alt='social icon' />
                     })}
-                </div>
-                <div className='mobile-view-footer-copy-rights'>
+                </div> */}
+
+                {/* <div className='mobile-view-footer-copy-rights'>
                     <div className='mobile-view-term-and-shiping'>
                         <p> <a href='#'> Shiping & Delivey </a></p>
                         <p> <a href='#'>Terms & Conditions </a></p>
                     </div>
                     <p className='mobile-view-right-reserved'>Designed & maintained by <br /> <a href='#'> Zelle Solutions </a></p>
-                </div>
+                </div> */}
         </div>
     </div>
   )

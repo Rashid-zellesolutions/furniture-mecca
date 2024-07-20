@@ -188,9 +188,9 @@
 }
 
 .header-icons-container img:nth-child(1){
-    width: 22px;
-    height: 22px;
-    margin-top: 8px;
+    width: 23px;
+    height: 23px;
+    margin-top: 5px;
     cursor: pointer;
 }
 
@@ -198,12 +198,14 @@
     width: 31px;
     height: 27px;
     cursor: pointer;
+    
 }
 
 .header-icons-container img:nth-child(3){
     width: 24px;
     height: 24px;
     cursor: pointer;
+    margin-top: 2px;
 }
 
 .header-nav-container{

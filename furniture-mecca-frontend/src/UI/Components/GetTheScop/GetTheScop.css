@@ -2,7 +2,8 @@
     margin-top: 40px;
     display: flex;
     width: 100%;
-    height: 100vh;
+    /* height: 100dvh; */
+    padding: 50px 0;
     background-image: url('../../../Assets/to-be-change/bb\ 1.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -91,10 +92,12 @@
 .get-the-scop-banner{
     width: 50%;
     display: flex;
+    flex-direction: column;
     /* padding: 30px 30px; */
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: relative;
 }
 
 .get-the-scop-banner img{
@@ -103,6 +106,48 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    z-index: 1;
+    position: relative;
+}
+
+.get-the-scop-banner button{
+    background-color: var(--button-color);
+    bottom: 5%;
+    z-index: 2;
+    position: absolute;
+    font-family: var(--work-sans-font);
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: white;
+    padding: 12px 27px;
+    border-radius: 5px;
+    border: 2px solid white;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 1300px){
+    .get-the-scop-banner button{
+        bottom: 7%;
+    }
+}
+
+.get-the-scop-banner button a{
+    color: white;
+    text-decoration: none;
+}
+
+.get-the-scop-banner button:hover{
+    background-color: white;
+    border: 2px solid var(--button-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.get-the-scop-banner button:hover a{
+    color: var(--button-color);
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
 }
 
 .mobile-view-scop-main-container{

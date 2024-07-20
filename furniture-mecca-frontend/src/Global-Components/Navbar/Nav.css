@@ -32,6 +32,14 @@
     position: relative;
 }
 
+.nav-item:nth-child(8) .nav-link {
+    color: var(--active-nav-item-color);
+}
+
+.nav-item:nth-child(9) .nav-link{
+    color: #005cc5;
+}
+
 .nav-item.nav-item.active .nav-link{
     color: var(--active-nav-item-color);
 }

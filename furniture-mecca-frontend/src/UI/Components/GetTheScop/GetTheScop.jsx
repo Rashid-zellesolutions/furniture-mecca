@@ -1,6 +1,6 @@
 import React from 'react'
 import './GetTheScop.css';
-import banner from '../../../Assets/to-be-change/Screenshot 2024-06-22 101700 3.png'
+import banner from '../../../Assets/global-images/flyre-image.jpg'
 
 const GetTheScop = () => {
   return (
@@ -23,6 +23,7 @@ const GetTheScop = () => {
         </div>
         <div className='get-the-scop-banner'>
             <img src={banner} alt="banner" />
+            <button> <a href='#'> Click To See FLyer </a> </button>
         </div>
       </div>
       <div className='mobile-view-scop-main-container'>
