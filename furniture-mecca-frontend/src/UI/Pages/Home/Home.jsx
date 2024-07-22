@@ -90,7 +90,7 @@ const categoryCardData = [
       <FurnitureProduct />
       <ImageHeading img={HeroImage} alt={'bed image'} />
       <ProductSlider cardData={productCardData} />
-      <ImageHeading img={HeroImage} alt={'bed image'} />
+      {/* <ImageHeading img={HeroImage} alt={'bed image'} /> */}
       <GetTheScop />
       <BlogSlider />
       <CustomerServicePanel />

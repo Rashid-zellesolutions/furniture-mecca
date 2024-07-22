@@ -82,7 +82,7 @@ const Nav = ({navLinks}) => {
         {
             heading: 'Dining Room', link: '/dining-room',
             links: [
-                {name: 'Dining Room Sets', link: '#'},
+                {name: 'Dining Room Sets', link: '/dining-room-sets'},
                 {name: 'Pub Heights Dining Sets', link: '#'},
                 {name: 'Dining Chairs & Benches', link: '#'},
                 {name: 'Dining Tables', link: '#'},

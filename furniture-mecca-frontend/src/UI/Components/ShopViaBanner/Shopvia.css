@@ -3,7 +3,7 @@
     width: 100%;
     align-items: center;
     background-color: var(--banner-bg-color);
-    padding: 18px 10px;
+    padding: 10px 10px;
 }
 
 .close{
@@ -18,7 +18,7 @@
 }
 
 .shop-via-banner span{
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
     width: 100%;
     display: flex;
@@ -32,5 +32,10 @@
 .shop-via-banner span a{
     color: var(--text-color);
     font-weight: 600;
+}
+
+.shop-via-banner img{
+    width: 15px; 
+    height: 15px;
 }
 

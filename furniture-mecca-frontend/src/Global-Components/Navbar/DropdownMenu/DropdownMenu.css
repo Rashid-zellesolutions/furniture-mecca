@@ -83,14 +83,14 @@
 .mattress-image img{
     width: 280px;
     height: 180px;
-    transition: all 0.5s ease-in-out;
+    /* transition: all 0.5s ease-in-out; */
     cursor: pointer;
 }
 
-.mattress-image img:hover{
+/* .mattress-image img:hover{
     transform: scale(1.1);
 
-}
+} */
 
 .image-title a{
     color: var(--text-color);

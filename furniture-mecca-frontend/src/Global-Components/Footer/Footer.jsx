@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Footer.css';
 import FooterNav from './FooterNav/FooterNav';
 import footerRedFurnitureMecca from '../../Assets/global-images/furniture-mecca-red.jpeg'
@@ -13,6 +13,13 @@ import TabFooter from '../TabAndMobileFooter/TabFooter';
 import filledStart from '../../Assets/icons/Star 3.png';
 import unfilledStart from '../../Assets/icons/Star 5.png';
 import nearStore from '../../Assets/all-stores-location-images/venango-store.jpg';
+import { MdOutlineLocationOn } from "react-icons/md";
+import { WiTime4 } from "react-icons/wi";
+import { CiCalendarDate } from "react-icons/ci";
+import { FiPhoneCall } from "react-icons/fi";
+
+import { FaRegCalendarPlus } from "react-icons/fa";
+import NearStorePopUp from '../../UI/Components/NearStorePopUp/NearStorePopUp';
 
 const Footer = () => {
 
@@ -224,10 +231,37 @@ const Footer = () => {
                 <div className='footer-customer-care-and-about-furniture-mecca'>
                     <div className='footer-nearby-store'>
                         <h3>Nearest Store</h3>
+                        <div className='nearby-store-details'>
+                            <img src={nearStore} alt='img' />
+                        </div>
+                            <div className='nearby-store-adress'>
+                                <span>
+                                    <MdOutlineLocationOn size={20} />
+                                    <p>E Venango St, Philadelphia, PA 19134 <br /> Philadelphia, Pennsylvania, 101</p>
+                                </span>
+                                <span>
+                                    <FiPhoneCall  size={15} />
+                                    <p> 267 639 6801</p>
+                                </span>
+                                <span>
+                                    <WiTime4 size={20} />
+                                    <p>9:30 AM - 6:30 PM</p>
+                                </span>
+                                <span>
+                                    <CiCalendarDate size={20} />
+                                    <p>Monday - Sunday</p>
+                                </span>
+                                <div>
+                                    <p>Outlet</p>
+                                    <a href='#'>Direction</a>
+                                    <a href='#'>Book an Appointment</a>
+                                </div>
+                            </div>
+                        {/* <h3>Nearest Store</h3>
                         <div className='nearby-store-image'>
                             <p>101 E. Venango st, Philadelphi</p>
                             <img src={nearStore} alt='img' />
-                        </div>
+                        </div> */}
                     </div>
                     {footerCustomerCareAndAbout.map((items, index) => {
                         return <div key={index} className='footer-care-and-about'>

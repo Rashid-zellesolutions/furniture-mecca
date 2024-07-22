@@ -4,6 +4,7 @@
     gap: 15px;
     width: 100%;
     padding: 60px 100px;
+    overflow: hidden;
 }
 
 .feature-product-heading{
@@ -27,11 +28,18 @@
     overflow-x: auto;
     overflow-y: hidden;
     gap: 20px;
+    cursor: grab;
+    transition: all 0.3s ease-in-out;
+}
+
+.products-slider.dragging {
+    transition: none;
+    cursor: grabbing;
 }
 
 /* Custom scrollbar styling for Webkit browsers */
 .products-slider::-webkit-scrollbar {
-    height: 8px; 
+    height: 4px; 
 }
 
 .products-slider::-webkit-scrollbar-track {

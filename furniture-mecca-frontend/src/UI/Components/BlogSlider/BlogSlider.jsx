@@ -50,13 +50,15 @@ const BlogSlider = () => {
                 <div className='blog-slider' style={{transform: `translateX(-${currentIndex * 37}%)`}}
                 onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
                     {infiniteSliderData.map((item, index) => (
-                        <a href={item.link} className='blog-card' key={index}>
-                            <img src={item.img} alt='blog img' />
+                        <div className='blog-card'>
+                            <a href={item.link} className='blog-card-img' key={index}>
+                                <img src={item.img} alt='blog img' />
+                            </a>
                             <div className='blog-para-and-category'>
                                 <p>{item.para}</p>
                                 <span>{item.category}</span>
                             </div>
-                        </a>
+                        </div>
                     ))}
                 </div>
                 <button className='blog-slider-arrow right' onClick={handleNext}>

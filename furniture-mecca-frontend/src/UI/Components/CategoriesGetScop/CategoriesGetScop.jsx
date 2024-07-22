@@ -1,7 +1,7 @@
 import React from 'react';
 import './CategoriesGetScop.css';
 
-const CategoriesGetScop = () => {
+const CategoriesGetScop = ({isTrue}) => {
 
     const productText = [
         {
@@ -48,7 +48,7 @@ const CategoriesGetScop = () => {
                 <p>By Signing up, you agree to our Privacy Policy and Terms of use</p>
             </div>
         </div>
-        <div className='product-text-details'>
+        <div className={`product-text-details ${isTrue ? 'show' : ''}`}>
             {productText.map((item, index) => {
                 return <div key={index} className='text-details'>
                     <h3>{item.heading}</h3>

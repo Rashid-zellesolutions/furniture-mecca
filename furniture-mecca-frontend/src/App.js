@@ -23,6 +23,7 @@ import HomeDecor from './Assets/to-be-change/home-decor.png';
 import Outlet from './Assets/to-be-change/outlet.png';
 import Haider from './Global-Components/Header/Haider';
 import Footer from './Global-Components/Footer/Footer';
+import ProductArchive from './UI/Pages/ProductArchive/ProductArchive';
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
             path='/dining-room' 
             element={<Categories categoriesMainImage={diningRoomMainImage} categoryCardData={categoryCardData} newArrival={true} />} 
           />
+          <Route path='/dining-room-sets' element={<ProductArchive />} />
           <Route 
             path='/bedroom' 
             element={<Categories categoriesMainImage={bedroomMainImage} categoryCardData={categoryCardData} newArrival={false} />} 

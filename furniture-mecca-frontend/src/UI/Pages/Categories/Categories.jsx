@@ -20,7 +20,7 @@ const Categories = ({categoriesMainImage, categoryCardData, newArrival}) => {
       <Category title={'Dining Room Furniture'} categoryData={categoryCardData} />
       <MultiProductSlider />
       {newArrival ? <NewArrival /> : <></>}
-      <CategoriesGetScop />
+      <CategoriesGetScop isTrue={true} />
       <CustomerServicePanel />
     </div>
   )

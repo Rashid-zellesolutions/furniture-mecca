@@ -82,13 +82,18 @@
 }
 
 .rating-stars-container h3{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 21px;
 }
 
+/* .rating-stars img{
+    width: 10px;
+    height: 10px;
+} */
+
 .rating-stars-container p{
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 400;
     line-height: 17px;
 }
@@ -127,16 +132,25 @@
 .footer-customer-care-and-about-furniture-mecca{
     display: flex;
     width: 70%;
+    justify-content: end;
+    gap: 20px;
+    padding-left: 50px;
+    /* align-items: center; */
     justify-content: space-between;
-    padding-left: 20px;
+    /* background-color: orange; */
 
 }
+
+/* Near by store styling */
 
 .footer-nearby-store{
     display: flex;
     flex-direction: column;
 }
 
+
+
+ 
 .footer-nearby-store h3{
     font-size: 16px;
     font-weight: 600;
@@ -146,44 +160,69 @@
 
 }
 
-.nearby-store-image{
-    position: relative;
-    width: 180px;
-    height: 180px;
+.footer-nearby-store img{
+    width: 250px;
+    height: 118px;
 }
 
-.nearby-store-image::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
-    z-index: 1;
+.nearby-store-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    /* background-color: #1F2123; */
+    /* align-items: center; */
+    /* padding: 15px; */
 }
 
-
-.nearby-store-image img{
-    width: 100%;
-    height: 100%;
-    display: block;
+.nearby-store-adress{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.nearby-store-image p{
-    position: absolute;
-    top: 70%;
-    z-index: 2;
+.nearby-store-adress span{
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: white;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 18px;
-    text-align: center;
 }
+
+.nearby-store-adress span:nth-child(2){
+    gap: 15px;
+}
+
+
+
+.nearby-store-adress span p{
+    font-size: 10px;
+    color: white;
+    line-height: 12px;
+}
+
+.nearby-store-adress div{
+    display: flex;
+    flex-direction: column;
+    /* gap: 5px; */
+    color: white;
+}
+
+.nearby-store-adress div a{
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nearby-store-adress div p{
+    font-size: 12px;
+}
+
+/* Near by store image styling end */
 
 .footer-care-and-about{
     display: flex;
     flex-direction: column;
+    /* background-color: green; */
 }
 
 .footer-care-and-about h3{
@@ -210,7 +249,8 @@
 .footer-rights-reserved-container{
     display: flex;
     justify-content: space-between;
-    padding: 25px 0 0 0;
+    /* padding: 25px 0 0 0; */
+    margin-top: 40px;
 }
 
 .footer-rights-reserved-container p{
@@ -242,8 +282,8 @@
 
 }
 .rating-stars img{
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
 }
 
 @media only screen and (max-width: 1200px){

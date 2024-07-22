@@ -124,12 +124,18 @@
 
 
 .product-text-details{
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     width: 100%;
     gap: 15px;
     font-family: var(--work-sans-font);
 }
+
+.product-text-details.show{
+    display: flex;
+}
+
 .text-details{
     display: flex;
     flex-direction: column;

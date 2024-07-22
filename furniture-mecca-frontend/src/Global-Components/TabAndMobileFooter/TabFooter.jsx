@@ -14,6 +14,12 @@ import youtubeIcon from '../../Assets/icons/youtube.png';
 import instaIcon from '../../Assets/icons/instagram.png';
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import addBtn from '../../Assets/icons/add-icon.png';
+import { MdOutlineLocationOn } from "react-icons/md";
+import { WiTime4 } from "react-icons/wi";
+import { CiCalendarDate } from "react-icons/ci";
+import { FiPhoneCall } from "react-icons/fi";
+
+import { FaRegCalendarPlus } from "react-icons/fa";
 
 
 
@@ -157,13 +163,47 @@ const TabFooter = () => {
                     </div>
                 </div>
                 <div className='footer-about-and-contact-links'>
-                    <div className='footer-nearby-store'>
+                <div className='tab-view-footer-nearby-store'>
+                        <h3>Nearest Store</h3>
+                        <div className='tab-view-nearby-store-details'>
+                            <img src={nearStore} alt='img' />
+                        </div>
+                            <div className='tab-view-nearby-store-adress'>
+                                <span>
+                                    <MdOutlineLocationOn size={20} />
+                                    <p>E Venango St, Philadelphia, PA 19134 <br /> Philadelphia, Pennsylvania, 101</p>
+                                </span>
+                                <span>
+                                    <FiPhoneCall  size={15} />
+                                    <p> 267 639 6801</p>
+                                </span>
+                                <span>
+                                    <WiTime4 size={20} />
+                                    <p>9:30 AM - 6:30 PM</p>
+                                </span>
+                                <span>
+                                    <CiCalendarDate size={20} />
+                                    <p>Monday - Sunday</p>
+                                </span>
+                                <div>
+                                    <p>Outlet</p>
+                                    <a href='#'>Direction</a>
+                                    <a href='#'>Book an Appointment</a>
+                                </div>
+                            </div>
+                        {/* <h3>Nearest Store</h3>
+                        <div className='nearby-store-image'>
+                            <p>101 E. Venango st, Philadelphi</p>
+                            <img src={nearStore} alt='img' />
+                        </div> */}
+                    </div>
+                    {/* <div className='footer-nearby-store'>
                         <h3>Nearest Store</h3>
                         <div className='nearby-store-image'>
                             <p>101 E. Venango st, Philadelphi</p>
                             <img src={nearStore} alt='img' />
                         </div>
-                    </div>
+                    </div> */}
                     <div className='footer-customer-care'>
                         <h3>Customer Care</h3>
                         <div className='customer-care-links'>
@@ -196,67 +236,6 @@ const TabFooter = () => {
                 <p>Designed & maintained by</p>
                 <a href='#'>Zelle Solutions</a>
             </div>
-
-            {/* <div className='footer-rating-and-links'>
-
-                <div className='mobile-view-footer-poster-div'>
-                    <img src={redFurnitureMecca} alt="img" className='footer-banner-img' />
-                    <div className='mobile-view-banner-containt'>
-                        <h3>FURNITURE MECCA</h3>
-                        <span className='rating-span'>
-                            {stars.map((item, i) => {
-                                return <img src={item.icon} alt="start" /> 
-                            })}
-                        </span>
-                        <p>847 Google Reviews</p>
-                    </div>
-                </div>
-
-                <div className={`footer-links`}>
-                    <div className='footer-nearby-store'>
-                        <h3>Nearest Store</h3>
-                        <div className='nearby-store-image'>
-                            <p>101 E. Venango st, Philadelphi</p>
-                            <img src={nearStore} alt='img' />
-                        </div>
-                    </div>
-                    <div className='footer-links-containt'>
-                        <h3>Customer Care</h3>
-                            <a href='#'>Contact Us</a>
-                            <a href='#'>Financing</a>
-                            <a href='#'>Shipping & Delivery</a>
-                            <a href='#'>Terms & Conditions</a>
-                    </div>
-                    <div className='footer-links-containt'>
-                        <h3>About Furniture Mecca</h3>
-                            <a href='#'>About Us</a>
-                            <a href='#'>Career</a>
-                            <a href='#'>Store Locatons</a>
-                            <a href='#'>Referance</a>
-                            <a href='#'>My Account</a>
-                    </div>
-                </div>
-            </div> */}
-
-                {/* <div className='mobile-view-footer-contact-section'>
-                    <span> <img src={locationIcon} alt="location" /> <a href='#'>Philadelphia</a> </span>
-                    <span> <img src={callIcon} alt="location" /> <a href='#'>215 352 1600</a> </span>
-                    <span> <img src={mailIcon} alt="location" /> <a href='#'>meccacustomercare@gamil.com</a> </span>
-                </div> */}
-
-                {/* <div className='mobile-view-footer-social-icons'>
-                    {socialIcons.map((item, i) => {
-                        return <img src={item.socialIcon} alt='social icon' />
-                    })}
-                </div> */}
-
-                {/* <div className='mobile-view-footer-copy-rights'>
-                    <div className='mobile-view-term-and-shiping'>
-                        <p> <a href='#'> Shiping & Delivey </a></p>
-                        <p> <a href='#'>Terms & Conditions </a></p>
-                    </div>
-                    <p className='mobile-view-right-reserved'>Designed & maintained by <br /> <a href='#'> Zelle Solutions </a></p>
-                </div> */}
         </div>
     </div>
   )
