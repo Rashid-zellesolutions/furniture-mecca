@@ -50,16 +50,6 @@ const AllStores = () => {
       setCardClicked(false);
     }
 
-    // const delaySliderHide = () => {
-    //   const interval = setInterval(() => {
-    //     setHovered(false);
-    //     clearInterval(interval)
-    //   }, 1000);
-    //   return () => {
-    //     clearInterval(interval)
-    //   }
-    // }
-
   return (
     <div className='all-stores-main-container'>
       <div className='store-cards-container'>

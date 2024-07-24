@@ -4,23 +4,24 @@ import imageOne from '../../../Assets/category/brown-soffa.png';
 import imageTwo from '../../../Assets/category/white-soffa.png';
 import imageThree from '../../../Assets/category/black-soffa.png'
 
-const BreadCrumWithProduct = () => {
+const BreadCrumWithProduct = ({breadcrumRecentData}) => {
 
-    const productData = [
-        {img: imageOne, title: 'Under $1500'},
-        {img: imageTwo, title: 'Sofa & Love Seat Sets'},
-        {img: imageThree, title: 'Sectional Sets'},
-        {img: imageOne, title: 'Under $1500'},
-        {img: imageTwo, title: 'Sofa & Love Seat Sets'},
-        {img: imageThree, title: 'Sectional Sets'},
-    ]
+    // const breadcrumRecentData = [
+    //     {img: imageOne, title: 'Under $1500'},
+    //     {img: imageTwo, title: 'Sofa & Love Seat Sets'},
+    //     {img: imageThree, title: 'Sectional Sets'},
+    //     {img: imageOne, title: 'Under $1500'},
+    //     {img: imageTwo, title: 'Sofa & Love Seat Sets'},
+    //     {img: imageThree, title: 'Sectional Sets'},
+    // ]
+
   return (
     <div className='breadcrum-with-products'>
         <div className='breadcrum'>
             <p> <a href='#'>Home</a> / <a href='#'> Furniture</a> / <a href='#'>Living Room</a> / <a href='#'> Living Room Sets</a> </p>
         </div>
-        <div className='products-main-container'>
-                {productData.map((item, index) => {
+        <div className='breadcrum-products-container'>
+                {breadcrumRecentData.map((item, index) => {
                     return <div className='single-product'>
                         <img src={item.img} alt='img' />
                         <p>{item.title}</p>

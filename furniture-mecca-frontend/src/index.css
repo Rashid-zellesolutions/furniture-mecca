@@ -3,7 +3,7 @@
   --icon-color: #C30000;
   --button-color: #2F7A97;
   --bg-color: #FFFFFF;
-  --work-sans-font: "Poppins", sans-serif;
+  --work-sans-font: "Work Sans", sans-serif;
   --hover-font-color: #C30000;
   --border-color: #D9D9D9;
   --active-nav-item-color: #C30000;
@@ -15,10 +15,24 @@
   --footer-nav-heading: #FAFAFA;
   --Poppins-font: "Poppins", sans-serif;
   --products-bg: #C9EFF4;
+  --product-text-color: #595959;
+  --hover-btn-bg: #595959
 }
 
 *{
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+}
+
+body {
+  font-family: var(--Poppins-font);
+}
+
+button {
+  font-family: var(--Poppins-font);
+}
+
+input{
+  font-family: var(--Poppins-font);
 }

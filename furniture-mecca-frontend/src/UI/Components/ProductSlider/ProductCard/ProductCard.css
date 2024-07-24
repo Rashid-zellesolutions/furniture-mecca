@@ -29,7 +29,7 @@
     top: 10px;
     right: 10px;
     color: var(--button-color);
-    font-family: var(--work-sans-font);
+    /* font-family: var(--work-sans-font); */
     background-color: #c5eef4; /* Optional: for better readability */
     padding: 5px 10px;
     font-size: 16px;
@@ -56,7 +56,7 @@
 .product-details{
     display: flex;
     flex-direction: column;
-    font-family: var(--work-sans-font);
+    /* font-family: var(--work-sans-font); */
 }
 
 .product-details h3{

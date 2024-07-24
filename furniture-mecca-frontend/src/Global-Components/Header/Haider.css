@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 12px 60px 12px 60px;
-    font-family: var(--work-sans-font);
+    /* font-family: var(--work-sans-font); */
     background-color: #F0F0F0;
 }
 
@@ -38,7 +38,7 @@
     font-weight: 500;
     line-height: 15px;
     text-decoration: none;
-    font-family: var(--work-sans-font);
+    /* font-family: var(--work-sans-font); */
     color: var(--text-color);
     cursor: pointer;
 }
@@ -96,7 +96,7 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 15px;
-    font-family: var(--work-sans-font);
+    font-family: var(--Poppins-font);
 }
 
 .search-bar-div img{
@@ -137,7 +137,7 @@
 
 .near-by-city-time p{
     color: var(--text-color);
-    font-family: var(--work-sans-font);
+    /* font-family: var(--work-sans-font); */
     font-size: 12px;
     line-height: 15px;
 }
@@ -145,7 +145,7 @@
 .near-by-city-time span{
     display: flex;
     gap: 5px;
-    font-family: var(--work-sans-font);
+    /* font-family: var(--work-sans-font); */
 }
 
 .near-by-city-time span a{
@@ -165,7 +165,7 @@
     font-size: 12px;
     line-height: 15px;
     color: var(--text-color);
-    font-family: var(--work-sans-font);
+    /* font-family: var(--work-sans-font); */
 }
 
 .deliver-to span{
@@ -174,7 +174,7 @@
     line-height: 15px;
     font-weight: 600;
     color: var(--text-color);
-    font-family: var(--work-sans-font);
+    /* font-family: var(--work-sans-font); */
 }
 
 .header-icons-container{
@@ -300,7 +300,7 @@
     border: none;
     outline: none;
     color: var(--text-color);
-    font-family: var(--work-sans-font);
+    /* font-family: var(--work-sans-font); */
     font-size: 16px;
     font-weight: 500;
     line-height: 18px;

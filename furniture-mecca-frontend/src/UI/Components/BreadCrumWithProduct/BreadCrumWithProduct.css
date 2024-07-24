@@ -22,7 +22,7 @@
     text-decoration: none;
 }
 
-.products-main-container{
+.breadcrum-products-container{
     display: flex;
     width: 100%;
     gap: 10px;

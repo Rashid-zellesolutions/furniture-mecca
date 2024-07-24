@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: center;
     padding: 70px 0;
-    font-family: var(--work-sans-font);
+    /* font-family: var(--work-sans-font); */
 }
 
 .scop-contact-container::before{
@@ -129,7 +129,7 @@
     flex-direction: column;
     width: 100%;
     gap: 15px;
-    font-family: var(--work-sans-font);
+    /* font-family: var(--work-sans-font); */
 }
 
 .product-text-details.show{

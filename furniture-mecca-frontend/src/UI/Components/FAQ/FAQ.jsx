@@ -109,9 +109,9 @@ const FAQ = () => {
             <div className='questions-answeres'>
                 {Qna.map((item, index) => {
                     return <div key={index} className='question-toggler'>
-                        <div className='question-section'>
+                        <div className='question-section' onClick={() => handleToggle(index)}>
                             <p>{item.question}</p>
-                            <img src={item.icon} alt='add btn' className={`${activeIndex === index ? 'rotate' : ''}`} onClick={() => handleToggle(index)} />
+                            <img src={item.icon} alt='add btn' className={`${activeIndex === index ? 'rotate' : ''}`} />
                         </div>
                         <div className={`answere-section ${activeIndex === index ? 'show-answere' : ''}`}
                         ref={el =>  answerRef.current[index] = el} 
