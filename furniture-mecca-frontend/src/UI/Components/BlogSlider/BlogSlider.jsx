@@ -2,28 +2,39 @@ import React, { useState } from 'react';
 import './BlogSlider.css';
 import arrowLeft from '../../../Assets/icons/arrow-left.png';
 import arrowRight from '../../../Assets/icons/arrow-right.png';
+import arrowLeftRed from '../../../Assets/icons/arrow-left-red.png';
+import arreowRightRed from '../../../Assets/icons/arrow-right-red.png';
 import blogOneImg from '../../../Assets/blogs-images/blog-one.webp'
 import blogTwoImage from '../../../Assets/blogs-images/blog-two.webp';
 import blogTheeImage from '../../../Assets/blogs-images/blog-three.webp';
+import { CgMenuLeftAlt } from "react-icons/cg";
 
 const BlogSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
     const blogSliderData = [
-        {img: blogOneImg, category: 'Uncategorized 0', para: 'Five Things To Consider When Choosing Furniture For A Small Living Room', link: '#'},
-        {img: blogTwoImage, category: 'Uncategorized 1', para: 'Your Furniture Show You As You Are', link: '#'},
-        {img: blogTheeImage, category: 'Uncategorized 2', para: 'Add That "Wow Factor" To Your Home  - Tips And Tricks', link: '#'},
-        {img: blogOneImg, category: 'Uncategorized 3', para: "Package Of All Living Room's Furniture For A Coordinated Look", link: '#'},
+        {img: blogOneImg, categoryIcon: <CgMenuLeftAlt size={15} />, category: 'Uncategorized 0', para: 'Five Things To Consider When Choosing Furniture For A Small Living Room', link: '#'},
+        {img: blogTwoImage, categoryIcon: <CgMenuLeftAlt size={15} />, category: 'Uncategorized 1', para: 'Your Furniture Show You As You Are', link: '#'},
+        {img: blogTheeImage, categoryIcon: <CgMenuLeftAlt size={15} />, category: 'Uncategorized 2', para: 'Add That "Wow Factor" To Your Home  - Tips And Tricks', link: '#'},
+        {img: blogOneImg, categoryIcon: <CgMenuLeftAlt size={15} />, category: 'Uncategorized 3', para: "Package Of All Living Room's Furniture For A Coordinated Look", link: '#'},
     ];
 
     // Duplicate the blogSliderData array to create an infinite loop effect
     const infiniteSliderData = [...blogSliderData, ...blogSliderData];
 
+    const [isHovered, setIsHovered] = useState(false);
     const handleMouseEnter = () => {
-        document.querySelector('.blog-slider').classList.add('paused');
+        setIsHovered(true);
     }
     const handleMouseLeave = () => {
-        document.querySelector('.blog-slider').classList.remove('paused');
+        setIsHovered(false);
     }
+
+    // const handleMouseEnter = () => {
+    //     document.querySelector('.blog-slider').classList.add('paused');
+    // }
+    // const handleMouseLeave = () => {
+    //     document.querySelector('.blog-slider').classList.remove('paused');
+    // }
 
     const handleNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % blogSliderData.length);
@@ -44,11 +55,11 @@ const BlogSlider = () => {
                 </p>
             </div>
             <div className='blog-slider-container'>
-            <button className='blog-slider-arrow left' onClick={handlePrev}>
-                    <img src={arrowLeft} alt='left' />
+            <button className='blog-slider-arrow left' onClick={handlePrev} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                    <img src={isHovered ? arrowLeftRed : arrowLeft} alt='left' />
                 </button>
                 <div className='blog-slider' style={{transform: `translateX(-${currentIndex * 37}%)`}}
-                onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
+               /* onMouseEnter={handleMouseEnter}  onMouseLeave={handleMouseLeave} */ >
                     {infiniteSliderData.map((item, index) => (
                         <div className='blog-card'>
                             <a href={item.link} className='blog-card-img' key={index}>
@@ -56,13 +67,13 @@ const BlogSlider = () => {
                             </a>
                             <div className='blog-para-and-category'>
                                 <p>{item.para}</p>
-                                <span>{item.category}</span>
+                                <span> {item.categoryIcon} {item.category}</span>
                             </div>
                         </div>
                     ))}
                 </div>
-                <button className='blog-slider-arrow right' onClick={handleNext}>
-                    <img src={arrowRight} alt='right' />
+                <button className='blog-slider-arrow right' onClick={handleNext} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                    <img src={isHovered ? arreowRightRed : arrowRight} alt='right' />
                 </button>
             </div>
             <div className='see-all-blog-button-container'>

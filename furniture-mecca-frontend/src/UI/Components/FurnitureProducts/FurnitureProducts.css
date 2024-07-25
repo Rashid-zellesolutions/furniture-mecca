@@ -135,8 +135,8 @@
     cursor: pointer;
     background-color: transparent;
     border: none;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     padding: 10px;
     position: absolute;
     top: 47%;
@@ -145,6 +145,11 @@
     position: absolute;
     color: var(--text-color);
     align-items: center;
+}
+
+.product-arrow img{
+    width: 30px;
+    height: 30pxpx;
 }
 
 .product-arrow:hover{

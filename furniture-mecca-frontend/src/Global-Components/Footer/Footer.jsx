@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './Footer.css';
 import FooterNav from './FooterNav/FooterNav';
 import footerRedFurnitureMecca from '../../Assets/global-images/furniture-mecca-red.jpeg'

@@ -3,7 +3,6 @@
     flex-direction: column;
     width: 100%;
     padding: 50px 60px;
-    /* font-family: var(--Poppins-font); */
     gap: 29px;
 }
 
@@ -15,7 +14,6 @@
 }
 
 /* Filters Toggle Section */
-
 .toggle-sort-section{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -25,6 +23,10 @@
 /* Hide and show button */
 .hide-and-show-filters-button-container{
     display: flex;
+}
+
+.hide-and-show-filters-button-container button{
+    display: flex;
     background-color: transparent;
     border: 1px solid black;
     width: 170px;
@@ -33,29 +35,18 @@
     border-radius: 2px;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
 }
 
-.hide-and-show-filters-button-container img{
+.hide-and-show-filters-button-container button img{
     width: 15px;
     height: 15px;
 }
 
-.hide-and-show-filters-button-container button{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 400;
-    text-transform: capitalize;
-    /* border-radius: 2px; */
-}
-
-
-
 /*Zip Code set Checkbox styling */
-
 .set-zip-to-dileviry-container{
     display: flex;
     gap: 5px;
@@ -112,8 +103,8 @@
 .checkbox-wrapper-1 .tgl-one + .tgl-btn {
     outline: 0;
     display: block;
-    width: 55px;
-    height: 30px;
+    width: 36px;
+    height: 22px;
     position: relative;
     cursor: pointer;
     -webkit-user-select: none;
@@ -155,7 +146,6 @@
 }
 
 /* Availablity Check Checkbox styling */
-
 .sort-availablity-container{
     display: flex;
     gap: 5px;
@@ -214,8 +204,8 @@
 .checkbox-wrapper-2 .tgl-two + .tgl-btn {
     outline: 0;
     display: block;
-    width: 55px;
-    height: 30px;
+    width: 36px;
+    height: 22px;
     position: relative;
     cursor: pointer;
     -webkit-user-select: none;
@@ -292,7 +282,6 @@
 }
 
 /* Products Section Styling */
-
 .products-and-filter-container{
     display: flex;
     border-top: 2px solid var(--border-color);
@@ -332,6 +321,8 @@
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .all-filters-section{
@@ -348,7 +339,6 @@
     width: 100%;
     border-bottom: 2px solid var(--border-color);
     padding: 20px 0 10px 0;
-    /* background-color: green; */
 }
 
 .single-filter span{
@@ -357,7 +347,6 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    /* background-color: orange; */
 }
 
 .single-filter span p{
@@ -388,9 +377,34 @@
 }
 
 .filters.show-filter{
-    height: 200px;
+    display: flex;
+    gap: 5px;
+    height: 140px;
     overflow-y: auto;
     transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+/* Style the entire scrollbar */
+.filters.filters.show-filter::-webkit-scrollbar {
+    width: 4px; /* Slim width */
+}
+
+/* Style the scrollbar track */
+.filters.filters.show-filter::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the scrollbar thumb */
+.filters.filters.show-filter::-webkit-scrollbar-thumb {
+    background: #888; /* Darker gray for the thumb */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the scrollbar thumb on hover */
+.filters.filters.show-filter::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker shade on hover */
 }
 
 .filters span{
@@ -402,18 +416,38 @@
     gap: 10px;
 }
 
-.filters span input{
+.custom-checkbox {
+    appearance: none;
     width: 20px;
     height: 20px;
-    /* display: none; */
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+    margin-right: 8px;
+    cursor: pointer;
+    outline: none;
 }
 
+.custom-checkbox:checked {
+    background-color: #28828A;
+    border-color: #28828A;
+}
 
-.filters span label{
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-    color: var(--product-text-color);
+.custom-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Ensure the label is clickable */
+label {
+    cursor: pointer;
 }
 
 /* Vew all Filters Button css */
@@ -421,7 +455,6 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
-    /* padding: 13px 60px; */
     height: 50px;
     width: 100%;
     background-color: #fff;
@@ -431,9 +464,7 @@
     cursor: pointer;
 }
 
-
 /* Products Css */
-
 .products-section{
     display: flex;
     flex-direction: column;
@@ -447,7 +478,6 @@
 
 .products-heading{
     display: flex;
-    /* flex-direction: row; */
     justify-content: space-between;
     width: 100%;
     padding: 10px;
@@ -457,7 +487,6 @@
 
 .sortby-relevance{
     display: flex;
-    /* align-items: center; */
     gap: 5px;
     position: relative;
 }
@@ -469,16 +498,13 @@
 }
 .sortby-relevance span{
     display: flex;
-    /* align-items: center; */
     cursor: pointer;
-    /* position: relative; */
 }
 
 .sortby-relevance span p{
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
-    /* position: relative; */
 }
 
 .relevance-dropdown{
@@ -486,7 +512,6 @@
     width: 150px;
     position: absolute;
     background-color: #ffff;
-    /* padding: 20px 16px; */
     z-index: 222;
     border: 1px solid var(--border-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -494,7 +519,27 @@
     overflow-x: hidden;
     overflow-y: auto;
     height: 120px;
+}
 
+.relevance-dropdown::-webkit-scrollbar {
+    width: 8px; /* Slim width */
+}
+
+/* Style the scrollbar track */
+.relevance-dropdown::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the scrollbar thumb */
+.relevance-dropdown::-webkit-scrollbar-thumb {
+    background: #888; /* Darker gray for the thumb */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the scrollbar thumb on hover */
+.relevance-dropdown::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker shade on hover */
 }
 
 .relevance-dropdown.show-relevance{
@@ -511,36 +556,23 @@
 }
 
 /* main products card */
-
 .product-main{
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr); */
-    /* flex: 0 0 33.33%; */
-    /* background-color: orange; */
+    padding: 30px 0 20px 0; 
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row;
     width: 100%;
-    padding: 30px 0 20px 0;
+    flex-wrap: wrap;
 }
 
 /* Give border effect to product card */
-
 .product-card {
-    flex: 1 1 calc(33.33%);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 33.33%;
     position: relative;
     padding: 30px 10px 50px 10px;
-    /* margin: 5px; */
-    box-sizing: border-box;
-    /* align-items: center; */
-    color: var(--product-text-color);
-    /* margin: 50px; */
-    width: 300px;
-}
 
-/* .product-card.card-width-increase{
-    width: 100%;
-} */
+}
 
 .product-card::before,
 .product-card::after {
@@ -548,7 +580,6 @@
     position: absolute;
     background: var(--border-color);
 }
-
 
 .product-card::after {
     bottom: 0;
@@ -566,8 +597,6 @@
     background: var(--border-color);
 }
 
-
-
 .product-card > div::after {
     top: 30px;
     bottom: 30px;
@@ -582,6 +611,15 @@
 .heart-icon-div{
     display: flex;
     justify-content: end;
+    padding: 8px 0;
+}
+
+.product-tag-div{
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 22px;
+    width: 100%;
+    justify-content: start;
 }
 
 .heart-icon-div .heart-icon{
@@ -598,8 +636,6 @@
 }
 
 .product-title{
-    /* text-align: justify; */
-    /* width: 90%; */
     background-color: transparent !important;
     font-size: 15px;
     font-weight: 400;
@@ -667,12 +703,10 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    
 }
 
 .color-variation{
     padding: 10px;
-    /* border-radius: 4px; */
     cursor: pointer;
 }
 

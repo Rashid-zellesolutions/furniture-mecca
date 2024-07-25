@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './LatestModulerBanner.css';
 import SodaBannerOne from '../../../Assets/to-be-change/soda-1.png';
 import SodaBannerTwo from '../../../Assets/to-be-change/soda-2.png';
@@ -10,7 +10,7 @@ import installmentBanner from '../../../Assets/to-be-change/New-Long-Financing-2
 import fullBed from '../../../Assets/to-be-change/hp-fourth_hero_mat_desktop_1b_3200x1388.png';
 import mobileViewFullBed from '../../../Assets/images/Rectangle 703.png'
 
-import diningImage from '../../../Assets/images/Dining-Room-Desk-1 1.png'
+// import diningImage from '../../../Assets/images/Dining-Room-Desk-1 1.png'
 
 const LatestModulerBanner = ({images, customWidth, mainImage, }) => {
   

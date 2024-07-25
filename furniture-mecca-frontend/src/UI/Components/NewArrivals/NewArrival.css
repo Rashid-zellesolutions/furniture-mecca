@@ -13,12 +13,22 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
 }
 
 .new-arrival-heading-div a{
     color: var(--text-color);
-    font-size: 15px;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 29px;
+    text-decoration: none;
+}
+
+.new-arrival-heading-div a:nth-child(2){
+    color: var(--text-color);
+    font-size: 18px;
     font-weight: 700;
+    line-height: 21px;
     text-decoration: none;
 }
 
@@ -28,7 +38,7 @@
     display: flex;
     flex: 0 0 35.33%;
     width: 100%;
-    gap: 10px;
+    gap: 25px;
     padding: 10px 0;
 }
 

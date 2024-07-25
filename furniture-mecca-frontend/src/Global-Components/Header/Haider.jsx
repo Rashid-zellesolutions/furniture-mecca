@@ -14,6 +14,7 @@ import Nav from '../Navbar/Nav';
 import TabMenu from '../Navbar/TabMenu/TabMenu';
 import NearStorePopUp from '../../UI/Components/NearStorePopUp/NearStorePopUp';
 import { MdOutlineStars } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const Haider = () => {
   const [isTabMenuOpen, setIsTabMenuOpen] = useState(false);
@@ -83,19 +84,19 @@ const Haider = () => {
       {/* Banner Responsive */}
       <div className='furniture-mecca-promotional-banner'>
         <div className='rotating-message'>
-          {currentIndex === 1 ? <span>Need help ordering? <a className='toll-free-ancor' href='#'> Call 860-812-1111 </a> </span> 
-          : currentIndex === 2 ? <span>Learn about my <a className='toll-free-ancor' href='#'>Financing Options</a> </span> 
+          {currentIndex === 1 ? <span>Need help ordering? <Link className='toll-free-ancor' href='#'> Call 860-812-1111 </Link> </span> 
+          : currentIndex === 2 ? <span>Learn about my <Link className='toll-free-ancor' href='#'>Financing Options</Link> </span> 
           : <span>Shop Bob's everyday low prices!</span>}
         </div>
         <div className='banner-link-container'>
-          <a href='#'>Stores</a>
-          <a href='#'>Orders</a>
-          <a href='#'>Financing</a>
-          <a href='#'>Help</a>
+          <Link>Stores</Link>
+          <Link>Orders</Link>
+          <Link>Financing</Link>
+          <Link>Help</Link>
         </div>
         <div className='on-tab-deliver-to'>
             <img src={deliverTo} alt="delivery" />
-            <span> Deliver to : <a href='#'> 06042</a> </span>
+            <span> Deliver to : <Link> 06042</Link> </span>
             <img src={locationIcon} alt="location" className='promotion-banner-location' />
         </div>
       </div>

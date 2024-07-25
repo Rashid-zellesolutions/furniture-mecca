@@ -10,7 +10,6 @@ import imageOne from '../../../Assets/category/brown-soffa.png';
 import imageTwo from '../../../Assets/category/white-soffa.png';
 import imageThree from '../../../Assets/category/black-soffa.png'
 
-
 const ProductArchive = () => {
   // Breadcrup component data
   const breadcrumRecentData = [
@@ -21,10 +20,11 @@ const ProductArchive = () => {
     {img: imageTwo, title: 'Sofa & Love Seat Sets'},
     {img: imageThree, title: 'Sectional Sets'},
 ]
+
   return (
     <div>
         <Shopvia />
-        <BreadCrumWithProduct breadcrumRecentData={breadcrumRecentData} />
+        <BreadCrumWithProduct breadcrumRecentData={breadcrumRecentData}  />
         <Products />
         <FAQ />
         <CategoriesGetScop isTrue={false} />

@@ -130,9 +130,12 @@
 }
 
 .blog-para-and-category {
+    display: flex;
+    flex-direction: column;
     padding: 30px 30px;
     height: 125px;
     width: 100%;
+    gap: 10px;
 }
 
 .blog-para-and-category p{
@@ -142,8 +145,11 @@
 }
 
 .blog-para-and-category span{
+    display: flex;
     font-size: 10px;
     line-height: 16px;
+    align-items: center;
+    gap: 10px;
 }
 
 @media only screen and (max-width: 435px){

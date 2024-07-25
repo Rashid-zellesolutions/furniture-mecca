@@ -29,6 +29,29 @@ body {
   font-family: var(--Poppins-font);
 }
 
+body::-webkit-scrollbar {
+  width: 4px; /* Slim width */
+  height: 4px; /* Slim height for horizontal scrollbar */
+}
+
+/* Style the scrollbar track */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray background */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the scrollbar thumb */
+body::-webkit-scrollbar-thumb {
+  background: #888; /* Darker gray for the thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the scrollbar thumb on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker shade on hover */
+}
+
+
 button {
   font-family: var(--Poppins-font);
 }

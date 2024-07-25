@@ -1,13 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './NewArrival.css';
-import goldenDiningRoomSet from '../../../Assets/images/Dining-Room-Set-in-Gold-02 1.png'
-import blackDiningRoomSet from '../../../Assets/images/Dining-room-set-black.png'
-import whiteDiningRoomSet from '../../../Assets/images/dining-room-set-white.png'
-import cart from '../../../Assets/icons/cart.png'
+import goldenDiningRoomSet from '../../../Assets/images/Dining-Room-Set-in-Gold-02 1.png';
+import blackDiningRoomSet from '../../../Assets/images/Dining-room-set-black.png';
+import whiteDiningRoomSet from '../../../Assets/images/dining-room-set-white.png';
+import cartRed from '../../../Assets/icons/cart.png';
 import { FaEye } from "react-icons/fa";
+import cart from '../../../Assets/icons/cart-white.png';
 
 const NewArrival = () => {
 
+    const [cartHoverIndex, setCartHoverIndex] = useState(null);
+    const handleCartHover = (index) => {
+      setCartHoverIndex(index);
+    }
+    const handleCardHoverLeave = () => {
+      setCartHoverIndex(null)
+    }
     const cardData = [
         {
             cardImage: goldenDiningRoomSet, pieces: '8 Pieces', title: 'Trellis Room Set', price: '$599', addCartLink: '#', 
@@ -37,8 +45,8 @@ const NewArrival = () => {
                 <span className='title-and-price'><p>{items.title}</p> <p>{items.price}</p></span>
             </div>
             <div className='card-buttons'>
-                <a href={items.addCartLink}>
-                    <img src={items.addCartIcon} alt='img' />
+                <a href={items.addCartLink} onMouseEnter={() => handleCartHover(index)} onMouseLeave={handleCardHoverLeave}>
+                    <img src={cartHoverIndex === index ? cartRed : items.addCartIcon} alt='img' />
                     <p>{items.addCart}</p>
                 </a>
                 <a href={items.viewAllLink}>

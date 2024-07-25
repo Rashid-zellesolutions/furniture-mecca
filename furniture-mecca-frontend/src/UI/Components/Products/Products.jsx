@@ -1,13 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useEffect, useState} from 'react'
 import './Products.css';
 import AddBtn from '../../../Assets/icons/add-icon.png'
 import { MdKeyboardArrowDown } from "react-icons/md";
-import heartImg from '../../../Assets/icons/like.png'
-import muellerSofa from '../../../Assets/images/Mueller-Sofa-and-Loveseat-01-300x200 1.png';
-import sherryImage from '../../../Assets/images/Sherry-Set-01-300x200 1.png'
-import filledStar from '../../../Assets/icons/Star 19.png'
 import filterHumberger from '../../../Assets/icons/humberger-icon.png'
-
+import { useSelector } from 'react-redux';
 
 const Products = () => {
 
@@ -17,86 +13,12 @@ const Products = () => {
     const [relevanceTrue, setRelevanceTrue] = useState(false)
     
     const [showAvailaabilityBox, setShowAvailabilityBox] = useState(false)
-    const [isTrue, setIsTrue] = useState(false)
     const [openFilterIndices, setOpenFilterIndices] = useState([]);
     const [showAllFilters, setShowAllFilters] = useState(false);
-    const contentRefs = useRef([]);
+    // Products Data From Redux
+    const productData = useSelector((state) => state.products.data)
 
-    // All Arra Of Objects to render multiple data on one time
-    const productData = [
-        {heart: heartImg, mainImage: muellerSofa, hoverImage: sherryImage , productTitle: `Trevor Brown 90" Manual Reclining Sofa & 79" Console Loveseat`, ratingStars: [
-                {icon: filledStar, title: 'filled'},
-                {icon: filledStar, title: 'filled'},
-                {icon: filledStar, title: 'filled'},
-                {icon: filledStar, title: 'filled'},
-                {icon: filledStar, title: 'filled'},
-            ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-            reviewCount: '(200)', priceTag: '$1,198.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
-                {color: '#FF0000'},
-                {color: '#B78953'},
-            ], deliveryTime: 'Get it in 3 to 4 days'
-        },
-        {heart: heartImg, mainImage: muellerSofa, productTitle: `Laurel Beige 85'' Sofa & 65'' Loveseat`, ratingStars: [
-                {icon: filledStar, title: 'filled'},
-                {icon: filledStar, title: 'filled'},
-                {icon: filledStar, title: 'filled'},
-                // {icon: filledStar, title: 'filled'},
-                // {icon: filledStar, title: 'filled'},
-            ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-            reviewCount: '(100)', priceTag: '$999.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
-                {color: '#FF0000'},
-                {color: '#B78953'},
-            ], deliveryTime: 'Get it in 3 to 4 days'
-        },
-        {heart: heartImg, mainImage: muellerSofa, productTitle: `Avenger Black 89'' Power Reclining Sofa & 78'' Reclining Console Loveseat with USB`, ratingStars: [
-                {icon: filledStar, title: 'filled'},
-                {icon: filledStar, title: 'filled'},
-                {icon: filledStar, title: 'filled'},
-                {icon: filledStar, title: 'filled'},
-                // {icon: filledStar, title: 'filled'},
-            ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-            reviewCount: '(197)', priceTag: '$1,998.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
-                {color: '#FF0000'},
-                {color: '#B78953'},
-            ], deliveryTime: 'Get it in 3 to 4 days'
-        },
-        {heart: heartImg, mainImage: muellerSofa, productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
-                    {icon: filledStar, title: 'filled'},
-                    {icon: filledStar, title: 'filled'},
-                    {icon: filledStar, title: 'filled'},
-                    {icon: filledStar, title: 'filled'},
-                    {icon: filledStar, title: 'filled'},
-                ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-                reviewCount: '(218)', priceTag: '$998.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
-                    {color: '#FF0000'},
-                    {color: '#B78953'},
-                ], deliveryTime: 'Get it in 3 to 4 days'
-            },
-        {heart: heartImg, mainImage: muellerSofa, productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
-                    {icon: filledStar, title: 'filled'},
-                    {icon: filledStar, title: 'filled'},
-                    {icon: filledStar, title: 'filled'},
-                    // {icon: filledStar, title: 'filled'},
-                    // {icon: filledStar, title: 'filled'},
-                ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-                reviewCount: '(150)', priceTag: '$4,598.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
-                    {color: '#FF0000'},
-                    {color: '#B78953'},
-                ], deliveryTime: 'Get it in 3 to 4 days'
-        },
-        {heart: heartImg, mainImage: muellerSofa, productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
-                    {icon: filledStar, title: 'filled'},
-                    {icon: filledStar, title: 'filled'},
-                    {icon: filledStar, title: 'filled'},
-                    {icon: filledStar, title: 'filled'},
-                    // {icon: filledStar, title: 'filled'},
-                ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-                reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
-                    {color: '#FF0000'},
-                    {color: '#B78953'},
-                ], deliveryTime: 'Get it in 3 to 4 days'
-        },
-    ]
+    console.log(productData)
 
     const filtersData = [
         {name: 'Product Type' , icon: AddBtn, filters: [
@@ -209,23 +131,19 @@ const Products = () => {
         });
     };
 
+    // show max 5 filters default and on click all
     const toggleFiltersVisibility = () => {
         setShowAllFilters(prevState => !prevState);
     };
 
-
-    // show 5 filters defould and on click all
-    useEffect(() => {
-        contentRefs.current.forEach((content, index) => {
-            if (content) { // Check if content is not null
-                if (openFilterIndices.includes(index)) {
-                    content.style.height = content.scrollHeight + 'px';
-                } else {
-                    content.style.height = 0;
-                }
-            }
-        });
-    }, [openFilterIndices]);
+    // Card title words limit
+    const maxLength = 30;
+    const truncateTitle = (title, maxLength) => {
+        if (title.length > maxLength) {
+            return title.slice(0, maxLength) + '...';
+        }
+        return title;
+    };
 
     // Select Color Variations Functions
     const [selectedColorIndices, setSelectedColorIndices] = useState(Array(productData.length).fill(0));
@@ -235,14 +153,29 @@ const Products = () => {
         setSelectedColorIndices(updatedIndices);
     };
 
+    // const [checkedItems, setCheckedItems] = useState([]);
+    // Function to handle checkbox changes
+    // const handleCheckboxChange = (itemName) => {
+    //     setCheckedItems(prevState => {
+    //     if (prevState.includes(itemName)) {
+    //         return prevState.filter(name => name !== itemName);
+    //     } else {
+    //         return [...prevState, itemName];
+    //     }
+    //     });
+    // };
+
+    // useEffect(() => {
+    //     console.log("Filters Selected", checkedItems)
+    // }, [checkedItems])
+
   return (
     <div className='products-main-container'>
         <h3>Dining Room Furniture Sets</h3>
         {/* Toggle section code */}
         <div className='toggle-sort-section'>
             <div className='hide-and-show-filters-button-container' onClick={handleFilterSection}>
-                <img src={filterHumberger} alt='img' />
-                <button>{hideFilters ? 'Show Filters' : 'Hide Filters'}</button>
+                <button> <img src={filterHumberger} alt='img' /> {hideFilters ? 'Show Filters' : 'Hide Filters'}</button>
             </div>
             <div className='set-zip-to-dileviry-container'>
                 <div class="checkbox-wrapper-1">
@@ -286,14 +219,18 @@ const Products = () => {
                             <p>{item.name}</p>
                             <img src={item.icon} alt='btn' className={isOpen ? 'rotate' : ''} />
                         </span>
-                        <div className={`filters ${isTrue ? 'show-filter' : ''}`} ref={el => contentRefs.current[index] = el}  >
+                        <div className={`filters ${isOpen ? 'show-filter' : ''}`} >
                             {item.filters.map((innerItem, innerIndex) => {
                                 return <span key={innerIndex}>
-                                <input type={innerItem.type} placeholder='checkbox' />
-                                <label >{innerItem.name}</label>
+                                <input type={innerItem.type} 
+                                    placeholder='checkbox' 
+                                    className="custom-checkbox"
+                                    id={`filter-${innerIndex}`}  
+                                    // onChange={() => handleCheckboxChange(innerItem.name)} 
+                                    />
+                                <label htmlFor={`filter-${innerIndex}`} >{innerItem.name}</label>
                             </span>
                             })}
-                            
                         </div>
                     </div>
                     })}
@@ -325,14 +262,14 @@ const Products = () => {
                     {productData.map((item, index) => {
                         return <div key={index} className={`product-card ${hideFilters ? 'card-width-increase' : ''}`}>
                         <div className='product-card-data'>
-                            <div className='heart-icon-div'>
-                                <img src={item.heart} alt='heart img' className='heart-icon' />
+                            <div className={` ${item.productTag ? 'product-tag-div' : 'heart-icon-div'}`}>
+                                <img src={item.productTag ? item.productTag : item.heart} alt='heart img' className={` ${item.productTag ? 'tag-img' : 'heart-icon'}`} />
                             </div>
                             <img src={hoveredIndex === index && item.hoverImage ? item.hoverImage : item.mainImage}  
                                 alt='product img' className='product-main-img' 
-                                onMouseEnter={() => handleImageHover(index)} 
+                                onMouseEnter={() => handleImageHover(index)}
                                 onMouseLeave={handleImageHoverLeave} />
-                            <p className='product-title'>{item.productTitle}</p>
+                            <p className='product-title'>{truncateTitle(item.productTitle, maxLength)}</p>
                             <div className='product-rating-stars-div'>
                                 {item.ratingStars.map((stars, starIndex) => {
                                     return <img key={starIndex} src={stars.icon} alt={stars.title} className='rating-star' />

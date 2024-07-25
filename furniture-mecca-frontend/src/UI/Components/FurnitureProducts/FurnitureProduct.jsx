@@ -7,10 +7,21 @@ import ChairFourImage from '../../../Assets/to-be-change/download 56.png';
 import ChairFiveImage from '../../../Assets/to-be-change/download 57.png';
 import ArrowLeft from '../../../Assets/icons/arrow-left.png';
 import ArrowRight from '../../../Assets/icons/arrow-right.png';
-import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
+import arrowLeftRed from '../../../Assets/icons/arrow-left-red.png';
+import arrowRightRed from '../../../Assets/icons/arrow-right-red.png';
+// import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 
 const FurnitureProduct = () => {
     const [index, setIndex] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    }
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    }
 
     const products = [
         { name: "Linen Chair", price: '$598', code: 'SKU: 1775-46-45', variation: [{color: 'red'}, {color: 'green'}, {color: 'blue'},], category: 'Chair', btnText: 'Buy Now', img: ChairOneImage },
@@ -52,7 +63,9 @@ const FurnitureProduct = () => {
         <div className="container">
             <h3 className='product-heading'>New Arrivals</h3>
             <div className="product-slider">
-                {index > 0 && <button onClick={handlePrev} className="product-arrow arrow-left"> <IoIosArrowDropleft size={35} /> </button>}
+                {index > 0 && <button onClick={handlePrev} className="product-arrow arrow-left" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> 
+                    <img src={isHovered ? arrowLeftRed : ArrowLeft} alt='arrow left' /> 
+                </button>}
                 <div
                     className="row"
                     style={{ transform: `translateX(-${index * 80}%)` }}
@@ -97,7 +110,9 @@ const FurnitureProduct = () => {
                         </div>
                     ))}
                 </div>
-                {index < totalSlides - 2 && <button onClick={handleNext} className="product-arrow arrow-right"> <IoIosArrowDropright size={35} /> </button>}
+                {index < totalSlides - 2 && <button onClick={handleNext} className="product-arrow arrow-right" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> 
+                    <img src={isHovered ? arrowRightRed : ArrowRight} alt='arrow right' /> 
+                </button>}
             </div>
             <div className='mobile-view-product-slider'>
                 <div className='mobile-view-row'>

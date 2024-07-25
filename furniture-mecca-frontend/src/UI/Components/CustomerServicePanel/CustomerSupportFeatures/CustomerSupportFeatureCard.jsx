@@ -4,11 +4,11 @@ import './CustomerSupportFeatureCard.css';
 import addBtnIcon from '../../../../Assets/icons/Group 437 (2).png';
 
 
-const CustomerSupportFeatureCard = ({img, heading, desc, isExtended, link, onToggle }) => {
+const CustomerSupportFeatureCard = ({img, heading, desc, isExtended, link, onToggle, className }) => {
 
   return (
     <>
-        <div className={`customer-support-card ${isExtended ? 'expended' : ''}`}>
+        <div className={`customer-support-card ${isExtended ? 'expended' : ''} ${className}`}>
             <div className='customer-support-card-heading'>
                 <img src={img} alt="cart" />
                 <h3>{heading}</h3>

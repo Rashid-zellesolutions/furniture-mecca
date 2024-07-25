@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Category from '../../Components/Category/Category';
 import ShipBanner from '../../Components/ShipBanner/ShipBanner';
 import LatestModulerBanner from '../../Components/LatestModuler/LatestModulerBanner';
