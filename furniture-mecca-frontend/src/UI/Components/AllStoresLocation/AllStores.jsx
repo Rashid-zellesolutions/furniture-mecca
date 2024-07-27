@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './AllStores.css';
+import { Link } from 'react-router-dom';
 import venangoStoreImage from '../../../Assets/all-stores-location-images/venango-store.jpg';
 import huntingParkStoreImage from '../../../Assets/all-stores-location-images/hunting-park-store.jpg';
 import upperDarbyStoreImage from '../../../Assets/all-stores-location-images/darby-store.jpg';
@@ -10,6 +11,7 @@ import pennStoreImage from '../../../Assets/all-stores-location-images/penn-st-s
 import lancasterStoreImage from '../../../Assets/all-stores-location-images/lancaster-store.jpg'
 import brookdaleStoreImage from '../../../Assets/all-stores-location-images/brookdale-store.jpg';
 import addBtn from '../../../Assets/icons/add-icon.png';
+
 
 const AllStores = () => {
     const [hovered, setHovered] = useState(false);
@@ -94,7 +96,7 @@ const AllStores = () => {
           <img src={stores[modalIndex].img} alt='store' />
           <div className='store-modal-buttons'>
             <button> {stores[modalIndex].number} </button>
-            <button> <a href={stores[modalIndex].directionLink}>{stores[modalIndex].direction}</a></button>
+            <button> <Link to={stores[modalIndex].directionLink}>{stores[modalIndex].direction}</Link></button>
           </div>
         </div>
       </div>

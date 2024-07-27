@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './DropdownMenu.css';
+import { Link } from 'react-router-dom';
 
 
 const DropdownMenu = ({navHeading, dropDownNavData}) => {
@@ -24,7 +25,7 @@ const DropdownMenu = ({navHeading, dropDownNavData}) => {
                             <p>
                                 {item.innerLinks.map((it, index) => {
                                     return <p className={`mattres-links ${outerIndex === i && innerIndex === index ? 'active' : ''}`} onClick={() => handleAccentActiveItems(i, index)}>
-                                        <a href={it.link}>{it.name}</a>
+                                        <Link to={it.link}>{it.name}</Link>
                                     </p>
                                 })}
                             </p>
@@ -38,7 +39,7 @@ const DropdownMenu = ({navHeading, dropDownNavData}) => {
                         <div className='mattresses-links-div'>
                             {dropDownNavData[0].links.map((item, index) => {
                                 return <p className={`mattres-links ${activeIndex === index ? 'active' : ''}`} key={index} onClick={() => handleActiveIndex(index)}>
-                                    <a href={item.link}>{item.name}</a>
+                                    <Link to={item.link}>{item.name}</Link>
                                 </p>
                             })}
                         </div>
@@ -49,7 +50,7 @@ const DropdownMenu = ({navHeading, dropDownNavData}) => {
             {dropDownNavData[0].Images.map((item, index) => {
                 return <div key={index} className='mattress-image'>
                     <img src={item.img} alt={item.title} />
-                    <p className='image-title'> <a href={item.link}> {item.title}</a> </p>
+                    <p className='image-title'><Link to={item.link}>{item.title}</Link> </p>
                     <p className='price'>{item.price}</p>
                 </div>
             })}

@@ -24,6 +24,7 @@ import Outlet from './Assets/to-be-change/outlet.png';
 import Haider from './Global-Components/Header/Haider';
 import Footer from './Global-Components/Footer/Footer';
 import ProductArchive from './UI/Pages/ProductArchive/ProductArchive';
+import SingleProduct from './UI/Pages/SingleProduct/SingleProduct';
 
 
 function App() {
@@ -65,10 +66,11 @@ function App() {
             path='/bedroom' 
             element={<Categories categoriesMainImage={bedroomMainImage} categoryCardData={categoryCardData} newArrival={false} />} 
           />
+          <Route path='/single-product' element={<SingleProduct />} />
         </Routes>
         <Footer />
         <button onClick={handleClickTop} className='scroll-to-top-button'>
-          <IoIosArrowDropup size={30} />
+          <IoIosArrowDropup size={30} className='lead-to-top-btn' />
         </button>
       </div>
     </Router>

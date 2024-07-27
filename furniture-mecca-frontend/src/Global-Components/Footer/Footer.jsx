@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css';
+import { Link } from 'react-router-dom';
 import FooterNav from './FooterNav/FooterNav';
 import footerRedFurnitureMecca from '../../Assets/global-images/furniture-mecca-red.jpeg'
 import facebook from '../../Assets/icons/facebook.png'
@@ -204,9 +205,9 @@ const Footer = () => {
                 <div className='footer-social-and-address-container'>
                     <div className='social-icons'>
                         {socialIcons.map((item, index) => {
-                            return <a href={item.link}>
+                            return <Link to={item.link}>
                                 <img src={item.icon} alt={item.name} />
-                            </a>
+                            </Link>
                         })}
                     </div>
                     <div className='rating-container'>
@@ -223,7 +224,7 @@ const Footer = () => {
                         {locationPhoneMail.map((item, index) => {
                             return <span className='icon-and-name'>
                                 <img src={item.icon} alt={item.name} />
-                                <a href={item.link}>{item.name}</a>
+                                <Link to={item.link}>{item.name}</Link>
                             </span>
                         })}
                     </div>
@@ -253,21 +254,16 @@ const Footer = () => {
                                 </span>
                                 <div>
                                     <p>Outlet</p>
-                                    <a href='#'>Direction</a>
-                                    <a href='#'>Book an Appointment</a>
+                                    <Link>Direction</Link>
+                                    <Link>Book an Appointment</Link>
                                 </div>
                             </div>
-                        {/* <h3>Nearest Store</h3>
-                        <div className='nearby-store-image'>
-                            <p>101 E. Venango st, Philadelphi</p>
-                            <img src={nearStore} alt='img' />
-                        </div> */}
                     </div>
                     {footerCustomerCareAndAbout.map((items, index) => {
                         return <div key={index} className='footer-care-and-about'>
                             <h3>{items.heading}</h3>
                             {items.navLinks.map((innerItem, innerIndex) => {
-                                return <a className='footer-care-and-about-links' key={innerIndex} href={innerItem}>{innerItem.name}</a>
+                                return <Link className='footer-care-and-about-links' key={innerIndex} to={innerItem}>{innerItem.name}</Link>
                             })}
                         </div>
                     })}
@@ -276,7 +272,7 @@ const Footer = () => {
             <div className='footer-rights-reserved-container'>
                 <p>2020 - 2024 Furniture Mecca. All Rights Reserved</p>
                 <p>
-                    <a href='#'>Designed & Managed By Zelle Solutions</a>
+                    <Link>Designed & Managed By Zelle Solutions</Link>
                 </p>
             </div>
         </div>

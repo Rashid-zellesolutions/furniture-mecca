@@ -568,7 +568,7 @@ label {
 .product-card {
     box-sizing: border-box;
     width: 100%;
-    max-width: 33.33%;
+    /* max-width: 33.33%; */
     position: relative;
     padding: 30px 10px 50px 10px;
 
@@ -642,6 +642,11 @@ label {
     line-height: 22px;
     margin-bottom: 15px;
     cursor: pointer;
+}
+
+.product-title a{
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 .product-rating-stars-div{
@@ -744,11 +749,29 @@ label {
 
 .related-categories-div{
     display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    gap: 20px;
+    /* align-items: center; */
+    justify-content: start;
+    padding: 20px 50px 0 150px;
+
+}
+
+.related-categories-div h3{
+    font-size: 22px;
+    line-height: 33px;
+    font-weight: 600;
+}
+
+.related-categories-items{
+    display: flex;
     flex-wrap: wrap;
+    width: 100%;
     gap: 20px;
     align-items: center;
     justify-content: start;
-    padding: 20px 0;
 }
 
 .related-categories-div a{

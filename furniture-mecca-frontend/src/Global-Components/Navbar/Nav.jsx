@@ -7,6 +7,7 @@ import cashtonImage from '../../Assets/menu-images/Cashton.jpg'
 import cyrilkImage from '../../Assets/menu-images/Cyrilk-.jpg'
 import medellinImage from '../../Assets/menu-images/medellin.jpg'
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Nav = ({navLinks}) => {
 
@@ -209,7 +210,7 @@ const Nav = ({navLinks}) => {
             return <h3 key={index} onMouseEnter={() => item.hasDropdown && handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave} onClick={() => handleActiveItemIndex(index)}
             className={`nav-item ${activeIndex === item.link ? 'active' : ''}`}>
-                <a href={item.link} className='nav-link'> {item.name} </a>
+                <Link to={item.link} className='nav-link'> {item.name} </Link>
                 {dropdownOpen === index && (
                     <div className='dropdown'>
                         {index === 0 ? <DropdownMenu navHeading={livingroomLinks[0].heading} 
@@ -238,7 +239,7 @@ const Nav = ({navLinks}) => {
         <div className='mobile-navbar'>
             {navLinks.map((item, index) => {
                 return  <h3 key={index} className='mobile-nav-link'>
-                    <a href={item.link}>{item.name}</a>
+                    <Link to={item.link}>{item.name}</Link>
                 </h3>
             })}
         </div>

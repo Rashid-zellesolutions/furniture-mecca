@@ -75,6 +75,94 @@ const productsSlicer = createSlice({
                         {color: '#B78953'},
                     ], deliveryTime: 'Get it in 3 to 4 days'
             },
+            {heart: heartImg, mainImage: muellerSofa, hoverImage: sherryImage , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
+                {icon: filledStar, title: 'filled'},
+                {icon: filledStar, title: 'filled'},
+                {icon: filledStar, title: 'filled'},
+                {icon: filledStar, title: 'filled'},
+            ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
+            reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+                {color: '#FF0000'},
+                {color: '#B78953'},
+            ], deliveryTime: 'Get it in 3 to 4 days'
+    },
+    {heart: heartImg, mainImage: muellerSofa, hoverImage: sherryImage , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
+                {icon: filledStar, title: 'filled'},
+                {icon: filledStar, title: 'filled'},
+                {icon: filledStar, title: 'filled'},
+                {icon: filledStar, title: 'filled'},
+            ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
+            reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+                {color: '#FF0000'},
+                {color: '#B78953'},
+            ], deliveryTime: 'Get it in 3 to 4 days'
+    },
+    {heart: heartImg, mainImage: muellerSofa, hoverImage: sherryImage , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
+            {icon: filledStar, title: 'filled'},
+            {icon: filledStar, title: 'filled'},
+            {icon: filledStar, title: 'filled'},
+            {icon: filledStar, title: 'filled'},
+        ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
+        reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+            {color: '#FF0000'},
+            {color: '#B78953'},
+        ], deliveryTime: 'Get it in 3 to 4 days'
+    },
+    {heart: heartImg, mainImage: muellerSofa, hoverImage: sherryImage , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
+            {icon: filledStar, title: 'filled'},
+            {icon: filledStar, title: 'filled'},
+            {icon: filledStar, title: 'filled'},
+            {icon: filledStar, title: 'filled'},
+        ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
+        reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+            {color: '#FF0000'},
+            {color: '#B78953'},
+        ], deliveryTime: 'Get it in 3 to 4 days'
+    },
+    {heart: heartImg, mainImage: muellerSofa, hoverImage: sherryImage , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
+            {icon: filledStar, title: 'filled'},
+            {icon: filledStar, title: 'filled'},
+            {icon: filledStar, title: 'filled'},
+            {icon: filledStar, title: 'filled'},
+        ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
+        reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+            {color: '#FF0000'},
+            {color: '#B78953'},
+        ], deliveryTime: 'Get it in 3 to 4 days'
+    },
+    {heart: heartImg, mainImage: muellerSofa, hoverImage: sherryImage , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
+                {icon: filledStar, title: 'filled'},
+                {icon: filledStar, title: 'filled'},
+                {icon: filledStar, title: 'filled'},
+                {icon: filledStar, title: 'filled'},
+            ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
+            reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+                {color: '#FF0000'},
+                {color: '#B78953'},
+            ], deliveryTime: 'Get it in 3 to 4 days'
+    },
+    {heart: heartImg, mainImage: muellerSofa, hoverImage: sherryImage , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
+            {icon: filledStar, title: 'filled'},
+            {icon: filledStar, title: 'filled'},
+            {icon: filledStar, title: 'filled'},
+            {icon: filledStar, title: 'filled'},
+        ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
+        reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+            {color: '#FF0000'},
+            {color: '#B78953'},
+        ], deliveryTime: 'Get it in 3 to 4 days'
+    },
+    {heart: heartImg, mainImage: muellerSofa, hoverImage: sherryImage , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
+            {icon: filledStar, title: 'filled'},
+            {icon: filledStar, title: 'filled'},
+            {icon: filledStar, title: 'filled'},
+            {icon: filledStar, title: 'filled'},
+        ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
+        reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+            {color: '#FF0000'},
+            {color: '#B78953'},
+        ], deliveryTime: 'Get it in 3 to 4 days'
+    },
         ]
     },
     reducers: {

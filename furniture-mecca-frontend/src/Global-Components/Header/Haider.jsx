@@ -103,9 +103,9 @@ const Haider = () => {
 
       <div className='header'>
         <div className='logo-container'>
-          <a href='/'>
+          <Link to={'/'}>
             <img src={logo} alt="logo" />
-          </a>
+          </Link>
         </div>
         <div className='search-bar-container'>
           <div className='search-bar-div'>
@@ -121,7 +121,7 @@ const Haider = () => {
                 <div className='near-by-city-time'>
                   <p>Nearest Store</p>
                   <span>
-                    <a href='#'>Manchester - CT </a><p> (Opens at 10:00 AM)</p>
+                    <Link>Manchester - CT </Link><p> (Opens at 10:00 AM)</p>
                   </span>
                 </div>
                 <span className='deliver-to'>
@@ -146,7 +146,7 @@ const Haider = () => {
               <img src={profileIcon} alt="profile" />
           </div>
           <div className='tab-view-logo-and-searchbar'>
-            <a href='/'><img src={logo} alt='logo' /></a>
+            <Link to={'/'}><img src={logo} alt='logo' /></Link>
             <div className='tab-view-searchbar-container'>
               <input type='search' placeholder="Search all things Bob's" />
               <img src={searchRed} alt="search" />
@@ -167,7 +167,7 @@ const Haider = () => {
               <img src={profileIcon} alt="profile" className='mobile-view-profile-icon' />
           </div>
           <div className='mobile-view-logo-div'>
-              <a href='/'><img src={logo} alt='logo' /></a>
+              <Link to={'/'}><img src={logo} alt='logo' /></Link>
           </div>
           <div className='mobile-view-card-and-location'>
               <img src={profileIcon} alt="profile" className='mobile-view-card-location-profile' />

@@ -13,11 +13,10 @@
     border: none;
     cursor: pointer;
     z-index: 1000;
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
-  
-  /* Floating animation */
-  animation: float 3s ease-in-out infinite;
-  }
+    transition: background-color 0.3s;
+    max-height: max-content;
+    animation: float 3s ease-in-out infinite;
+}
 
   @keyframes float {
     0%, 100% {
@@ -27,3 +26,5 @@
       transform: translateY(-10px); /* Adjust the height of the floating effect */
     }
   }
+
+  

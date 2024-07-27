@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './TabMenu.css'
 import TabMenuTab from './TabMenuTabs/TabMenuTab'
 import { FaChevronRight } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 const TabMenu = ({navLinks}) => {
   const [isTabClicked, setIsTabClicked] = useState(null)
@@ -30,8 +31,8 @@ const TabMenu = ({navLinks}) => {
           </div>  
         })}
         <div className='tab-menu-extra-options'>
-          <span><a href='#'>View in Your Room App</a></span>
-          <span><a href='#'>live Chat</a></span>
+          <span><Link>View in Your Room App</Link></span>
+          <span><Link>live Chat</Link></span>
         </div>
       </div>
       {activeIndex !== null && (

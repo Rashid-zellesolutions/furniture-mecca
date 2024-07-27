@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './TabFooter.css';
+import { Link } from 'react-router-dom';
 import redFurnitureMecca from '../../Assets/global-images/furniture-mecca-red.jpeg'
 import nearStore from '../../Assets/all-stores-location-images/venango-store.jpg'
 import filledStar from '../../Assets/icons/Star 3.png';
@@ -83,6 +84,7 @@ const TabFooter = () => {
     const handleContaintShow = (index) => {
         setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
     }
+
   return (
     <div className='mobile-view-footer-main-container'>
         <div className='footer-first-section'>
@@ -109,9 +111,9 @@ const TabFooter = () => {
                             <p>mon-sat 10am - 8pm</p>
                             <p>sun 11am - 7pm</p>
                         </span>
-                        <a href='#'>View Direction</a>
-                        <a href='#'>Book Appointment</a>
-                        <a href='#'>Virtual Tour</a>
+                        <Link>View Direction</Link>
+                        <Link>Book Appointment</Link>
+                        <Link>Virtual Tour</Link>
                         <span onClick={handleDetailCloseToggle} className='close-togle'>
                             <p>Close</p><IoIosArrowUp size={30} />
                         </span>
@@ -136,9 +138,9 @@ const TabFooter = () => {
                 <div className='social-icon-and-banner'>
                     <div className='footer-social-icons'>
                         {socialIcons.map((item, index) => {
-                            return <a key={index} href={item.socialLink}>
+                            return <Link key={index} to={item.socialLink}>
                                 <img src={item.socialIcon} alt="icon" />
-                            </a>
+                            </Link>
                         })}
                     </div>
                     <div className='footer-banner'>
@@ -147,7 +149,7 @@ const TabFooter = () => {
                             <h3>Furniture Mecca</h3>
                             <div className='rating-starts-container'>
                                 {stars.map((item, index) => {
-                                    return <img src={item.icon} alt='start' />
+                                    return <img key={index} src={item.icon} alt='start' />
                                 })}
                             </div>
                             <p>847 Google Reviews</p>
@@ -157,7 +159,7 @@ const TabFooter = () => {
                         {contactData.map((item, index) => {
                             return <span key={index}>
                                 <img src={item.icon} alt='img' />
-                                <a href={item.link}>{item.title}</a>
+                                <Link href={item.link}>{item.title}</Link>
                             </span>
                         })}
                     </div>
@@ -191,24 +193,12 @@ const TabFooter = () => {
                                     <a href='#'>Book an Appointment</a>
                                 </div>
                             </div>
-                        {/* <h3>Nearest Store</h3>
-                        <div className='nearby-store-image'>
-                            <p>101 E. Venango st, Philadelphi</p>
-                            <img src={nearStore} alt='img' />
-                        </div> */}
-                    </div>
-                    {/* <div className='footer-nearby-store'>
-                        <h3>Nearest Store</h3>
-                        <div className='nearby-store-image'>
-                            <p>101 E. Venango st, Philadelphi</p>
-                            <img src={nearStore} alt='img' />
                         </div>
-                    </div> */}
                     <div className='footer-customer-care'>
                         <h3>Customer Care</h3>
                         <div className='customer-care-links'>
                             {customerCare.map((item, index) => {
-                                return <a key={index} href={item.link}>{item.item}</a>
+                                return <Link key={index} to={item.link}>{item.item}</Link>
                             })}
                         </div>
                     </div>
@@ -216,7 +206,7 @@ const TabFooter = () => {
                         <h3>About Furniture Mecca</h3>
                         <div className='customer-care-links'>
                             {aboutUs.map((item, index) => {
-                                return <a key={index} href={item.link}>{item.item}</a>
+                                return <Link key={index} to={item.link}>{item.item}</Link>
                             })}
                         </div>
                     </div>
@@ -226,7 +216,7 @@ const TabFooter = () => {
                 <p>
                 © 2020 - 2024 Furniture Mecca. All Rights Reserved.
                 </p>
-                <p> Designed & Managed By <a href='#'>Zelle Solutions</a></p>
+                <p> Designed & Managed By <Link>Zelle Solutions</Link></p>
             </div>
             <div className='mobile-view-terms-and-rights'>
                 <div className='ship-and-terms'>
@@ -234,7 +224,7 @@ const TabFooter = () => {
                     <p>Terms & Condition</p>
                 </div>
                 <p>Designed & maintained by</p>
-                <a href='#'>Zelle Solutions</a>
+                <Link>Zelle Solutions</Link>
             </div>
         </div>
     </div>

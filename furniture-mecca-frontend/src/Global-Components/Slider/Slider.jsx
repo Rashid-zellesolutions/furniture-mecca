@@ -10,6 +10,7 @@ import ArrowLeft from '../../Assets/icons/arrow-left.png';
 import ArrowRight from '../../Assets/icons/arrow-right.png';
 import arrowLeftRed from '../../Assets/icons/arrow-left-red.png';
 import arrowRightRed from '../../Assets/icons/arrow-right-red.png';
+import { Link } from 'react-router-dom';
 
 const Slider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);

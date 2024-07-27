@@ -2,6 +2,7 @@ import React from 'react'
 import './furnitureDropDown.css';
 import imageOne from '../../../Assets/menu-images/furniture-menu-image.avif';
 import imageTwo from '../../../Assets/menu-images/furniture-menu-image-two.jpg';
+import { Link } from 'react-router-dom';
 
 const FurnitureDropdown = () => {
 
@@ -71,7 +72,7 @@ const FurnitureDropdown = () => {
             <h3 className='furniture-heading'>Living Room</h3>
             <div className='living-room-links'>
                 {livingRoomLinks.map((livingRoomItems, index) => {
-                    return <a href={livingRoomItems.link}>{livingRoomItems.name}</a>
+                    return <Link to={livingRoomItems.link}>{livingRoomItems.name}</Link>
                 })}
             </div>
             <h3 className='furniture-heading shop-via-chat-option'>Shop via Chat</h3>
@@ -80,7 +81,7 @@ const FurnitureDropdown = () => {
             <h3 className='furniture-heading'>Bedroom</h3>
             <div className='living-room-links'>
                 {bedroomLinks.map((bedroomLinksItems, index) => {
-                    return <a href={bedroomLinksItems.link}>{bedroomLinksItems.name}</a>
+                    return <Link to={bedroomLinksItems.link}>{bedroomLinksItems.name}</Link>
                 })}
             </div>
         </div>
@@ -88,7 +89,7 @@ const FurnitureDropdown = () => {
             <h3 className='furniture-heading'>Dining</h3>
             <div className='living-room-links'>
                 {diningLinks.map((diningItems, index) => {
-                    return <a href={diningItems.link}>{diningItems.name}</a>
+                    return <Link to={diningItems.link}>{diningItems.name}</Link>
                 })}
             </div>
         </div>
@@ -96,13 +97,13 @@ const FurnitureDropdown = () => {
             <h3 className='furniture-heading'>Entryway Furniture</h3>
             <div className='living-room-links'>
                 {entrywayLinks.map((entrywayItems, index) => {
-                    return <a href={entrywayItems.link}>{entrywayItems.name}</a>
+                    return <Link to={entrywayItems.link}>{entrywayItems.name}</Link>
                 })}
             </div>
             <h3 className='furniture-heading'>Small spaces</h3>
             <div className='living-room-links '>
                 {smallSpacesLinks.map((smallspacesItems, index) => {
-                    return <a href={smallspacesItems.link}>{smallspacesItems.name}</a>
+                    return <Link to={smallspacesItems.link}>{smallspacesItems.name}</Link>
                 })}
             </div>
         </div>

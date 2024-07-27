@@ -4,6 +4,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import furnitureMenuImage from '../../../../Assets/menu-images/furniture-menu-image.avif'
 import furnitureMenuImageTwo from '../../../../Assets/menu-images/furniture-menu-image-two.jpg';
 import TabMenuTabLinks from './TabMenuTabLinks/TabMenuTabLinks';
+import { Link } from 'react-router-dom';
 
 const TabMenuTab = ({name, ind, closeMenu, headingLink}) => {
 
@@ -112,8 +113,8 @@ const TabMenuTab = ({name, ind, closeMenu, headingLink}) => {
       <div className={`sub-nav-header ${isSubNavOpen ? 'hide-sub-nav-header' : ''}`}>
         <span className='back-to-main-menu'><FaChevronLeft size={17} onClick={closeMenu}  /></span>
         <div className='sub-menu-heading-container'>
-            <h3> <a href={headingLink}>{name}</a></h3>
-            <span><a href='#'> Shop all</a> | <a href='#'> Shop via Chat</a></span>
+            <h3> <Link to={headingLink}>{name}</Link></h3>
+            <span><Link> Shop all</Link> | <Link> Shop via Chat</Link></span>
         </div>
       </div>
       <div className={`tab-sub-menu-link ${isSubNavOpen ? 'hide-sub-menu-link' : ''}`}>
@@ -138,7 +139,7 @@ const TabMenuTab = ({name, ind, closeMenu, headingLink}) => {
         <div className='tab-sub-menu-images-container'>
             <div className='tab-sub-menu-image-and-title'>
                 <img src={furnitureMenuImage} alt='img' />
-                <span>Introducing my <a href='#'>New Modular Bob</a></span>
+                <span>Introducing my <Link>New Modular Bob</Link></span>
             </div>
             <div className='tab-sub-menu-image-and-title'>
                 <img src={furnitureMenuImageTwo} alt='img two' />
