@@ -42,6 +42,7 @@ const Products = () => {
 
     // All Initial State VAriables
     
+    // const [borderLeft, setBorderLeft] = useState(false);
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [hideFilters, setHideFilters] = useState(false);
     const [relevanceTrue, setRelevanceTrue] = useState(false)
@@ -63,10 +64,10 @@ const Products = () => {
             {type: 'checkbox', name: 'Kitchen Islands'},
         ]},
         {name: 'Color' , icon: AddBtn, filters: [
-            {type: 'checkbox', name: 'Dining Room Sets'},
-            {type: 'checkbox', name: 'Bar Sets'},
-            {type: 'checkbox', name: 'Kitchen Islands'},
-            {type: 'checkbox', name: 'Kitchen Islands'},
+            {type: 'checkbox', name: 'Blue'},
+            {type: 'checkbox', name: 'Green'},
+            {type: 'checkbox', name: 'Orange'},
+            {type: 'checkbox', name: 'Red'},
         ]},
         {name: 'Material' , icon: AddBtn, filters: [
             {type: 'checkbox', name: 'Dining Room Sets'},
@@ -240,7 +241,7 @@ const Products = () => {
                     <p>Clear Filters</p>
                 </div>
                 <div className='all-filters-section'>
-                {filtersData.slice(0, showAllFilters ? filtersData.length : 5).map((item, index) => {
+                {/* {filtersData.slice(0, showAllFilters ? filtersData.length : 5).map((item, index) => {
                         const isOpen = openFilterIndices.includes(index);
                         return <div key={index} className='single-filter'>
                         <span onClick={() => handleFilterClick(index)}>
@@ -261,11 +262,89 @@ const Products = () => {
                             })}
                         </div>
                     </div>
+                    })} */}
+
+                    {filtersData.slice(0, showAllFilters ? filtersData.length : 5).map((item, index) => {
+                        const isOpen = openFilterIndices.includes(index);
+                        return <div key={index} className='single-filter'>
+                        <span onClick={() => handleFilterClick(index)}>
+                            <p>{item.name}</p>
+                            <img src={item.icon} alt='btn' className={isOpen ? 'rotate' : ''} />
+                        </span>
+                        <div className={`${item.name === 'Color' ? 'color-filter' : 'filters'} ${isOpen ? 'show-filter' : ''}`} >
+                            {item.name === 'Color' ? (
+                                item.filters.map((innerItem, innerIndex) => (
+                                    <span key={innerIndex} className={`${item.name === 'Color' ? 'color-span' : ''}`} >
+                                        <input type={innerItem.type} placeholder='checkbox' className='custom-checkbox'
+                                        id={`filter-${innerIndex}`} />
+                                        <label htmlFor={`filter-${innerIndex}`}>{innerItem.name}</label>
+                                    </span>
+                                ))
+                            ) : (
+                                item.filters.map((innerItem, innerIndex) => (
+                                    <span key={innerIndex}>
+                                        <input type={innerItem.type} placeholder='checkbox' className='custom-checkbox'
+                                        id={`filter-${innerIndex}`} />
+                                        <label htmlFor={`filter-${innerIndex}`}>{innerItem.name}</label>
+                                    </span>
+                                )) 
+                            )}
+                            {/* {item.filters.map((innerItem, innerIndex) => {
+                                return <span key={innerIndex}>
+                                <input type={innerItem.type} 
+                                    placeholder='checkbox' 
+                                    className="custom-checkbox"
+                                    id={`filter-${innerIndex}`}  
+                                    // onChange={() => handleCheckboxChange(innerItem.name)} 
+                                    />
+                                <label htmlFor={`filter-${innerIndex}`} >{innerItem.name}</label>
+                            </span>
+                            })} */}
+                        </div>
+                    </div>
+
+                    // this is top outer 
                     })}
+                    
+                    
                 </div>
                 <button onClick={toggleFiltersVisibility}>
-                {showAllFilters ? 'Show Less Filters' : 'View All Filters'}
-            </button>
+                    {showAllFilters ? 'Show Less Filters' : 'View All Filters'}
+                </button>
+                {/* <div className='colors-filter-variation'>
+                        <span>
+                            <input type={'checkbox'} 
+                                placeholder='checkbox' 
+                                className="custom-checkbox"
+                                id={`filter`}  
+                            />
+                            <label htmlFor={`filter`} >blue</label>
+                        </span>
+                        <span>
+                            <input type={'checkbox'} 
+                                placeholder='checkbox' 
+                                className="custom-checkbox"
+                                id={`filter`}  
+                            />
+                            <label htmlFor={`filter`} >blue</label>
+                        </span>
+                        <span>
+                            <input type={'checkbox'} 
+                                placeholder='checkbox' 
+                                className="custom-checkbox"
+                                id={`filter`}  
+                            />
+                            <label htmlFor={`filter`} >blue</label>
+                        </span>
+                        <span>
+                        <input type={'checkbox'} 
+                            placeholder='checkbox' 
+                            className="custom-checkbox"
+                            id={`filter`}
+                        />
+                        <label htmlFor={`filter`} >blue</label>
+                    </span>
+                </div> */}
             </div>
             {/* Products section code */}
             <div className={`products-section ${hideFilters ? 'full-width' : ''}`}>
@@ -338,6 +417,7 @@ const Products = () => {
                             priceTag={item.priceTag} financingAdd={item.financingAdd} learnMore={item.learnMore} colorVariation={item.colorVariation}
                             mainIndex={index} deliveryTime={item.deliveryTime} 
                             selectedColorIndices={selectedColorIndices} handleVariantColor={() => handleVariantImageClick(index, colorIndex)}
+                            borderLeft={index % 3 === 2}
                         />
                     })}
                     

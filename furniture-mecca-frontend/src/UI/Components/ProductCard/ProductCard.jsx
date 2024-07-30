@@ -5,9 +5,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setColorIndex } from '../../../Redux/ColorIndex/ColorINdexSlicer';
 
 const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardContainerClass, mouseEnter, mouseLeave, ProductTitle, stars, reviewCount, lowPriceAddvertisement,
-    priceTag, financingAdd, learnMore, colorVariation, mainIndex, deliveryTime, handleVariantColor, selectedColorIndices, maxWidthAccordingToComp
+    priceTag, financingAdd, learnMore, colorVariation, mainIndex, deliveryTime, handleVariantColor, selectedColorIndices, maxWidthAccordingToComp, borderLeft
 }) => {
     
+    // const [borderLeft, setBorderLeft] = useState(false);
     const dispatch = useDispatch();
     const selectedColorIndex = useSelector((state) => state.colorIndex.colorIndex);
     const handleColorVariationIndex = (colorIndex) => {
@@ -26,7 +27,7 @@ const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardCont
   return (
     // <div className='product-main'>
     <>
-        <div className={productCardContainerClass} style={{maxWidth: maxWidthAccordingToComp}}>
+        <div className={`${productCardContainerClass} ${borderLeft ? 'hide-after' : ''} `} style={{maxWidth: maxWidthAccordingToComp}}>
             <div className='product-card-data'>
                 <div className={tagDivClass}>
                     <img src={tagIcon} alt='heart img' className={tagClass} />

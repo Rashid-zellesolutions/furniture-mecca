@@ -13,7 +13,6 @@ const SimillerProducts = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [hideFilters, setHideFilters] = useState(false);
 
-    console.log(productData)
 
     
 
@@ -77,7 +76,7 @@ const SimillerProducts = () => {
     // const [hoveredIndex, setHoveredIndex] = useState(null);
     // const [hideFilters, setHideFilters] = useState(false);
     
-    const cardWidth = 300; // Adjust the width of your cards here
+    const cardWidth = 310; // Adjust the width of your cards here
 
     const handleScroll = (direction) => {
         const container = scrollContainerRef.current;
@@ -111,7 +110,7 @@ const SimillerProducts = () => {
                     <img src={arrowLeftRed} alt='arrow-left' />
                 </button>
                 <div className='similler-products-cards' ref={scrollContainerRef}>
-                    {productData.map((item, index) => (
+                    {productData.slice(0, 12).map((item, index) => (
                         <ProductCard
                             key={index}
                             maxWidthAccordingToComp={'100%'}
@@ -134,6 +133,7 @@ const SimillerProducts = () => {
                             deliveryTime={item.deliveryTime}
                             selectedColorIndices={selectedColorIndices}
                             handleVariantColor={() => handleVariantImageClick(index, colorIndex)}
+                            borderLeft={index % 4 === 3}
                         />
                     ))}
                 </div>

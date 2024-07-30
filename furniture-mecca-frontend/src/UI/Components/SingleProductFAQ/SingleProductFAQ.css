@@ -39,7 +39,7 @@
     cursor: pointer;
 }
 
-.rotate{
+.arrow-rotate{
     transform: rotate(175deg);
     transition: all 0.3s ease-in-out;
 

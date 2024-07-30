@@ -1,11 +1,10 @@
 import React from 'react'
 import './ShipBanner.css'
-import ShipBannerImg from '../../../Assets/to-be-change/shipbanner 3.png';
 
-const ShipBanner = () => {
+const ShipBanner = ({bannerImg, paddindTrue}) => {
   return (
-    <div className='banner-div'>
-      <img src={ShipBannerImg} alt="ship banner" />
+    <div className={`banner-div ${paddindTrue ? 'padding-bottom' : ''}`}>
+      <img src={bannerImg} alt="ship banner" />
     </div>
   )
 }

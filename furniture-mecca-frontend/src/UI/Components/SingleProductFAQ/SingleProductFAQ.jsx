@@ -16,7 +16,7 @@ const SingleProductFAQ = () => {
         }
     }, [activeIndex])
 
-    const Qna = [
+    const productDetails = [
         {question: 'Description', icon: arrowDown, answereOne: 
             `Well, let's face it. Coordinating living room furniture – including fabrics, pillows, colors, 
             and sizes – can be exhausting! A living room set is an effective and convenient way to complete 
@@ -65,13 +65,13 @@ const SingleProductFAQ = () => {
     // }
   return (
     <div className='single-product-detailed-section-container'>
-                {Qna.map((item, index) => {
+                {productDetails.map((item, index) => {
                     const isExpanded = expandedIndex === index;
                     const truncatedText = item.answereOne.slice(0, 150) + (item.answereOne.length > 150 ? '...' : '');
                     return <div key={index} className='details-toggler'>
                         <div className='single-product-details-section' onClick={() => handleToggle(index)}>
                             <p>{item.question}</p>
-                            <img src={item.icon} alt='add btn' className={`${activeIndex === index ? 'rotate' : ''}`} />
+                            <img src={item.icon} alt='add btn' className={`${activeIndex === index ? 'arrow-rotate' : ''}`} />
                         </div>
                         <div className={`single-product-details-answered-section ${activeIndex === index ? 'show-answere' : ''}`}
                         ref={el =>  answerRef.current[index] = el} 

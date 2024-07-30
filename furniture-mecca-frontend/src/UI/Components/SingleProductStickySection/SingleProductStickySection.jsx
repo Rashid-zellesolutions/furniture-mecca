@@ -96,16 +96,6 @@ const SingleProductStickySection = () => {
     }
   };
 
-  // useEffect(() => {
-  //   updateDisableStates();
-  //   mainSliderRef.current.addEventListener('scroll', updateDisableStates);
-  //   thumbnailSliderRef.current.addEventListener('scroll', updateDisableStates);
-  //   return () => {
-  //     mainSliderRef.current.removeEventListener('scroll', updateDisableStates);
-  //     thumbnailSliderRef.current.removeEventListener('scroll', updateDisableStates);
-  //   };
-  // }, []);
-
   useEffect(() => {
     // Ensure refs are not null before adding event listeners
     const mainSlider = mainSliderRef.current;

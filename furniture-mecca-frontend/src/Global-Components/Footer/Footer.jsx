@@ -28,52 +28,57 @@ const Footer = () => {
         {
             heading: "Living Room", navItems: [
             {name: 'Living Room Sets', link: '#'},
+            {name: 'Sofa & Lovaseat Sets', link: '#'},
             {name: 'Sectionals', link: '#'},
+            {name: 'Reclining Furniture', link: '#'},
             {name: 'Sofas', link: '#'},
             {name: 'Sleeper Sofas', link: '#'},
-            {name: 'Love Seats', link: '#'},
-            {name: 'Reclining Furniture', link: '#'},
+            {name: 'Lovaseats', link: '#'},
             {name: 'Small Space Living Room', link: '#'},
-            {name: 'Outlets', link: '#'},
             ]
         },
         {
-            heading: "Bed Room", navItems: [
+            heading: "Bedroom", navItems: [
                 {name: 'Bed Room Sets', link: '#'},
                 {name: 'Bed & HeadBoards', link: '#'},
+                {name: 'Dressers & Mirrir Sets', link: '#'},
                 {name: 'Dressers', link: '#'},
                 {name: 'Chest', link: '#'},
-                {name: 'Dresser & Mirror Sets', link: '#'},
                 {name: 'Night Stands', link: '#'},
                 {name: 'Mirrors', link: '#'},
                 {name: 'Twin Beds', link: '#'},
                 {name: 'Queen Beds', link: '#'},
-                {name: 'King Beds', link: '#'},
                 {name: 'Full Bed', link: '#'},
+                {name: 'King Beds', link: '#'},
+                {name: 'Small Space Bed Room', link: '#'},
+                {name: 'Outlets', link: '#'},
+            ]
+        },
+        {
+            heading: "Dining Rooms", navItems: [
+                {name: 'Living Room Sets', link: '#'},
+                {name: 'Pub Height Dining Sets', link: '#'},
+                {name: 'Dining Chairs & Benches', link: '#'},
+                {name: 'Dining Tables', link: '#'},
+                {name: 'Bar Stools', link: '#'},
+                {name: 'Servers,Buffets & China Cabinates', link: '#'},
                 {name: 'Small Space Bed Room', link: '#'},
                 {name: 'Outlets', link: '#'},
             ]
         },
         {
             heading: "Mattresses", navItems: [
-                {name: 'Dining Room Sets', link: '#'},
-                {name: 'Pub Height Dining Set', link: '#'},
-                {name: 'Dining Chairs & Benches', link: '#'},
-                {name: 'Dining Tables', link: '#'},
+                {name: 'Twin Beds', link: '#'},
+                {name: 'Queen Beds', link: '#'},
+                {name: 'Full Bed', link: '#'},
+                {name: 'King Beds', link: '#'},
                 {name: 'Bar Stools', link: '#'},
-                {name: 'Servers, Buffets & China Cabinets', link: '#'},
-            ]
-        },
-        {
-            heading: "Dining Rooms", navItems: [
-                {name: 'Living Room Sets', link: '#'},
-                {name: 'Sectionals', link: '#'},
-                {name: 'Sofas', link: '#'},
-                {name: 'Sleeper Sofas', link: '#'},
-                {name: 'Love Seats', link: '#'},
-                {name: 'Reclining Furniture', link: '#'},
-                {name: 'Small Space Bed Room', link: '#'},
-                {name: 'Outlets', link: '#'},
+                {name: 'Bed Frames', link: '#'},
+                {name: 'Pillows', link: '#'},
+                {name: 'Memory Foam Mattresses', link: '#'},
+                {name: 'Box Spring', link: '#'},
+                {name: 'Mattresses Protections', link: '#'},
+                {name: 'Outlet', link: '#'},
             ]
         },
         {
@@ -133,7 +138,7 @@ const Footer = () => {
             ]
         },
         {
-            heading: "Rugs", navItems: [
+            heading: "Outlet", navItems: [
                 {name: 'Bed Room Sets', link: '#'},
                 {name: 'Bed & HeadBoards', link: '#'},
                 {name: 'Dressers', link: '#'},

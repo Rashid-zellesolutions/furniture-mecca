@@ -36,6 +36,7 @@ import KidsRoom from '../../../Assets/to-be-change/kids-room.png';
 import AreaRugs from '../../../Assets/to-be-change/area-rugs.png';
 import HomeDecor from '../../../Assets/to-be-change/home-decor.png';
 import Outlet from '../../../Assets/to-be-change/outlet.png';
+import shipBanner from '../../../Assets/to-be-change/shipbanner 3.png'
 
 
 const Home = () => {
@@ -84,7 +85,7 @@ const categoryCardData = [
       <NearStorePopUp />
       <Shopvia />
       <Slider />
-      <ShipBanner />
+      <ShipBanner bannerImg={shipBanner} paddindTrue={false} />
       <Category title={'Shop by Category'} categoryData={categoryCardData} />
       <LatestModulerBanner customWidth={true} />
       <FurnitureProduct />

@@ -47,7 +47,7 @@ const FrequentlyBought = () => {
     <div className='frequently-bought-main'>
         <h3>Frequently Bought Together</h3>
         <div className='frequently-bought-card'>
-        {productData.map((item, index) => (
+        {productData.slice(0, 5).map((item, index) => (
                         <ProductCard
                             key={index}
                             maxWidthAccordingToComp={'100%'}
@@ -70,6 +70,7 @@ const FrequentlyBought = () => {
                             deliveryTime={item.deliveryTime}
                             selectedColorIndices={selectedColorIndices}
                             handleVariantColor={() => handleVariantImageClick(index, colorIndex)}
+                            borderLeft={index % 4 === 3}
                         />
                     ))}
         </div>

@@ -1,0 +1,31 @@
+/* .footer-main-container{
+    display: flex;
+    width: 100%;
+    padding: 40px;
+    background-color: var(--footer-bg-color);
+    color: #ffff;
+}
+
+.footer-menu-links{
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav{
+    display: flex;
+    flex-direction: column;
+} */
+
+/* .footer-nav h3{
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 1365px){
+    .footer-nav h3{
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 600;
+    }
+} */

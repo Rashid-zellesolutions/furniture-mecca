@@ -18,6 +18,14 @@
     animation: float 3s ease-in-out infinite;
 }
 
+.lead-to-top-btn{
+  transition: all 0.3S ease-in-out;
+}
+
+.lead-to-top-btn:hover{
+  transform: scale(1.5);
+}
+
   @keyframes float {
     0%, 100% {
       transform: translateY(0);
