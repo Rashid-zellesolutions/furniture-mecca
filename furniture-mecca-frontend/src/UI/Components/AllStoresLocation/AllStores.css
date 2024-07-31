@@ -3,7 +3,6 @@
     width: 100%;
     background-color: #EEEEEE;
     padding: 0px 100px;
-    /* font-family: var(--work-sans-font); */
     color: var(--text-color);
 }
 
@@ -37,7 +36,6 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
-
     }
 }
 
@@ -173,6 +171,8 @@
 }
 
 .find button{
+    display: flex;
+    align-items: center;
     width: max-content;
     height: 40px;
     padding: 12px 24px;
@@ -321,11 +321,9 @@
     position: relative;
     background-color: white;
     color: var(--text-color);
-    /* font-family: var(--work-sans-font); */
     border-radius: 5px;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 0;
-
 }
 
 .mobile-view-location-card-container.show-modal .mobile-view-card {
@@ -368,7 +366,6 @@
 
 .store-modal-buttons button{
     background-color: var(--button-color);
-    /* font-family: var(--work-sans-font); */
     color: white;
     width: 50%;
     border: 2px solid var(--button-color);
@@ -407,5 +404,4 @@
         font-size: 10px;
         font-weight: 400;
     }
-    
 }

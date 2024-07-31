@@ -22,7 +22,6 @@ const GetTheScop = () => {
           </div>
         </div>
         <div className='get-the-scop-banner'>
-
             <h3>Furniture Mecca Promotions</h3>
             <p>Get Exclusive Promotional Offers For The Year 2024</p>
             <div className='banner-container'>

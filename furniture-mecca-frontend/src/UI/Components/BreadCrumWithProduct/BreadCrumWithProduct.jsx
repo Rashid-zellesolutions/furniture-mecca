@@ -6,15 +6,6 @@ import imageThree from '../../../Assets/category/black-soffa.png'
 
 const BreadCrumWithProduct = ({breadcrumRecentData}) => {
 
-    // const breadcrumRecentData = [
-    //     {img: imageOne, title: 'Under $1500'},
-    //     {img: imageTwo, title: 'Sofa & Love Seat Sets'},
-    //     {img: imageThree, title: 'Sectional Sets'},
-    //     {img: imageOne, title: 'Under $1500'},
-    //     {img: imageTwo, title: 'Sofa & Love Seat Sets'},
-    //     {img: imageThree, title: 'Sectional Sets'},
-    // ]
-
   return (
     <div className='breadcrum-with-products'>
         <div className='breadcrum'>

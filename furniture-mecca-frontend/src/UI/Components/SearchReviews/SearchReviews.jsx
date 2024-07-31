@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './SearchReviews.css';
 import searchIcon from '../../../Assets/icons/search-white.png';
+import searchIconRed from '../../../Assets/icons/search-red.png';
 
 const SearchReviews = () => {
+    const [isHovered, setIsHovered] = useState(false)
     const relatedReviews = [
         {relatedReview: 'good quality 111'},
         {relatedReview: 'great set 89'},
@@ -14,6 +16,14 @@ const SearchReviews = () => {
         {relatedReview: 'poor quality 24'},
         {relatedReview: 'perfect size 20'},
     ]
+
+    const handleMouseHover = () => {
+        setIsHovered(true);
+    }
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    }
   return (
     <div className='search-reviews-main-container'>
         <p>Show reviews that mention</p>
@@ -21,8 +31,8 @@ const SearchReviews = () => {
             <div className='review-search-bar-div'>
                 <div className='search-bar'>
                     <input type='text' placeholder='Search' />
-                    <div className='search-button'>
-                        <img src={searchIcon} alt='search icon' />
+                    <div className='search-button' onMouseEnter={handleMouseHover} onMouseLeave={handleMouseLeave}>
+                        <img src={isHovered ? searchIconRed : searchIcon} alt='search icon' />
                     </div>
                 </div>
             </div>

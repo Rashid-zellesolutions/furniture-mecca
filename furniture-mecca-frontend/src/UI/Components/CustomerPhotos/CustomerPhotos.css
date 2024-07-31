@@ -39,7 +39,6 @@
   .customer-slider-arrow {
     background: none;
     border: none;
-    /* font-size: 2rem; */
     cursor: pointer;
     z-index: 1;
     position: absolute;
@@ -49,10 +48,6 @@
     width: 50px;
     height: 50px;
   }
-  
-  /* .nav-button:hover {
-    color: grey;
-  } */
   
   .customer-slider-arrow:first-of-type {
     left: 10px;

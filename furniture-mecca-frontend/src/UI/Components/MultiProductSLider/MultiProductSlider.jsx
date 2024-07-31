@@ -23,18 +23,6 @@ const MultiProductSlider = () => {
         return () => clearInterval(interval);
     }, [images.length]);
 
-    // const intervals = [2000, 4000, 1000, 3000]; // Intervals in milliseconds
-
-    // const [currentIndex, setCurrentIndex] = useState(0);
-
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
-    //     }, intervals[currentIndex % intervals.length]);
-        
-    //     return () => clearInterval(interval);
-    // }, [currentIndex, images.length, intervals]);
-
     const getSliderImages = (sliderIndex) => {
         const shift = (index, shiftBy) => (index + shiftBy) % images.length;
         return images.map((_, i) => {

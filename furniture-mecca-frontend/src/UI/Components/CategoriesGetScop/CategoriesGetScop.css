@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* padding: 0 30px; */
     gap: 50px;
 }
 
@@ -17,8 +16,6 @@
     background-position: center;
     align-items: center;
     justify-content: center;
-    /* padding: 70px 0; */
-    /* font-family: var(--work-sans-font); */
 }
 
 .scop-contact-container::before{
@@ -35,7 +32,6 @@
 .scop-contact-container > * {
     position: relative;
     z-index: 2;
-
 }
 
 .heading-and-links{
@@ -62,7 +58,6 @@
     color: white;
     text-decoration: none;
     font-weight: 500;
-
 }
 
 .scop-input{
@@ -123,15 +118,12 @@
     color: white;
 }
 
-
 .product-text-details{
-    /* display: flex; */
     display: none;
     flex-direction: column;
     width: 100%;
     gap: 15px;
     padding: 0 30px;
-    /* font-family: var(--work-sans-font); */
 }
 
 .product-text-details.show{

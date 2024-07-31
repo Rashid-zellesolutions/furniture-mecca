@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const TabMenuTabLinks = ({name, closeSubMenuLinks, ind, innerInd, tabSublinksData}) => {
 
+  console.log("index is : ", ind , "Inner INdex is : ", innerInd)
   return (
     <div className='tab-sub-menu-links'>
       <div className={`sub-nav-header `}>
@@ -16,7 +17,7 @@ const TabMenuTabLinks = ({name, closeSubMenuLinks, ind, innerInd, tabSublinksDat
       </div>
       <div className='tab-sub-menu-link'>
         {tabSublinksData[ind].furnitureSubData[innerInd].furnitureLinks.map((item, index) => {
-          return <h3 className='tab-sub-menu-link-item'>
+          return <h3 key={index} className='tab-sub-menu-link-item'>
            <Link to={item.link}> {item.name} </Link>
           </h3>
         })}

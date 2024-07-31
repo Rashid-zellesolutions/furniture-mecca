@@ -12,20 +12,15 @@
     color: var(--text-color);
 }
 
-
 .search-reviews{
     display: flex;
     width: 100%;
-    gap: 10px;   
-    /* align-items: center; */
+    gap: 10px;
 }
 .review-search-bar-div{
     display: flex;
     width: 30%;
-    /* align-items: center; */
 }
-
-
 
 .search-bar{
     display: flex;
@@ -49,7 +44,6 @@
     color: var(--text-color);
 }
 
-
 .search-button{
     height: 100%;
     width: 50px;
@@ -63,8 +57,13 @@
     cursor: pointer;
 }
 
+.search-button:hover{
+    background-color: #fff;
+    border: none;
+    border-left: 1px solid var(--active-nav-item-color);
+}
+
 .most-related-reviews{
-    /* grid-area: related-reviews; */
     display: flex;
     width: 70%;
     align-items: center;

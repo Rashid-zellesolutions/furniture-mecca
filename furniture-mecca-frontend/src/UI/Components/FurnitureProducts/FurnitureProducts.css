@@ -10,7 +10,6 @@
 
 .product-heading{
     color: var(--text-color);
-    /* font-family: var(--work-sans-font); */
     font-size: 28px;
     line-height: 28px;
     font-weight: 600;
@@ -62,7 +61,6 @@
     width: 50%;
     padding: 0 20px;
     align-items: start;
-    /* font-family: var(--work-sans-font); */
     gap: 5px;
 }
 
@@ -248,7 +246,6 @@
         flex-direction: column;
         padding: 10px;
         flex: 1 0 35%;
-        /* font-family: var(--work-sans-font); */
         border-radius: 4px;
     }
     .mobile-view-product img{

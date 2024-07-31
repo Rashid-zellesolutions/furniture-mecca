@@ -7,6 +7,8 @@ import LatestModulerBanner from '../../Components/LatestModuler/LatestModulerBan
 import NewArrival from '../../Components/NewArrivals/NewArrival';
 import MultiProductSlider from '../../Components/MultiProductSLider/MultiProductSlider';
 import CategoriesGetScop from '../../Components/CategoriesGetScop/CategoriesGetScop';
+import BestSeller from '../../Components/BestSeller/BestSeller';
+import DealOfDay from '../../Components/DealOfDay/DealOfDay';
 
 const Categories = ({categoriesMainImage, categoryCardData, newArrival}) => {
 
@@ -15,7 +17,9 @@ const Categories = ({categoriesMainImage, categoryCardData, newArrival}) => {
       <Shopvia />
       <LatestModulerBanner customWidth={false} mainImage={categoriesMainImage} />
       <Category title={'Dining Room Furniture'} categoryData={categoryCardData} />
-      <MultiProductSlider />
+      {/* <MultiProductSlider /> */}
+      <BestSeller />
+      <DealOfDay />
       {newArrival ? <NewArrival /> : <></>}
       <CategoriesGetScop isTrue={true} />
       <CustomerServicePanel />

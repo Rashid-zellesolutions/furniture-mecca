@@ -2,7 +2,6 @@
     margin-top: 40px;
     display: flex;
     width: 100%;
-    /* height: 100%; */
     padding: 0 90px;
     background-image: url('../../../Assets/to-be-change/bb\ 1.png');
     background-repeat: no-repeat;
@@ -19,11 +18,8 @@
 .get-the-scop-form{
     display: flex;
     width: 100%;
-    /* background-color: orange; */
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
-    /* font-family: var(--work-sans-font); */
 }
 
 .get-the-scop-form h3{
@@ -98,18 +94,14 @@
     display: flex;
     flex-direction: column;
     padding: 30px 120px;
-    /* justify-content: center; */
     align-items: center;
     overflow: hidden;
     position: relative;
-    /* font-family: var(--work-sans-font); */
-    /* background-color: orange; */
     gap: 10px;
 }
 
 .get-the-scop-banner h3{
     font-size: 22px;
-    /* line-height: 22px; */
     font-weight: 600;
     color: var(--text-color);
 }
@@ -117,7 +109,6 @@
 .get-the-scop-banner p{
     font-size: 11px;
     color: var(--text-color);
-    /* margin-bottom: 20px; */
     font-weight: 600;
 }
 
@@ -130,18 +121,13 @@
 }
 
 .banner-container img{
-    /* width: 400px;
-    height: 482px; */
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
     z-index: 1;
     position: relative;
     margin-bottom: 20px;
-    /* animation: float 3s ease-in-out infinite; */
 }
-
-
 
 .banner-container img:hover{
     animation: float 1.5s ease-in-out infinite;
@@ -152,7 +138,6 @@
     bottom: 12%;
     z-index: 2;
     position: absolute;
-    /* font-family: var(--work-sans-font); */
     font-size: 13px;
     line-height: 16px;
     text-transform: capitalize;
@@ -173,10 +158,6 @@
     }
 }
 
-/* .float-image{
-    animation: float 3s ease-in-out infinite;
-} */
-
 @keyframes float {
     0%{
         transform: translateY(0%);
@@ -188,14 +169,6 @@
         transform: translateY(0%);
     }
 }
-
-
-
-/* @media only screen and (max-width: 1300px){
-    .get-the-scop-banner button{
-        bottom: 7%;
-    }
-} */
 
 .get-the-scop-banner button a{
     color: white;

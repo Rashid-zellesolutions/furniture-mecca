@@ -29,13 +29,6 @@ const BlogSlider = () => {
         setIsHovered(false);
     }
 
-    // const handleMouseEnter = () => {
-    //     document.querySelector('.blog-slider').classList.add('paused');
-    // }
-    // const handleMouseLeave = () => {
-    //     document.querySelector('.blog-slider').classList.remove('paused');
-    // }
-
     const handleNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % blogSliderData.length);
     }
@@ -58,8 +51,7 @@ const BlogSlider = () => {
             <button className='blog-slider-arrow left' onClick={handlePrev} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <img src={isHovered ? arrowLeftRed : arrowLeft} alt='left' />
                 </button>
-                <div className='blog-slider' style={{transform: `translateX(-${currentIndex * 37}%)`}}
-               /* onMouseEnter={handleMouseEnter}  onMouseLeave={handleMouseLeave} */ >
+                <div className='blog-slider' style={{transform: `translateX(-${currentIndex * 37}%)`}} >
                     {infiniteSliderData.map((item, index) => (
                         <div className='blog-card'>
                             <a href={item.link} className='blog-card-img' key={index}>

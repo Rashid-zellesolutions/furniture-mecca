@@ -76,6 +76,7 @@
 
 .related-category-tags{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     gap: 20px;
 }

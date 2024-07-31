@@ -2,7 +2,7 @@
 /* Give border effect to product card */
 .product-card {
     box-sizing: border-box;
-    width: 100%;
+    /* width: 100%; */
     position: relative;
     padding: 30px 10px 50px 10px;
 

@@ -7,22 +7,16 @@ import arrowLeftRed from '../../../Assets/icons/arrow-left-red.png';
 import arrowRightRed from '../../../Assets/icons/arrow-right-red.png';
 
 const SimillerProducts = () => {
-    const productData = useSelector((state) => state.products.data)
-    console.log("similer product data", productData);
 
+    const productData = useSelector((state) => state.products.data)
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [hideFilters, setHideFilters] = useState(false);
-
-
-    
-
-   
 
     // Change image on hover function
     const handleImageHover = (index) => {
       setHoveredIndex(index);
     };
-  
+
     const handleImageHoverLeave = () => {
       setHoveredIndex(null);
     };
@@ -36,7 +30,6 @@ const SimillerProducts = () => {
         return title;
     };
 
-    
     // Select Color Variations Functions
     const [selectedColorIndices, setSelectedColorIndices] = useState(Array(productData.length).fill(0));
     const handleVariantImageClick = (cardIndex, colorIndex) => {
@@ -45,39 +38,11 @@ const SimillerProducts = () => {
         setSelectedColorIndices(updatedIndices);
     };
 
+    // product color variation index from redux
     const colorIndex = useSelector((state) => state.colorIndex.colorIndex)
-    console.log("color variation index", colorIndex)
 
-    // Card slider
-    // const scrollContainerRef = useRef(null);
-    // const [scrollPosition, setScrollPosition] = useState(0);
-    // const cardWidth = 300; // Set the width of your cards here
-    // const visibleCards = 4;
-    // const totalCards = productData.length;
-
-    // const handleScroll = (direction) => {
-    //     const container = scrollContainerRef.current;
-    //     if (container) {
-    //         const newPosition = scrollPosition + direction * cardWidth;
-    //         const maxScroll = (totalCards - visibleCards) * cardWidth;
-    //         if (newPosition >= 0 && newPosition <= maxScroll) {
-    //             container.scrollTo({
-    //                 left: newPosition,
-    //                 behavior: 'smooth'  
-    //             });
-    //             setScrollPosition(newPosition);
-    //         }
-    //     }
-    // };
-
-    // const productData = useSelector((state) => state.products.data);
     const scrollContainerRef = useRef(null);
-
-    // const [hoveredIndex, setHoveredIndex] = useState(null);
-    // const [hideFilters, setHideFilters] = useState(false);
-    
     const cardWidth = 310; // Adjust the width of your cards here
-
     const handleScroll = (direction) => {
         const container = scrollContainerRef.current;
         if (container) {
@@ -97,55 +62,54 @@ const SimillerProducts = () => {
     const handleTouchMove = (e) => {
         e.preventDefault();
     };
-
+    
   return (
     <div className='similler-products-main-container'>
         <h3>Try These Instead</h3>
         <div className='similler-products-wrapper' onMouseDown={handleMouseDown}
-                onTouchMove={handleTouchMove}>
-                <button
-                    className='scroll-button left'
-                    onClick={() => handleScroll(-1)}
-                >
-                    <img src={arrowLeftRed} alt='arrow-left' />
-                </button>
-                <div className='similler-products-cards' ref={scrollContainerRef}>
-                    {productData.slice(0, 12).map((item, index) => (
-                        <ProductCard
-                            key={index}
-                            maxWidthAccordingToComp={'100%'}
-                            tagIcon={item.productTag ? item.productTag : item.heart}
-                            tagClass={` ${item.productTag ? 'tag-img' : 'heart-icon'}`}
-                            tagDivClass={`${item.productTag ? 'product-tag-div' : 'heart-icon-div'}`}
-                            mainImage={hoveredIndex === index && item.hoverImage ? item.hoverImage : item.mainImage}
-                            productCardContainerClass={`product-card ${hideFilters ? 'card-width-increase' : ''}`}
-                            mouseEnter={() => handleImageHover(index)}
-                            mouseLeave={handleImageHoverLeave}
-                            ProductTitle={truncateTitle(item.productTitle, maxLength)}
-                            stars={item.ratingStars}
-                            reviewCount={item.reviewCount}
-                            lowPriceAddvertisement={item.lowPriceAddvertisement}
-                            priceTag={item.priceTag}
-                            financingAdd={item.financingAdd}
-                            learnMore={item.learnMore}
-                            colorVariation={item.colorVariation}
-                            mainIndex={index}
-                            deliveryTime={item.deliveryTime}
-                            selectedColorIndices={selectedColorIndices}
-                            handleVariantColor={() => handleVariantImageClick(index, colorIndex)}
-                            borderLeft={index % 4 === 3}
-                        />
-                    ))}
-                </div>
-                <button
-                    className='scroll-button right'
-                    onClick={() => handleScroll(1)}
-                >
-                    <img src={arrowRightRed} about='arrow-right' />
-                </button>
+            onTouchMove={handleTouchMove}>
+            <button
+                className='scroll-button left'
+                onClick={() => handleScroll(-1)}
+            >
+                <img src={arrowLeftRed} alt='arrow-left' />
+            </button>
+            <div className='similler-products-cards' ref={scrollContainerRef}>
+                {productData.slice(0, 12).map((item, index) => (
+                    <ProductCard
+                        key={index}
+                        maxWidthAccordingToComp={'100%'} justWidth={'310px'}
+                        tagIcon={item.productTag ? item.productTag : item.heart}
+                        tagClass={` ${item.productTag ? 'tag-img' : 'heart-icon'}`}
+                        tagDivClass={`${item.productTag ? 'product-tag-div' : 'heart-icon-div'}`}
+                        mainImage={hoveredIndex === index && item.hoverImage ? item.hoverImage : item.mainImage}
+                        productCardContainerClass={`product-card ${hideFilters ? 'card-width-increase' : ''}`}
+                        mouseEnter={() => handleImageHover(index)}
+                        mouseLeave={handleImageHoverLeave}
+                        ProductTitle={truncateTitle(item.productTitle, maxLength)}
+                        stars={item.ratingStars}
+                        reviewCount={item.reviewCount}
+                        lowPriceAddvertisement={item.lowPriceAddvertisement}
+                        priceTag={item.priceTag}
+                        financingAdd={item.financingAdd}
+                        learnMore={item.learnMore}
+                        colorVariation={item.colorVariation}
+                        mainIndex={index}
+                        deliveryTime={item.deliveryTime}
+                        selectedColorIndices={selectedColorIndices}
+                        handleVariantColor={() => handleVariantImageClick(index, colorIndex)}
+                        borderLeft={index % 4 === 3}
+                    />
+                ))}
             </div>
+            <button
+                className='scroll-button right'
+                onClick={() => handleScroll(1)}
+            >
+                <img src={arrowRightRed} about='arrow-right' />
+            </button>
+        </div>
     </div>
   )
 }
-
 export default SimillerProducts

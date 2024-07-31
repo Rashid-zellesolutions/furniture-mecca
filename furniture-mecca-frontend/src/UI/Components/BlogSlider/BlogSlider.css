@@ -3,7 +3,6 @@
     flex-direction: column;
     width: 100%;
     padding: 40px 100px 0 100px;
-    /* font-family: var(--work-sans-font); */
     color: var(--text-color);
 }
 
@@ -71,7 +70,6 @@
 }
 
 /* blog Slider */
-
 .blog-main-container {
     width: 100%;
     overflow: hidden;
@@ -93,7 +91,6 @@
     display: flex;
     transition: all 0.3s ease-in-out;
     gap: 5px;
-    /* overflow: hidden; */
 }
 
 .blog-card {
@@ -181,7 +178,6 @@
     background-color: transparent;
     border: none;
     color: white;
-    /* padding: 10px; */
     z-index: 22;
 }
 

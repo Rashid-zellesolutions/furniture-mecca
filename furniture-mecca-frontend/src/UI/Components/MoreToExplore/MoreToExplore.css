@@ -28,6 +28,12 @@
     gap: 32px;
 }
 
+@media only screen and (max-width: 1020px){
+    .explore-card{
+        width: 35%;
+    }
+}
+
 .explore-card span{
     display: flex;
     flex-direction: column;
@@ -44,6 +50,19 @@
     cursor: pointer;
 }
 
+@media only screen and (max-width: 875px){
+    .more-to-explore-main-container{
+        padding: 20px;
+    }
+    .explore-card{
+        width: 50%;
+    }
+
+    .explore-card span h3{
+        font-size: 28px;
+    }
+}
+
 .explore-card span p{
     font-size: 16px;
     line-height: 24px;
@@ -52,9 +71,90 @@
     cursor: pointer;
 }
 
+@media only screen and (max-width: 875px){
+    .explore-card{
+        width: 50%;
+    }
+
+    .explore-card span h3{
+        font-size: 28px;
+    }
+
+    .explore-card span p{
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+@media only screen and (max-width: 690px){
+    .more-to-explore-main-container{
+        padding: 15px;
+    }
+    .explore-card{
+        width: 70%;
+    }
+
+    .explore-card span h3{
+        font-size: 32px;
+    }
+
+    .explore-card span p{
+        font-size: 26px;
+        line-height: 40px;
+    }
+}
+
+@media only screen and (max-width: 665px){
+    .explore-card{
+        width: 80%;
+    }
+
+    .explore-card span h3{
+        font-size: 28px;
+    }
+
+    .explore-card span p{
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .more-to-explore-main-container{
+        padding: 10px;
+    }
+    .explore-card{
+        width: 100%;
+    }
+
+    .explore-card span h3{
+        font-size: 26px;
+    }
+
+    .explore-card span p{
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+
+@media only screen and (max-width: 320px){
+    .explore-card span h3{
+        font-size: 24px;
+    }
+
+    .explore-card span p{
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
+
 .explore-card p{
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
     color: var(--text-color);
 }
+
+
+

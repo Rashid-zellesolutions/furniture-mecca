@@ -8,41 +8,6 @@ import { useSelector } from 'react-redux';
 import ProductCard from '../ProductCard/ProductCard';
 
 const Products = () => {
-
-    // Products Data From Redux
-    // const productData = useSelector((state) => state.products.data)
-    // const [hideFilters, setHideFilters] = useState(false);
-    // const [hoveredIndex, setHoveredIndex] = useState(null);
-
-    // // Change image on hover function
-    // const handleImageHover = (index) => {
-    //     setHoveredIndex(index);
-    // };
-    
-    // const handleImageHoverLeave = () => {
-    //     setHoveredIndex(null);
-    // };
-    
-    // // Card title words limit
-    // const maxLength = 30;
-    // const truncateTitle = (title, maxLength) => {
-    //     if (title.length > maxLength) {
-    //         return title.slice(0, maxLength) + '...';
-    //     }
-    //     return title;
-    // };
-
-    // Select Color Variations Functions
-    // const [selectedColorIndices, setSelectedColorIndices] = useState(Array(productData.length).fill(0));
-    // const handleVariantImageClick = (cardIndex, colorIndex) => {
-    //     const updatedIndices = [...selectedColorIndices];
-    //     updatedIndices[cardIndex] = colorIndex;
-    //     setSelectedColorIndices(updatedIndices);
-    // };
-
-    // All Initial State VAriables
-    
-    // const [borderLeft, setBorderLeft] = useState(false);
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [hideFilters, setHideFilters] = useState(false);
     const [relevanceTrue, setRelevanceTrue] = useState(false)
@@ -53,8 +18,6 @@ const Products = () => {
     const [showAllFilters, setShowAllFilters] = useState(false);
     // Products Data From Redux
     const productData = useSelector((state) => state.products.data)
-
-    console.log(productData)
 
     const filtersData = [
         {name: 'Product Type' , icon: AddBtn, filters: [
@@ -184,7 +147,6 @@ const Products = () => {
         return title;
     };
 
-    
     // Select Color Variations Functions
     const [selectedColorIndices, setSelectedColorIndices] = useState(Array(productData.length).fill(0));
     const handleVariantImageClick = (cardIndex, colorIndex) => {
@@ -193,11 +155,10 @@ const Products = () => {
         setSelectedColorIndices(updatedIndices);
     };
 
+
+
+
     const colorIndex = useSelector((state) => state.colorIndex.colorIndex)
-    console.log("color variation index", colorIndex)
-
-    
-
   return (
     <div className='products-main-container'>
         <h3>Dining Room Furniture Sets</h3>
@@ -226,8 +187,8 @@ const Products = () => {
                     <h5 onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
                         Within 3 Months
                         <div className={`availability-dropdown ${showAvailaabilityBox ? 'show-box' : ''}`}>
-                            <p> <a href='#'>Within 3 Months</a></p>
-                            <p> <a href='#'>Within 8 Weeks</a> </p>
+                            <p> <Link to={'#'}>Within 3 Months</Link></p>
+                            <p> <Link to={'#'}>Within 8 Weeks</Link> </p>
                         </div>
                     </h5>
                 </span>
@@ -241,29 +202,6 @@ const Products = () => {
                     <p>Clear Filters</p>
                 </div>
                 <div className='all-filters-section'>
-                {/* {filtersData.slice(0, showAllFilters ? filtersData.length : 5).map((item, index) => {
-                        const isOpen = openFilterIndices.includes(index);
-                        return <div key={index} className='single-filter'>
-                        <span onClick={() => handleFilterClick(index)}>
-                            <p>{item.name}</p>
-                            <img src={item.icon} alt='btn' className={isOpen ? 'rotate' : ''} />
-                        </span>
-                        <div className={`filters ${isOpen ? 'show-filter' : ''}`} >
-                            {item.filters.map((innerItem, innerIndex) => {
-                                return <span key={innerIndex}>
-                                <input type={innerItem.type} 
-                                    placeholder='checkbox' 
-                                    className="custom-checkbox"
-                                    id={`filter-${innerIndex}`}  
-                                    // onChange={() => handleCheckboxChange(innerItem.name)} 
-                                    />
-                                <label htmlFor={`filter-${innerIndex}`} >{innerItem.name}</label>
-                            </span>
-                            })}
-                        </div>
-                    </div>
-                    })} */}
-
                     {filtersData.slice(0, showAllFilters ? filtersData.length : 5).map((item, index) => {
                         const isOpen = openFilterIndices.includes(index);
                         return <div key={index} className='single-filter'>
@@ -274,9 +212,9 @@ const Products = () => {
                         <div className={`${item.name === 'Color' ? 'color-filter' : 'filters'} ${isOpen ? 'show-filter' : ''}`} >
                             {item.name === 'Color' ? (
                                 item.filters.map((innerItem, innerIndex) => (
-                                    <span key={innerIndex} className={`${item.name === 'Color' ? 'color-span' : ''}`} >
+                                    <span key={innerIndex} className={`color-span`} >
                                         <input type={innerItem.type} placeholder='checkbox' className='custom-checkbox'
-                                        id={`filter-${innerIndex}`} />
+                                        id={`filter-${innerIndex}`}/>
                                         <label htmlFor={`filter-${innerIndex}`}>{innerItem.name}</label>
                                     </span>
                                 ))
@@ -289,62 +227,13 @@ const Products = () => {
                                     </span>
                                 )) 
                             )}
-                            {/* {item.filters.map((innerItem, innerIndex) => {
-                                return <span key={innerIndex}>
-                                <input type={innerItem.type} 
-                                    placeholder='checkbox' 
-                                    className="custom-checkbox"
-                                    id={`filter-${innerIndex}`}  
-                                    // onChange={() => handleCheckboxChange(innerItem.name)} 
-                                    />
-                                <label htmlFor={`filter-${innerIndex}`} >{innerItem.name}</label>
-                            </span>
-                            })} */}
                         </div>
                     </div>
-
-                    // this is top outer 
                     })}
-                    
-                    
                 </div>
                 <button onClick={toggleFiltersVisibility}>
                     {showAllFilters ? 'Show Less Filters' : 'View All Filters'}
                 </button>
-                {/* <div className='colors-filter-variation'>
-                        <span>
-                            <input type={'checkbox'} 
-                                placeholder='checkbox' 
-                                className="custom-checkbox"
-                                id={`filter`}  
-                            />
-                            <label htmlFor={`filter`} >blue</label>
-                        </span>
-                        <span>
-                            <input type={'checkbox'} 
-                                placeholder='checkbox' 
-                                className="custom-checkbox"
-                                id={`filter`}  
-                            />
-                            <label htmlFor={`filter`} >blue</label>
-                        </span>
-                        <span>
-                            <input type={'checkbox'} 
-                                placeholder='checkbox' 
-                                className="custom-checkbox"
-                                id={`filter`}  
-                            />
-                            <label htmlFor={`filter`} >blue</label>
-                        </span>
-                        <span>
-                        <input type={'checkbox'} 
-                            placeholder='checkbox' 
-                            className="custom-checkbox"
-                            id={`filter`}
-                        />
-                        <label htmlFor={`filter`} >blue</label>
-                    </span>
-                </div> */}
             </div>
             {/* Products section code */}
             <div className={`products-section ${hideFilters ? 'full-width' : ''}`}>
@@ -364,49 +253,9 @@ const Products = () => {
                         </div>
                     </div>
                 </div>
-                {/* product cards  */}
-                {/* <div className='product-main'>
-                    {productData.map((item, index) => {
-                        return <div key={index} className={`product-card ${hideFilters ? 'card-width-increase' : ''}`}>
-                        <div className='product-card-data'>
-                            <div className={` ${item.productTag ? 'product-tag-div' : 'heart-icon-div'}`}>
-                                <img src={item.productTag ? item.productTag : item.heart} alt='heart img' className={` ${item.productTag ? 'tag-img' : 'heart-icon'}`} />
-                            </div>
-                            <img src={hoveredIndex === index && item.hoverImage ? item.hoverImage : item.mainImage}  
-                                alt='product img' className='product-main-img' 
-                                onMouseEnter={() => handleImageHover(index)}
-                                onMouseLeave={handleImageHoverLeave} />
-                            <p className='product-title'> <Link to={'/single-product'}> {truncateTitle(item.productTitle, maxLength)} </Link> </p>
-                            <div className='product-rating-stars-div'>
-                                {item.ratingStars.map((stars, starIndex) => {
-                                    return <img key={starIndex} src={stars.icon} alt={stars.title} className='rating-star' />
-                                })}
-                                <p>{item.reviewCount}</p>
-                            </div>
-                            <p className='product-low-price-addvetisement'>{item.lowPriceAddvertisement}</p>
-                            <h3 className='product-price-tag'>{item.priceTag}</h3>
-                            <div className='product-financing-addvertisement-div'>
-                                <p>{item.financingAdd}</p>
-                                <a href='#'>{item.learnMore}</a>
-                            </div>
-                            <div className='color-variation-div'>
-                                {item.colorVariation.map((color, colorIndex) => {
-                                    return <span key={colorIndex} className='color-variation' onClick={() => handleVariantImageClick(index, colorIndex)} 
-                                    style={{
-                                        backgroundColor: `${color.color}`,
-                                        border: selectedColorIndices[index] === colorIndex ? `1px solid ${color.color}` : 'none',
-                                        boxShadow: selectedColorIndices[index] === colorIndex ? `inset 0 0 0 2px #FFFF` : ''
-                                    }}></span>
-                                })}
-                            </div>
-                            <p className='product-delivery-time'>{item.deliveryTime}</p>
-                        </div>
-                    </div>
-                    })}
-                </div> */}
                 <div className='product-main'>
                     {productData.map((item, index) => {
-                        return <ProductCard key={index} maxWidthAccordingToComp={'33.33%'} tagIcon={item.productTag ? item.productTag : item.heart}
+                        return <ProductCard key={index} maxWidthAccordingToComp={'33.33%'} justWidth={'100%'} tagIcon={item.productTag ? item.productTag : item.heart}
                             tagClass={` ${item.productTag ? 'tag-img' : 'heart-icon'}`}
                             tagDivClass={`${item.productTag ? 'product-tag-div' : 'heart-icon-div'}`}
                             mainImage={hoveredIndex === index && item.hoverImage ? item.hoverImage : item.mainImage}
@@ -420,70 +269,22 @@ const Products = () => {
                             borderLeft={index % 3 === 2}
                         />
                     })}
-                    
                 </div>
-                
-                
-
-                
-                {/* Product Card Code */}
-                {/* <div className='product-main'>
-                    {productData.map((item, index) => {
-                        return <div key={index} className={`product-card ${hideFilters ? 'card-width-increase' : ''}`}>
-                        <div className='product-card-data'>
-                            <div className={` ${item.productTag ? 'product-tag-div' : 'heart-icon-div'}`}>
-                                <img src={item.productTag ? item.productTag : item.heart} alt='heart img' className={` ${item.productTag ? 'tag-img' : 'heart-icon'}`} />
-                            </div>
-                            <img src={hoveredIndex === index && item.hoverImage ? item.hoverImage : item.mainImage}  
-                                alt='product img' className='product-main-img' 
-                                onMouseEnter={() => handleImageHover(index)}
-                                onMouseLeave={handleImageHoverLeave} />
-                            <p className='product-title'> <Link to={'/single-product'}> {truncateTitle(item.productTitle, maxLength)} </Link> </p>
-                            <div className='product-rating-stars-div'>
-                                {item.ratingStars.map((stars, starIndex) => {
-                                    return <img key={starIndex} src={stars.icon} alt={stars.title} className='rating-star' />
-                                })}
-                                <p>{item.reviewCount}</p>
-                            </div>
-                            <p className='product-low-price-addvetisement'>{item.lowPriceAddvertisement}</p>
-                            <h3 className='product-price-tag'>{item.priceTag}</h3>
-                            <div className='product-financing-addvertisement-div'>
-                                <p>{item.financingAdd}</p>
-                                <a href='#'>{item.learnMore}</a>
-                            </div>
-                            <div className='color-variation-div'>
-                                {item.colorVariation.map((color, colorIndex) => {
-                                    return <span key={colorIndex} className='color-variation' onClick={() => handleVariantImageClick(index, colorIndex)} 
-                                    style={{
-                                        backgroundColor: `${color.color}`,
-                                        border: selectedColorIndices[index] === colorIndex ? `1px solid ${color.color}` : 'none',
-                                        boxShadow: selectedColorIndices[index] === colorIndex ? `inset 0 0 0 2px #FFFF` : ''
-                                    }}></span>
-                                })}
-                            </div>
-                            <p className='product-delivery-time'>{item.deliveryTime}</p>
-                        </div>
-                    </div>
-                    })}
-                </div> */}
-
                 {/* Product Card Code End */}
-
-
                 <div className='view-more-products-button-div'>
                     <button className='view-more-btn'>View 196 more</button>
                 </div>
             </div>
         </div>
-                {/* Related Categories Code */}
-                <div className='related-categories-div'>
-                    <h3>Related Categories</h3>
-                    <div className='related-categories-items'>
-                        {relatedCategoriesData.map((item, index) => {
-                            return <a key={index} href={item.link}>{item.categoryName}</a>
-                        })}
-                    </div>
-                </div>
+        {/* Related Categories Code */}
+        <div className='related-categories-div'>
+            <h3>Related Categories</h3>
+            <div className='related-categories-items'>
+                {relatedCategoriesData.map((item, index) => {
+                    return <Link key={index} to={item.link}>{item.categoryName}</Link>
+                })}
+            </div>
+        </div>
     </div>
   )
 }

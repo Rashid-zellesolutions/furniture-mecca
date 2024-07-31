@@ -377,18 +377,32 @@
 }
 
 .color-filter{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: green;
+    display: none !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    gap: 5px !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    height: 0px !important;
+    margin-bottom: 10px !important;
+    height: 0 !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.color-filter.show-filter {
+    display: flex !important;
+    /* gap: 5px; */
+    height: 80px !important;
+    overflow-y: auto !important;
+    transition: all 0.3s ease-in-out !important;
+    margin-top: 20px !important;
 }
 
 .color-span{
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    width: 50%;
-    /* background-color: orange;    */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: start !important;
+    width: 45% !important; 
 }
 
 .filters.show-filter{
@@ -579,9 +593,6 @@ label {
     flex-wrap: wrap;
 }
 
-/* Product Card */
-
-
 /* View More Button Styl */
 
 .view-more-products-button-div{
@@ -646,31 +657,4 @@ label {
     line-height: 15px;
     font-weight: 400;
     text-decoration: none;
-}
-
-
-
-
-/* Color Variation Div */
-
-.colors-filter-variation{
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr); */
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    
-}
-
-/* .color-colum{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-} */
-
-.colors-filter-variation span{
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    width: 50%;
 }

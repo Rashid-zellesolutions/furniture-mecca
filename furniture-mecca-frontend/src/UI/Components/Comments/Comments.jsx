@@ -47,25 +47,22 @@ const Comments = () => {
                 </div>
             </div>
         })}
-
         {commentData.map((item, index) => {
             return <div key={index} className='comment-section'>
-                        <div className='stars-and-date'>
-                            <div className='comment-stars'>
-                                {item.icon.map((star, index) => {
-                                    return <img src={star.star} alt='star' />
-                                })}
-                            </div>
-                            <p>{item.date}</p>
-                        </div>
-                        <div className='comment-and-see-more'>
-                            <p>{item.comment}</p>
-                            <Link>{item.showLess}</Link>
-                        </div>
+                <div className='stars-and-date'>
+                    <div className='comment-stars'>
+                        {item.icon.map((star, index) => {
+                            return <img src={star.star} alt='star' />
+                        })}
                     </div>
-        })}
-        
-            
+                    <p>{item.date}</p>
+                </div>
+                <div className='comment-and-see-more'>
+                    <p>{item.comment}</p>
+                    <Link>{item.showLess}</Link>
+                </div>
+            </div>
+        })} 
         <div className='feedback'>
             <button>
                 <img src={thumbUp} alt='thhumb' />

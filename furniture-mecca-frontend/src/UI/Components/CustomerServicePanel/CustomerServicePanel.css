@@ -16,7 +16,6 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
-    /* font-family: var(--work-sans-font); */
     color: var(--text-color);
 }
 
