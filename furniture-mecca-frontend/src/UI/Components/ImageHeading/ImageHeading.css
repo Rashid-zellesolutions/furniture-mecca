@@ -1,0 +1,9 @@
+.image-heading-container{
+    display: flex;
+    width: 100%;
+}
+
+.image-heading-container img{
+    width: 100%;
+    cursor: pointer;
+}

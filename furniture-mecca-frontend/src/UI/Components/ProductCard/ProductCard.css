@@ -1,0 +1,155 @@
+/* Give border effect to product card */
+.product-card {
+    box-sizing: border-box;
+    position: relative;
+    padding: 30px 10px 50px 10px;
+}
+
+.product-card::before,
+.product-card::after {
+    content: '';
+    position: absolute;
+    background: var(--border-color);
+}
+
+.product-card::after {
+    bottom: 0;
+    left: 30px;
+    right: 30px;
+    height: 2px;
+}
+
+  /* Left and right borders */
+.product-card > div::before,
+.product-card > div::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: var(--border-color);
+}
+
+.product-card > div::after {
+    top: 30px;
+    bottom: 30px;
+    right: 0;
+}
+
+.product-card.hide-after > div::after {
+    display: none;
+}
+
+/* Product Card Border Effect End */
+.heart-icon-div{
+    display: flex;
+    justify-content: end;
+    padding: 8px 0;
+}
+
+.product-tag-div{
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 22px;
+    width: 100%;
+    justify-content: start;
+}
+
+.heart-icon-div .heart-icon{
+    width: 23px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.product-card-data .product-main-img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.product-title{
+    background-color: transparent !important;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.product-title a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.product-rating-stars-div{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.rating-star{
+    width: 14px;
+    height: 14px;
+}
+
+.product-rating-stars-div p{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+}
+
+.product-low-price-addvetisement{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-top: 10px;
+}
+
+.product-price-tag{
+    font-size: 18px !important;
+    line-height: 27px !important;
+    font-weight: 600 !important;
+    margin-top: 5px;
+}
+
+.product-financing-addvertisement-div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 14px 0 14px 0;
+}
+
+.product-financing-addvertisement-div p{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+}
+
+.product-financing-addvertisement-div a{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--product-text-color);
+}
+
+.product-financing-addvertisement-div a:hover{
+    color: var(--active-nav-item-color);
+}
+
+.color-variation-div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.color-variation{
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.product-delivery-time{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    margin-top: 25px;
+}

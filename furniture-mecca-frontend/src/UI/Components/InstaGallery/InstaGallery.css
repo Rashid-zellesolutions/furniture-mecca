@@ -1,0 +1,53 @@
+.insta-gallery-images{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.insta-gallery-row-one{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.insta-gallery-row-two{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.insta-gallery-row-one img,
+.insta-gallery-row-two img {
+    flex: 1;
+    object-fit: cover; /* Maintains aspect ratio and covers the area */
+    width: 100%; /* Ensures image stretches to fill its container */
+    height: auto; /* Keeps aspect ratio */
+}
+
+.insta-icon{
+    position: absolute;
+    top: 40%;
+    right: 45%;
+    cursor: pointer;
+    transition: transform 1.5s ease-in-out;
+}
+
+.insta-icon.animate{
+    animation: scaleAndReset 1.5s ease-in-out;
+}
+
+@keyframes scaleAndReset {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,141 @@
+.moduler-container{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+.moduler-container.show{
+    display: flex;
+    padding: 50px 0;
+}
+
+.soda-banner{
+    display: flex;
+    width: 100%;
+}
+
+.soda-image{
+    width: 50%;
+    cursor: pointer;
+}
+
+.mobile-soda-banner{
+    display: none; 
+    width: 100%;
+}
+
+.mobile-view-financing-banner{
+    display: none;
+}
+
+.financing-banner{
+    display: flex;
+    width: 100%;
+}
+
+.financing-banner img{
+    width: 50%;
+}
+
+.installment-banner{
+    display: flex;
+    width: 100%;
+}
+
+.installment-banner img{
+    width: 100%;
+}
+
+.bed-banner{
+    display: flex;
+    width: 100%;
+}
+
+.bed-banner img{
+    width: 100%;
+}
+
+.mobile-view-bed-banner{
+    display: none;
+}
+
+@media only screen and (max-width: 700px){
+    .soda-image{
+        display: none;
+    }
+    .mobile-soda-banner{
+        display: flex;
+        width: 100%;
+    }
+    .financing-banner{
+        display: none;
+    }
+
+    .mobile-view-financing-banner{
+        display: flex;
+        width: 100%;
+    }
+    .mobile-view-financing-banner img{
+        width: 100%;
+    }
+
+    .installment-banner{
+        display: none;
+    }
+
+    .bed-banner{
+        display: none;
+    }
+
+    .mobile-view-bed-banner{
+        display: flex;
+        width: 100%;
+    }
+    .mobile-view-bed-banner img{
+        width: 100%;
+    }
+}
+
+/* full width container */
+
+.full-width-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.full-width-container.hide{
+    display: none;
+}
+
+.dining-image-div{
+    display: none;
+    width: 100%;
+}
+
+.dining-image-div.show-main-img{
+    display: flex;
+}
+
+.dining-image-div img{
+    width: 100%;
+}
+
+.dining-paypal-div{
+    display: flex;
+    width: 100%;
+}
+
+.dining-paypal-div img{
+    width: 50%;
+}
+
+.dining-installment-div{
+    display: flex;
+    width: 100%;
+}
+
+.dining-installment-div img{
+    width: 100%;
+}
+

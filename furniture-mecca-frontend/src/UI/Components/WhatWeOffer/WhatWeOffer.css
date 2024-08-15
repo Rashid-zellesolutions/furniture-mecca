@@ -1,0 +1,66 @@
+.what-we-offer-container{
+    display: flex;
+    width: 100%;
+    gap: 24px;
+    flex-direction: column;
+}
+
+.what-we-offer-container h3{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.offer-cards-div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px 0;
+    margin-bottom: 40px;
+}
+
+.servise-card{
+    display: flex;
+    gap: 15px;
+    padding: 16px 10px;
+    background-color: #f7f7f7;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.servise-card img{
+    width: 32px;
+    height: 32px;
+}
+
+.servise-card-details-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.servise-card-details-section h3{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.how-it-work{
+    color: var(--active-nav-item-color);
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.payment-way{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+}

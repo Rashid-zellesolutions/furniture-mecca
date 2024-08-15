@@ -1,0 +1,161 @@
+.new-arrival-main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: var(--global-padding);
+}
+
+/* New Arrival Headings Styling */
+.new-arrival-heading-div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.new-arrival-heading-div a{
+    color: var(--text-color);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 37px;
+    text-decoration: none;
+}
+
+.new-arrival-heading-div a:nth-child(2){
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    text-decoration: none;
+}
+
+/* New Arrival Cards Container Styling */
+.new-arrival-cards{
+    display: flex;
+    flex: 0 0 35.33%;
+    width: 100%;
+    gap: 25px;
+    padding: 10px 0;
+}
+
+.card{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.card-header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header img{
+    width: 100%;
+}
+
+.card-header::before{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
+.pieces-text{
+    position:  absolute;
+    bottom: 8%;
+    font-size: 55px;
+    line-height: 64px;
+    font-weight: 700;
+    color: white;
+    left: 10px;
+}
+
+.title-and-price{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    background-color: #FAFAFA;
+    padding: 5px 10px;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.new-arrival-product-name{
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+}
+
+.new-arrival-product-price{
+    font-size: 25px;
+    line-height: 29px;
+    font-weight: 700;
+}
+
+.card-buttons{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+    background-color: var(--button-color);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    gap: 15px;
+}
+
+.card-buttons a{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    font-size: 15px;
+    line-height: 17px;
+    font-weight: 400;
+    text-decoration: none;
+    width: 150px;
+    justify-content: center;
+    height: 40px;
+}
+
+.card-buttons a:hover{
+    color: var(--active-nav-item-color);
+}
+
+.card-buttons a img{
+    width: 20px;
+}
+
+@media only screen and (max-width: 1000px){
+    .pieces-text{
+        bottom: 12%;
+    }
+}
+
+@media only screen and (max-width: 825px){
+    .card-buttons{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: var(--button-color);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    .card-buttons a img{
+        width: 15px;
+    }
+    .card-buttons a{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: white;
+        font-size: 11px;
+        text-decoration: none;
+    }
+}
