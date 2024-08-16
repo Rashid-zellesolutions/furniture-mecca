@@ -4,10 +4,13 @@
 }
 
 .product-img{
-    width: 480px;
-    height: 430px;
+    width: 100%;
+    min-width: 480px;
+    height: 100%;
+    max-height: 430px;
     overflow: hidden;
     position: relative;
+    object-fit: cover;
 }
 
 .product-img img {
@@ -15,6 +18,7 @@
     height: 100%;
     transition: transform 0.2s;
     cursor: pointer;
+    object-fit: cover;
 }
 
 .product-img img:hover{
@@ -32,6 +36,7 @@
     background-color: #c5eef4; /* Optional: for better readability */
     padding: 5px 10px;
     font-size: 16px;
+    /* background-color: orange; */
 }
 
 .product-img-detail h3{

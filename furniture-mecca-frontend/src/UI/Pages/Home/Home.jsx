@@ -63,21 +63,21 @@ const Home = () => {
         para: `Customize your journey to comfort town with this collection’s adjustable 
         headrest, zero-gravity recline, and charging ports!`
     },
-    {  heading: 'Journey', btnText: 'Shop Journey', productImageHeading: 'Journey Power Reclining Sofa', 
-      productImagePrice: '$999', productImageAbout: "Bob's everyday low price", img : journeyImage, 
-        para: `Customize your journey to comfort town with this collection’s adjustable 
-        headrest, zero-gravity recline, and charging ports!`
-    },
-    {  heading: 'Journey', btnText: 'Shop Journey', productImageHeading: 'Journey Power Reclining Sofa', 
-      productImagePrice: '$999', productImageAbout: "Bob's everyday low price", img : journeyImage, 
-        para: `Customize your journey to comfort town with this collection’s adjustable 
-        headrest, zero-gravity recline, and charging ports!`
-    },
-    {   heading: 'Viking', btnText: 'Shop Viking', productImageHeading: 'Viking Power Reclining Sofa', 
-      productImagePrice: '$999', productImageAbout: "Bob's everyday low price", img : vikingImage, 
-      para: `On-trend and feature-packed with storage, charging ports, 
-      and a reading light? There’s no better place to relax than Viking!`
-  },
+  //   {  heading: 'Journey', btnText: 'Shop Journey', productImageHeading: 'Journey Power Reclining Sofa', 
+  //     productImagePrice: '$999', productImageAbout: "Bob's everyday low price", img : journeyImage, 
+  //       para: `Customize your journey to comfort town with this collection’s adjustable 
+  //       headrest, zero-gravity recline, and charging ports!`
+  //   },
+  //   {  heading: 'Journey', btnText: 'Shop Journey', productImageHeading: 'Journey Power Reclining Sofa', 
+  //     productImagePrice: '$999', productImageAbout: "Bob's everyday low price", img : journeyImage, 
+  //       para: `Customize your journey to comfort town with this collection’s adjustable 
+  //       headrest, zero-gravity recline, and charging ports!`
+  //   },
+  //   {   heading: 'Viking', btnText: 'Shop Viking', productImageHeading: 'Viking Power Reclining Sofa', 
+  //     productImagePrice: '$999', productImageAbout: "Bob's everyday low price", img : vikingImage, 
+  //     para: `On-trend and feature-packed with storage, charging ports, 
+  //     and a reading light? There’s no better place to relax than Viking!`
+  // },
 ]
 
 const categoryCardData = [

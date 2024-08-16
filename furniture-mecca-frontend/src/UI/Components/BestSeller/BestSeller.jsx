@@ -1,18 +1,11 @@
 import React, { useState } from 'react';
 import './BestSeller.css';
 import BestSellerProductCard from '../BestSellerProductCard/BestSellerProductCard';
-// import productImageOne from '../../../Assets/images/best-seller-one.png';
-// import productImageTwo from '../../../Assets/images/best-seller-two.png';
-// import productImageThree from '../../../Assets/images/best-seller-three.png';
-// import productImageFour from '../../../Assets/images/best-seller-four.png';
-// import productImageFive from '../../../Assets/images/best-seller-five.png';
-// import productImageSix from '../../../Assets/images/best-seller-six.png';
 import bannerOne from '../../../Assets/images/best-seller-banner-one.png';
 import bannerTwo from '../../../Assets/images/best-seller-banner-two.png';
-// import heartIcon from '../../../Assets/icons/like.png'
-// import starIcon from '../../../Assets/icons/Star 19.png';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import Loader from '../Loader/Loader';
 
 const BestSeller = () => {
     const bestSellerNav = ['Living Room', 'Bedroom', 'Dining Room']
@@ -20,20 +13,12 @@ const BestSeller = () => {
 
     const handleActiveItem = (index) => {
         setActiveItem(index)
-    }
+    };
 
     const productCardData = useSelector((state) => state.productCard.data)
 
     const navigate = useNavigate()
-    // const productCardData = [
-    //     {id: 1, name: "Stevie Charcoal 87'' Sofa & Chair", defaultPrice: '$ 199.00', offerPrice: '$ 1,599.00', heartIcon: heartIcon, productImage: productImageOne, stars: Array(5).fill({starIcon: starIcon}), reviews: '(200)' },
-    //     {id: 2, name: "Stevie Charcoal 87'' Sofa & Chair", defaultPrice: '$ 199.00', offerPrice: '$ 1,599.00', heartIcon: heartIcon, productImage: productImageTwo, stars: Array(5).fill({starIcon: starIcon}), reviews: '(200)' },
-    //     {id: 3, name: "Stevie Charcoal 87'' Sofa & Chair", defaultPrice: '$ 199.00', offerPrice: '$ 1,599.00', heartIcon: heartIcon, productImage: productImageThree, stars: Array(5).fill({starIcon: starIcon}), reviews: '(200)' },
-    //     {id: 4, name: "Stevie Charcoal 87'' Sofa & Chair", defaultPrice: '$ 199.00', offerPrice: '$ 1,599.00', heartIcon: heartIcon, productImage: productImageFour, stars: Array(5).fill({starIcon: starIcon}), reviews: '(200)' },
-    //     {id: 5, name: "Stevie Charcoal 87'' Sofa & Chair", defaultPrice: '$ 199.00', offerPrice: '$ 1,599.00', heartIcon: heartIcon, productImage: productImageFive, stars: Array(5).fill({starIcon: starIcon}), reviews: '(200)' },
-    //     {id: 6, name: "Stevie Charcoal 87'' Sofa & Chair", defaultPrice: '$ 199.00', offerPrice: '$ 1,599.00', heartIcon: heartIcon, productImage: productImageSix, stars: Array(5).fill({starIcon: starIcon}), reviews: '(200)' },
-
-    // ]
+    
     const handleProductClick = (item) => {
         navigate(`/single-product/${item.id}`, { state: { productCard: item } });
         console.log("Clicked on ", item.id);
@@ -58,7 +43,7 @@ const BestSeller = () => {
             </div>
             <div className='best-seller-cards'>
                 {productCardData.map((item, index) => {
-                    return <BestSellerProductCard heartIcon={item.heartIcon} 
+                    return <BestSellerProductCard key={index} heartIcon={item.heartIcon} 
                         productMainImage={item.mainImage} 
                         starIcon={item.ratingStars} 
                         reviews={item.reviews} 

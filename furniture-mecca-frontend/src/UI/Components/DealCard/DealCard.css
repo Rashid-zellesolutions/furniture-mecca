@@ -31,16 +31,25 @@
 }
 
 .deal-card-sale-banner button{
-    width: 66px;
-    height: 30px;
-    padding: 4px 15px;
+    width: 100px;
+    height: 40px;
+    padding: 0px 15px;
     border: 1px solid var(--active-nav-item-color);
     background-color: var(--active-nav-item-color);
     border-radius: 4px;
     color: #fff;
-    font-size: 15px;
+    font-size: 24px;
     font-weight: 22px;
     font-weight: 600;
+}
+
+@media only screen and (max-width: 1800px){
+    .deal-card-sale-banner button{
+        width: 66px;
+        height: 30px;
+        padding: 4px 15px;
+        font-size: 15px;
+    }
 }
 
 /* deal card product image */
@@ -70,7 +79,7 @@
 }
 
 .available p{
-    font-size: 15px;
+    font-size: 26px;
     font-weight: 400;
     line-height: 22px;
     color: var(--text-color);
@@ -87,7 +96,7 @@
 }
 
 .sold-out p{
-    font-size: 15px;
+    font-size: 26px;
     font-weight: 400;
     line-height: 22px;
     color: var(--text-color);
@@ -98,9 +107,36 @@
     color: var(--active-nav-item-color);
 }
 
+@media only screen and (max-width: 1830px){
+    .available p, .sold-out p{
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 1550px){
+    .available p, .sold-out p{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1300px){
+    .available p, .sold-out p{
+        font-size: 15px;
+    }
+}
+
+
+
 @media only screen and (max-width: 1240px){
     .deal-card-stock-or-not{
         padding: 5px 30px;
+    }
+}
+
+/* Stock or not font media query */
+@media only screen and (max-width: 1140px){
+    .available p, .sold-out p{
+        font-size: 12px;
     }
 }
 
@@ -156,26 +192,13 @@
     color: var(--text-color);
 }
 
-@media only screen and (max-width: 1130px){
-    .deal-card-product-name h3{
-        font-size: 18px;
-        line-height: 28px;
-    }
-}
-
-@media only screen and (max-width: 1100px){
-    .deal-card-product-name h3{
-        font-size: 16px;
-        line-height: 18px;
-    }
-}
 
 .deal-card-price{
     display: flex;
     gap: 10px;
     align-items: center;
     border-bottom: 1px solid var(--border-color);
-    padding: 0px 0;
+    /* padding: 20px 0; */
 }
 
 .deal-card-price del{
@@ -194,24 +217,15 @@
     margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 1050px){
-    .deal-card-price del{
-        margin-bottom: 5px;
-    }
-    
-    .deal-card-price p{
-        margin-bottom: 5px;
-    }
-}
-
 /* Brand div */
 .deal-card-brand-div{
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 25px;
     margin-bottom: 15px;
+    /* padding: 50px 0; */
 }
 
 .deal-card-brand-div h3{
@@ -225,35 +239,6 @@
     border: 1px solid var(--border-color);
 }
 
-@media only screen and (max-width: 1130px){
-    .deal-card-brand-div h3{
-        font-size: 22px;
-    }
-}
-
-@media only screen and (max-width: 1280px){
-    .deal-card-brand-div{
-        margin-bottom: 10px;
-    }
-}
-
-@media only screen and (max-width: 1260px){
-    .deal-card-brand-div{
-        margin-bottom: 5px;
-    }
-}
-
-@media only screen and (max-width: 1200px){
-    .deal-card-brand-tag{
-        padding: 20px 10px;
-    }
-}
-
-@media only screen and (max-width: 1090px){
-    .deal-card-brand-div h3{
-        font-size: 18px;
-    }
-}
 
 .deal-card-brand-tag img{
     width: 100%;
@@ -263,10 +248,13 @@
     object-fit: contain;
 }
 
+
+
 /* Description */
 .deal-card-desc{
     display: flex;
     width: 100%;
+    /* padding: 20px 0; */
 }
 
 .deal-card-desc p{
@@ -276,42 +264,13 @@
     color: var(--text-color);
 }
 
-@media only screen and (max-width: 1340px){
-    .deal-card-desc p{
-        line-height: 20px;
-    }
-}
-
-@media only screen and (max-width: 1330px){
-    .deal-card-desc p{
-        line-height: 18px;
-    }
-}
-
-@media only screen and (max-width: 1310px){
-    .deal-card-desc p{
-        line-height: 16px;
-    }
-}
-
-@media only screen and (max-width: 1300px){
-    .deal-card-desc p{
-        line-height: 14px;
-    }
-}
-
-@media only screen and (max-width: 1110px){
-    .deal-card-desc p{
-        font-size: 10px;
-    }
-}
-
 /* add to cart div */
 
 .deal-card-add-to-cart-section{
     display: flex;
     width: 100%;
     align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -322,7 +281,7 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 17px;
     font-weight: 400;
     color: var(--text-color);
@@ -337,47 +296,15 @@
     color: #fff;
 }
 
-.deal-card-add-to-cart-btn img{
-    width: 20px;
-    height: 20px;
-}
-
-@media only screen and (max-width: 1280px){
-    .deal-card-add-to-cart-btn{
-        width: 160px;
-        font-size: 13px;
-        gap: 15px;
-    }
-}
-
-@media only screen and (max-width: 1120px){
-    .deal-card-add-to-cart-btn{
-        width: 120px;
-        gap: 5px;
-        font-size: 10px;
-    }
-}
-
-@media only screen and (max-width: 1040px){
-    .deal-card-add-to-cart-btn{
-        gap: 5px;
-    }
-}
-
-@media only screen and (max-width: 1000px){
-    .deal-card-add-to-cart-btn{
-        gap: 25px;
-    }
-}
-
 .deal-card-add-to-cart-section span{
-    width: 40px;
+    width: 80px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid var(--border-color);
     border-radius: 3px;
+    cursor: pointer;
 }
 
 /* Footer */

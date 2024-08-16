@@ -93,7 +93,7 @@ const AllStores = () => {
           <button className='modal-close-btn'>
             <img src={addBtn} alt='add btn' onClick={closeModal}/>
           </button>
-          <img src={stores[modalIndex].img} alt='store' />
+          <img src={stores[modalIndex].img} alt='store' className='modal-main-image' />
           <div className='store-modal-buttons'>
             <button> {stores[modalIndex].number} </button>
             <button> <Link to={stores[modalIndex].directionLink}>{stores[modalIndex].direction}</Link></button>

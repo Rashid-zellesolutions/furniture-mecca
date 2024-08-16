@@ -1,7 +1,14 @@
 .category-main-container{
     display: flex;
     flex-direction: column;
-    padding: var(--global-padding);
+    /* padding: var(--global-padding); */
+    padding: 25px 100px;
+}
+
+@media only screen and (max-width: 1400px){
+    .category-main-container{
+        padding: var(--global-padding);
+    }
 }
 
 .category-heading{
@@ -14,25 +21,43 @@
 
 .category-cards-container{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     align-items: center;
     padding: 0px 0px 0 0;
 }
 
-@media only screen and (max-width: 2080px){
+@media only screen and (max-width: 1360px){
+    .category-cards-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .category-cards-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 545px){
+    .category-cards-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* @media only screen and (max-width: 2080px){
     .category-cards-container{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
     }
-}
+} */
 
-@media only screen and (max-width: 1760px){
+/* @media only screen and (max-width: 1760px){
     .category-cards-container{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
-}
+} */
 
 /* @media only screen and (max-width: 1430px){
     .category-cards-container{
@@ -43,7 +68,7 @@
 
 
 
-@media only screen and (max-width: 1200px){
+/* @media only screen and (max-width: 1200px){
     .category-main-container{
         padding: 20px 30px;
     }
@@ -51,9 +76,9 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
-}
+} */
 
-@media only screen and (max-width: 700px){
+/* @media only screen and (max-width: 700px){
     .category-main-container{
         display: flex;
         flex-direction: column;
@@ -66,9 +91,9 @@
         align-items: center;
         padding: 0px 20px 0 20px;
     }
-}
+} */
 
-@media only screen and (max-width: 420px){
+/* @media only screen and (max-width: 420px){
     .category-main-container{
         display: flex;
         flex-direction: column;
@@ -81,4 +106,4 @@
         align-items: center;
         padding: 0px 10px 0 10px;
     }
-}
+} */
