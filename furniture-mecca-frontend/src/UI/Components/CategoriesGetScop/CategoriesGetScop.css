@@ -123,56 +123,76 @@
 .product-text-details{
     display: none;
     width: 100%;
+    align-items: flex-start;
+    /* justify-content: space-between; */
     gap: 15px;
-    /* padding: 0 30px; */
-    height: 35vh;
+    height: auto;
+    /* height: fit-content; */
     overflow: hidden;
 }
 
 
+/* @media only screen and (max-width: 2710px){
+    .product-text-details{
+        height: 30vh;
+    }
+}
 
- @media only screen and (max-width: 2180px){
+@media only screen and (max-width: 2425px){
     .product-text-details{
         height: 55vh;
     }
 }
 
-@media only screen and (max-width: 1840px){
+@media only screen and (max-width: 1825px){
     .product-text-details{
-        height: 65vh;
+        height: 62vh;
     }
 }
 
-@media only screen and (max-width: 1530px){
+@media only screen and (max-width: 1750px){
     .product-text-details{
-        height: 77vh;
+        height: 70vh;
     }
 }
 
-@media only screen and (max-width: 1380px){
+@media only screen and (max-width: 1565px){
+    .product-text-details{
+        height: 80vh;
+    }
+}
+
+
+@media only screen and (max-width: 1370px){
     .product-text-details{
         height: 95vh;
     }
 }
 
-/*
-
-@media only screen and (max-width: 1413px){
+@media only screen and (max-width: 1305px){
     .product-text-details{
-        height: 45vh;
+        height: 39vh;
     }
 }
 
-@media only screen and (max-width: 1070px){
+@media only screen and (max-width: 1105px){
     .product-text-details{
-        height: 50vh;
+        height: 40vh;
+    }
+}
+
+@media only screen and (max-width: 1015px){
+    .product-text-details{
+        height: 42vh;
     }
 } */
 
 .product-text{
-    width: 63%;
+    width: 80%;
     display: flex;
+    /* align-items: flex-start; */
     /* flex: 1; */
+    height: auto;
     flex-direction: column;
 }
 
@@ -186,7 +206,7 @@
     width: 100%;
     gap: 10px;
     text-align: justify;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .text-details h3{
@@ -205,11 +225,12 @@
 
 .image-gallery-slider{
     display: flex;
-    width: 37%;
+    width: 20%;
+    height: 23vh;
     gap: 10px;
 }
 
-/* @media only screen and (max-width: 2420px){
+/* @media only screen and (max-width: 2360px){
     .product-text{
         width: 75%;
     }
@@ -218,59 +239,32 @@
     }
 } */
 
-/* @media only screen and (max-width: 1980px){
-    .product-text{
-        width: 70%;
-    }
-    .image-gallery-slider{
-        width: 30%;
-    }
-} */
-
-/* @media only screen and (max-width: 1680px){
-    .product-text{
-        width: 65%;
-    }
-    .image-gallery-slider{
-        width: 35%;
-    }
-} */
-
-
-
-
-
 .vertical-slider {
     display: flex;
     flex-direction: column;
-    animation: slide 20s linear infinite; /* Infinite scrolling animation */
+    animation: slide 10s linear infinite; /* Infinite scrolling animation */
     gap: 10px;
+    /* height: 30%; */
+    /* background-color: purple; */
+    /* flex-grow: 0; */
 }
 
 .img-one {
     height: 250px;
-    /* object-fit: cover; */
+    width: 100%;
+    object-fit: cover;
     cursor: pointer;
 }
 
 .img-two {
     height: 310px;
+    width: 100%;
+    object-fit: cover;
     cursor: pointer;
 }
 
-/* @media only screen and (max-width: 1450px){
-    .img-one {
-        width: 200px;
-        height: 220px;
-    }
-    
-    .img-two {
-        width: 200px;
-        height: 280px;
-    }
-} */
 
-@media only screen and (max-width: 1330px){
+/* @media only screen and (max-width: 1330px){
     .img-one {
         width: 180px;
     }
@@ -278,31 +272,20 @@
     .img-two {
         width: 180px;
     }
-}
-
-/* @media only screen and (max-width: 1220px){
-    .img-one {
-        width: 160px;
-        height: 200px;
-    }
-    
-    .img-two {
-        width: 160px;
-        height: 260px;
-    }
 } */
 
-@media only screen and (max-width: 1100px){
+
+/* @media only screen and (max-width: 1100px){
     .img-one {
         width: 150px;
-        height: 180px;
+        height: 180px !important;
     }
     
     .img-two {
         width: 150px;
         height: 240px !important;
     }
-}
+} */
 
 @keyframes slide {
     0% {

@@ -8,7 +8,7 @@ import ImageHeading from '../../Components/ImageHeading/ImageHeading';
 
 import tuxedoChair from '../../../Assets/Furniture Mecca/Landing Page/feature products/ma-tax-free_multiple-collection-image2_desktop_su7kxr 1.png'
 import vikingImage from '../../../Assets/Furniture Mecca/Landing Page/feature products/ma-tax-free_multiple-collection-image3_desktop_xxwngg 2.png'
-import journeyImage from '../../../Assets/Furniture Mecca/Landing Page/feature products/ma-tax-free_multiple-collection-image4_desktop_dvojd3 1.png'
+// import journeyImage from '../../../Assets/Furniture Mecca/Landing Page/feature products/ma-tax-free_multiple-collection-image4_desktop_dvojd3 1.png'
 
 // images for heading
 import HeroImage from '../../../Assets/Furniture Mecca/Landing Page/Slider/hp-fourth_hero_mo_desktop_1_3200x1388 (3).png';
@@ -59,7 +59,7 @@ const Home = () => {
         and a reading light? There’s no better place to relax than Viking!`
     },
     {  heading: 'Journey', btnText: 'Shop Journey', productImageHeading: 'Journey Power Reclining Sofa', 
-      productImagePrice: '$999', productImageAbout: "Bob's everyday low price", img : journeyImage, 
+      productImagePrice: '$999', productImageAbout: "Bob's everyday low price", img : tuxedoChair, 
         para: `Customize your journey to comfort town with this collection’s adjustable 
         headrest, zero-gravity recline, and charging ports!`
     },

@@ -36,11 +36,13 @@
 }
 
 .best-seller-slider-menu-bar h3{
-    font-size: 25px;
+    font-size: 38px;
     line-height: 37px;
     font-weight: 600;
     color: var(--text-color);
 }
+
+
 
 .best-seller-menu-bar{
     display: flex;
@@ -49,7 +51,7 @@
 }
 
 .best-seller-menu-bar p{
-    font-size: 15px;
+    font-size: 22px;
     font-weight: 400;
     line-height: 22px;
     color: var(--text-color);
@@ -59,9 +61,74 @@
 
 .best-seller-menu-bar p.active{
     border-bottom: 3px solid var(--active-nav-item-color);
-    font-size: 18px;
+    font-size: 26px;
     font-weight: 600;
 }
+
+@media only screen and (max-width: 3000px){
+    .best-seller-menu-bar p.active{
+        line-height: 28px;
+    }
+}
+
+@media only screen and (max-width: 2375px){
+    .best-seller-slider-menu-bar h3{
+        font-size: 34px;
+    } 
+
+    .best-seller-menu-bar p{
+        font-size: 22px;
+    }
+    
+    .best-seller-menu-bar p.active{
+        font-size: 26px;
+        line-height: 28px;
+    }
+}
+
+@media only screen and (max-width: 1850px){
+    .best-seller-slider-menu-bar h3{
+        font-size: 30px;
+    } 
+
+    .best-seller-menu-bar p{
+        font-size: 18px;
+    }
+    
+    .best-seller-menu-bar p.active{
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 1460px){
+    .best-seller-slider-menu-bar h3{
+        font-size: 25px;
+    } 
+
+    .best-seller-menu-bar p{
+        font-size: 15px;
+    }
+    
+    .best-seller-menu-bar p.active{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .best-seller-slider-menu-bar h3{
+        font-size: 20px;
+    }
+
+    .best-seller-menu-bar p{
+        font-size: 13px;
+    }
+    
+    .best-seller-menu-bar p.active{
+        font-size: 15px;
+    }
+}
+
+
 
 .products-slider-container{
     /* width: 100%; */
@@ -70,6 +137,7 @@
     position: relative;
     overflow: hidden; /* Hide overflow to only show visible cards */
     width: 100%; /* Adjust as needed */
+    padding: 10px;
 }
 
 
@@ -151,6 +219,7 @@
     line-height: 60px;
     font-weight: 600;
     color: var(--text-color);
+    margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 2900px){

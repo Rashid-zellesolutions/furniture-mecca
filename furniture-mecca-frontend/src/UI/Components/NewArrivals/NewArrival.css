@@ -64,12 +64,48 @@
 
 .pieces-text{
     position:  absolute;
-    bottom: 8%;
+    bottom: 4.5%;
     font-size: 55px;
     line-height: 64px;
     font-weight: 700;
     color: white;
     left: 10px;
+}
+
+@media only screen and (max-width: 2520px){
+    .pieces-text{
+        bottom: 5%;
+    }
+}
+
+@media only screen and (max-width: 2200px){
+    .pieces-text{
+        bottom: 6%;
+    }
+}
+
+@media only screen and (max-width: 1750px){
+    .pieces-text{
+        bottom: 7%;
+    }
+}
+
+@media only screen and (max-width: 1630px){
+    .pieces-text{
+        bottom: 8%;
+    }
+}
+
+@media only screen and (max-width: 1460px){
+    .pieces-text{
+        bottom: 10%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .pieces-text{
+        bottom: 12%;
+    }
 }
 
 .title-and-price{
@@ -117,9 +153,10 @@
     line-height: 17px;
     font-weight: 400;
     text-decoration: none;
-    width: 150px;
+    /* width: 150px; */
     justify-content: center;
     height: 40px;
+    padding: 10px 20px;
 }
 
 .card-buttons a:hover{
