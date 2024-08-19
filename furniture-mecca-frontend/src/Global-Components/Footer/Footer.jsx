@@ -233,6 +233,7 @@ const Footer = () => {
                         })}
                     </div>
                 </div>
+                <div className='empty-space-div'></div>
                 <div className='footer-customer-care-and-about-furniture-mecca'>
                     <div className='footer-nearby-store'>
                         <h3>Nearest Store</h3>

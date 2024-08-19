@@ -144,7 +144,7 @@ const Products = () => {
     };
 
     // Card title words limit
-    const maxLength = 30;
+    const maxLength = 50;
     const truncateTitle = (title, maxLength) => {
         if (title.length > maxLength) {
             return title.slice(0, maxLength) + '...';

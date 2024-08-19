@@ -7,9 +7,9 @@
 }
 
 .products-main-container h3{
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 60px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 45px;
     color: var(--product-text-color);
 }
 
@@ -490,6 +490,12 @@ label {
     border-radius: 4px;
     color: var(--product-text-color);
     cursor: pointer;
+}
+
+.filters-section button{
+    background-color: var(--active-nav-item-color);
+    border: 1px solid var(--active-nav-item-color);
+    color: #fff;
 }
 
 /* Products Css */

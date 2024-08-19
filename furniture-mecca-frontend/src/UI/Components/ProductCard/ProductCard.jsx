@@ -3,6 +3,8 @@ import './ProductCard.css';
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux';
 import { setColorIndex } from '../../../Redux/ColorIndex/ColorINdexSlicer';
+import cartIcon from '../../../Assets/icons/cart-white.png'
+import cartRed from '../../../Assets/icons/cart2.png';
 
 const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardContainerClass, mouseEnter, mouseLeave, ProductTitle, stars, reviewCount, lowPriceAddvertisement,
     priceTag, financingAdd, learnMore, colorVariation, mainIndex, deliveryTime, handleVariantColor, selectedColorIndices, maxWidthAccordingToComp, borderLeft, justWidth, handleCardClick
@@ -20,6 +22,16 @@ const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardCont
             handleVariantColor();
         }
     };
+
+    const [cardHovered, setCardHovered] = useState(false);
+    const handleMouseEnter = () => {
+        setCardHovered(true)
+        console.log(cardHovered);
+    }
+
+    const handleMouseLeave = () => {
+        setCardHovered(false);
+    }
     
   return (
     <>
@@ -28,10 +40,22 @@ const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardCont
                 <div className={tagDivClass}>
                     <img src={tagIcon} alt='heart img' className={tagClass} />
                 </div>
-                <img src={mainImage}  
-                    alt='product img' className='product-main-img' 
-                    onMouseEnter={mouseEnter}
-                    onMouseLeave={mouseLeave} />
+                <div className='product-main-image-container'>
+                    <img src={mainImage}  
+                        alt='product img' className='product-main-img' 
+                        onMouseEnter={mouseEnter}
+                        onMouseLeave={mouseLeave} />
+                        <div className='overlay-buttons'>
+                            <button className='overlay-button' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                                <img src={cardHovered ? cartIcon : cartRed} alt='cart' />
+                                Add to cart
+                            </button>
+                            <button className='overlay-button'>
+                                Quick View
+                            </button>
+                        </div>
+                </div>
+
                 <p className='product-title'> <Link> {ProductTitle} </Link> </p>
                 <div className='product-rating-stars-div'>
                     {stars.map((stars, starIndex) => {
