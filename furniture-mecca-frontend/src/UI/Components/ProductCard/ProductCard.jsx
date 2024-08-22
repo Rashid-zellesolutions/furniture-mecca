@@ -36,7 +36,7 @@ const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardCont
   return (
     <>
         <div className={`${productCardContainerClass} ${borderLeft ? 'hide-after' : ''} `} style={{maxWidth: maxWidthAccordingToComp, width: justWidth}}>
-            <div className='product-card-data' onClick={handleCardClick}>
+            <div className='product-card-data'>
                 <div className={tagDivClass}>
                     <img src={tagIcon} alt='heart img' className={tagClass} />
                 </div>
@@ -46,13 +46,13 @@ const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardCont
                         onMouseEnter={mouseEnter}
                         onMouseLeave={mouseLeave} />
                         <div className='overlay-buttons'>
-                            <button className='overlay-button' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                            <Link to={'/add-to-cart'} className='overlay-button' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                                 <img src={cardHovered ? cartIcon : cartRed} alt='cart' />
                                 Add to cart
-                            </button>
-                            <button className='overlay-button'>
+                            </Link>
+                            <Link className='overlay-button'>
                                 Quick View
-                            </button>
+                            </Link>
                         </div>
                 </div>
 

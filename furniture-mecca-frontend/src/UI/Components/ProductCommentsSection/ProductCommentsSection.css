@@ -13,6 +13,7 @@
     justify-content: space-between;
     align-items: end;
     border-bottom: 1px solid var(--border-color);
+    padding-bottom: 30px;
 }
 
 .sort-by-related p{

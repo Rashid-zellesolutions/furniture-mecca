@@ -103,7 +103,8 @@ const DealCard = () => {
                 </div>
             </div>
             <div className='deal-card-desc'>
-                <p>The New Jersey Sectional with Pullout Bed and Left-Arm-Facing .........</p>
+                <p>The New Jersey Sectional with Pullout Bed and Left-Arm-Facing The New Jersey Sectional with Pullout Bed and Left-Arm-Facing The New 
+                    Jersey Sectional with Pullout Bed and Left-Arm-Facing The New Jersey Sectional with Pullout Bed and Left-Arm-Facing .........</p>
             </div>
             <div className='deal-card-add-to-cart-section'>
                 <button className='deal-card-add-to-cart-btn' onMouseEnter={handleMouseHoverIn} onMouseLeave={handleMouseHoverLeave}>

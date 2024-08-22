@@ -6,31 +6,36 @@ import FAQ from '../../Components/FAQ/FAQ';
 import Shopvia from '../../Components/ShopViaBanner/Shopvia';
 import BreadCrumWithProduct from '../../Components/BreadCrumWithProduct/BreadCrumWithProduct';
 import Products from '../../Components/Products/Products';
-import imageOne from '../../../Assets/category/brown-soffa.png';
-import imageTwo from '../../../Assets/category/white-soffa.png';
-import imageThree from '../../../Assets/category/black-soffa.png'
+import underFifteen from '../../../Assets/Furniture Mecca/product archive page/breadcrums/under-1500.png';
+import sofaAndLoveSeat from '../../../Assets/Furniture Mecca/product archive page/breadcrums/sofa-and-love-seat.png';
+import sectionalSets from '../../../Assets/Furniture Mecca/product archive page/breadcrums/sectional-set.png'
 import InstaGallery from '../../Components/InstaGallery/InstaGallery';
+import RelatedCategories from '../../Components/Related-categories-Tags/RelatedCategories';
 
 const ProductArchive = () => {
   // Breadcrup component data
   const breadcrumRecentData = [
-    {img: imageOne, title: 'Under $1500'},
-    {img: imageTwo, title: 'Sofa & Love Seat Sets'},
-    {img: imageThree, title: 'Sectional Sets'},
-    {img: imageOne, title: 'Under $1500'},
-    {img: imageTwo, title: 'Sofa & Love Seat Sets'},
-    {img: imageThree, title: 'Sectional Sets'},
+    {img: underFifteen, title: 'Under $1500'},
+    {img: sofaAndLoveSeat, title: 'Sofa & Love Seat Sets'},
+    {img: sectionalSets, title: 'Sectional Sets'},
+    {img: underFifteen, title: 'Under $1500'},
+    {img: sofaAndLoveSeat, title: 'Sofa & Love Seat Sets'},
+    {img: sectionalSets, title: 'Sectional Sets'},
+    {img: underFifteen, title: 'Under $1500'},
+    {img: sofaAndLoveSeat, title: 'Sofa & Love Seat Sets'},
+    {img: sectionalSets, title: 'Sectional Sets'},
 ]
 
   return (
     <div>
-        <Shopvia />
+        {/* <Shopvia /> */}
         <BreadCrumWithProduct breadcrumRecentData={breadcrumRecentData}  />
         <Products />
+        <RelatedCategories />
         <FAQ />
         {/* <CategoriesGetScop isTrue={false} /> */}
         <InstaGallery />
-        <CustomerServicePanel />
+        {/* <CustomerServicePanel /> */}
     </div>
   )
 }

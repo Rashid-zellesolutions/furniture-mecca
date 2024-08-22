@@ -87,7 +87,7 @@ const categoryCardData = [
   return (
     <div className='home-page-main-container'>
       <NearStorePopUp />
-      <Shopvia />
+      {/* <Shopvia /> */}
       <Slider />
       <ShipBanner bannerImg={shipBanner} paddindTrue={false} />
       <Category title={'Shop by Category'} categoryData={categoryCardData} />

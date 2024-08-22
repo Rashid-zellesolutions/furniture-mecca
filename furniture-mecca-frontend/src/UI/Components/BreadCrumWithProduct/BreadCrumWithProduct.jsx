@@ -14,7 +14,9 @@ const BreadCrumWithProduct = ({breadcrumRecentData}) => {
         <div className='breadcrum-products-container'>
                 {breadcrumRecentData.map((item, index) => {
                     return <div className='single-product'>
+                      <div className='breadcrum-product-image'>
                         <img src={item.img} alt='img' />
+                      </div>
                         <p>{item.title}</p>
                     </div>
                 })}

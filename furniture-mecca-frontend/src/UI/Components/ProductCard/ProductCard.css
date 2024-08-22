@@ -111,6 +111,7 @@
     line-height: 18px;
     font-weight: 400;
     border-radius: 4px;
+    text-decoration: none;
 }
 
 .overlay-button img{

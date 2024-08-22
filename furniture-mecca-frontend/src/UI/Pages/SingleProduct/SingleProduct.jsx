@@ -14,6 +14,8 @@ import OutdoorFaves from '../../Components/OutdoorFaves/OutdoorFaves'
 import ShipBanner from '../../Components/ShipBanner/ShipBanner'
 import attentionBanner from '../../../Assets/images/attention-banner.png'
 import { useLocation } from 'react-router-dom'
+import InstaGallery from '../../Components/InstaGallery/InstaGallery'
+import Shopvia from '../../Components/ShopViaBanner/Shopvia'
 
 const SingleProduct = () => {
   const location = useLocation();
@@ -37,18 +39,20 @@ const SingleProduct = () => {
 
   return (
     <div>
+        <Shopvia />
         <SingleProductStickySection productCard={dynamicData} />
         <SimillerProducts />
         <FrequentlyBought />
         <RatingAndReview />
         <CustomerPhotos />
         <ProductComments />
-        <ShippingReturn />
-        <MoreToExplore />
+        {/* <ShippingReturn /> */}
+        {/* <MoreToExplore /> */}
         <OutdoorFaves />
         <ShipBanner bannerImg={attentionBanner} paddindTrue={true} />
-        <CategoriesGetScop />
-        <CustomerServicePanel />
+        <InstaGallery />
+        {/* <CategoriesGetScop /> */}
+        {/* <CustomerServicePanel /> */}
     </div>
   )
 }

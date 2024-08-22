@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 100%;
     padding: 50px 60px;
-    gap: 29px;
+    gap: 15px;
 }
 
 .products-main-container h3{
@@ -48,12 +48,12 @@
 
 /*Zip Code set Checkbox styling */
 .set-zip-to-dileviry-container{
-    display: flex;
+    display: none;
     gap: 5px;
 }
 
 .set-zip-to-dileviry-container span{
-    display: flex;
+    display: none;
     align-items: center;
     gap: 5px;
 }
@@ -147,7 +147,7 @@
 
 /* Availablity Check Checkbox styling */
 .sort-availablity-container{
-    display: flex;
+    display: none;
     gap: 5px;
     position: relative;
 }
@@ -322,6 +322,7 @@
     line-height: 21px;
     font-weight: 400;
     cursor: pointer;
+    color: #C61B1A; 
     text-decoration: underline;
 }
 
@@ -628,7 +629,7 @@ label {
 /* Related Category Style */
 
 .related-categories-div{
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
     gap: 20px;

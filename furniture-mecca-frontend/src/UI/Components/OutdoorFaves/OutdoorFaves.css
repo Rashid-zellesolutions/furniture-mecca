@@ -1,9 +1,9 @@
 .out-door-faves-main{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 50px;
     width: 100%;
-    padding: 30px 60px;
+    padding: 50px 60px;
 }
 
 .out-door-and-fav{

@@ -397,6 +397,7 @@
     outline: none;
     transition: transform 0.2s, border-color 0.2s, opacity 0.2s;
     position: relative;
+    text-decoration: none;
 }
 
 .add-to-cart-btn::after {

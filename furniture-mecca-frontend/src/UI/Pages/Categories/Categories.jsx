@@ -14,7 +14,7 @@ const Categories = ({categoriesMainImage, categoryCardData, newArrival , showPro
 
   return (
     <div>
-      <Shopvia />
+      {/* <Shopvia /> */}
       <LatestModulerBanner customWidth={false} showBanners={showPromotionsBaneers} mainImgShow={true} mainImage={categoriesMainImage} />
       <Category title={'Dining Room Furniture'} categoryData={categoryCardData} />
       <BestSeller />
