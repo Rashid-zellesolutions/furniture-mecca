@@ -1,11 +1,12 @@
 .get-the-scop-main-container{
-    margin-top: 40px;
+    /* margin-top: 40px; */
     display: flex;
     width: 100%;
-    padding: 0 90px;
+    padding: var(--global-padding);
     background-image: url('../../../Assets/to-be-change/bb\ 1.png');
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 25px;
 }
 
 .get-the-scop-form-container{

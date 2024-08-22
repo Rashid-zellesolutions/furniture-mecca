@@ -71,39 +71,39 @@ function App() {
           <Route path='/dining-room-sets' element={<ProductArchive />} />
           <Route 
             path='/living-room' 
-            element={<Categories categoriesMainImage={livingRoomMainImage} categoryCardData={categoryCardData} newArrival={false} />} 
+            element={<Categories categoriesMainImage={livingRoomMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} newArrival={false} />} 
           />
           <Route 
             path='/bedroom' 
-            element={<Categories categoriesMainImage={bedroomMainImage} categoryCardData={categoryCardData} newArrival={false} />} 
+            element={<Categories categoriesMainImage={bedroomMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} newArrival={false} />} 
           />
           <Route 
             path='/dining-room' 
-            element={<Categories categoriesMainImage={diningRoomMainImage} categoryCardData={categoryCardData} newArrival={true} />} 
+            element={<Categories categoriesMainImage={diningRoomMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} newArrival={true} />} 
           />
           <Route 
             path='/mattresses' 
-            element={<Categories categoriesMainImage={mattressesMainImage} categoryCardData={categoryCardData} newArrival={true} />} 
+            element={<Categories categoriesMainImage={mattressesMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} newArrival={true} />} 
           />
           <Route 
             path='/kids' 
-            element={<Categories categoriesMainImage={kidsMainImage} categoryCardData={categoryCardData} newArrival={true} />} 
+            element={<Categories categoriesMainImage={kidsMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} newArrival={true} />} 
           />
           <Route 
             path='/accent-furniture-and-rugs' 
-            element={<Categories categoriesMainImage={accentFurnitureMainImage} categoryCardData={categoryCardData} newArrival={true} />} 
+            element={<Categories categoriesMainImage={accentFurnitureMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} newArrival={true} />} 
           />
           <Route 
             path='/small-spaces' 
-            element={<Categories categoriesMainImage={smallSpaceMainImage} categoryCardData={categoryCardData} newArrival={true} />} 
+            element={<Categories categoriesMainImage={smallSpaceMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} newArrival={true} />} 
           />
           <Route 
             path='/outlets' 
-            element={<Categories categoriesMainImage={outletMainImage} categoryCardData={categoryCardData} newArrival={true} />} 
+            element={<Categories categoriesMainImage={outletMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} newArrival={true} />} 
           />
           <Route 
             path='/tent-sale' 
-            element={<Categories categoriesMainImage={tentSaleMainImage} categoryCardData={categoryCardData} newArrival={true} />} 
+            element={<Categories categoriesMainImage={tentSaleMainImage} showBanners={false} categoryCardData={categoryCardData} newArrival={true} />} 
           />
 
           <Route path='/single-product/:id' element={<SingleProduct  />} />

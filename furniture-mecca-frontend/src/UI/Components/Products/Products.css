@@ -492,7 +492,7 @@ label {
     cursor: pointer;
 }
 
-.filters-section button{
+.filters-section button:hover{
     background-color: var(--active-nav-item-color);
     border: 1px solid var(--active-nav-item-color);
     color: #fff;

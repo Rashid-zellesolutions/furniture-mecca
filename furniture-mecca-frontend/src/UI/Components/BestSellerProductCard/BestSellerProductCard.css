@@ -60,9 +60,9 @@
     margin-bottom: 5px;
 }
 .product-name-div h3{
-    font-size: 40px;
-    line-height: 46px;
-    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
     color: var(--text-color);
 }
 
@@ -75,7 +75,7 @@
 }
 
 .best-sellerdel-price{
-    font-size: 28px;
+    font-size: 15px;
     line-height: 22px;
     font-weight: 600;
     color: var(--text-color);
@@ -83,7 +83,7 @@
 }
 
 .best-seller-new-price{
-    font-size: 32px;
+    font-size: 18px;
     line-height: 27px;
     font-weight: 600;
     color: var(--active-nav-item-color);
@@ -103,7 +103,7 @@
     }
 } */
 
-@media only screen and (max-width: 2375px){
+/* @media only screen and (max-width: 2375px){
     .product-name-div h3{
         font-size: 30px;
         line-height: 34px;
@@ -155,4 +155,4 @@
     .best-seller-new-price{
         font-size: 15px;
     }
-}
+} */

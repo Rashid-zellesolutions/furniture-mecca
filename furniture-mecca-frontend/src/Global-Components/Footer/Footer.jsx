@@ -233,8 +233,8 @@ const Footer = () => {
                         })}
                     </div>
                 </div>
-                <div className='empty-space-div'></div>
-                <div className='footer-customer-care-and-about-furniture-mecca'>
+                {/* <div className='empty-space-div'></div> */}
+                {/* <div className='footer-customer-care-and-about-furniture-mecca'> */}
                     <div className='footer-nearby-store'>
                         <h3>Nearest Store</h3>
                         <div className='nearby-store-details'>
@@ -264,20 +264,34 @@ const Footer = () => {
                                 </div>
                             </div>
                     </div>
-                    {footerCustomerCareAndAbout.map((items, index) => {
+                    {/* <div className='footer-get-scoop-and-about'>
+                        <div className='footer-about-links-section'> */}
+                            {footerCustomerCareAndAbout.map((items, index) => {
+                                return <div key={index} className='footer-care-and-about'>
+                                    <h3>{items.heading}</h3>
+                                    {items.navLinks.map((innerItem, innerIndex) => {
+                                        return <Link className='footer-care-and-about-links' key={innerIndex} to={innerItem}>{innerItem.name}</Link>
+                                    })}
+                                </div>
+                            })}
+                        {/* </div>
+                    
+                    </div> */}
+                    {/* {footerCustomerCareAndAbout.map((items, index) => {
                         return <div key={index} className='footer-care-and-about'>
                             <h3>{items.heading}</h3>
                             {items.navLinks.map((innerItem, innerIndex) => {
                                 return <Link className='footer-care-and-about-links' key={innerIndex} to={innerItem}>{innerItem.name}</Link>
                             })}
                         </div>
-                    })}
-                </div>
+                    })} */}
+                    
+                {/* </div> */}
             </div>
             <div className='footer-rights-reserved-container'>
                 <p>2020 - 2024 Furniture Mecca. All Rights Reserved</p>
                 <p>
-                    <Link>Designed & Managed By Zelle Solutions</Link>
+                    <Link to={'https://zellesolutions.com/'}>Designed & Managed By Zelle Solutions</Link>
                 </p>
             </div>
         </div>

@@ -63,13 +63,13 @@ const CategoriesGetScop = ({isTrue}) => {
                 <div className='vertical-slider'>
                     <img className='img-one' src={imgOne} alt='img' />
                     <img className='img-one' src={imgOne} alt='img' />
-                    <img className='img-two' src={imgOne} alt='img' />
-                    <img className='img-two' src={imgOne} alt='img' />
+                    <img className='img-one' src={imgOne} alt='img' />
+                    <img className='img-one' src={imgOne} alt='img' />
                 </div>
                 <div className='vertical-slider'>
-                    <img className='img-one' src={imgOne} alt='img' />
                     <img className='img-two' src={imgOne} alt='img' />
-                    <img className='img-one' src={imgOne} alt='img' />
+                    <img className='img-two' src={imgOne} alt='img' />
+                    <img className='img-two' src={imgOne} alt='img' />
                     <img className='img-two' src={imgOne} alt='img' />
                 </div>
             </div>

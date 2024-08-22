@@ -5,7 +5,7 @@ import dealDayImage from '../../../Assets/Furniture Mecca/Landing Page/deal of t
 const DealDayCountDown = () => {
 
   const calculateTimeLeft = () => {
-    const targetDate = new Date("2024-08-20T00:00:00").getTime();
+    const targetDate = new Date("2024-08-23T21:00:00").getTime();
     const now = new Date().getTime();
     const difference = targetDate - now;
     const padZero = (num) => String(num).padStart(2, '0')

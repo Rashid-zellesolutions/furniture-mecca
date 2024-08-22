@@ -12,10 +12,10 @@ import { CgMenuLeftAlt } from "react-icons/cg";
 const BlogSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
     const blogSliderData = [
-        {img: blogOneImg, categoryIcon: <CgMenuLeftAlt size={15} />, category: 'Uncategorized 0', para: 'Five Things To Consider When Choosing Furniture For A Small Living Room', link: '#'},
-        {img: blogTwoImage, categoryIcon: <CgMenuLeftAlt size={15} />, category: 'Uncategorized 1', para: 'Your Furniture Show You As You Are', link: '#'},
-        {img: blogTheeImage, categoryIcon: <CgMenuLeftAlt size={15} />, category: 'Uncategorized 2', para: 'Add That "Wow Factor" To Your Home  - Tips And Tricks', link: '#'},
-        {img: blogOneImg, categoryIcon: <CgMenuLeftAlt size={15} />, category: 'Uncategorized 3', para: "Package Of All Living Room's Furniture For A Coordinated Look", link: '#'},
+        {img: blogOneImg, categoryIcon: <CgMenuLeftAlt size={15} />, category: 'Uncategorized 0', date: '20-08-2024', para: 'Five Things To Consider When Choosing Furniture For A Small Living Room', link: '#'},
+        {img: blogTwoImage, categoryIcon: <CgMenuLeftAlt size={15} />, category: 'Uncategorized 1', date: '21-02-2024', para: 'Your Furniture Show You As You Are', link: '#'},
+        {img: blogTheeImage, categoryIcon: <CgMenuLeftAlt size={15} />, category: 'Uncategorized 2', date: '01-05-2024', para: 'Add That "Wow Factor" To Your Home  - Tips And Tricks', link: '#'},
+        {img: blogOneImg, categoryIcon: <CgMenuLeftAlt size={15} />, category: 'Uncategorized 3', date: '12-07-2024', para: "Package Of All Living Room's Furniture For A Coordinated Look", link: '#'},
     ];
 
     // Duplicate the blogSliderData array to create an infinite loop effect
@@ -35,6 +35,22 @@ const BlogSlider = () => {
     const handlePrev = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + blogSliderData.length) % blogSliderData.length)
     }
+
+
+    const truncateTextByWords = (text, wordLimit) => {
+        if (typeof text !== 'string' || wordLimit <= 0) {
+            return '';
+        }
+    
+        const words = text.split(' ');
+    
+        if (words.length <= wordLimit) {
+            return text;
+        }
+    
+        return words.slice(0, wordLimit).join(' ') + '...';
+    }
+    
 
     return (
         <div className='blog-main-container'>
@@ -58,8 +74,11 @@ const BlogSlider = () => {
                                 <img src={item.img} alt='blog img' />
                             </a>
                             <div className='blog-para-and-category'>
-                                <p>{item.para}</p>
-                                <span> {item.categoryIcon} {item.category}</span>
+                                <p>{truncateTextByWords(item.para, 6)}</p>
+                                <div className='category-and-date'>
+                                    <span> {item.categoryIcon} {item.category}  </span>
+                                    <p>{item.date}</p>
+                                </div>
                             </div>
                         </div>
                     ))}

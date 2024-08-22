@@ -1,6 +1,7 @@
 .image-heading-container{
     display: flex;
     width: 100%;
+    padding: 25px 0;
 }
 
 .image-heading-container img{

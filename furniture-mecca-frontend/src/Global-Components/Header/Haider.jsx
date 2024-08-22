@@ -86,7 +86,7 @@ const Haider = () => {
         <div className='rotating-message'>
           {currentIndex === 1 ? <span>Need help ordering? <Link className='toll-free-ancor' href='#'> Call 860-812-1111 </Link> </span> 
           : currentIndex === 2 ? <span>Learn about my <Link className='toll-free-ancor' href='#'>Financing Options</Link> </span> 
-          : <span>Shop Bob's everyday low prices!</span>}
+          : <span>Shop Furniture Mecca's everyday low prices!</span>}
         </div>
         <div className='banner-link-container'>
           <Link>Stores</Link>
@@ -96,7 +96,7 @@ const Haider = () => {
         </div>
         <div className='on-tab-deliver-to'>
             <img src={deliverTo} alt="delivery" />
-            <span> Deliver to : <Link> 06042</Link> </span>
+            <span> Deliver to : <Link> PA 19134</Link> </span>
             <img src={locationIcon} alt="location" className='promotion-banner-location' />
         </div>
       </div>
@@ -121,12 +121,12 @@ const Haider = () => {
                 <div className='near-by-city-time'>
                   <p>Nearest Store</p>
                   <span>
-                    <Link>Manchester - CT </Link><p> (Opens at 10:00 AM)</p>
+                    <Link>E Venango - ST </Link><p> (Opens at 09:30 AM)</p>
                   </span>
                 </div>
                 <span className='deliver-to'>
                   <p>Deliver to</p>
-                  <span>06042</span>
+                  <span>PA 19134</span>
                 </span>
               </div>
           </div>

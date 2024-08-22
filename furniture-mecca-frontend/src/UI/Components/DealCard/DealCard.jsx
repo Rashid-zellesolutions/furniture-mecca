@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './DealCard.css';
 import fireIcon from '../../../Assets/icons/fire-icon.png';
 import dealProductImage from '../../../Assets/images/deal-item-img.png';
@@ -25,6 +25,41 @@ const DealCard = () => {
     const handleMouseHoverLeave = () => {
         setIsCartHovered(false);
     }
+
+    // State to hold the remaining time
+    const targetDate = '2024-08-23T21:00:59';
+    const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+    useEffect(() => {
+        // Function to calculate time left
+        const calculateTimeLeft = () => {
+            const now = new Date();
+            const difference = new Date(targetDate) - now;
+
+            if (difference <= 0) {
+                // Time is up
+                setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            setTimeLeft({ days, hours, minutes, seconds });
+        };
+
+        // Initial calculation
+        calculateTimeLeft();
+
+        // Update the timer every second
+        const interval = setInterval(calculateTimeLeft, 1000);
+
+        // Clear interval on component unmount
+        return () => clearInterval(interval);
+    }, [targetDate]);
+
 
   return (
     <div className='deal-card-main-div'>
@@ -91,7 +126,10 @@ const DealCard = () => {
             </div>
             <div className='deal-card-end-timer'>
                 <p>End in:</p>
-                <button>201d : 23h : 33m : 20s</button>
+                {/* <button>201d : 23h : 33m : 20s</button> */}
+                <button>
+                    {`${timeLeft.days}d : ${timeLeft.hours}h : ${timeLeft.minutes}m : ${timeLeft.seconds}s`}
+                </button>
             </div>
         </div>
     </div>

@@ -62,7 +62,7 @@
     top: 0;
 }
 
-.pieces-text{
+/* .pieces-text{
     position:  absolute;
     bottom: 4.5%;
     font-size: 55px;
@@ -70,6 +70,17 @@
     font-weight: 700;
     color: white;
     left: 10px;
+
+} */
+.pieces-text {
+    position: absolute;
+    bottom: 4.5%;
+    font-size: 55px;
+    line-height: 64px;
+    font-weight: 700;
+    color: white;
+    left: 10px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Example shadow */
 }
 
 @media only screen and (max-width: 2520px){

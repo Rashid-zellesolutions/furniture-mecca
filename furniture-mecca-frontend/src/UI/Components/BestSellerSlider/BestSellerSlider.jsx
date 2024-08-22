@@ -14,7 +14,7 @@ const BestSellerSlider = () => {
 
     const bestSellerNav = ['Living Room', 'Bedroom', 'Dining Room']
     
-    const [loading, setLoading] = useState(false); // Add state for loading
+    const [loading, setLoading] = useState(false); 
     const [activeItem, setActiveItem] = useState(0)
     const navigate = useNavigate()
 

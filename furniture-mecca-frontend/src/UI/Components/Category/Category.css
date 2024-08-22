@@ -1,21 +1,13 @@
 .category-main-container{
     display: flex;
     flex-direction: column;
-    /* padding: var(--global-padding); */
-    /* padding: 25px 400px; */
-    padding: 25px 100px;
-}
-
-@media only screen and (max-width: 1400px){
-    .category-main-container{
-        padding: var(--global-padding);
-    }
+    padding: var(--global-padding);
 }
 
 .category-heading{
     color: var(--text-color);
-    font-size: 30px;
-    line-height: 45px;
+    font-size: 25px;
+    line-height: 29px;
     font-weight: 700;
     margin-bottom: 24px;
 }
@@ -24,88 +16,31 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    /* gap: 20px; */
     align-items: center;
     padding: 0px 0px 0 0;
 }
 
-@media only screen and (max-width: 1360px){
+@media only screen and (min-width: 1025px) and (max-width: 1200px){
     .category-cards-container{
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (min-width: 769px) and (max-width: 1024px){
     .category-cards-container{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media only screen and (max-width: 545px){
+@media only screen and (min-width: 481px) and (max-width: 768px){
     .category-cards-container{
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-/* @media only screen and (max-width: 2080px){
-    .category-cards-container{
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-    }
-} */
-
-/* @media only screen and (max-width: 1760px){
-    .category-cards-container{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-    }
-} */
-
-/* @media only screen and (max-width: 1430px){
-    .category-cards-container{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-} */
-
-
-
-/* @media only screen and (max-width: 1200px){
-    .category-main-container{
-        padding: 20px 30px;
-    }
-    .category-cards-container{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-} */
-
-/* @media only screen and (max-width: 700px){
-    .category-main-container{
-        display: flex;
-        flex-direction: column;
-        padding: 20px 15px 30px 15px;
-    }
-    .category-cards-container{
-        display: grid;
         grid-template-columns: auto auto;
-        gap: 10px;
-        align-items: center;
-        padding: 0px 20px 0 20px;
     }
-} */
+}
 
-/* @media only screen and (max-width: 420px){
-    .category-main-container{
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-    }
+@media only screen and (min-width: 320px) and (max-width: 480px){
     .category-cards-container{
-        display: grid;
         grid-template-columns: auto;
-        gap: 10px;
-        align-items: center;
-        padding: 0px 10px 0 10px;
     }
-} */
+}
+

@@ -10,13 +10,13 @@ import installmentBanner from '../../../Assets/Furniture Mecca/Landing Page/Pay 
 // import fullBed from '../../../Assets/to-be-change/hp-fourth_hero_mat_desktop_1b_3200x1388.png';
 import mobileViewFullBed from '../../../Assets/images/Rectangle 703.png'
 
-const LatestModulerBanner = ({images, customWidth, mainImage, mainImgShow }) => {
+const LatestModulerBanner = ({images, customWidth, mainImage, mainImgShow, showBanners, paddingTop }) => {
   
   return (
     <>
       <div className={`moduler-container ${customWidth ? 'show' : ''}`}>
         
-        <div className='financing-banner'>
+        <div className={`financing-banner`}>
           <img src={PaypalBannerOne} alt="paypal banner" />
           <img src={PaypalBannerTwo} alt="paypal banner two" />
         </div>
@@ -34,11 +34,11 @@ const LatestModulerBanner = ({images, customWidth, mainImage, mainImgShow }) => 
         <div className={`dining-image-div ${mainImgShow ? 'show-main-img' : ''}`}>
           <img src={mainImage} alt='dining image' />
         </div>
-        <div className='dining-paypal-div'>
+        <div className={`dining-paypal-div ${showBanners ? 'show-banners' : ''} ${paddingTop ? 'padding-top' : ''}`}>
             <img src={PaypalBannerOne} alt='paypal one' />
             <img src={PaypalBannerTwo} alt='paypal two' />
         </div>
-        <div className='dining-installment-div'>
+        <div className={`dining-installment-div ${showBanners ? 'show-banners' : ''}`}>
             <img src={installmentBanner} alt='installment' />
         </div>
       </div>

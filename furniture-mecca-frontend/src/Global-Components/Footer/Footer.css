@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 100%;
     padding: 40px;
+    /* margin-top: 25px; */
     background-color: var(--footer-bg-color);
 }
 
@@ -65,8 +66,11 @@
 
 .footer-contact-section{
     display: flex;
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr); */
     justify-content: center;
     width: 100%;
+    justify-content: space-evenly;
     border-top: 1px solid var(--border-color);
     padding: 40px 0 0 0;
 }
@@ -148,7 +152,7 @@
 }
 
 .footer-customer-care-and-about-furniture-mecca{
-    display: flex;
+    display: flex; 
     /* width: 70%; */
     /* justify-content: end; */
     gap: 20px;
@@ -226,7 +230,21 @@
 .footer-care-and-about{
     display: flex;
     flex-direction: column;
+    /* width: 100%; */
 }
+
+/* .footer-get-scoop-and-about{
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+} */
+
+/* .footer-about-links-section{
+    display: flex;
+    width: 100%;
+    background-color: orange;
+    justify-content: space-between;
+} */
 
 .footer-care-and-about h3{
     font-size: 16px;

@@ -5,6 +5,7 @@
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    padding-bottom: 25px;
 }
 
 .insta-gallery-row-one{
@@ -31,7 +32,7 @@
 .insta-icon{
     position: absolute;
     top: 40%;
-    right: 45%;
+    right: 50%;
     cursor: pointer;
     transition: transform 1.5s ease-in-out;
 }

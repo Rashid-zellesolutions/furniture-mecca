@@ -5,24 +5,24 @@ import Category from '../../Components/Category/Category';
 import CustomerServicePanel from '../../Components/CustomerServicePanel/CustomerServicePanel';
 import LatestModulerBanner from '../../Components/LatestModuler/LatestModulerBanner';
 import NewArrival from '../../Components/NewArrivals/NewArrival';
-import MultiProductSlider from '../../Components/MultiProductSLider/MultiProductSlider';
+// import MultiProductSlider from '../../Components/MultiProductSLider/MultiProductSlider';
 import CategoriesGetScop from '../../Components/CategoriesGetScop/CategoriesGetScop';
 import BestSeller from '../../Components/BestSeller/BestSeller';
 import DealOfDay from '../../Components/DealOfDay/DealOfDay';
 
-const Categories = ({categoriesMainImage, categoryCardData, newArrival}) => {
+const Categories = ({categoriesMainImage, categoryCardData, newArrival , showPromotionsBaneers}) => {
 
   return (
     <div>
       <Shopvia />
-      <LatestModulerBanner customWidth={false} mainImgShow={true} mainImage={categoriesMainImage} />
+      <LatestModulerBanner customWidth={false} showBanners={showPromotionsBaneers} mainImgShow={true} mainImage={categoriesMainImage} />
       <Category title={'Dining Room Furniture'} categoryData={categoryCardData} />
       <BestSeller />
       <DealOfDay />
       {newArrival ? <NewArrival /> : <></>}
       <CategoriesGetScop isTrue={true} />
-      <LatestModulerBanner customWidth={false} mainImgShow={false} />
-      <CustomerServicePanel />
+      <LatestModulerBanner customWidth={false} showBanners={true} paddingTop={true} mainImgShow={false} />
+      {/* <CustomerServicePanel /> */}
     </div>
   )
 }

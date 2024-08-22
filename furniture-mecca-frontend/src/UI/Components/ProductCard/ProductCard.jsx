@@ -56,7 +56,7 @@ const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardCont
                         </div>
                 </div>
 
-                <p className='product-title'> <Link> {ProductTitle} </Link> </p>
+                <p className='product-title' onClick={handleCardClick}> <Link> {ProductTitle} </Link> </p>
                 <div className='product-rating-stars-div'>
                     {stars.map((stars, starIndex) => {
                         return <img key={starIndex} src={stars.icon} alt={stars.title} className='rating-star' />

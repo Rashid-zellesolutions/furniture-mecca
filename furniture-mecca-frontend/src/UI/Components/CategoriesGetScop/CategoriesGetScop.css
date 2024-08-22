@@ -8,7 +8,7 @@
 }
 
 .scop-contact-container{
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
     height: 380px;
@@ -188,7 +188,7 @@
 } */
 
 .product-text{
-    width: 80%;
+    width: 60%;
     display: flex;
     /* align-items: flex-start; */
     /* flex: 1; */
@@ -204,9 +204,9 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 10px;
+    gap: 5px;
     text-align: justify;
-    /* margin-bottom: 20px; */
+    margin-bottom: 28px;
 }
 
 .text-details h3{
@@ -225,9 +225,11 @@
 
 .image-gallery-slider{
     display: flex;
-    width: 20%;
+    width: 40%;
     height: 23vh;
     gap: 10px;
+    justify-content: center;
+    /* background-color: orange; */
 }
 
 /* @media only screen and (max-width: 2360px){
@@ -242,23 +244,28 @@
 .vertical-slider {
     display: flex;
     flex-direction: column;
-    animation: slide 10s linear infinite; /* Infinite scrolling animation */
+    animation: slide 15s linear infinite; /* Infinite scrolling animation */
     gap: 10px;
+    padding: 0 10px;
     /* height: 30%; */
     /* background-color: purple; */
     /* flex-grow: 0; */
 }
 
 .img-one {
-    height: 250px;
     width: 100%;
+    height: 250px !important;
+    /* width: 100%; */
+    min-width: 220px;
     object-fit: cover;
     cursor: pointer;
+    border-radius: 15px;
 }
 
 .img-two {
-    height: 310px;
     width: 100%;
+    height: 310px !important;
+    min-width: 220px;
     object-fit: cover;
     cursor: pointer;
 }

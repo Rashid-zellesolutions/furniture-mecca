@@ -6,11 +6,11 @@
     color: var(--text-color);
 }
 
-@media only screen and (max-width: 1200px){
+/* @media only screen and (max-width: 1200px){
     .blog-main-container{
         padding: 20px 30px;
     }
-}
+} */
 
 /* Blog Heading and Para */
 .blog-heading-and-para{
@@ -18,7 +18,7 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
-    text-align: center;
+    text-align: center; 
 }
 
 .blog-heading-and-para h3{
@@ -41,7 +41,7 @@
     text-align: center;
 }
 
-@media only screen and (max-width: 700px){
+/* @media only screen and (max-width: 700px){
     .blog-heading-and-para h3{
         font-size: 20px;
     }
@@ -70,7 +70,7 @@
     .blog-heading-and-para p{
         font-size: 10px;
     }
-}
+} */
 
 /* blog Slider */
 .blog-main-container {
@@ -99,7 +99,7 @@
 .blog-card {
     display: flex;
     flex-direction: column;
-    flex: 0 0 33.33%;
+    flex: 0 0 32.50%;
     /* width: 430px; */
     /* gap: 15px; */
     /* height: 420px; */
@@ -140,11 +140,14 @@
 .blog-para-and-category {
     display: flex;
     flex-direction: column;
-    padding: 30px 30px;
-    height: 125px;
+    padding: 10px;
+    height: auto;
     width: 100%;
     gap: 10px;
+    background-color: #efefef;
 }
+
+
 
 .blog-para-and-category p{
     font-size: 16px;
@@ -153,16 +156,31 @@
     color: black;
 }
 
+.category-and-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
 .blog-para-and-category span{
     display: flex;
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
     align-items: center;
-    gap: 10px;
+    /* gap: 5px; */
 }
 
-@media only screen and (max-width: 435px){
+.category-and-date p{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+/* @media only screen and (max-width: 435px){
     .blog-card{
         flex:  0 0 36%;
     }
@@ -180,11 +198,11 @@
         font-size: 10px;
         line-height: 13px;
     }
-}
+} */
 
 .blog-slider-arrow {
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     cursor: pointer;
     background-color: transparent;
@@ -194,7 +212,8 @@
 }
 
 .blog-slider-arrow img{
-    width: 25px;
+    width: 32px;
+    height: 32px;
 }
 
 .left {
@@ -232,7 +251,7 @@
     border: 2px solid var(--active-nav-item-color);
     cursor: pointer;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     padding: 12px 20px;
 }
 
