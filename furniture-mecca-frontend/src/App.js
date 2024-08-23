@@ -37,6 +37,7 @@ import ProductArchive from './UI/Pages/ProductArchive/ProductArchive';
 import SingleProduct from './UI/Pages/SingleProduct/SingleProduct';
 import Shopvia from './UI/Components/ShopViaBanner/Shopvia';
 import AddToCart from './UI/Pages/AddToCart/AddToCart';
+import ContinueCart from './UI/Components/Cart-Components/Continue-cart/ContinueCart';
 
 
 function App() {
@@ -111,6 +112,7 @@ function App() {
 
           <Route path='/single-product/:id' element={<SingleProduct  />} />
           <Route path='/add-to-cart' element={<AddToCart />} />
+          <Route path='/check-page' element={<ContinueCart />} />
         </Routes>
         <Footer />
         <button onClick={handleClickTop} className='scroll-to-top-button'>

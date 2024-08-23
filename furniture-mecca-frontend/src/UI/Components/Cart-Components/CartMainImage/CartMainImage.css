@@ -14,6 +14,12 @@
     /* background-color: orange; */
 }
 
+@media only screen and (min-width: 481px){
+    .cart-header{
+        height: 300px;
+    }
+}
+
 .cart-header::before {
     content: ""; /* Required for pseudo-elements */
     position: absolute; /* Position relative to .cart-header */

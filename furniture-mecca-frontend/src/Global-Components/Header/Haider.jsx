@@ -132,9 +132,15 @@ const Haider = () => {
           </div>
         </div>
         <div className='header-icons-container'>
+          <Link>
           <img src={profileIcon} alt="profile" />
+          </Link>
+          <Link>
           <img src={HeartIcon} alt="heart" />
-          <img src={cartIcon} alt="cart" />
+          </Link>
+          <Link to={'/add-to-cart'}>
+            <img src={cartIcon} alt="cart" />
+          </Link>
         </div>
       </div>
 
