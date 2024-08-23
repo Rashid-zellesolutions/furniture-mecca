@@ -24,9 +24,13 @@ const CartItems = ({cartItemData}) => {
                 <div className='price-and-count'>
                     <p>$ 1,599.00</p>
                     <div className='product-count'>
-                        <img src={minusBtn} alt='minus' />
+                        <button>
+                            <img src={minusBtn} alt='minus' />
+                        </button>
                         <p>1</p>
-                        <img src={plusBtn} alt='plus' />
+                        <button>
+                            <img src={plusBtn} alt='plus' />
+                        </button>
                     </div>
                 </div>
                 <div className='cart-item-actual-price'>
