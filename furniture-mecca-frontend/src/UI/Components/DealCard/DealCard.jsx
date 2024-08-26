@@ -27,7 +27,7 @@ const DealCard = () => {
     }
 
     // State to hold the remaining time
-    const targetDate = '2024-08-23T21:00:59';
+    const targetDate = '2024-08-31T21:00:59';
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
     useEffect(() => {
@@ -126,7 +126,7 @@ const DealCard = () => {
                 <h3>Hurry Up!</h3>
             </div>
             <div className='deal-card-end-timer'>
-                <p>End in:</p>
+                <p>Ends in:</p>
                 {/* <button>201d : 23h : 33m : 20s</button> */}
                 <button>
                     {`${timeLeft.days}d : ${timeLeft.hours}h : ${timeLeft.minutes}m : ${timeLeft.seconds}s`}

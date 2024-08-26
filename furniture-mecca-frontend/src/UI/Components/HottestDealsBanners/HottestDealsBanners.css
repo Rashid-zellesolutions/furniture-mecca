@@ -3,7 +3,8 @@
   flex-direction: column;
   width: 100%;
   gap: 10px;
-  padding: var(--global-padding);
+  /* padding: var(--global-padding); */
+  padding: 25px 60px 50px 60px;
 }
 
 .hot-deal-main-heading{

@@ -21,6 +21,7 @@ import grayImage from '../../../Assets/images/gray-variant-image.png'
 import WhatWeOffer from '../WhatWeOffer/WhatWeOffer';
 import ProductOverView from '../ProductOverView/ProductOverView';
 import SingleProductFAQ from '../SingleProductFAQ/SingleProductFAQ';
+import AlsoNeed from '../AlsoNeed/AlsoNeed';
 
 
 
@@ -233,9 +234,9 @@ const handleThumbnailClick = (index) => {
       <div className='right-section'>
         <div className='single-product-detail-container'>
             <h3 className='single-product-heading'>{productData.productCard.productTitle}</h3>
-            <span className='single-product-see-more'>
+            {/* <span className='single-product-see-more'>
                 <p>See more by </p><Link>Sol 72 Outdoor</Link>
-            </span>
+            </span> */}
             <div className='single-product-rating'>
                 <span className='stars-icon'>
                     {ratingStars.map((item, index) => {
@@ -248,7 +249,7 @@ const handleThumbnailClick = (index) => {
             <h3 className='single-product-price'>{productData.productCard.priceTag}</h3>
             <p className='single-product-installment-price-price'>$9/month for 6 months - Total {productData.productCard.priceTag}</p>
             <span className='single-product-shipping'>
-                <p>Free Shipping</p>
+                {/* <p>Free Shipping</p> */}
                 <p>Get it between July 27 - July 31'</p>
             </span>
             <div className='single-product-frame-color'>
@@ -279,6 +280,7 @@ const handleThumbnailClick = (index) => {
                       {isLoading ? 'Loading...' : 'Add To Cart'}
                   </Link>
                 </div>
+                {/* <AlsoNeed /> */}
                 <WhatWeOffer />
                 <ProductOverView />
                 <SingleProductFAQ />

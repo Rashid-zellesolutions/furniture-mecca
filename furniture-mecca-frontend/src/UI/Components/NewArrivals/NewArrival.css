@@ -158,6 +158,9 @@
 .card-buttons a{
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
     gap: 15px;
     color: white;
     font-size: 15px;
@@ -167,12 +170,17 @@
     /* width: 150px; */
     justify-content: center;
     height: 40px;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
 }
 
 .card-buttons a:hover{
-    color: var(--active-nav-item-color);
+    background-color: var(--active-nav-item-color);
+    border-radius: 6px;
 }
+
+/* .card-buttons a:hover{
+    color: var(--active-nav-item-color);
+} */
 
 .card-buttons a img{
     width: 20px;

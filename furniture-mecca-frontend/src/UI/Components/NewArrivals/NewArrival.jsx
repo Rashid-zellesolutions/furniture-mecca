@@ -45,15 +45,15 @@ const NewArrival = () => {
                 <span className='pieces-text'>{items.pieces}</span>
                 <span className='title-and-price'><p className='new-arrival-product-name'>{items.title}</p> <p className='new-arrival-product-price'>{items.price}</p></span>
             </div>
-            <div className='card-buttons'>
+            <div className='card-buttons'> 
                 <Link to={items.addCartLink} onMouseEnter={() => handleCartHover(index)} onMouseLeave={handleCardHoverLeave}>
-                  <img src={cartHoverIndex === index ? cartRed : items.addCartIcon} alt='icon' />
+                  <img src={items.addCartIcon} alt='icon' />
                   <p> {items.addCart} </p>
                 </Link>
-                <a href={items.viewAllLink}>
+                <Link to={items.viewAllLink}>
                     {items.viewIcon}
                     <p>{items.viewAll}</p>
-                </a>
+                </Link>
             </div>
         </div>
         })}

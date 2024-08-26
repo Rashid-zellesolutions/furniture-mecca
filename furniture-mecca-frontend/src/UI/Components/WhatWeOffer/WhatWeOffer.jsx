@@ -17,6 +17,11 @@ const WhatWeOffer = () => {
         <div className='offer-cards-div'>
             {servisesData.map((item, index) => {
                 return <div className='servise-card'>
+                    {/* <input type="checkbox" className="customCheckbox" /> */}
+                    <div class="checkbox-wrapper-1">
+                        <input id={`example-${index}`} class="substituted" type="checkbox" aria-hidden="true" />
+                        <label for={`example-${index}`}></label>
+                    </div>
                     <img src={item.icon} alt='payment-icon' />
                     <div className='servise-card-details-section'>
                         <h3>{item.serviseName}</h3>

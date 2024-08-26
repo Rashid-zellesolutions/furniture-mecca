@@ -9,6 +9,7 @@ import NewArrival from '../../Components/NewArrivals/NewArrival';
 import CategoriesGetScop from '../../Components/CategoriesGetScop/CategoriesGetScop';
 import BestSeller from '../../Components/BestSeller/BestSeller';
 import DealOfDay from '../../Components/DealOfDay/DealOfDay';
+import FinanceBannerSlider from '../../Components/FinanceBannerSlider/FinanceBannerSlider';
 
 const Categories = ({categoriesMainImage, categoryCardData, newArrival , showPromotionsBaneers}) => {
 
@@ -19,9 +20,10 @@ const Categories = ({categoriesMainImage, categoryCardData, newArrival , showPro
       <Category title={'Dining Room Furniture'} categoryData={categoryCardData} />
       <BestSeller />
       <DealOfDay />
-      {newArrival ? <NewArrival /> : <></>}
+      <NewArrival /> 
       <CategoriesGetScop isTrue={true} />
-      <LatestModulerBanner customWidth={false} showBanners={true} paddingTop={true} mainImgShow={false} />
+      {/* <LatestModulerBanner customWidth={false} showBanners={true} paddingTop={true} mainImgShow={false} /> */}
+      <FinanceBannerSlider />
       {/* <CustomerServicePanel /> */}
     </div>
   )

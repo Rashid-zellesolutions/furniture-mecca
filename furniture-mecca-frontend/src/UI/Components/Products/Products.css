@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 100%;
     padding: 50px 60px;
-    gap: 15px;
+    gap: 5px;
 }
 
 .products-main-container h3{
@@ -22,7 +22,7 @@
 
 /* Hide and show button */
 .hide-and-show-filters-button-container{
-    display: flex;
+    display: none;
 }
 
 .hide-and-show-filters-button-container button{
@@ -284,9 +284,17 @@
 /* Products Section Styling */
 .products-and-filter-container{
     display: flex;
-    border-top: 2px solid var(--border-color);
-    padding: 15px 0;
+    /* border-top: 2px solid var(--border-color); */
+    padding: 10px 0;
     gap: 15px;
+    /* height: 580px;
+    background-color: orange;
+    overflow-x: hidden;
+    overflow-y: auto; */
+}
+
+.products-and-filter-container::-webkit-scrollbar{
+    display: none;
 }
 
 .filters-section{
@@ -295,18 +303,45 @@
     width: 25%;
     height: max-content;
     gap: 35px;
-    padding: 0 15px;
+    padding-right: 15px;
     border-right: 1px solid var(--border-color);
     transition: height 0.3s ease-in-out;
+    /* height: 100vh; */
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* background-color: orange; */
 }
 
 .filters-section.hide-filter{
     display: none;
 }
 
+.hide-filters-btn{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+}
+
+.hide-filters-btn button{
+    font-size: 14px;
+    font-weight: 400;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: none; */
+    /* width: 125px; */
+    height: 40px;
+    padding: 10px;
+    gap: 15px;
+    border-radius: 25px;
+}
+
 .filters-heading-section{
     display: flex;
     width: 100%;
+    padding: 0 15px;
     justify-content: space-between;
     align-items: center;
 }
@@ -339,7 +374,7 @@
     flex-direction: column;
     width: 100%;
     border-bottom: 2px solid var(--border-color);
-    padding: 20px 0 10px 0;
+    padding: 10px 10px;
 }
 
 .single-filter span{
@@ -480,7 +515,16 @@ label {
 }
 
 /* Vew all Filters Button css */
-.filters-section button{
+
+.less-or-all-filters-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.less-or-all-filters-btn button{
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
@@ -515,7 +559,7 @@ label {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
     align-items: center;
     border-bottom: 2px solid var(--border-color);
 }
@@ -592,12 +636,18 @@ label {
 
 /* main products card */
 .product-main{
-    padding: 30px 0 20px 0; 
+    padding: 10px 0 20px 0; 
     display: flex;
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
+    /* background-color: orange; */
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
 }
+
+.product-main::-webkit-scrollbar{display: none;}
 
 /* View More Button Styl */
 

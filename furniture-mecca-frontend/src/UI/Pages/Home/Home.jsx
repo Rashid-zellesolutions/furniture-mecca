@@ -1,4 +1,6 @@
 import React from 'react'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css';
 import Category from '../../Components/Category/Category';
 import ShipBanner from '../../Components/ShipBanner/ShipBanner';
 import LatestModulerBanner from '../../Components/LatestModuler/LatestModulerBanner';
@@ -41,6 +43,7 @@ import HottestDealsBanners from '../../Components/HottestDealsBanners/HottestDea
 import BestSellerSlider from '../../Components/BestSellerSlider/BestSellerSlider';
 import DealDayCountDown from '../../Components/DealDayCountDown/DealDayCountDown';
 import InstaGallery from '../../Components/InstaGallery/InstaGallery';
+import FinanceBannerSlider from '../../Components/FinanceBannerSlider/FinanceBannerSlider';
 
 
 const Home = () => {
@@ -87,12 +90,12 @@ const categoryCardData = [
   return (
     <div className='home-page-main-container'>
       <NearStorePopUp />
-      {/* <Shopvia /> */}
       <Slider />
       <ShipBanner bannerImg={shipBanner} paddindTrue={false} />
       <Category title={'Shop by Category'} categoryData={categoryCardData} />
       <HottestDealsBanners />
-      <LatestModulerBanner customWidth={true} showBanners={true} />
+      {/* <LatestModulerBanner customWidth={true} showBanners={true} /> */}
+      <FinanceBannerSlider />
       <BestSellerSlider />
       {/* <FurnitureProduct /> */}
       <ImageHeading img={HeroImage} alt={'bed image'} />

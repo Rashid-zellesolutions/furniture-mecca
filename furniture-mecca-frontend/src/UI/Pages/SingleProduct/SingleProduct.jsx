@@ -39,7 +39,6 @@ const SingleProduct = () => {
 
   return (
     <div>
-        <Shopvia />
         <SingleProductStickySection productCard={dynamicData} />
         <SimillerProducts />
         <FrequentlyBought />

@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux';
 import { setColorIndex } from '../../../Redux/ColorIndex/ColorINdexSlicer';
 import cartIcon from '../../../Assets/icons/cart-white.png'
-import cartRed from '../../../Assets/icons/cart2.png';
+import cartBlack from '../../../Assets/icons/cart-black.png';
+import eyeBlack from '../../../Assets/icons/eye-black.png';
+import eyeWhite from '../../../Assets/icons/eye-white.png';
 
 const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardContainerClass, mouseEnter, mouseLeave, ProductTitle, stars, reviewCount, lowPriceAddvertisement,
     priceTag, financingAdd, learnMore, colorVariation, mainIndex, deliveryTime, handleVariantColor, selectedColorIndices, maxWidthAccordingToComp, borderLeft, justWidth, handleCardClick
@@ -32,6 +34,14 @@ const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardCont
     const handleMouseLeave = () => {
         setCardHovered(false);
     }
+
+    const [quickViewHovered, setQuickViewHovered] = useState(false);
+    const handleQuickViewHover = () => {
+        setQuickViewHovered(true);
+    }
+    const handlQuickViewLeave = () => {
+        setQuickViewHovered(false)
+    }
     
   return (
     <>
@@ -47,10 +57,12 @@ const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardCont
                         onMouseLeave={mouseLeave} />
                         <div className='overlay-buttons'>
                             <Link to={'/add-to-cart'} className='overlay-button' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                                <img src={cardHovered ? cartIcon : cartRed} alt='cart' />
+                                <img src={cardHovered ? cartIcon : cartBlack} alt='cart' />
                                 Add to cart
                             </Link>
-                            <Link className='overlay-button'>
+                            <Link className='overlay-button' onMouseEnter={handleQuickViewHover} onMouseLeave={handlQuickViewLeave}>
+                                {/* <img src={cardHovered ? eyeWhite : eyeIcon} alt="eye icon" /> */}
+                                <img src={quickViewHovered ? eyeWhite : eyeBlack} alt='cart' />
                                 Quick View
                             </Link>
                         </div>

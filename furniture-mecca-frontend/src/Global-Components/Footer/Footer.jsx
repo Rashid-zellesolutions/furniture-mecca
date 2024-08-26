@@ -156,10 +156,10 @@ const Footer = () => {
         },
     ]
     const socialIcons = [
-        {name: 'facebook', icon: facebook, link: '#'},
-        {name: 'tiktok', icon: tiktok, link: '#'},
-        {name : 'youtube', icon: youtube, link: '#'},
-        {name: 'insta', icon: insta, link: '#'}
+        {name: 'facebook', icon: facebook, link: 'https://www.facebook.com/myfurnituremecca'},
+        {name: 'tiktok', icon: tiktok, link: 'https://www.tiktok.com/@myfurnituremecca?_t=8gcQvVGSaGI&_r=1'},
+        {name : 'youtube', icon: youtube, link: 'https://www.youtube.com/@FurnitureMecca1'},
+        {name: 'insta', icon: insta, link: 'https://www.instagram.com/myfurnituremecca/?igshid=MzRlODBiNWFlZA%3D%3D'}
     ]
 
     const locationPhoneMail = [

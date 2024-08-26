@@ -20,22 +20,22 @@
     position: absolute;
     bottom: -2px; /* Position the border at the bottom */
     left: 0;
-    width: 18%; /* Adjust this percentage as needed */
+    width: 84px; /* Adjust this percentage as needed */
     height: 2px; /* Match the border thickness */
     z-index: 222;
     background-color: var(--active-nav-item-color); /* Use the desired border color */
 }
 
-.deal-of-the-day-heading::after {
+/* .deal-of-the-day-heading::after {
     content: '';
     position: absolute;
-    bottom: -2px; /* Position the border at the bottom */
+    bottom: -2px; 
     right: 0;
-    width: 13%; /* Adjust this percentage as needed */
-    height: 2px; /* Match the border thickness */
+    width: 13%; 
+    height: 2px; 
     z-index: 222;
-    background-color: var(--active-nav-item-color); /* Use the desired border color */
-}
+    background-color: var(--active-nav-item-color); 
+} */
 
 .deal-of-the-day-heading h3{
     font-size: 25px;

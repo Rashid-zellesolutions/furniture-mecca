@@ -16,6 +16,7 @@
     font-size: 22px;
     line-height: 33px;
     font-weight: 600;
+    color: var(--text-color);
 }
 
 .related-categories-items{

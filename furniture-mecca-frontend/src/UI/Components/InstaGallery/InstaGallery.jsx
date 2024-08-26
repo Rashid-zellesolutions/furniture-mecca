@@ -26,18 +26,15 @@ const InstaGallery = () => {
         }, 1500)
     }
   return (
-    <div className='insta-gallery-images' onMouseMove={handleMouseMove}>
-        <div className='insta-gallery-row-one'>
-            {instaGalleryImages.slice(0, 5).map((item, inex) => {
-                return <img src={item} alt='img' />
+    <div className='insta-container' onMouseMove={handleMouseMove}>
+        <div className='images'>
+            {instaGalleryImages.map((image, index) => {
+                return <img src={image} alt={`image ${index + 1}`} />
             })}
         </div>
-        <div className='insta-gallery-row-two'>
-            {instaGalleryImages.slice(5, 10).map((item, inex) => {
-                return <img src={item} alt='img' />
-            })}
+        <div className={`icon ${animateMouse ? 'animate' : ''}`}>
+            <img src={instaIcon} alt='icon' className={`${animateMouse ? 'animate' : ''}`} />
         </div>
-        <img src={instaIcon} alt='icon' className={`insta-icon ${animateMouse ? 'animate' : ''}`} />
     </div>
   )
 }

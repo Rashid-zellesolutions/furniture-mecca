@@ -7,6 +7,7 @@ import filterHumberger from '../../../Assets/icons/humberger-icon.png'
 import { useSelector } from 'react-redux';
 import ProductCard from '../ProductCard/ProductCard';
 import { useNavigate } from 'react-router-dom';
+import arrowBlack from '../../../Assets/icons/hide-arrow-black.png'
 
 const Products = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -199,6 +200,9 @@ const Products = () => {
         <div className='products-and-filter-container'>
             {/* Filters side bar section code */}
             <div className={`filters-section ${hideFilters ? 'hide-filter' : ''}`}>
+                <div className='hide-filters-btn'>
+                    <button onClick={handleFilterSection}> <img src={arrowBlack} alt='arrow black' /> Hide Filters</button>
+                </div>
                 <div className='filters-heading-section'>
                     <h3>Filters</h3>
                     <p>Clear Filters</p>
@@ -233,9 +237,12 @@ const Products = () => {
                     </div>
                     })}
                 </div>
-                <button onClick={toggleFiltersVisibility}>
-                    {showAllFilters ? 'Show Less Filters' : 'View All Filters'}
-                </button>
+                <div className='less-or-all-filters-btn'>
+                    <button onClick={toggleFiltersVisibility}>
+                        {showAllFilters ? 'Show Less Filters' : 'View All Filters'}
+                    </button>
+                </div>
+                
             </div>
             {/* Products section code */}
             <div className={`products-section ${hideFilters ? 'full-width' : ''}`}>
@@ -274,7 +281,7 @@ const Products = () => {
                 </div>
                 {/* Product Card Code End */}
                 <div className='view-more-products-button-div'>
-                    <button className='view-more-btn'>View 196 more</button>
+                    <button className='view-more-btn'>View 15 more</button>
                 </div>
             </div>
         </div>

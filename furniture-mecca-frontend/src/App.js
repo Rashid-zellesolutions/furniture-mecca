@@ -1,3 +1,4 @@
+
 import './App.css';
 import './index.css';
 import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
@@ -5,8 +6,7 @@ import Categories from './UI/Pages/Categories/Categories';
 import Home from './UI/Pages/Home/Home';
 import { IoIosArrowDropup } from "react-icons/io";
 
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css';
+
 
 import livingRoomMainImage from './Assets/pages-main-images/Living-Room-Desk-1-1024x341.jpg';
 import bedroomMainImage from './Assets/pages-main-images/Bedroom-Desk-1.jpg';
@@ -75,23 +75,23 @@ function App() {
           <Route path='/dining-room-sets' element={<ProductArchive />} />
           <Route 
             path='/living-room' 
-            element={<Categories categoriesMainImage={livingRoomMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} newArrival={false} />} 
+            element={<Categories categoriesMainImage={livingRoomMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} />} 
           />
           <Route 
             path='/bedroom' 
-            element={<Categories categoriesMainImage={bedroomMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} newArrival={false} />} 
+            element={<Categories categoriesMainImage={bedroomMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} />} 
           />
           <Route 
             path='/dining-room' 
-            element={<Categories categoriesMainImage={diningRoomMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} newArrival={true} />} 
+            element={<Categories categoriesMainImage={diningRoomMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} />} 
           />
           <Route 
             path='/mattresses' 
-            element={<Categories categoriesMainImage={mattressesMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} newArrival={true} />} 
+            element={<Categories categoriesMainImage={mattressesMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} />} 
           />
           <Route 
             path='/kids' 
-            element={<Categories categoriesMainImage={kidsMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} newArrival={true} />} 
+            element={<Categories categoriesMainImage={kidsMainImage} showPromotionsBaneers={false} categoryCardData={categoryCardData} />} 
           />
           <Route 
             path='/accent-furniture-and-rugs' 
