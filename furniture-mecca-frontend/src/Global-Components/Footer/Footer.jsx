@@ -22,7 +22,7 @@ import { FiPhoneCall } from "react-icons/fi";
 // import { FaRegCalendarPlus } from "react-icons/fa";
 // import NearStorePopUp from '../../UI/Components/NearStorePopUp/NearStorePopUp';
 
-const Footer = () => {
+const Footer = ({notLandingPage}) => {
 
     const footerNavLinks = [
         {
@@ -206,6 +206,7 @@ const Footer = () => {
                 })}
             </div>
             <div className='footer-contact-section'>
+                <div className='footer-social-icon-and-near-store-details'>
                 <div className='footer-social-and-address-container'>
                     <div className='social-icons'>
                         {socialIcons.map((item, index) => {
@@ -264,16 +265,34 @@ const Footer = () => {
                                 </div>
                             </div>
                     </div>
+
+                    </div>
                     {/* <div className='footer-get-scoop-and-about'>
                         <div className='footer-about-links-section'> */}
-                            {footerCustomerCareAndAbout.map((items, index) => {
-                                return <div key={index} className='footer-care-and-about'>
-                                    <h3>{items.heading}</h3>
-                                    {items.navLinks.map((innerItem, innerIndex) => {
-                                        return <Link className='footer-care-and-about-links' key={innerIndex} to={innerItem}>{innerItem.name}</Link>
-                                    })}
+                        <div className='footer-get-scoop-and-about'>
+                            <div className={`footer-get-the-scoop-main-section ${notLandingPage ? 'show-footer-scoop' : ''}`}>
+                                <h3>Get the Scoop</h3>
+                                <div className='footer-get-scoop-input-and-button'>
+                                    <div className='footer-get-scoop-input'>
+                                        <input type='text' placeholder='Email' />
+                                    </div>
+                                    <button>Sign Me Up!</button>
                                 </div>
-                            })}
+                                <p>By signing up. you agree to our Privacy Policy and Terms of Use</p>
+                            </div>
+
+                            <div className='footer-care-and-about-section'>
+                            {footerCustomerCareAndAbout.map((items, index) => {
+                                    return <div key={index} className='footer-care-and-about'>
+                                        <h3>{items.heading}</h3>
+                                        {items.navLinks.map((innerItem, innerIndex) => {
+                                            return <Link className='footer-care-and-about-links' key={innerIndex} to={innerItem}>{innerItem.name}</Link>
+                                        })}
+                                    </div>
+                                })}
+                            </div>
+                        </div>
+                            
                         {/* </div>
                     
                     </div> */}

@@ -192,7 +192,6 @@ const handleThumbnailClick = (index) => {
         }, 1000);
     };
 
-    // const mainImage = productData?.productCard?.mainImage || productData?.products?.mainImage
   return (
     <div className='sticky-main-container'>
       <div className='left-section'>
@@ -212,9 +211,6 @@ const handleThumbnailClick = (index) => {
           </div>
         </div>
         <div className='thumbnail-slider-container'>
-          <div className={`thumbnail-arrow thumbnail-arrow-left ${disableThumbLeft ? 'disabled' : ''}`} onClick={() => scrollLeft('thumbnail')}>
-            <img src={arrowLeft} alt='arrow left' />
-          </div>
           <div className='thumbnail-slider' ref={thumbnailSliderRef}>
             {sliderImages.map((thumbnailItem, thumbnailIndex) => (
               <div
@@ -226,17 +222,11 @@ const handleThumbnailClick = (index) => {
               </div>
             ))}
           </div>
-          <div className={`thumbnail-arrow thumbnail-arrow-right ${disableThumbRight ? 'disabled' : ''}`} onClick={() => scrollRight('thumbnail')}>
-            <img src={arrowRight} alt='arrow right' />
-          </div>
         </div>
       </div>
       <div className='right-section'>
         <div className='single-product-detail-container'>
             <h3 className='single-product-heading'>{productData.productCard.productTitle}</h3>
-            {/* <span className='single-product-see-more'>
-                <p>See more by </p><Link>Sol 72 Outdoor</Link>
-            </span> */}
             <div className='single-product-rating'>
                 <span className='stars-icon'>
                     {ratingStars.map((item, index) => {

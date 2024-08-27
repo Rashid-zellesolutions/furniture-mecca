@@ -1,11 +1,11 @@
 
 import './App.css';
 import './index.css';
-import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Categories from './UI/Pages/Categories/Categories';
 import Home from './UI/Pages/Home/Home';
 import { IoIosArrowDropup } from "react-icons/io";
-
+import { useLocation } from 'react-router-dom';
 
 
 import livingRoomMainImage from './Assets/pages-main-images/Living-Room-Desk-1-1024x341.jpg';
@@ -38,9 +38,16 @@ import SingleProduct from './UI/Pages/SingleProduct/SingleProduct';
 import Shopvia from './UI/Components/ShopViaBanner/Shopvia';
 import AddToCart from './UI/Pages/AddToCart/AddToCart';
 import ContinueCart from './UI/Components/Cart-Components/Continue-cart/ContinueCart';
+import { useEffect, useState } from 'react';
 
 
 function App() {
+  const [currentUrl, setCurrentUrl] = useState('/');
+  const location = useLocation();
+  useEffect(() => {
+    setCurrentUrl(location.pathname);
+  }, [location]);
+
   const categoryCardData = [
     {title: "Dining Room Sets", img: newArrivalImage, link: '#'},
     {title: "Pub Height Dining Sets", img: livingRoomImage, link: '#'},
@@ -65,7 +72,6 @@ function App() {
   }
 
   return (
-    <Router>
       <div>
         <Haider />
         <Shopvia />
@@ -114,12 +120,11 @@ function App() {
           <Route path='/add-to-cart' element={<AddToCart />} />
           <Route path='/check-page' element={<ContinueCart />} />
         </Routes>
-        <Footer />
+        <Footer notLandingPage={currentUrl === '/' ? false : true} />
         <button onClick={handleClickTop} className='scroll-to-top-button'>
           <IoIosArrowDropup size={30} className='lead-to-top-btn' />
         </button>
       </div>
-    </Router>
   );
 }
 

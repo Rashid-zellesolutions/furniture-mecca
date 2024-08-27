@@ -16,7 +16,7 @@ function FinanceBannerSlider() {
     useEffect(() => {
         const intervel = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 3000);
+        }, 5000);
         return () => clearInterval(intervel)
     }, [images.length]);
 
@@ -37,12 +37,12 @@ function FinanceBannerSlider() {
                 </div>
             })}
         </div>
-        <button className="carousel-control prev" onClick={prevSlide}>
+        {/* <button className="carousel-control prev" onClick={prevSlide}>
             <img src={arrowLeft} alt="arrow left" />
         </button>
         <button className="carousel-control next" onClick={nextSlide}>
             <img src={arrowRight} alt="arrow right" />
-        </button>
+        </button> */}
     </div>
   );
 }

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import productOne from '../../../Assets/images/product-one.png'
 import productTwo from '../../../Assets/images/product-two.png'
 import productThree from '../../../Assets/images/product-three.png'
-import filledStar from '../../../Assets/icons/Star 19.png';
+import filledStar from '../../../Assets/icons/large-star-blue.png';
 import thumbUp from '../../../Assets/icons/Thumbs up.png'
 
 const Comments = () => {

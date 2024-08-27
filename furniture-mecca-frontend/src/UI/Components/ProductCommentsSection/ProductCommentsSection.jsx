@@ -21,9 +21,9 @@ const ProductCommentsSection = () => {
                     </span>
                 </fieldset>
                 <div className={`related-dropdown ${isClicked ? 'show-related-dropdown' : ''}`}>
-                    <p>Rashid Ali</p>
-                    <p>Rashid Ali</p>
-                    <p>Rashid Ali</p>
+                    <p>Item One</p>
+                    <p>Item Two</p>
+                    <p>Item Three</p>
                 </div>
             </div>
         </div>

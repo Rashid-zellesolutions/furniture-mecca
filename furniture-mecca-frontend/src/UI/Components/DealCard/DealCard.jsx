@@ -5,7 +5,7 @@ import dealProductImage from '../../../Assets/images/deal-item-img.png';
 import starIcon from '../../../Assets/icons/Star 19.png';
 import tagLogo from '../../../Assets/Logo/small-logo.png';
 import whiteCart from '../../../Assets/icons/white-cart.png';
-import redCart from '../../../Assets/icons/cart2.png';
+import blactCart from '../../../Assets/icons/cart-black.png';
 import twoArrow from '../../../Assets/icons/combined-arrow-icon.png';
 import heartIcon from '../../../Assets/icons/red-heart-without-circle.png'
 
@@ -108,7 +108,7 @@ const DealCard = () => {
             </div>
             <div className='deal-card-add-to-cart-section'>
                 <button className='deal-card-add-to-cart-btn' onMouseEnter={handleMouseHoverIn} onMouseLeave={handleMouseHoverLeave}>
-                    <img src={isCartHovered ? whiteCart : redCart} alt='cart' />
+                    <img src={isCartHovered ? whiteCart : blactCart} alt='cart' />
                     Add to cart
                 </button>
                 <span>

@@ -1,7 +1,7 @@
 import React from 'react'
 import './RatingAndReview.css';
 import { Link } from 'react-router-dom';
-import starIcon from '../../../Assets/icons/Star 19.png';
+import starIcon from '../../../Assets/icons/large-star-blue.png';
 
 const RatingAndReview = () => {
     const stars = [

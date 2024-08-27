@@ -94,7 +94,6 @@ const categoryCardData = [
       <ShipBanner bannerImg={shipBanner} paddindTrue={false} />
       <Category title={'Shop by Category'} categoryData={categoryCardData} />
       <HottestDealsBanners />
-      {/* <LatestModulerBanner customWidth={true} showBanners={true} /> */}
       <FinanceBannerSlider />
       <BestSellerSlider />
       {/* <FurnitureProduct /> */}
@@ -105,7 +104,6 @@ const categoryCardData = [
       <BlogSlider />
       <InstaGallery />
       <CustomerServicePanel />
-      {/* <AllStores /> */}
     </div>
   )
 }

@@ -57,6 +57,7 @@
 .rating-div span img{
     width: 25px;
     height: 25px;
+    object-fit: contain;
 }
 
 .rating-div p{
@@ -92,6 +93,7 @@
 .progress-bar-div img{
     width: 24px;
     height: 24px;
+    object-fit: contain;
 }
 
 .progress-bar-container{

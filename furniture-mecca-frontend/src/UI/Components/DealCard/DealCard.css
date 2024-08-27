@@ -313,6 +313,11 @@
     border-radius: 3px;
 }
 
+.deal-card-add-to-cart-btn img{
+    width: 20px;
+    height: 20px;
+}
+
 .deal-card-add-to-cart-btn:hover{
     background-color: var(--active-nav-item-color);
     color: #fff;
