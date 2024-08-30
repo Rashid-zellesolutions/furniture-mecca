@@ -1,39 +1,58 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './CartProducts.css';
 import CartItems from '../Cart-items/CartItems';
 import productImage from '../../../../Assets/Furniture Mecca/Cart Page/products/web-image-1-600x400 1.png'
-import minusBtn from '../../../../Assets/icons/minus-white.png';
-import plusBtn from '../../../../Assets/icons/plus-white.png';
-import { Link } from 'react-router-dom';
+import CartPaymnetMethoud from '../CArtAddPaymentMethoud/CartPaymnetMethoud';
+// import minusBtn from '../../../../Assets/icons/minus-white.png';
+// import plusBtn from '../../../../Assets/icons/plus-white.png';
+// import { Link } from 'react-router-dom';
 
 const CartProducts = () => {
 
-    // Slide page to right
-    // function openNav() {
-    //     document.getElementById("myNav").style.width = "100%";
-    //     console.log("open nav clicked")
+    // const [activeBullet, setActiveBullet] = useState(0);
+    // const [isPaymentTrue, setIsPaymentTrue] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const handleToggle = () => {
+        setIsOpen(!isOpen);
+      };
+
+    // const handleBulletClick = (index) => {
+    //     setActiveBullet(index);
+    //     setIsPaymentTrue(index === 1);
+    // };
+    // useEffect(() => {
+    //     if (!isOpen) {
+    //       setActiveBullet(0);
+    //       setIsPaymentTrue(false);
+    //     }
+    //   }, [isOpen]);
+
+    //   const [otherBillingChecked, setOtherBillingChecked] = useState(false);
+    //   const handleOtherBilling = (event) => {
+    //     setOtherBillingChecked(event.target.checked);
     //   }
-      
-    //   function closeNav() {
-    //     document.getElementById("myNav").style.width = "0%";
+
+    //   const handleCheckedIndex = () => {
+    //     setActiveBullet(1);
+    //     setIsPaymentTrue(true);
     //   }
 
     const cartData = [
         {
             id: 1, name: "Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat", img: productImage, color: 'White', 
-            title: '3 Pieces Sofa & Love Seat', oldPrice: '$ 1,599.00', newPrice: '$ 3198.00' 
+            title: '3 Pieces Sofa & Love Seat', oldPrice: 1599.00 , newPrice: '$ 3198.00' 
         },
         {
             id: 1, name: "Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat", img: productImage, color: 'White', 
-            title: '2 Pieces Sofa & Love Seat', oldPrice: '$ 1,599.00', newPrice: '$ 3198.00' 
+            title: '2 Pieces Sofa & Love Seat', oldPrice: 1599.00 , newPrice: '$ 3198.00' 
         },
         {
             id: 1, name: "Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat", img: productImage, color: 'White', 
-            title: '2 Pieces Sofa & Love Seat', oldPrice: '$ 1,599.00', newPrice: '$ 3198.00' 
+            title: '2 Pieces Sofa & Love Seat', oldPrice: 1599.00 , newPrice: '$ 3198.00' 
         },
         {
             id: 1, name: "Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat", img: productImage, color: 'White', 
-            title: '2 Pieces Sofa & Love Seat', oldPrice: '$ 1,599.00', newPrice: '$ 3198.00' 
+            title: '2 Pieces Sofa & Love Seat', oldPrice: 1599.00 , newPrice: '$ 3198.00'  
         },
     ]
 
@@ -51,14 +70,14 @@ const CartProducts = () => {
         <div className='cart-products-heading'>
             <h3>Products (3)</h3>
         </div>
-        <div className='cart-items'>
+        <div className={`cart-items ${isOpen ? 'low-width' : ''}`}>
             {cartData.map((items, index) => {
                 return <CartItems key={index} 
                             cartProductName={items.name} 
                             cartPRoductImage={items.img} 
                             cartProductColor={items.color} 
                             cartProductTitle={items.title}
-                            cartProductOldPrice={items.oldPrice} 
+                            cartProductOldPrice={'$ ' + items.oldPrice} 
                             cartProductNewPrice={items.newPrice} />
             })}
             
@@ -81,9 +100,10 @@ const CartProducts = () => {
                 </button>
             </div>
         </div>
+
         {/* Desktop View */}
-        <div className='desktop-cart-item-details'>
-            <div className='desktop-price-details-div'>
+        <div className={`desktop-cart-item-details`}>
+            <div className={`desktop-price-details-div ${isOpen ? 'desktop-price-div-decrease' : ''}`}>
                 {detailsDeta.map((item, index) => {
                     return <div key={index} className='dektop-price-details'>
                         <p className='desktop-price-title'>{item.title}</p>
@@ -91,31 +111,17 @@ const CartProducts = () => {
                     </div>
                 })}
             </div>
-            <div className='desktop-continue-btn-div'>
-                <button>
+            <div className={`desktop-continue-btn-div ${isOpen ? 'hide-continue-btn' : ''}`}>
+                <button onClick={handleToggle}>
                     Continue
                 </button>
             </div>
         </div>
+        <CartPaymnetMethoud 
+            isOpen={isOpen} 
+            handleToggle={handleToggle}
+        />
     </div>
-
-
-    {/* <div className="overlay-content">
-      <div id="myNav" className="overlay">
-  <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
-  <div>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-  </div>
-</div>
-
-<h2>Fullscreen Overlay Nav Example</h2>
-<p>Click on the element below to open the fullscreen overlay navigation menu.</p>
-<p>In this example, the navigation menu will slide in, from left to right:</p>
-<span style={{fontSize:'30px', cursor: 'pointer'}} onClick={openNav}>&#9776; open</span>
-    </div> */}
     </>
   )
 }

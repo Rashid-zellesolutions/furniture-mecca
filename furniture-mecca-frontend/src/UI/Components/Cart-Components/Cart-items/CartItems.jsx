@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './CartItems.css';
 // import productImage from '../../../../Assets/Furniture Mecca/Cart Page/products/web-image-1-600x400 1.png'
 import minusBtn from '../../../../Assets/icons/minus-white.png';
@@ -8,8 +8,48 @@ import deleteBtn from '../../../../Assets/icons/delete-red.png';
 import plusCharcol from '../../../../Assets/icons/plus.png';
 import minusCharcol from '../../../../Assets/icons/minus.png'
 
-const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartProductTitle, cartProductOldPrice, cartProductNewPrice}) => {
-  return (
+const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartProductTitle, cartProductOldPrice, 
+    cartProductNewPrice}) => {
+  
+    const [quantity, setQuantity] = useState(0)
+    // const newPriceNumber = cartProductNewPrice;
+    // let priceNumber = parseFloat(newPriceNumber.replace('$', ''));
+    // let totalPrice = priceNumber 
+    // console.log(typeof priceNumber); 
+    // alert(newPriceNumber)
+    // let priceNumber = 19.00;
+    // let priceString = "$" + priceNumber.toFixed(2);
+    // console.log(typeof priceString); 
+
+    // const [totalPrice, setTotalPrice] = useState(priceNumber);
+    const increaseQuantity = () => {
+        setQuantity(quantity + 1);
+        // setQuantity(prevQuantity => {
+        //     const newQuantity = prevQuantity + 1;
+
+        //     setTotalPrice(newQuantity * priceNumber);
+        //     console.log("total price for all products", totalPrice);
+        //     return newQuantity
+        // } )
+    }
+    const decreaseQuantity = () => {
+        if(quantity > 0){
+            setQuantity(quantity - 1);
+        }
+        // setQuantity(prevQuantity => {
+        //     if(prevQuantity > 0){
+        //         const newQuantity = prevQuantity - 1;
+
+        //     setTotalPrice(newQuantity * priceNumber);
+        //     console.log("decrease price", totalPrice);
+        //     return newQuantity;
+        //     }
+        //     return prevQuantity;
+        // })
+    }
+
+
+    return (
     <>
         <div className='cart-product'>
             <div className='cart-item-name'>
@@ -26,19 +66,19 @@ const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartPro
                     <p>{cartProductColor}</p>
                     <p>{cartProductTitle}</p>
                     <div className='price-and-count'>
-                        <p>{cartProductOldPrice}</p>
+                        <p> $ this is old price {cartProductOldPrice}</p>
                         <div className='product-count'>
-                            <button>
+                            <button onClick={decreaseQuantity}>
                                 <img src={minusBtn} alt='minus' />
                             </button>
-                            <p>1</p>
-                            <button>
+                            <p>{quantity}</p>
+                            <button onClick={increaseQuantity}>
                                 <img src={plusBtn} alt='plus' />
                             </button>
                         </div>
                     </div>
                     <div className='cart-item-actual-price'>
-                        <p>{cartProductNewPrice} </p>
+                        <p>${cartProductNewPrice} </p>
                     </div>
                 </div>
             </div>
@@ -55,11 +95,11 @@ const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartPro
                     </div>
                     <div className='desktop-quantity-and-new-price'>
                         <div className='desktop-quantity'>
-                            <button>
+                            <button onClick={decreaseQuantity}>
                                 <img src={minusCharcol} alt='minus' />
                             </button>
-                            <p>1</p>
-                            <button>
+                            <p>{quantity}</p>
+                            <button onClick={increaseQuantity}>
                                 <img src={plusCharcol} alt='plus' />
                             </button>
                         </div>

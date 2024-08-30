@@ -6,6 +6,7 @@ import Categories from './UI/Pages/Categories/Categories';
 import Home from './UI/Pages/Home/Home';
 import { IoIosArrowDropup } from "react-icons/io";
 import { useLocation } from 'react-router-dom';
+import aarrowTop from './Assets/icons/arrow-up.png'
 
 
 import livingRoomMainImage from './Assets/pages-main-images/Living-Room-Desk-1-1024x341.jpg';
@@ -122,7 +123,8 @@ function App() {
         </Routes>
         <Footer notLandingPage={currentUrl === '/' ? false : true} />
         <button onClick={handleClickTop} className='scroll-to-top-button'>
-          <IoIosArrowDropup size={30} className='lead-to-top-btn' />
+          {/* <IoIosArrowDropup size={30} className='lead-to-top-btn' /> */}
+          <img src={aarrowTop} alt='arrow up' className='lead-to-top-btn' />
         </button>
       </div>
   );
