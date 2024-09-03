@@ -16,7 +16,7 @@
 
 @media only screen and (min-width: 481px){
     .cart-header{
-        height: 300px;
+        height: 220px;
     }
 }
 
@@ -39,6 +39,7 @@
 .cart-header h3{
     color: #ffff;
     text-decoration: underline;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 700;
+    line-height: 60px;
 }

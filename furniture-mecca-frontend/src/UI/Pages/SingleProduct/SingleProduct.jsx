@@ -13,9 +13,10 @@ import MoreToExplore from '../../Components/MoreToExplore/MoreToExplore'
 import OutdoorFaves from '../../Components/OutdoorFaves/OutdoorFaves'
 import ShipBanner from '../../Components/ShipBanner/ShipBanner'
 import attentionBanner from '../../../Assets/images/attention-banner.png'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import InstaGallery from '../../Components/InstaGallery/InstaGallery'
 import Shopvia from '../../Components/ShopViaBanner/Shopvia'
+import { useDispatch } from 'react-redux'
 
 const SingleProduct = () => {
   const location = useLocation();
@@ -36,6 +37,13 @@ const SingleProduct = () => {
   if(!productCard){
     return <div>Product Not Found</div>
   }
+
+  // const dispatch = useDispatch;
+  //   const {productId} = useParams();
+  //   const product = productCard.find((product) => String((productCard.id) === productId))
+  //   const handleAdd = (product) => {
+  //       dispatch(add(product))
+  //   }
 
   return (
     <div>

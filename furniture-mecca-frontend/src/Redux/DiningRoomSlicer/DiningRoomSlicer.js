@@ -94,84 +94,84 @@ const productsSlicer = createSlice({
                 {color: '#FF0000'},
                 {color: '#B78953'},
             ], deliveryTime: 'Get it in 3 to 4 days'
-    },
-    {id: 7, heart: heartImg, mainImage: brownDiningSet, hoverImage: knightDaleSet , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
-                {icon: filledStar, title: 'filled'},
-                {icon: filledStar, title: 'filled'},
-                {icon: filledStar, title: 'filled'},
-                {icon: filledStar, title: 'filled'},
-            ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-            reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
-                {color: '#FF0000'},
-                {color: '#B78953'},
-            ], deliveryTime: 'Get it in 3 to 4 days'
-    },
-    {id: 8, heart: heartImg, mainImage: dakotaSet, hoverImage: goldDiningSet , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
-            {icon: filledStar, title: 'filled'},
-            {icon: filledStar, title: 'filled'},
-            {icon: filledStar, title: 'filled'},
-            {icon: filledStar, title: 'filled'},
-        ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-        reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
-            {color: '#FF0000'},
-            {color: '#B78953'},
-        ], deliveryTime: 'Get it in 3 to 4 days'
-    },
-    {id: 9, heart: heartImg, mainImage: goldDiningSet, hoverImage: dakotaSet , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
-            {icon: filledStar, title: 'filled'},
-            {icon: filledStar, title: 'filled'},
-            {icon: filledStar, title: 'filled'},
-            {icon: filledStar, title: 'filled'},
-        ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-        reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
-            {color: '#FF0000'},
-            {color: '#B78953'},
-        ], deliveryTime: 'Get it in 3 to 4 days'
-    },
-    {id: 10, heart: heartImg, mainImage: everDeen, hoverImage: webImage , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
-            {icon: filledStar, title: 'filled'},
-            {icon: filledStar, title: 'filled'},
-            {icon: filledStar, title: 'filled'},
-            {icon: filledStar, title: 'filled'},
-        ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-        reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
-            {color: '#FF0000'},
-            {color: '#B78953'},
-        ], deliveryTime: 'Get it in 3 to 4 days'
-    },
-    {id: 11, heart: heartImg, mainImage: whiteDiningSet, hoverImage: blackDiningSet , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
-                {icon: filledStar, title: 'filled'},
-                {icon: filledStar, title: 'filled'},
-                {icon: filledStar, title: 'filled'},
-                {icon: filledStar, title: 'filled'},
-            ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-            reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
-                {color: '#FF0000'},
-                {color: '#B78953'},
-            ], deliveryTime: 'Get it in 3 to 4 days'
-    },
-    {id: 12, heart: heartImg, mainImage: zoraDiningSet, hoverImage: knightDaleSet , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
-            {icon: filledStar, title: 'filled'},
-            {icon: filledStar, title: 'filled'},
-            {icon: filledStar, title: 'filled'},
-            {icon: filledStar, title: 'filled'},
-        ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-        reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
-            {color: '#FF0000'},
-            {color: '#B78953'},
-        ], deliveryTime: 'Get it in 3 to 4 days'
-    },
-    {id: 13, heart: heartImg, mainImage: knightDaleSet, hoverImage: zoraDiningSet , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
-            {icon: filledStar, title: 'filled'},
-            {icon: filledStar, title: 'filled'},
-            {icon: filledStar, title: 'filled'},
-            {icon: filledStar, title: 'filled'},
-        ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-        reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
-            {color: '#FF0000'},
-            {color: '#B78953'},
-        ], deliveryTime: 'Get it in 3 to 4 days'
-    },
+            },
+            {id: 7, heart: heartImg, mainImage: brownDiningSet, hoverImage: knightDaleSet , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
+                        {icon: filledStar, title: 'filled'},
+                        {icon: filledStar, title: 'filled'},
+                        {icon: filledStar, title: 'filled'},
+                        {icon: filledStar, title: 'filled'},
+                    ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
+                    reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+                        {color: '#FF0000'},
+                        {color: '#B78953'},
+                    ], deliveryTime: 'Get it in 3 to 4 days'
+            },
+            {id: 8, heart: heartImg, mainImage: dakotaSet, hoverImage: goldDiningSet , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
+                    {icon: filledStar, title: 'filled'},
+                    {icon: filledStar, title: 'filled'},
+                    {icon: filledStar, title: 'filled'},
+                    {icon: filledStar, title: 'filled'},
+                ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
+                reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+                    {color: '#FF0000'},
+                    {color: '#B78953'},
+                ], deliveryTime: 'Get it in 3 to 4 days'
+            },
+            {id: 9, heart: heartImg, mainImage: goldDiningSet, hoverImage: dakotaSet , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
+                    {icon: filledStar, title: 'filled'},
+                    {icon: filledStar, title: 'filled'},
+                    {icon: filledStar, title: 'filled'},
+                    {icon: filledStar, title: 'filled'},
+                ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
+                reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+                    {color: '#FF0000'},
+                    {color: '#B78953'},
+                ], deliveryTime: 'Get it in 3 to 4 days'
+            },
+            {id: 10, heart: heartImg, mainImage: everDeen, hoverImage: webImage , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
+                    {icon: filledStar, title: 'filled'},
+                    {icon: filledStar, title: 'filled'},
+                    {icon: filledStar, title: 'filled'},
+                    {icon: filledStar, title: 'filled'},
+                ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
+                reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+                    {color: '#FF0000'},
+                    {color: '#B78953'},
+                ], deliveryTime: 'Get it in 3 to 4 days'
+            },
+            {id: 11, heart: heartImg, mainImage: whiteDiningSet, hoverImage: blackDiningSet , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
+                        {icon: filledStar, title: 'filled'},
+                        {icon: filledStar, title: 'filled'},
+                        {icon: filledStar, title: 'filled'},
+                        {icon: filledStar, title: 'filled'},
+                    ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
+                    reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+                        {color: '#FF0000'},
+                        {color: '#B78953'},
+                    ], deliveryTime: 'Get it in 3 to 4 days'
+            },
+            {id: 12, heart: heartImg, mainImage: zoraDiningSet, hoverImage: knightDaleSet , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
+                    {icon: filledStar, title: 'filled'},
+                    {icon: filledStar, title: 'filled'},
+                    {icon: filledStar, title: 'filled'},
+                    {icon: filledStar, title: 'filled'},
+                ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
+                reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+                    {color: '#FF0000'},
+                    {color: '#B78953'},
+                ], deliveryTime: 'Get it in 3 to 4 days'
+            },
+            {id: 13, heart: heartImg, mainImage: knightDaleSet, hoverImage: zoraDiningSet , productTitle: `Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat`, ratingStars: [
+                    {icon: filledStar, title: 'filled'},
+                    {icon: filledStar, title: 'filled'},
+                    {icon: filledStar, title: 'filled'},
+                    {icon: filledStar, title: 'filled'},
+                ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
+                reviewCount: '(180)', priceTag: '$1,398.00', financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+                    {color: '#FF0000'},
+                    {color: '#B78953'},
+                ], deliveryTime: 'Get it in 3 to 4 days'
+            },
         ]
     },
     reducers: {

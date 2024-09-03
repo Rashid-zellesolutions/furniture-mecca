@@ -279,7 +279,7 @@
     /* height: 80vh; */
     background-color: #666666;
     border-radius: 25px;
-    padding: 20px 50px;
+    padding: 10px 50px;
     color: #fff ;
 }
 
@@ -339,8 +339,8 @@
 }
 
 .desktop-user-and-address p{
-    width: 40%;
-    text-align: justify;
+    width: 60%;
+    text-align: start;
     font-size: 12px;
     font-weight: 300;
     line-height: 23px;
@@ -473,6 +473,146 @@
     font-size: 15px;
     font-weight: 600;
     line-height: 23px;
+    color: #FFC750;
+}
+
+/* Order track map */
+
+.desktop-order-track{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    position: relative;
+    background-image: url('../../../Assets/Furniture Mecca/Cart Page/map-image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    padding: 20px 35px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-placed-main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    border-radius: 25px;
+    color: #fff;
+}
+
+.order-track-heading-secton{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.tick-and-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 20px;
+}
+
+.tick-and-heading img{
+    height: 64px;
+    width: auto;
+    object-fit: contain;
+}
+
+.togle-order-track-btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.rotate-up{
+    transform: rotate(180deg);
+    transition: transform 0.5s ease;
+}
+
+.rotate-down{
+    transform: rotate(360deg);
+    transition: transform 0.5s ease;
+}
+
+.order-track-steps-main{
+    display: flex;
+    width: 100%;
+    height: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: display 0.3s ease, height 0.3s ease, transform 0.3s ease, padding 0.3s ease;
+}
+
+.order-track-steps-main.show-track{
+    height: 120px;
+    opacity: 1;
+    visibility: visible;
+    padding: 30px;
+}
+
+.order-track-steps{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.order-track-steps.show-order-track{
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+.order-track-steps img{
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+}
+
+.step-line{
+    width: 100px;
+    height: 3px;
+    background-color: #ffff;
+}
+
+.return-home-btn-div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.return-home-btn-div button{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    gap: 10px;
+    padding: 12px 15px;
+    background-color: #C61B1A;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Media query */
@@ -482,5 +622,198 @@
     }
     .desktop-summery-main-container{
         display: flex;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px){
+    .order-track-heading-secton {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 0 50px;
+    }
+
+    .tick-and-heading img {
+        height: 50px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .order-track-steps-main.show-track {
+        height: 100px;
+    }
+
+    .order-track-steps img {
+        height: 25px;
+    }
+
+    .step-line {
+        width: 60px;
+    }
+    
+    
+}
+
+/* Tablate View Query */
+@media only screen and (min-width: 781px) and (max-width: 1024px){
+    .desktop-summery-main-div {
+        padding: 10px 20px;
+    }
+
+    .desktop-user-and-number {
+        width: 35%;
+    }
+
+    .desktop-user-and-number h3 {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .desktop-user-and-address p {
+        width: 60%;
+        text-align: start;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 18px;
+    }
+
+    .dektop-order-and-price p {
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 17px;
+    }
+
+    .desktop-order-under-line {
+        width: 60px;
+        height: 3px;
+    }
+
+    .desktop-total {
+        gap: 5px;
+    }
+
+    .desktop-total p {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 16px;
+    }
+    .desktop-total h3 {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+    }
+
+    .desktop-contact-us {
+        padding: 10px;
+    }
+
+    .desktop-contact-us p {
+        font-size: 10px;
+        line-height: 16px;
+    }
+
+    .desktop-contact-us h3 {
+        font-size: 12px;
+        line-height: 18px;
+        color: #FFC750;
+    }
+
+    /* Map query */
+    /* .order-track-heading-secton {
+        
+        padding: 10px;
+        justify-content: start;
+    } */
+    .tick-and-heading img {
+        height: 40px;
+        width: auto;
+        object-fit: contain;
+    }
+    .order-track-heading-secton{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: start;
+        gap: 10px;
+        padding: 10px 45px;
+    }
+
+    .tick-and-heading {
+        gap: 10px;
+        padding: 5px 10px;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .tick-and-heading h3{
+        font-size: 12px;
+    }
+
+    .order-track-steps-main.show-track {
+        height: 80px;
+    }
+
+    .order-track-steps img {
+        height: 22px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .step-line {
+        width: 35px;
+    }
+}
+
+/* Ipad screen query */
+@media only screen and (min-width: 481px) and (max-width: 780px){
+    .desktop-order-track{
+        display: none;
+    }
+    .desktop-summery-main-div{
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .desktop-user-and-number {
+        width: 35%;
+        gap: 0px;
+    }
+
+    .desktop-user-and-address p {
+        font-size: 11px;
+        line-height: 20px;
+    }
+    .dektop-order-and-price p {
+        font-weight: 600;
+    }
+    .desktop-total {
+        gap: 10px;
+    }
+
+    .desktop-total p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .desktop-total h3 {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+    }
+
+    .desktop-contact-us {
+        padding: 10px;
+    }
+
+    .desktop-contact-us p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .desktop-contact-us h3 {
+        font-size: 18px;
+        line-height: 20px;
     }
 }

@@ -1,10 +1,10 @@
 import React, { useEffect, useState} from 'react'
 import './Products.css';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import AddBtn from '../../../Assets/icons/add-icon.png'
 import { MdKeyboardArrowDown } from "react-icons/md";
 import filterHumberger from '../../../Assets/icons/humberger-icon.png'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import ProductCard from '../ProductCard/ProductCard';
 import { useNavigate } from 'react-router-dom';
 import arrowBlack from '../../../Assets/icons/hide-arrow-black.png'
@@ -24,6 +24,9 @@ const Products = () => {
         navigate(`/single-product/${item.id}`, { state: { products: item } });
         console.log(`card clicked /single-product/${item.id}`)
     };
+
+    
+
 
     const filtersData = [
         {name: 'Product Type' , icon: AddBtn, filters: [

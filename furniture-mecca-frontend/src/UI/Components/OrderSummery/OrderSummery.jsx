@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './OrderSummery.css'
 import userIcon from '../../../Assets/icons/user-icon.png';
 import orderIcon from '../../../Assets/icons/order-detail-icon.png'
 import rightArrow from '../../../Assets/icons/right-arrow-white.png'
+import mapImage from '../../../Assets/Furniture Mecca/Cart Page/map-image.png'
+import tickMarkBig from '../../../Assets/icons/tick-mark-big.png';
+import tickMarkSmall from '../../../Assets/icons/tick-mark-small.png';
+import arrowUp from '../../../Assets/icons/arrow-up-white.png';
+import arrowDown from '../../../Assets/icons/arrow-down-white.png'
+import whiteCircle from '../../../Assets/icons/empty-circle-white.png';
 
 const OrderSummery = () => {
+    const [trackShow, setTrackShow] = useState(true)
+    const handleShowTrack = () => {
+        setTrackShow(!trackShow)
+    }
     const orderAndPrice = [
         {orderName: 'Monaco 3 PC Modular Sectional with 2 Chaise, Grey, Sectional', price: '$ 1955.00'},
         {orderName: 'Monaco 3 PC Modular Sectional with 2 Chaise, Grey, Sectional', price: '$ 1955.00'},
@@ -81,7 +91,7 @@ const OrderSummery = () => {
         </div>
         <div className='desktop-summery-main-container'>
                 <div className='desktop-summery-main-div'>
-                    <h3>Summery</h3>
+                    <h3>Summary</h3>
                     <p>Order # 123456</p>
                     <div className='desktop-customer-details'>
                         <img src={userIcon} alt='user' />
@@ -128,7 +138,33 @@ const OrderSummery = () => {
                     </div>
                 </div>
                 <div className='desktop-order-track'>
-                    <h3>Location</h3>
+                    <div className='order-placed-main-container'>
+                        <div className='order-track-heading-secton'>
+                            <div className='tick-and-heading'>
+                                <img src={tickMarkBig} alt='tick big' />
+                                <h3>Your Order has Been Placed</h3>
+                            </div>
+                            <button className='togle-order-track-btn' onClick={handleShowTrack}>
+                                <img src={arrowDown} alt='arrow down' className={`${trackShow ? 'rotate-up' : 'rotate-down'}`} />
+                            </button>
+                        </div>
+                        <div className={`order-track-steps-main ${trackShow ? 'show-track' : ''}`}>
+                            <div className={`order-track-steps ${trackShow ? 'show-order-track' : ''}`}>
+                                <img src={tickMarkSmall} alt='circle' />
+                                <div className='step-line'></div>
+                                <img src={whiteCircle} alt='circle' />
+                                <div className='step-line'></div>
+                                <img src={whiteCircle} alt='circle' />
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div className='return-home-btn-div'>
+                        <button>
+                            Return Home
+                            <img src={rightArrow} alt='right' />
+                        </button>
+                    </div>
                 </div>
         </div>
     </>

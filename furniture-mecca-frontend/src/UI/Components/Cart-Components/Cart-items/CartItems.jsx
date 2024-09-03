@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './CartItems.css';
 import minusBtn from '../../../../Assets/icons/minus-white.png';
 import plusBtn from '../../../../Assets/icons/plus-white.png';
@@ -6,29 +6,42 @@ import closeBtn from '../../../../Assets/icons/close-btn.png';
 import deleteBtn from '../../../../Assets/icons/delete-red.png';
 import plusCharcol from '../../../../Assets/icons/plus.png';
 import minusCharcol from '../../../../Assets/icons/minus.png'
+import crossBtn from '../../../../Assets/icons/Mask group (1).png'
 
-const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartProductTitle, cartProductOldPrice, 
-    cartProductNewPrice}) => {
+const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartProductTitle, cartProductTotalPrice, 
+    cartSingleProductPrice, isCartOpen, productColor, handleRomoveProduct, cartIndex, productsLength}) => {
   
-    const [quantity, setQuantity] = useState(0)
+    const [quantity, setQuantity] = useState(1)
+    // const [totalPrice, setTotalPrice] = useState(cartSingleProductPrice);
+    const totalPrice = cartSingleProductPrice * quantity;
+    // useEffect(() => {
+    //     increaseQuantity()
+    //     decreaseQuantity()
+    // }, [totalPrice])
     const increaseQuantity = () => {
         setQuantity(quantity + 1);
+        // setTotalPrice(totalPrice * quantity);
     }
     const decreaseQuantity = () => {
-        if(quantity > 0){
+        if(quantity > 1){
             setQuantity(quantity - 1);
+            // setTotalPrice(totalPrice * quantity);
         }
     }
+    const formatedTotalPrice = totalPrice.toLocaleString()
+    const formatedSinglePrice = cartSingleProductPrice.toLocaleString()
+
+
 
 
     return (
     <>
         <div className='cart-product'>
-            <div className='cart-item-name'>
-                <h3>{cartProductName}</h3>
-                <button>
+                <button className='mobile-cart-remove-btn' onClick={() => handleRomoveProduct(cartIndex)}>
                     <img src={closeBtn} alt='close btn' />
                 </button>
+            <div className='cart-item-name'>
+                <h3>{cartProductName}</h3>
             </div>
             <div className='cart-product-containt'>
                 <div className='cart-item-image'>
@@ -38,7 +51,7 @@ const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartPro
                     <p>{cartProductColor}</p>
                     <p>{cartProductTitle}</p>
                     <div className='price-and-count'>
-                        <p>{cartProductOldPrice}</p>
+                        <p>{formatedSinglePrice}</p>
                         <div className='product-count'>
                             <button onClick={decreaseQuantity}>
                                 <img src={minusBtn} alt='minus' />
@@ -50,40 +63,56 @@ const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartPro
                         </div>
                     </div>
                     <div className='cart-item-actual-price'>
-                        <p>{cartProductNewPrice} </p>
+                        <p>{formatedTotalPrice} </p>
                     </div>
                 </div>
             </div>
         </div>
         {/* Desktop view Card */}
         <div className='desktop-cart-product'>
+            
             <div className='desktop-cart-product-image'>
                 <img src={cartPRoductImage} alt='product image' />
             </div>
-            <div className='desktop-cart-containt'>
-                <div className='desktop-cart-product-name-and-quantity'>
-                    <div className='desktop-cart-product-name'>
-                        <h3>{cartProductName}</h3>
-                    </div>
-                    <div className='desktop-quantity-and-new-price'>
-                        <div className='desktop-quantity'>
-                            <button onClick={decreaseQuantity}>
-                                <img src={minusCharcol} alt='minus' />
-                            </button>
-                            <p>{quantity}</p>
-                            <button onClick={increaseQuantity}>
-                                <img src={plusCharcol} alt='plus' />
-                            </button>
-                        </div>
-                        <p className='desktop-new-price'>{cartProductNewPrice}</p>
+            <div className='desktop-cart-containt-section'>
+                <button className={`cross-btn ${isCartOpen ? 'hide-cross-btn' : ''}`} onClick={() => handleRomoveProduct(cartIndex)}>
+                    <img src={crossBtn} alt='cross' />
+                </button>
+                <div className='desktop-name-and-single-price'>
+                    <h3>{cartProductName}</h3>
+                    <p className='desktop-product-extra-info'>{productColor}</p>
+                    <p className='desktop-product-extra-info'>Table & 4 Chairs</p>
+                    <p className='desktop-product-extra-info'>Yes, Protect it (+$99)</p>
+                    <p>$ {formatedSinglePrice}</p>
+                </div>
+                <div className={`desktop-quantity-and-save-for-leter ${isCartOpen ? 'hide-quantity' : ''}`}>
+                    <div className='desktop-quantity'>
+                        <button onClick={decreaseQuantity}>
+                            <img src={minusCharcol} alt='minus' />
+                        </button>
+                        <p>{quantity}</p>
+                        <button onClick={increaseQuantity}>
+                            <img src={plusCharcol} alt='plus' />
+                        </button>
                     </div>
                 </div>
-                <div className='desktop-cart-old-price-and-delete'>
-                    <p className='desktop-old-price'>{cartProductOldPrice}</p>
-                    <button>
-                        <img src={deleteBtn} alt='delete btn' />
-                        <p>Remove Item</p>
+                <div className={`desktop-total-price-and-remove-item ${isCartOpen ? 'hide-total-and-remove-item' : ''}`}>
+                    <p>$ {formatedTotalPrice}</p>
+                    <button className='save-for-leter'>
+                        Save For Later
                     </button>
+                </div>
+                <div className={isCartOpen ? 'cart-open-quantity-and-total-price' : 'cart-close-quantity-and-total-price'}>
+                    <div className='desktop-quantity'>
+                        <button onClick={decreaseQuantity}>
+                            <img src={minusCharcol} alt='minus' />
+                        </button>
+                        <p>{quantity}</p>
+                        <button onClick={increaseQuantity}>
+                            <img src={plusCharcol} alt='plus' />
+                        </button>
+                    </div>
+                    <p className='cart-open-total-price'>$ {formatedTotalPrice}</p>
                 </div>
             </div>
         </div>
