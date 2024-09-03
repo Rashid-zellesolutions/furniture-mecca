@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './CartItems.css';
-// import productImage from '../../../../Assets/Furniture Mecca/Cart Page/products/web-image-1-600x400 1.png'
 import minusBtn from '../../../../Assets/icons/minus-white.png';
 import plusBtn from '../../../../Assets/icons/plus-white.png';
 import closeBtn from '../../../../Assets/icons/close-btn.png';
@@ -12,40 +11,13 @@ const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartPro
     cartProductNewPrice}) => {
   
     const [quantity, setQuantity] = useState(0)
-    // const newPriceNumber = cartProductNewPrice;
-    // let priceNumber = parseFloat(newPriceNumber.replace('$', ''));
-    // let totalPrice = priceNumber 
-    // console.log(typeof priceNumber); 
-    // alert(newPriceNumber)
-    // let priceNumber = 19.00;
-    // let priceString = "$" + priceNumber.toFixed(2);
-    // console.log(typeof priceString); 
-
-    // const [totalPrice, setTotalPrice] = useState(priceNumber);
     const increaseQuantity = () => {
         setQuantity(quantity + 1);
-        // setQuantity(prevQuantity => {
-        //     const newQuantity = prevQuantity + 1;
-
-        //     setTotalPrice(newQuantity * priceNumber);
-        //     console.log("total price for all products", totalPrice);
-        //     return newQuantity
-        // } )
     }
     const decreaseQuantity = () => {
         if(quantity > 0){
             setQuantity(quantity - 1);
         }
-        // setQuantity(prevQuantity => {
-        //     if(prevQuantity > 0){
-        //         const newQuantity = prevQuantity - 1;
-
-        //     setTotalPrice(newQuantity * priceNumber);
-        //     console.log("decrease price", totalPrice);
-        //     return newQuantity;
-        //     }
-        //     return prevQuantity;
-        // })
     }
 
 
@@ -66,7 +38,7 @@ const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartPro
                     <p>{cartProductColor}</p>
                     <p>{cartProductTitle}</p>
                     <div className='price-and-count'>
-                        <p> $ this is old price {cartProductOldPrice}</p>
+                        <p>{cartProductOldPrice}</p>
                         <div className='product-count'>
                             <button onClick={decreaseQuantity}>
                                 <img src={minusBtn} alt='minus' />
@@ -78,7 +50,7 @@ const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartPro
                         </div>
                     </div>
                     <div className='cart-item-actual-price'>
-                        <p>${cartProductNewPrice} </p>
+                        <p>{cartProductNewPrice} </p>
                     </div>
                 </div>
             </div>

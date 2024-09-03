@@ -5,6 +5,7 @@
     position: relative;
     width: 100%;
     z-index: 22222;
+    /* gap: 20px; */
 }
 
 .cart-products-heading{
@@ -17,18 +18,11 @@
 
 .cart-products-heading h3{
     font-size: 15px;
-    font-weight: 700px;
+    font-weight: 700;
+    line-height: 38px;
     color: var(--text-color);
 }
 
-@media only screen and (min-width: 810px){
-    .cart-products-heading{
-        padding: 0 60px 20px 60px;
-    }
-    .cart-products-heading h3{
-        font-size: 25px;
-    }
-}
 
 .cart-items{
     display: grid;
@@ -39,29 +33,9 @@
     border-bottom: 1px solid var(--border-color);
     overflow-x: hidden;
     overflow-y: auto;
-    /* margin-bottom: 10px; */
     padding: 10px;
     gap: 10px;
     transition: width 0.5s ease;
-}
-
-
-
-@media only screen and (min-width: 481px){
-    .cart-items{
-        width: 100%;
-        height: 527px;
-        border-top: none;
-        border-bottom: none;
-        /* margin-bottom: 10px; */
-        padding: 10px 105px;
-        gap: 10px;
-        /* transition: padding 0.5s ease; */
-    }
-    .cart-items.low-width{
-        width: 70%;
-        padding: 10px 50px;
-    }
 }
 
 /* Custom scrollbar for WebKit browsers */
@@ -72,7 +46,6 @@
 .cart-item-details{
     display: flex;
     flex-direction: column;
-    /* padding: 15px 0; */
 }
 
 .cart-item-details-heading{
@@ -80,8 +53,6 @@
     width: 100%;
     padding: 15px 10px 5px 10px;
 }
-
-
 
 .cart-item-details-heading h3{
     font-size: 15px;
@@ -97,14 +68,6 @@
     padding: 10px 30px;
     gap: 10px;
 }
-
-
-
-/* @media only screen and (min-width: 480x){
-    .cart-item-details{
-        display: none;
-    }
-} */
 
 .price-details{
     display: flex;
@@ -151,39 +114,20 @@
     cursor: pointer;
 }
 
-@media only screen and (min-width: 480px){
-    .cart-item-details-heading{
-        display: none;
-    }
-    .price-details-div{
-        display: none;
-    }
-    .continue-btn{
-        display: none;
-    }
-}
-
 /* Desktop Component Styling */
 .desktop-cart-item-details{
-    display: flex;
+    display: none;
     width: 100%;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     padding: 10px 90px 50px 90px;
     gap: 10px;
 }
 
+
+
 .desktop-cart-item-details .decrease-width{
     width: 70% !important;
-}
-
-
-
-
-@media only screen and (max-width: 480px){
-    .desktop-cart-item-details{
-        display: none;
-    }
 }
 
 .desktop-price-details-div{
@@ -193,12 +137,10 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    transition: width 0.5s ease;
+    transition: width 0.5s ease, gap 0.5s ease;
 }
 
-.desktop-price-details-div.desktop-price-div-decrease{
-    width: 65%;
-}
+
 
 .dektop-price-details{
     display: flex;
@@ -208,7 +150,6 @@
     height: 50px;
     padding: 0 10px;
     border-radius: 5px;
-    /* cursor: pointer; */
     margin-bottom: 10px;
 }
 
@@ -216,7 +157,6 @@
     font-size: 15px;
     font-weight: 400;
     color: var(--text-color);
-    /* margin-bottom: 10px; */
 }
 
 .desktop-price-total{
@@ -249,18 +189,12 @@
     display: none;
 }
 
-
-
-
-
-
 .overlay {
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
-    /* left: 0; */
     right: 0;
     background-color: #FFF;
     overflow-x: hidden;
@@ -276,17 +210,123 @@
 }
 
 
+/* Media Queries */
 
+/* Hide and show componennts according to screen */
+@media only screen and (min-width: 481px){
+    .desktop-cart-item-details{
+        display: flex;
+    }
+    .cart-item-details-heading {
+        display: none;
+    }
+    .price-details-div {
+        display: none;
+    }
+    .continue-btn{
+        display: none;
+    }
 
+    .cart-products-heading h3 {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 38px;
+        color: var(--text-color);
+    }
 
-/* .town-zip-and-state-input-div input{
+    .cart-items{
+        width: 100%;
+        height: 450px;
+        border-top: none;
+        border-bottom: none;
+        padding: 10px 20px;
+        gap: 10px;
+        transition: width 0.5s ease;
+    }
+}
 
-} */
+/* Large screens desktop and latop */
+@media only screen and (min-width: 1025px) {
+    .cart-items.low-width{
+        width: 65%;
+        padding: 10px 50px;
+    }
 
-/* .checkbox-div input{
-    border: 1px solid var(--active-nav-item-color);
-    height: 20px;
-    width: 20px;
-    background-color: transparent;
-} */
+    .cart-products-heading {
+        display: flex;
+        align-items: center;
+        padding: 0 105px 15px 105px;
+    }
+    .cart-items{
+        padding: 10px 105px;
+    }
+
+    .desktop-continue-btn-div{
+        position: relative;
+    }
+
+    .desktop-continue-btn-div button{
+        position: absolute;
+        top: 0;
+    }
+
+    .desktop-cart-item-details.desktop-cart-item-div-padding-decrease {
+        padding: 20px 90px 50px 50px
+    }
+    .desktop-price-details-div.desktop-price-div-decrease{
+        width: 65%;
+    }
+}
+
+/* Tablates screens */
+@media only screen and (min-width: 781px) and (max-width: 1024px) {
+    .cart-products-heading {
+        display: flex;
+        align-items: center;
+        padding: 0 50px 15px 50px;
+    }
+
+    .cart-items{
+        padding: 10px 50px;
+    }
+
+    .desktop-cart-item-details {
+        padding: 20px 50px;
+    }
+
+    .desktop-continue-btn-div{
+        position: relative;
+    }
+
+    .desktop-continue-btn-div button{
+        position: absolute;
+        top: 0;
+    }
+}
+
+/* Ipods Screens */
+@media only screen and (min-width: 481px) and (max-width: 780px) {
+    .desktop-cart-item-details{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .desktop-price-details-div{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        transition: width 0.5s ease;
+    }
+
+    .desktop-continue-btn-div {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+}
 

@@ -9,50 +9,27 @@ import CartPaymnetMethoud from '../CArtAddPaymentMethoud/CartPaymnetMethoud';
 
 const CartProducts = () => {
 
-    // const [activeBullet, setActiveBullet] = useState(0);
-    // const [isPaymentTrue, setIsPaymentTrue] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const handleToggle = () => {
         setIsOpen(!isOpen);
       };
 
-    // const handleBulletClick = (index) => {
-    //     setActiveBullet(index);
-    //     setIsPaymentTrue(index === 1);
-    // };
-    // useEffect(() => {
-    //     if (!isOpen) {
-    //       setActiveBullet(0);
-    //       setIsPaymentTrue(false);
-    //     }
-    //   }, [isOpen]);
-
-    //   const [otherBillingChecked, setOtherBillingChecked] = useState(false);
-    //   const handleOtherBilling = (event) => {
-    //     setOtherBillingChecked(event.target.checked);
-    //   }
-
-    //   const handleCheckedIndex = () => {
-    //     setActiveBullet(1);
-    //     setIsPaymentTrue(true);
-    //   }
-
     const cartData = [
         {
             id: 1, name: "Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat", img: productImage, color: 'White', 
-            title: '3 Pieces Sofa & Love Seat', oldPrice: 1599.00 , newPrice: '$ 3198.00' 
+            title: '3 Pieces Sofa & Love Seat', oldPrice: '$ 1599.00' , newPrice: '$ 3198.00' 
         },
         {
             id: 1, name: "Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat", img: productImage, color: 'White', 
-            title: '2 Pieces Sofa & Love Seat', oldPrice: 1599.00 , newPrice: '$ 3198.00' 
+            title: '2 Pieces Sofa & Love Seat', oldPrice: '$ 1599.00' , newPrice: '$ 3198.00' 
         },
         {
             id: 1, name: "Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat", img: productImage, color: 'White', 
-            title: '2 Pieces Sofa & Love Seat', oldPrice: 1599.00 , newPrice: '$ 3198.00' 
+            title: '2 Pieces Sofa & Love Seat', oldPrice: '$ 1599.00' , newPrice: '$ 3198.00' 
         },
         {
             id: 1, name: "Trevor Brown 90'' Manual Reclining Sofa & 79'' Console Loveseat", img: productImage, color: 'White', 
-            title: '2 Pieces Sofa & Love Seat', oldPrice: 1599.00 , newPrice: '$ 3198.00'  
+            title: '2 Pieces Sofa & Love Seat', oldPrice: '$ 1599.00' , newPrice: '$ 3198.00'  
         },
     ]
 
@@ -77,7 +54,7 @@ const CartProducts = () => {
                             cartPRoductImage={items.img} 
                             cartProductColor={items.color} 
                             cartProductTitle={items.title}
-                            cartProductOldPrice={'$ ' + items.oldPrice} 
+                            cartProductOldPrice={items.oldPrice} 
                             cartProductNewPrice={items.newPrice} />
             })}
             
@@ -102,7 +79,7 @@ const CartProducts = () => {
         </div>
 
         {/* Desktop View */}
-        <div className={`desktop-cart-item-details`}>
+        <div className={`desktop-cart-item-details ${isOpen ? 'desktop-cart-item-div-padding-decrease' : ''}`}>
             <div className={`desktop-price-details-div ${isOpen ? 'desktop-price-div-decrease' : ''}`}>
                 {detailsDeta.map((item, index) => {
                     return <div key={index} className='dektop-price-details'>

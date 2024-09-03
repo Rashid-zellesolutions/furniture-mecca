@@ -15,7 +15,8 @@
   }
   
   .slide-div.open {
-    width: 30%;
+    /* width: 35%; */
+    width: 500px;
   }
   
   .close-btn {
@@ -179,3 +180,15 @@
     gap: 10px;
 }
 
+/* Hide and Show Components according to screen size */
+@media only screen and (max-width: 480px){
+    .slide-div{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1080px){
+    .slide-div.open {
+        width: 420px;
+      }
+}

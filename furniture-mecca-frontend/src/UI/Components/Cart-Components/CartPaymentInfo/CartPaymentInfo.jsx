@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './CartPaymentInfo.css';
-import cardImg from '../../../../Assets/to-be-change/visa-card.png';
+import visaCArd from '../../../../Assets/Furniture Mecca/Cart Page/visa-card.png';
+import masterCard from '../../../../Assets/Furniture Mecca/Cart Page/master-card.png';
+import discoverCArd from '../../../../Assets/Furniture Mecca/Cart Page/discover-card.png';
+import americanExpressCard from '../../../../Assets/Furniture Mecca/Cart Page/american-express-card.png'
 import { useRef } from 'react';
 import CartContinueBtn from '../CartContinueBtn/CartContinueBtn';
+import { Link } from 'react-router-dom';
 
 const CartPaymentInfo = ({isPaymentTrue}) => {
     const [currentCardType, setCurrentCardType] = useState(0);
@@ -21,7 +25,7 @@ const CartPaymentInfo = ({isPaymentTrue}) => {
     const [isSummaryOpen, setIsSummeryOpen] = useState(false);
 
     const cardTypes = ['Credit Card', 'Paypal', 'Acima', 'Progressive'];
-    const cardIcons = [cardImg, cardImg, cardImg, cardImg]
+    const cardIcons = [visaCArd, masterCard, discoverCArd, americanExpressCard]
   return (
     <div className={`payment-info-div ${isPaymentTrue ? 'payment-inner-open' : ''}`} >
         <div className='cart-payment-info'>
@@ -63,7 +67,9 @@ const CartPaymentInfo = ({isPaymentTrue}) => {
                 </div>
             </div>
         </div>
-        <CartContinueBtn text={'Continue'} />
+        <Link to={'/summery-page'}>
+            <CartContinueBtn text={'Continue'} />
+        </Link>
     </div>
   )
 }

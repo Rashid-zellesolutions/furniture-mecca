@@ -40,6 +40,7 @@ import Shopvia from './UI/Components/ShopViaBanner/Shopvia';
 import AddToCart from './UI/Pages/AddToCart/AddToCart';
 import ContinueCart from './UI/Components/Cart-Components/Continue-cart/ContinueCart';
 import { useEffect, useState } from 'react';
+import Summery from './UI/Pages/Summery/Summery';
 
 
 function App() {
@@ -120,6 +121,7 @@ function App() {
           <Route path='/single-product/:id' element={<SingleProduct  />} />
           <Route path='/add-to-cart' element={<AddToCart />} />
           <Route path='/check-page' element={<ContinueCart />} />
+          <Route path='/summery-page' element={<Summery />} />
         </Routes>
         <Footer notLandingPage={currentUrl === '/' ? false : true} />
         <button onClick={handleClickTop} className='scroll-to-top-button'>
