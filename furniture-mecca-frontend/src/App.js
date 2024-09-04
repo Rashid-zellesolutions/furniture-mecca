@@ -41,6 +41,7 @@ import AddToCart from './UI/Pages/AddToCart/AddToCart';
 import ContinueCart from './UI/Components/Cart-Components/Continue-cart/ContinueCart';
 import { useEffect, useState } from 'react';
 import Summery from './UI/Pages/Summery/Summery';
+import PageNotFound from './UI/Pages/404Page/404Page';
 
 
 function App() {
@@ -122,6 +123,7 @@ function App() {
           <Route path='/add-to-cart' element={<AddToCart />} />
           <Route path='/check-page' element={<ContinueCart />} />
           <Route path='/summery-page' element={<Summery />} />
+          <Route path='*' element={<PageNotFound />} />
         </Routes>
         <Footer notLandingPage={currentUrl === '/' ? false : true} />
         <button onClick={handleClickTop} className='scroll-to-top-button'>

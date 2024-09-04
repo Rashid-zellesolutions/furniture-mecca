@@ -9,7 +9,7 @@ import eyeBlack from '../../../Assets/icons/eye-black.png';
 import eyeWhite from '../../../Assets/icons/eye-white.png';
 
 const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardContainerClass, mouseEnter, mouseLeave, ProductTitle, stars, reviewCount, lowPriceAddvertisement,
-    priceTag, financingAdd, learnMore, colorVariation, mainIndex, deliveryTime, handleVariantColor, selectedColorIndices, maxWidthAccordingToComp, borderLeft, justWidth, handleCardClick
+    priceTag, financingAdd, learnMore, colorVariation, handleAddToCart, mainIndex, deliveryTime, handleVariantColor, selectedColorIndices, maxWidthAccordingToComp, borderLeft, justWidth, handleCardClick
 }) => {
     
     const dispatch = useDispatch();
@@ -43,6 +43,8 @@ const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardCont
         setQuickViewHovered(false)
     }
     
+    
+
   return (
     <>
         <div className={`${productCardContainerClass} ${borderLeft ? 'hide-after' : ''} `} style={{maxWidth: maxWidthAccordingToComp, width: justWidth}}>
@@ -56,15 +58,15 @@ const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardCont
                         onMouseEnter={mouseEnter}
                         onMouseLeave={mouseLeave} />
                         <div className='overlay-buttons'>
-                            <Link to={'/add-to-cart'} className='overlay-button' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                            <button className='overlay-button' onClick={handleAddToCart} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                                 <img src={cardHovered ? cartIcon : cartBlack} alt='cart' />
                                 Add to cart
-                            </Link>
-                            <Link className='overlay-button' onMouseEnter={handleQuickViewHover} onMouseLeave={handlQuickViewLeave}>
+                            </button>
+                            <button className='overlay-button' onMouseEnter={handleQuickViewHover} onMouseLeave={handlQuickViewLeave}>
                                 {/* <img src={cardHovered ? eyeWhite : eyeIcon} alt="eye icon" /> */}
                                 <img src={quickViewHovered ? eyeWhite : eyeBlack} alt='cart' />
                                 Quick View
-                            </Link>
+                            </button>
                         </div>
                 </div>
 

@@ -34,6 +34,7 @@ const SingleProduct = () => {
   useEffect(() => {
     handleClickTop()
   }, [productCard]);
+  
   if(!productCard){
     return <div>Product Not Found</div>
   }

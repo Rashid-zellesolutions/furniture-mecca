@@ -1,0 +1,23 @@
+.calculateTotalPrice{
+    display: flex;
+    width: 100;
+    height: 100%;
+    padding: 50px 100px;
+}
+
+.check-cart{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    border: 2px solid gray;
+}
+
+.check-img{
+    width: 200px;
+    height: 140px;
+}
+
+.check-img img{
+    width: 100%;
+    height: 100%;
+}

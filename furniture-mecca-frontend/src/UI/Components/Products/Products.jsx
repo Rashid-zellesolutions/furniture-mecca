@@ -8,26 +8,33 @@ import { useDispatch, useSelector } from 'react-redux';
 import ProductCard from '../ProductCard/ProductCard';
 import { useNavigate } from 'react-router-dom';
 import arrowBlack from '../../../Assets/icons/hide-arrow-black.png'
+import { useProducts } from '../../../context/productsContext/productContext';
+import { useCart } from '../../../context/cartContext/cartContext';
 
 const Products = () => {
+    // products context data
+    const {products} = useProducts();
+    const {addToCart} = useCart();
+
+    // state variables
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [hideFilters, setHideFilters] = useState(false);
     const [relevanceTrue, setRelevanceTrue] = useState(false)
     const navigate = useNavigate()
-    
     const [showAvailaabilityBox, setShowAvailabilityBox] = useState(false)
-   
     const [showAllFilters, setShowAllFilters] = useState(false);
-    // Products Data From Redux
-    const productData = useSelector((state) => state.products.data)
+    
+   
+    // navigate to single product page with product data
     const handleProductClick = (item) => {
         navigate(`/single-product/${item.id}`, { state: { products: item } });
         console.log(`card clicked /single-product/${item.id}`)
     };
+    
 
     
 
-
+    // filters data
     const filtersData = [
         {name: 'Product Type' , icon: AddBtn, filters: [
             {type: 'checkbox', name: 'Dining Room Sets'},
@@ -92,6 +99,7 @@ const Products = () => {
        
     ]
 
+    // Related Categories Data
     const relatedCategoriesData = [
         {categoryName: 'Leather Living Room sets', link: '#'},
         {categoryName: 'Reclining Living Room Sets', link: '#'},
@@ -101,6 +109,7 @@ const Products = () => {
         {categoryName: 'Sofa & chair sets', link: '#'},
     ]
 
+    // open filters when page load
     const initialOpenFilters = filtersData.map((_, index) => index);
     const [openFilterIndices, setOpenFilterIndices] = useState(initialOpenFilters);
 
@@ -157,7 +166,7 @@ const Products = () => {
     };
 
     // Select Color Variations Functions
-    const [selectedColorIndices, setSelectedColorIndices] = useState(Array(productData.length).fill(0));
+    const [selectedColorIndices, setSelectedColorIndices] = useState(Array(products.length).fill(0));
     const handleVariantImageClick = (cardIndex, colorIndex) => {
         const updatedIndices = [...selectedColorIndices];
         updatedIndices[cardIndex] = colorIndex;
@@ -266,7 +275,7 @@ const Products = () => {
                     </div>
                 </div>
                 <div className='product-main'>
-                    {productData.map((item, index) => {
+                    {products.map((item, index) => {
                         return <ProductCard key={index} maxWidthAccordingToComp={'33.33%'} justWidth={'100%'} tagIcon={item.productTag ? item.productTag : item.heart}
                             tagClass={` ${item.productTag ? 'tag-img' : 'heart-icon'}`}
                             tagDivClass={`${item.productTag ? 'product-tag-div' : 'heart-icon-div'}`}
@@ -279,6 +288,7 @@ const Products = () => {
                             mainIndex={index} deliveryTime={item.deliveryTime} 
                             selectedColorIndices={selectedColorIndices} handleVariantColor={() => handleVariantImageClick(index, colorIndex)}
                             borderLeft={index % 3 === 2} handleCardClick={() => handleProductClick(item)}
+                            handleAddToCart={() => addToCart(item)}
                         />
                     })}
                 </div>

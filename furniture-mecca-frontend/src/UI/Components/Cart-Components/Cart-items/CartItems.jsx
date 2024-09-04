@@ -9,31 +9,18 @@ import minusCharcol from '../../../../Assets/icons/minus.png'
 import crossBtn from '../../../../Assets/icons/Mask group (1).png'
 
 const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartProductTitle, cartProductTotalPrice, 
-    cartSingleProductPrice, isCartOpen, productColor, handleRomoveProduct, cartIndex, productsLength}) => {
+    cartSingleProductPrice, isCartOpen, productColor, quantity, handleRomoveProduct,  cartIndex, productsLength, handleIncreament, handleDecreament, handleTotalPrice}) => {
   
-    const [quantity, setQuantity] = useState(1)
-    // const [totalPrice, setTotalPrice] = useState(cartSingleProductPrice);
-    const totalPrice = cartSingleProductPrice * quantity;
-    // useEffect(() => {
-    //     increaseQuantity()
-    //     decreaseQuantity()
-    // }, [totalPrice])
-    const increaseQuantity = () => {
-        setQuantity(quantity + 1);
-        // setTotalPrice(totalPrice * quantity);
-    }
-    const decreaseQuantity = () => {
-        if(quantity > 1){
-            setQuantity(quantity - 1);
-            // setTotalPrice(totalPrice * quantity);
-        }
-    }
-    const formatedTotalPrice = totalPrice.toLocaleString()
-    const formatedSinglePrice = cartSingleProductPrice.toLocaleString()
-
-
-
-
+        const productTotalPrice = cartSingleProductPrice * quantity;
+        const singlePrice = cartSingleProductPrice.toLocaleString('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        }); 
+        const formatedProductTotalPrice = productTotalPrice.toLocaleString('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        }); 
+        
     return (
     <>
         <div className='cart-product'>
@@ -51,19 +38,19 @@ const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartPro
                     <p>{cartProductColor}</p>
                     <p>{cartProductTitle}</p>
                     <div className='price-and-count'>
-                        <p>{formatedSinglePrice}</p>
+                        <p>{cartSingleProductPrice}</p>
                         <div className='product-count'>
-                            <button onClick={decreaseQuantity}>
+                            <button onClick={handleDecreament}>
                                 <img src={minusBtn} alt='minus' />
                             </button>
                             <p>{quantity}</p>
-                            <button onClick={increaseQuantity}>
+                            <button onClick={handleIncreament}>
                                 <img src={plusBtn} alt='plus' />
                             </button>
                         </div>
                     </div>
                     <div className='cart-item-actual-price'>
-                        <p>{formatedTotalPrice} </p>
+                        <p>{formatedProductTotalPrice} </p>
                     </div>
                 </div>
             </div>
@@ -75,44 +62,44 @@ const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartPro
                 <img src={cartPRoductImage} alt='product image' />
             </div>
             <div className='desktop-cart-containt-section'>
-                <button className={`cross-btn ${isCartOpen ? 'hide-cross-btn' : ''}`} onClick={() => handleRomoveProduct(cartIndex)}>
+                <button className={`cross-btn ${isCartOpen ? 'hide-cross-btn' : ''}`} onClick={handleRomoveProduct}>
                     <img src={crossBtn} alt='cross' />
                 </button>
                 <div className='desktop-name-and-single-price'>
                     <h3>{cartProductName}</h3>
-                    <p className='desktop-product-extra-info'>{productColor}</p>
+                    <p className='desktop-product-extra-info'>Gray</p>
                     <p className='desktop-product-extra-info'>Table & 4 Chairs</p>
                     <p className='desktop-product-extra-info'>Yes, Protect it (+$99)</p>
-                    <p>$ {formatedSinglePrice}</p>
+                    <p>{singlePrice}</p>
                 </div>
                 <div className={`desktop-quantity-and-save-for-leter ${isCartOpen ? 'hide-quantity' : ''}`}>
                     <div className='desktop-quantity'>
-                        <button onClick={decreaseQuantity}>
+                        <button onClick={handleDecreament}>
                             <img src={minusCharcol} alt='minus' />
                         </button>
                         <p>{quantity}</p>
-                        <button onClick={increaseQuantity}>
+                        <button onClick={handleIncreament}>
                             <img src={plusCharcol} alt='plus' />
                         </button>
                     </div>
                 </div>
                 <div className={`desktop-total-price-and-remove-item ${isCartOpen ? 'hide-total-and-remove-item' : ''}`}>
-                    <p>$ {formatedTotalPrice}</p>
+                    <p>$ {formatedProductTotalPrice}</p>
                     <button className='save-for-leter'>
                         Save For Later
                     </button>
                 </div>
                 <div className={isCartOpen ? 'cart-open-quantity-and-total-price' : 'cart-close-quantity-and-total-price'}>
                     <div className='desktop-quantity'>
-                        <button onClick={decreaseQuantity}>
+                        <button onClick={handleDecreament}>
                             <img src={minusCharcol} alt='minus' />
                         </button>
                         <p>{quantity}</p>
-                        <button onClick={increaseQuantity}>
+                        <button onClick={handleIncreament}>
                             <img src={plusCharcol} alt='plus' />
                         </button>
                     </div>
-                    <p className='cart-open-total-price'>$ {formatedTotalPrice}</p>
+                    <p className='cart-open-total-price'>$ {formatedProductTotalPrice}</p>
                 </div>
             </div>
         </div>

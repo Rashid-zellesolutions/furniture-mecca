@@ -25,12 +25,6 @@
     object-fit: contain;
 }
 
-/* @media only screen and (min-width: 481px){
-    .cart-product{
-        display: none;
-    }
-} */
-
 .cart-item-name{
     display: flex;
     width: 100%;
@@ -64,7 +58,6 @@
     padding: 5 0;
     width: 100%;
 }
-
 
 .cart-item-image{
     width: auto;
@@ -103,7 +96,6 @@
     font-size: 0.88rem;
     font-weight: 500;
     color: var(--text-color);
-
 }
 
 .product-count{
@@ -138,8 +130,6 @@
     cursor: pointer;
 }
 
-
-
 .cart-item-actual-price{
     display: flex;
     width: 100%;
@@ -164,7 +154,6 @@
     padding: 15px;
 }
 
-
 .desktop-cart-product-image{
     display: flex;
     width: auto;
@@ -175,114 +164,6 @@
 .desktop-cart-product-image img {
     width: 100%;
     height: 100%;
-}
-
-.desktop-cart-containt{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.desktop-cart-product-name-and-quantity{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-
-
-.desktop-cart-product-name{
-    display: flex;
-    width: 50%;
-    align-items: center;
-}
-
-.desktop-cart-product-name-and-quantity h3{
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--text-color);
-    text-align: start;
-}
-
-.desktop-quantity-and-new-price{
-    display: flex;
-    width: 50%;
-    align-items: center;
-    gap: 30px;
-    justify-content: end;
-}
-
-
-/* 
-.desktop-quantity{
-    display: flex;
-    align-items: center;
-    width: 150px;
-    height: 50px;
-    border: 1px solid #2F7A97;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 10px;
-}
-
-
-
-.desktop-quantity button{
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 50px;
-    border: none;
-    cursor: pointer;
-}
-
-.desktop-quantity p{
-    display: flex;
-    padding: 0 20px;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-    border-left: 1px solid #2F7A97;
-    border-right: 1px solid #2F7A97;
-} */
-
-
-.desktop-new-price{
-    font-size: 18px;
-    font-weight: 500;
-    color: #C61B1A;
-}
-
-.desktop-cart-old-price-and-delete{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.desktop-old-price{
-    font-size: 20px;
-    font-weight: 600;
-    color: #C61B1A;
-}
-
-.desktop-cart-old-price-and-delete button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 400;
-    gap: 5px;
-    color: #C61B1A;
-    border: none;
-    text-decoration: underline;
-    background-color: transparent;
-    cursor: pointer;
 }
 
 .desktop-cart-containt-section{
@@ -318,16 +199,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: center; */
-    /* background-color: orange; */
     height: 100%;
-    width: auto;
+    width: 50%;
+    gap: 7px;
 }
 
 .desktop-name-and-single-price h3{
     font-size: 14px;
     font-weight: 600;
-    line-height: 24px;
+    line-height: 18px;
     color: #595959;
 }
 
@@ -358,7 +238,6 @@
     display: none;
 }
 
-
 .desktop-quantity{
     display: flex;
     align-items: center;
@@ -370,15 +249,12 @@
     border-radius: 10px;
 }
 
-
-
 .desktop-quantity button{
     background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    /* height: 40px; */
     height: 100%;
     border: none;
     cursor: pointer;
@@ -387,14 +263,12 @@
 .desktop-quantity p{
     display: flex;
     padding: 0 20px;
-    /* height: 0px; */
     height: 100%;
     align-items: center;
     justify-content: center;
     border-left: 1px solid #2F7A97;
     border-right: 1px solid #2F7A97;
 }
-
 
 .save-for-leter{
     height: 30px;
@@ -417,11 +291,6 @@
     height: 100%;
     align-items: center;
     justify-content: center;
-    /* justify-content: space-between; */
-    /* background-color: orange; */
-    /* bottom: 0; */
-    /* right: 0; */
-    /* position: relative; */
 }
 
 .desktop-total-price-and-remove-item.hide-total-and-remove-item{
@@ -517,8 +386,6 @@
         width: 100px;
         height: 40px;
     }
-    
-    
     
     .desktop-quantity button{
         height: 40px;
