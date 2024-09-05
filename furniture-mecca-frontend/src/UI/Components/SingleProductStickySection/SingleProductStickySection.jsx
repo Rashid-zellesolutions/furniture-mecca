@@ -266,9 +266,9 @@ const handleThumbnailClick = (index) => {
                         </button>
                     </div>
                     <img src={redHeart} alt='red-heart-icon' className='red-heart-icon' />
-                    <Link to={'add-to-cart'} className={`add-to-cart-btn ${isLoading ? 'loading' : ''}`} onClick={handleClick}>
+                    <button  className={`add-to-cart-btn ${isLoading ? 'loading' : ''}`} onClick={handleClick}>
                       {isLoading ? 'Loading...' : 'Add To Cart'}
-                  </Link>
+                  </button>
                 </div>
                 {/* <AlsoNeed /> */}
                 <WhatWeOffer />

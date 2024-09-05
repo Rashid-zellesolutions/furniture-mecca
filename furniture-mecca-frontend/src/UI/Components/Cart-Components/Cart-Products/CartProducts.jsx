@@ -67,6 +67,7 @@ const CartProducts = () => {
         {cart.length <= 0 && <EmptyCart /> }
             {cart.map((items, index) => {
                 return <CartItems key={items.product.id}
+                            onlyMobile={false}
                             cartIndex={items.product.id}
                             productsLength={cart.length}
                             handleRomoveProduct={() => removeFromCart(items.product.id)}

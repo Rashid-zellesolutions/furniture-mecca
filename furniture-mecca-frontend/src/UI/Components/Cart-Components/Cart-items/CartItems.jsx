@@ -7,10 +7,13 @@ import deleteBtn from '../../../../Assets/icons/delete-red.png';
 import plusCharcol from '../../../../Assets/icons/plus.png';
 import minusCharcol from '../../../../Assets/icons/minus.png'
 import crossBtn from '../../../../Assets/icons/Mask group (1).png'
+import { HiOutlineArrowPathRoundedSquare } from "react-icons/hi2";
 
 const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartProductTitle, cartProductTotalPrice, 
-    cartSingleProductPrice, isCartOpen, productColor, quantity, handleRomoveProduct,  cartIndex, productsLength, handleIncreament, handleDecreament, handleTotalPrice}) => {
+    cartSingleProductPrice, isCartOpen, onlyMobile, productColor, quantity, handleRomoveProduct,  cartIndex, productsLength, handleIncreament, handleDecreament, handleTotalPrice}) => {
   
+        const [saveForLeter, setSaveForLeter] = useState(false)
+        
         const productTotalPrice = cartSingleProductPrice * quantity;
         const singlePrice = cartSingleProductPrice.toLocaleString('en-US', {
             style: 'currency',
@@ -19,10 +22,18 @@ const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartPro
         const formatedProductTotalPrice = productTotalPrice.toLocaleString('en-US', {
             style: 'currency',
             currency: 'USD'
-        }); 
+        });
+        
+        const handleSaveForLeter = () => {
+            setSaveForLeter(true)
+            const timeOut = setTimeout(() => {
+                setSaveForLeter(false);
+            }, 2000);
+        }
         
     return (
     <>
+        
         <div className='cart-product'>
                 <button className='mobile-cart-remove-btn' onClick={() => handleRomoveProduct(cartIndex)}>
                     <img src={closeBtn} alt='close btn' />
@@ -56,7 +67,7 @@ const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartPro
             </div>
         </div>
         {/* Desktop view Card */}
-        <div className='desktop-cart-product'>
+        <div className={`${onlyMobile ? 'desktop-cart-product' : 'hide-desktop-cart'}`}>
             
             <div className='desktop-cart-product-image'>
                 <img src={cartPRoductImage} alt='product image' />
@@ -85,8 +96,8 @@ const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartPro
                 </div>
                 <div className={`desktop-total-price-and-remove-item ${isCartOpen ? 'hide-total-and-remove-item' : ''}`}>
                     <p>$ {formatedProductTotalPrice}</p>
-                    <button className='save-for-leter'>
-                        Save For Later
+                    <button className='save-for-leter' onClick={handleSaveForLeter}>
+                       <HiOutlineArrowPathRoundedSquare size={20} className={`${saveForLeter ? 'arrow-rotate' : ''}`} /> Save For Later
                     </button>
                 </div>
                 <div className={isCartOpen ? 'cart-open-quantity-and-total-price' : 'cart-close-quantity-and-total-price'}>

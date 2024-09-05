@@ -25,7 +25,7 @@ export const ProductProvider = ({children}) => {
             {icon: filledStar, title: 'filled'},
             {icon: filledStar, title: 'filled'},
             {icon: filledStar, title: 'filled'},
-        ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
+        ], lowPriceAddvertisement: 'Every day Low Prices', 
         reviewCount: '(200)', priceTag: 1198, financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
             {color: '#FF0000'},
             {color: '#B78953'},

@@ -10,11 +10,19 @@ import { useNavigate } from 'react-router-dom';
 import arrowBlack from '../../../Assets/icons/hide-arrow-black.png'
 import { useProducts } from '../../../context/productsContext/productContext';
 import { useCart } from '../../../context/cartContext/cartContext';
+import cartBlack from '../../../Assets/icons/big-black-cart.png';
+import closeBtn from '../../../Assets/icons/close-btn.png'
+import CartItems from '../Cart-Components/Cart-items/CartItems';
+
+import minusBtn from '../../../Assets/icons/minus-white.png';
+import plusBtn from '../../../Assets/icons/plus-white.png';
+import CartSideSection from '../Cart-side-section/CartSideSection';
+import QuickView from '../QuickView/QuickView';
 
 const Products = () => {
     // products context data
     const {products} = useProducts();
-    const {addToCart} = useCart();
+    const {cart, addToCart, cartSectionOpen, setCartSectionOpen, increamentQuantity, decreamentQuantity, removeFromCart, calculateTotalPrice} = useCart();
 
     // state variables
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -23,6 +31,23 @@ const Products = () => {
     const navigate = useNavigate()
     const [showAvailaabilityBox, setShowAvailabilityBox] = useState(false)
     const [showAllFilters, setShowAllFilters] = useState(false);
+    const [addToCartClicked, setAddToCartClicked] = useState(false)
+    const [quickViewClicked, setQuickView] = useState(false);
+
+    const handleCartSectionOpen = (item) => {
+        setAddToCartClicked(true)
+        console.log("Cart Data ", cart)
+        addToCart(item)
+    }
+
+    const handleCartSectionClose = () => {
+        setAddToCartClicked(false)
+    }
+
+    const handleQuickViewOpen = (item) => {
+        setQuickView(true);
+    }
+    const handleQuickViewClose = () => {setQuickView(false)}
     
    
     // navigate to single product page with product data
@@ -213,7 +238,10 @@ const Products = () => {
             {/* Filters side bar section code */}
             <div className={`filters-section ${hideFilters ? 'hide-filter' : ''}`}>
                 <div className='hide-filters-btn'>
-                    <button onClick={handleFilterSection}> <img src={arrowBlack} alt='arrow black' /> Hide Filters</button>
+                    <button onClick={handleFilterSection}> 
+                        {/* <img src={arrowBlack} alt='arrow black' />  */}
+                        Hide Filters
+                    </button>
                 </div>
                 <div className='filters-heading-section'>
                     <h3>Filters</h3>
@@ -289,6 +317,8 @@ const Products = () => {
                             selectedColorIndices={selectedColorIndices} handleVariantColor={() => handleVariantImageClick(index, colorIndex)}
                             borderLeft={index % 3 === 2} handleCardClick={() => handleProductClick(item)}
                             handleAddToCart={() => addToCart(item)}
+                            handleCartSectionOpen={() => handleCartSectionOpen(item)}
+                            handleQuickView={() => handleQuickViewOpen()}
                         />
                     })}
                 </div>
@@ -305,6 +335,59 @@ const Products = () => {
                 {relatedCategoriesData.map((item, index) => {
                     return <Link key={index} to={item.link}>{item.categoryName}</Link>
                 })}
+            </div>
+        </div>
+
+        {/* Cart Side Section */}
+        <div className={`cart-side-main-section ${addToCartClicked ? 'show-side-cart' : ''} `}>
+            <button className='cart-section-close-btn' onClick={handleCartSectionClose}>
+                <img src={closeBtn} alt='close btn' />
+            </button>
+            <div className={`cart-side-section-containt-div ${addToCartClicked ? 'show-side-cart-containt' : ''}`}>
+                <div className='cart-section-heading-div'>
+                    <img src={cartBlack} alt='cart icon' />
+                    <p>Your Cart {(cart.length)}</p>
+                </div>
+                <div className='cart-section-products'>
+                    {cart.map((items, index) => {
+                        return  <CartSideSection
+                            key={items.product.id}
+                            handleItemRemove={() => removeFromCart(items.product.id)}
+                            closeBtn={closeBtn}
+                            productTitle={items.product.productTitle}
+                            mainImage={items.product.mainImage}
+                            priceTag={items.product.priceTag}
+                            decreamentQuantity={() => decreamentQuantity(items.product.id)}
+                            minusBtn={minusBtn}
+                            quantity={items.quantity}
+                            increamentQuantity={() => increamentQuantity(items.product.id)}
+                            plusBtn={plusBtn}
+                        />
+                    })}
+                </div>
+                <div className='cart-side-section-buttons'>
+                    <div className='cart-section-view-cart-and-checkout-btn'>
+                        <a href='/add-to-cart' className='cart-side-section-view-cart'>
+                            View Cart
+                        </a>
+                        <button className='cart-side-section-checkout'>
+                            Checkout
+                        </button>
+                    </div>
+                    <button className='cart-side-section-continue-shopping'>
+                        Continue Shopping
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        {/* Quick View Section */}
+        <div className={`quick-view-section ${quickViewClicked ? 'show-quick-view-section' : ''}`}>
+            <button className={`quick-view-close`} onClick={handleQuickViewClose}>
+                <img src={closeBtn} alt='close' />
+            </button>
+            <div className={`quickview-containt ${quickViewClicked ? 'show-quick-view-containt' : ''}`}>
+                <QuickView />
             </div>
         </div>
     </div>

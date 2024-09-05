@@ -154,6 +154,10 @@
     padding: 15px;
 }
 
+.desktop-cart-product.hide-desktop-cart{
+    display: none;
+}
+
 .desktop-cart-product-image{
     display: flex;
     width: auto;
@@ -271,6 +275,10 @@
 }
 
 .save-for-leter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     height: 30px;
     padding: 0px 15px;
     border-radius: 10px;
@@ -283,6 +291,20 @@
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+.arrow-rotate {
+    animation: rotate 1s linear infinite;
+}
+
+/* Define the keyframes for the rotation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .desktop-total-price-and-remove-item{

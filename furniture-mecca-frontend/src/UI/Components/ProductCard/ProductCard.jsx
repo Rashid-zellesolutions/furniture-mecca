@@ -7,10 +7,13 @@ import cartIcon from '../../../Assets/icons/cart-white.png'
 import cartBlack from '../../../Assets/icons/cart-black.png';
 import eyeBlack from '../../../Assets/icons/eye-black.png';
 import eyeWhite from '../../../Assets/icons/eye-white.png';
+import namer from 'color-namer';
 
 const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardContainerClass, mouseEnter, mouseLeave, ProductTitle, stars, reviewCount, lowPriceAddvertisement,
-    priceTag, financingAdd, learnMore, colorVariation, handleAddToCart, mainIndex, deliveryTime, handleVariantColor, selectedColorIndices, maxWidthAccordingToComp, borderLeft, justWidth, handleCardClick
+    priceTag, financingAdd, handleQuickView, learnMore, colorVariation, handleAddToCart, handleCartSectionOpen, mainIndex, deliveryTime, handleVariantColor, selectedColorIndices, maxWidthAccordingToComp, borderLeft, justWidth, handleCardClick
 }) => {
+    
+    const [cartClicked, setCartClicked] = useState(true);
     
     const dispatch = useDispatch();
     const selectedColorIndex = useSelector((state) => state.colorIndex.colorIndex);
@@ -18,7 +21,7 @@ const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardCont
         dispatch(setColorIndex(colorIndex))
     }
 
-    const handleClick = (colorIndex) => {
+    const handleClick = (colorIndex, color) => {
         dispatch(setColorIndex(colorIndex));
         if (handleVariantColor) {
             handleVariantColor();
@@ -42,9 +45,9 @@ const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardCont
     const handlQuickViewLeave = () => {
         setQuickViewHovered(false)
     }
-    
-    
 
+    
+    
   return (
     <>
         <div className={`${productCardContainerClass} ${borderLeft ? 'hide-after' : ''} `} style={{maxWidth: maxWidthAccordingToComp, width: justWidth}}>
@@ -58,11 +61,11 @@ const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardCont
                         onMouseEnter={mouseEnter}
                         onMouseLeave={mouseLeave} />
                         <div className='overlay-buttons'>
-                            <button className='overlay-button' onClick={handleAddToCart} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                            <button className={`overlay-button ${cartClicked ? 'loading' : ''}`} onClick={handleCartSectionOpen} /* onClick={handleAddToCart} */ onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                                 <img src={cardHovered ? cartIcon : cartBlack} alt='cart' />
                                 Add to cart
                             </button>
-                            <button className='overlay-button' onMouseEnter={handleQuickViewHover} onMouseLeave={handlQuickViewLeave}>
+                            <button className='overlay-button' onClick={handleQuickView} onMouseEnter={handleQuickViewHover} onMouseLeave={handlQuickViewLeave}>
                                 {/* <img src={cardHovered ? eyeWhite : eyeIcon} alt="eye icon" /> */}
                                 <img src={quickViewHovered ? eyeWhite : eyeBlack} alt='cart' />
                                 Quick View
@@ -85,7 +88,7 @@ const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardCont
             </div>
             <div className='color-variation-div'>
                 {colorVariation.map((color, colorIndex) => {
-                    return <span key={colorIndex} className='color-variation' onClick={() => handleClick(colorIndex)}
+                    return <span key={colorIndex} className='color-variation' onClick={() => handleClick(colorIndex, color)}
                     style={{
                         backgroundColor: `${color.color}`,
                         border: selectedColorIndices[mainIndex] === colorIndex ? `1px solid ${color.color}` : 'none',
@@ -96,6 +99,8 @@ const ProductCard = ({tagIcon, tagClass, tagDivClass, mainImage, productCardCont
                 <p className='product-delivery-time'>{deliveryTime}</p>
             </div>
         </div>
+
+        
     </>
   )
 }
