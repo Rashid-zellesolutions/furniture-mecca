@@ -26,7 +26,7 @@ export const ProductProvider = ({children}) => {
             {icon: filledStar, title: 'filled'},
             {icon: filledStar, title: 'filled'},
         ], lowPriceAddvertisement: 'Every day Low Prices', 
-        reviewCount: '(200)', priceTag: 1198, financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+        reviewCount: '(200)', priceTag: 1198, totalPrice: 0 , financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
             {color: '#FF0000'},
             {color: '#B78953'},
         ], deliveryTime: 'Get it in 3 to 4 days'
@@ -47,7 +47,7 @@ export const ProductProvider = ({children}) => {
                 {icon: filledStar, title: 'filled'},
                 {icon: filledStar, title: 'filled'},
             ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-            reviewCount: '(197)', priceTag: 1998, financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+            reviewCount: '(197)', priceTag: 1998, totalPrice: 0 , financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
                 {color: '#FF0000'},
                 {color: '#B78953'},
             ], deliveryTime: 'Get it in 3 to 4 days'
@@ -59,7 +59,7 @@ export const ProductProvider = ({children}) => {
                     {icon: filledStar, title: 'filled'},
                     {icon: filledStar, title: 'filled'},
                 ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-                reviewCount: '(218)', priceTag: 998, financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+                reviewCount: '(218)', priceTag: 998, totalPrice: 0 , financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
                     {color: '#FF0000'},
                     {color: '#B78953'},
                 ], deliveryTime: 'Get it in 3 to 4 days'
@@ -69,7 +69,7 @@ export const ProductProvider = ({children}) => {
                     {icon: filledStar, title: 'filled'},
                     {icon: filledStar, title: 'filled'},
                 ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-                reviewCount: '(150)', priceTag: 4598, financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+                reviewCount: '(150)', priceTag: 4598, totalPrice: 0 , financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
                     {color: '#FF0000'},
                     {color: '#B78953'},
                 ], deliveryTime: 'Get it in 3 to 4 days'
@@ -80,7 +80,7 @@ export const ProductProvider = ({children}) => {
                     {icon: filledStar, title: 'filled'},
                     {icon: filledStar, title: 'filled'},
                 ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-                reviewCount: '(180)', priceTag: 1398, financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+                reviewCount: '(180)', priceTag: 1398, totalPrice: 0 , financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
                     {color: '#FF0000'},
                     {color: '#B78953'},
                 ], deliveryTime: 'Get it in 3 to 4 days'
@@ -91,7 +91,7 @@ export const ProductProvider = ({children}) => {
             {icon: filledStar, title: 'filled'},
             {icon: filledStar, title: 'filled'},
         ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-        reviewCount: '(180)', priceTag: 1398, financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+        reviewCount: '(180)', priceTag: 1398, totalPrice: 0 , financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
             {color: '#FF0000'},
             {color: '#B78953'},
         ], deliveryTime: 'Get it in 3 to 4 days'
@@ -102,7 +102,7 @@ export const ProductProvider = ({children}) => {
                     {icon: filledStar, title: 'filled'},
                     {icon: filledStar, title: 'filled'},
                 ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-                reviewCount: '(180)', priceTag: 1398, financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+                reviewCount: '(180)', priceTag: 1398, totalPrice: 0 , financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
                     {color: '#FF0000'},
                     {color: '#B78953'},
                 ], deliveryTime: 'Get it in 3 to 4 days'
@@ -113,7 +113,7 @@ export const ProductProvider = ({children}) => {
                 {icon: filledStar, title: 'filled'},
                 {icon: filledStar, title: 'filled'},
             ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-            reviewCount: '(180)', priceTag: 1398, financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+            reviewCount: '(180)', priceTag: 1398, totalPrice: 0 , financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
                 {color: '#FF0000'},
                 {color: '#B78953'},
             ], deliveryTime: 'Get it in 3 to 4 days'
@@ -124,7 +124,7 @@ export const ProductProvider = ({children}) => {
                 {icon: filledStar, title: 'filled'},
                 {icon: filledStar, title: 'filled'},
             ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-            reviewCount: '(180)', priceTag: 1398, financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+            reviewCount: '(180)', priceTag: 1398, totalPrice: 0 , financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
                 {color: '#FF0000'},
                 {color: '#B78953'},
             ], deliveryTime: 'Get it in 3 to 4 days'
@@ -135,7 +135,7 @@ export const ProductProvider = ({children}) => {
                 {icon: filledStar, title: 'filled'},
                 {icon: filledStar, title: 'filled'},
             ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-            reviewCount: '(180)', priceTag: 1398, financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+            reviewCount: '(180)', priceTag: 1398, totalPrice: 0 , financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
                 {color: '#FF0000'},
                 {color: '#B78953'},
             ], deliveryTime: 'Get it in 3 to 4 days'
@@ -146,7 +146,7 @@ export const ProductProvider = ({children}) => {
                     {icon: filledStar, title: 'filled'},
                     {icon: filledStar, title: 'filled'},
                 ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-                reviewCount: '(180)', priceTag: 1398, financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+                reviewCount: '(180)', priceTag: 1398, totalPrice: 0 , financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
                     {color: '#FF0000'},
                     {color: '#B78953'},
                 ], deliveryTime: 'Get it in 3 to 4 days'
@@ -157,7 +157,7 @@ export const ProductProvider = ({children}) => {
                 {icon: filledStar, title: 'filled'},
                 {icon: filledStar, title: 'filled'},
             ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-            reviewCount: '(180)', priceTag: 1398, financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+            reviewCount: '(180)', priceTag: 1398, totalPrice: 0 , financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
                 {color: '#FF0000'},
                 {color: '#B78953'},
             ], deliveryTime: 'Get it in 3 to 4 days'
@@ -168,7 +168,7 @@ export const ProductProvider = ({children}) => {
                 {icon: filledStar, title: 'filled'},
                 {icon: filledStar, title: 'filled'},
             ], lowPriceAddvertisement: 'Bobs Every day Low Prices',
-            reviewCount: '(180)', priceTag: 1398, financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
+            reviewCount: '(180)', priceTag: 1398, totalPrice: 0 , financingAdd: '12 most special financing', learnMore: 'Learn more', colorVariation: [
                 {color: '#FF0000'},
                 {color: '#B78953'},
             ], deliveryTime: 'Get it in 3 to 4 days'

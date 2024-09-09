@@ -3,7 +3,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css';
 import Category from '../../Components/Category/Category';
 import ShipBanner from '../../Components/ShipBanner/ShipBanner';
-import LatestModulerBanner from '../../Components/LatestModuler/LatestModulerBanner';
+// import LatestModulerBanner from '../../Components/LatestModuler/LatestModulerBanner';
 import ProductSlider from '../../Components/ProductSlider/ProductSlider';
 import ImageHeading from '../../Components/ImageHeading/ImageHeading';
 
@@ -15,11 +15,11 @@ import vikingImage from '../../../Assets/Furniture Mecca/Landing Page/feature pr
 // images for heading
 import HeroImage from '../../../Assets/Furniture Mecca/Landing Page/Slider/hp-fourth_hero_mo_desktop_1_3200x1388 (3).png';
 import GetTheScop from '../../Components/GetTheScop/GetTheScop';
-import CustomerServicePanel from '../../Components/CustomerServicePanel/CustomerServicePanel';
-import FurnitureProduct from '../../Components/FurnitureProducts/FurnitureProduct';
+// import CustomerServicePanel from '../../Components/CustomerServicePanel/CustomerServicePanel';
+// import FurnitureProduct from '../../Components/FurnitureProducts/FurnitureProduct';
 import Slider from '../../../Global-Components/Slider/Slider';
-import Shopvia from '../../Components/ShopViaBanner/Shopvia';
-import AllStores from '../../Components/AllStoresLocation/AllStores';
+// import Shopvia from '../../Components/ShopViaBanner/Shopvia';
+// import AllStores from '../../Components/AllStoresLocation/AllStores';
 import BlogSlider from '../../Components/BlogSlider/BlogSlider';
 import NearStorePopUp from '../../Components/NearStorePopUp/NearStorePopUp';
 
@@ -41,9 +41,11 @@ import Outlet from '../../../Assets/to-be-change/outlet.png';
 import shipBanner from '../../../Assets/Home-Page/At Furniture Mecca Slider 1.png'
 import HottestDealsBanners from '../../Components/HottestDealsBanners/HottestDealsBanners';
 import BestSellerSlider from '../../Components/BestSellerSlider/BestSellerSlider';
-import DealDayCountDown from '../../Components/DealDayCountDown/DealDayCountDown';
+// import DealDayCountDown from '../../Components/DealDayCountDown/DealDayCountDown';
 import InstaGallery from '../../Components/InstaGallery/InstaGallery';
 import FinanceBannerSlider from '../../Components/FinanceBannerSlider/FinanceBannerSlider';
+import Comparision from '../../Components/Comparision/Comparision';
+import DealOfTheDay from '../../Components/DealOfTheDay/DealOfTheDay';
 
 
 const Home = () => {
@@ -99,11 +101,13 @@ const categoryCardData = [
       {/* <FurnitureProduct /> */}
       <ImageHeading img={HeroImage} alt={'bed image'} />
       <ProductSlider cardData={productCardData} />
-      <DealDayCountDown />
+      <Comparision />
+      {/* <DealDayCountDown /> */}
+      <DealOfTheDay />
       <GetTheScop />
       <BlogSlider />
       <InstaGallery />
-      <CustomerServicePanel />
+      {/* <CustomerServicePanel /> */}
     </div>
   )
 }

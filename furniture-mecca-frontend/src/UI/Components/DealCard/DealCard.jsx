@@ -27,7 +27,7 @@ const DealCard = () => {
     }
 
     // State to hold the remaining time
-    const targetDate = '2024-09-06T21:00:59';
+    const targetDate = '2024-09-07T21:00:59';
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
     useEffect(() => {

@@ -56,6 +56,8 @@ const CartProducts = () => {
 
     ]
 
+    // console.log("cart products total price", cart[0].product.totalPrice)
+
   return (
     <>
     <div className='cart-products-main-container'>
@@ -79,6 +81,7 @@ const CartProducts = () => {
                             isCartOpen={isOpen}
                             productColor={items.product.color}
                             quantity={items.quantity}
+                            productTotalPrice={items.totalPrice}
                             handleIncreament={() => increamentQuantity(items.product.id)}
                             handleDecreament={() => decreamentQuantity(items.product.id)}
                             />

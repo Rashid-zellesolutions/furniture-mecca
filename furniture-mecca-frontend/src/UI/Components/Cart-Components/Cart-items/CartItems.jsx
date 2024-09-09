@@ -23,7 +23,7 @@ const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartPro
             style: 'currency',
             currency: 'USD'
         });
-        
+        console.log("Product Total Price in Component:", productTotalPrice);
         const handleSaveForLeter = () => {
             setSaveForLeter(true)
             const timeOut = setTimeout(() => {
@@ -62,12 +62,13 @@ const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartPro
                     </div>
                     <div className='cart-item-actual-price'>
                         <p>{formatedProductTotalPrice} </p>
+                        {/* <p>{productTotalPrice} </p> */}
                     </div>
                 </div>
             </div>
         </div>
         {/* Desktop view Card */}
-        <div className={`${onlyMobile ? 'desktop-cart-product' : 'hide-desktop-cart'}`}>
+        <div className={`desktop-cart-product`}>
             
             <div className='desktop-cart-product-image'>
                 <img src={cartPRoductImage} alt='product image' />
@@ -96,6 +97,7 @@ const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartPro
                 </div>
                 <div className={`desktop-total-price-and-remove-item ${isCartOpen ? 'hide-total-and-remove-item' : ''}`}>
                     <p>$ {formatedProductTotalPrice}</p>
+                    {/* <p>$ {productTotalPrice}</p> */}
                     <button className='save-for-leter' onClick={handleSaveForLeter}>
                        <HiOutlineArrowPathRoundedSquare size={20} className={`${saveForLeter ? 'arrow-rotate' : ''}`} /> Save For Later
                     </button>
@@ -111,6 +113,7 @@ const CartItems = ({cartProductName, cartPRoductImage, cartProductColor, cartPro
                         </button>
                     </div>
                     <p className='cart-open-total-price'>$ {formatedProductTotalPrice}</p>
+                    {/* <p className='cart-open-total-price'>$ {productTotalPrice}</p> */}
                 </div>
             </div>
         </div>

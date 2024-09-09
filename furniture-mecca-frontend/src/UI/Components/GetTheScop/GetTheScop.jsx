@@ -25,10 +25,11 @@ const GetTheScop = () => {
             <h3>Furniture Mecca Promotions</h3>
             {/* <p>Get Exclusive Promotional Offers For The Year 2024</p> */}
             <p>Get Exclusive Promotions For The Year 2024</p>
-            <div className='banner-container'>
+            <button> <a href='#'> Click To See FLyer </a> </button>
+            {/* <div className='banner-container'>
               <img src={banner} alt="banner" className='float-image' />
               <button> <a href='#'> Click To See FLyer </a> </button>
-            </div>
+            </div> */}
         </div>
       </div>
       <div className='mobile-view-scop-main-container'>

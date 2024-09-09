@@ -1,0 +1,170 @@
+.deal-of-the-day-slider-container {
+    display: flex;
+    /* align-items: center; */
+    align-items: start;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+
+  
+
+  /* .deal-of-the-day-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  } */
+  
+  .deal-of-the-day-slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    padding: 0 90px 0 30px;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: max-content;
+
+  }
+  
+  .deal-of-the-day-product-card {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .deal-of-the-day-rating-div{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .deal-of-the-day-rating-star{
+    height: 14px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .deal-of-the-day-rating-div p{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-left: 5px;
+    color: #595959;
+  }
+
+  .deal-of-the-day-product-name{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    color: var(--text-color);
+  }
+  
+
+.deal-of-the-day-prices{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.deal-of-the-day-prices del{
+    color: #D9D9D9;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 23px;
+}
+
+.deal-of-the-day-prices p{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    color: #C61B1A;
+}
+
+.deal-of-the-day-product-image{
+    width: 100%;
+    height: 270px;
+    padding: 10px;
+    border: 1px solid #595959;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.deal-of-the-day-product-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.deal-of-the-day-discount-tag{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #C61B1A;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 23px;
+    color: #fff;
+    padding: 4px 15px;
+}
+
+.deal-of-the-day-stock-or-sold{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.deal-of-the-day-stock-or-sold p{
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+    color: #595959 !important;
+}
+
+.deal-of-the-day-stock-or-sold p span{
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    line-height: 18px !important;
+    color: black !important;
+}
+
+.deal-of-the-day-line{
+    height: 6px;
+    background: linear-gradient(to right, #41D43E 50%, #d7d7d7 50%);
+    border: none;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.deal-of-the-day-arrow{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    background-color: #C61B1A;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.deal-of-the-day-left{
+    left: 0px;
+}
+
+.deal-of-the-day-right{
+    right: 0px;
+}
+  

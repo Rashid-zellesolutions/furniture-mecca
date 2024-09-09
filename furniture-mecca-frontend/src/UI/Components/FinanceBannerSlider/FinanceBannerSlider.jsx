@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import './FinanceBannerSlider.css';
 import installmentBanner from '../../../Assets/Furniture Mecca/Landing Page/Pay option banner/New Main Financing.jpg';
+import paypalBanner from '../../../Assets/Furniture Mecca/Landing Page/sale banner/AFF-Banner-pt2.jpg';
+import moveForword from '../../../Assets/Furniture Mecca/Landing Page/sale banner/AFF-Banner-2.jpg';
 import arrowLeft from '../../../Assets/icons/arrow-left.png';
 import arrowRight from '../../../Assets/icons/arrow-right.png';
 
 function FinanceBannerSlider() {
     const images = [
-        installmentBanner,
-        installmentBanner,
-        installmentBanner,
+        paypalBanner,
+        moveForword,
       ];
 
     const [currentIndex, setCurrentIndex] = useState(0);

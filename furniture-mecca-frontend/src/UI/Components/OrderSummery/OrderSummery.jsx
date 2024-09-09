@@ -9,20 +9,16 @@ import tickMarkSmall from '../../../Assets/icons/tick-mark-small.png';
 import arrowUp from '../../../Assets/icons/arrow-up-white.png';
 import arrowDown from '../../../Assets/icons/arrow-down-white.png'
 import whiteCircle from '../../../Assets/icons/empty-circle-white.png';
+import { useCart } from '../../../context/cartContext/cartContext';
+import SummaryOderDetails from './SummeryOrderDetails/SummaryOderDetails';
 
-const OrderSummery = () => {
+const OrderSummery = ({productName, productPrice}) => {
+    const {cart} = useCart()
     const [trackShow, setTrackShow] = useState(true)
     const handleShowTrack = () => {
         setTrackShow(!trackShow)
     }
-    const orderAndPrice = [
-        {orderName: 'Monaco 3 PC Modular Sectional with 2 Chaise, Grey, Sectional', price: '$ 1955.00'},
-        {orderName: 'Monaco 3 PC Modular Sectional with 2 Chaise, Grey, Sectional', price: '$ 1955.00'},
-        {orderName: 'Monaco 3 PC Modular Sectional with 2 Chaise, Grey, Sectional', price: '$ 1955.00'},
-        {orderName: 'Monaco 3 PC Modular Sectional with 2 Chaise, Grey, Sectional', price: '$ 1955.00'},
-        {orderName: 'Monaco 3 PC Modular Sectional with 2 Chaise, Grey, Sectional', price: '$ 1955.00'},
-        {orderName: 'Monaco 3 PC Modular Sectional with 2 Chaise, Grey, Sectional', price: '$ 1955.00'}
-    ]
+    
 
     const summeryTotal = [
         {name: 'Sub Total', price: '$ 1955'},
@@ -57,16 +53,22 @@ const OrderSummery = () => {
                 <p>Order Details</p>
             </div>
             <div className='summery-orders-div'>
-                {orderAndPrice.map((item, index) => (
-                    <div className='summery-orders-and-price'>
-                    <div className='summery-orders'>
-                            <p>{item.orderName}</p>
-                            <div className='order-under-line-div'>
-                                <div className='order-under-line'></div>
-                            </div>
-                        </div>
-                        <p>{item.price}</p>
-                    </div>
+                {cart.map((item, index) => (
+                    <SummaryOderDetails 
+                        productId={item.product.id}
+                        productName={item.product.productTitle}
+                        productTotalPrice={item.product.priceTag}
+                        quantity={item.quantity}
+                    />
+                    // <div className='summery-orders-and-price'>
+                    // <div className='summery-orders'>
+                    //         <p>{item.product.productTitle}</p>
+                    //         <div className='order-under-line-div'>
+                    //             <div className='order-under-line'></div>
+                    //         </div>
+                    //     </div>
+                    //     <PriceTag price={item.product.priceTag} />
+                    // </div>
                 ))}
             </div>
             <div className='summery-total-price'>
@@ -111,18 +113,23 @@ const OrderSummery = () => {
                         <p>Order Details</p>
                     </div>
                     <div className='desktop-order-details-main'>
-                        {orderAndPrice.map((items, index) => (
-                            <div className='dektop-order-and-price'>
-                                <div className='desktop-orders'>
-                                    <p>Monaco 3 PC Modular Sectional with 2 Chaise, Grey, Sectional</p>
-                                    <div className='desktop-order-under-line-div'>
-                                        <div className='desktop-order-under-line'></div>
-                                    </div>
-                                </div>
-                                <p>$ 1955.00</p>
-                            </div>
-                        ))}
-                        
+                        {cart.map((items, index) => (
+                            <SummaryOderDetails 
+                                productId={items.product.id}
+                                productName={items.product.productTitle}
+                                productTotalPrice={items.product.priceTag}
+                                quantity={items.quantity}
+                            />
+                            // <div className='dektop-order-and-price'>
+                            //     <div className='desktop-orders'>
+                            //         <p>{items.product.productTitle}</p>
+                            //         <div className='desktop-order-under-line-div'>
+                            //             <div className='desktop-order-under-line'></div>
+                            //         </div>
+                            //     </div>
+                            //     <PriceTag price={items.product.priceTag} />
+                            // </div>
+                        ))} 
                     </div>
                     <div className='desktop-price-total-div'>
                         {summeryTotal.map((item, index) => (

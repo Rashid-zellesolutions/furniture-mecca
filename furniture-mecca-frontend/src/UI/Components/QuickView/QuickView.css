@@ -60,19 +60,135 @@
     gap: 25px;
 }
 
+.quick-view-slider {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.quick-view-slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.quick-view-slider-wrapper {
+    display: flex;
+    height: 200px;
+    transition: transform 0.5s ease;
+}
+
+.quick-view-slider-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.quick-view-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background: rgba(0, 0, 0, 0.5); */
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.quick-view-arrow.disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.quick-view-arrow img{
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.quick-view-arrow.quick-view-left {
+    left: 10px;
+}
+
+.quick-view-arrow.quick-view-right {
+    right: 10px;
+}
+
+/* 
 .quick-view-image{
     display: flex;
     width: 100%;
     height: 200px;
     object-fit: cover;
+    position: relative;
+    overflow: hidden;
 }
 
-.quick-view-image img{
+.slider-main-section{
+    display: flex;
+    width: 100%;
+    height: auto;
+
+}
+
+.quick-view-active{
+    display: flex;
+    width: 100%;
+}
+
+.quick-view-inactive{
+    display: none;
+}
+
+.quick-view-slides{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.quick-view-slides img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.quick-view-arrow{
+    position: absolute;
+    top: 50%;
+    width: auto;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 333;
+}
+
+.quick-view-arrow-disable{
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.quick-view-arrow-left{
+    left: 10px;
+}
+
+.quick-view-arrow-right{
+    right: 10px;
+} */
+
+/* .quick-view-image img{
 
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+} */
 
 .quick-view-variations{
     display: flex;
@@ -147,6 +263,10 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+}
+
+.quickview-heart-icon{
+    cursor: pointer;
 }
 
 .quick-view-add-to-cart{

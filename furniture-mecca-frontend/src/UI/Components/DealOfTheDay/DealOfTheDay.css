@@ -1,0 +1,49 @@
+.deal-of-the-day-main-container{
+    display: flex;
+    width: 100%;
+    padding: var(--global-padding);
+}
+
+.deal-of-the-day-products-slider-main-container{
+    display: flex;
+    width: 100%;
+    /* background-color: yellow; */
+    border: 2px solid #C61B1A;
+    padding: 20px;
+    position: relative;
+    border-radius: 8px;
+    /* background-color: purple; */
+
+}
+
+.deal-of-the-day-border-heading{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    top: 0;
+}
+
+.deal-of-the-day-border-heading h3{
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 38px;
+}
+
+.deal-of-the-day-border-countdown{
+    background-color: #C61B1A;
+    border-radius: 25px;
+    padding: 10px 15px;
+    
+}
+
+.deal-of-the-day-border-countdown p{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 23px;
+}
+
+
+
+

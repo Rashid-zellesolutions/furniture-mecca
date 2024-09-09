@@ -7,6 +7,7 @@ import arrowRight from '../../../Assets/icons/arrow-right.png'
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Loader from '../Loader/Loader';
+import CheckSlider from '../check-check/CheckSlider';
 
 
 
@@ -55,16 +56,26 @@ const BestSellerSlider = () => {
         setCurrentIndex(prevIndex => (prevIndex < maxIndex ? prevIndex + 1 : 0));
     };
 
-    const offset = -currentIndex * 100; // Adjust offset for sliding
+    const offset = -currentIndex * 100; 
 
 
-    // const handleLoader = (index) => {
-    //     setLoading(true); // Show loader
-    //     setTimeout(() => {
-    //         setActiveItem(index);
-    //         setLoading(false); // Hide loader after 2 seconds
-    //     }, 2000);
-    // };
+    const handleLoader = (index) => {
+        setLoading(true); // Show loader
+        setTimeout(() => {
+            setActiveItem(index);
+            setLoading(false); // Hide loader after 2 seconds
+        }, 2000);
+    };
+
+//     const [currentIndex, setCurrentIndex] = useState(0);
+
+//   const totalPages = Math.ceil(productCardData.length / itemsPerPage);
+
+//   const handleDotClick = (index) => {
+//     setCurrentIndex(index);
+//   };
+
+//   const offset = -currentIndex * 100; 
 
 
   return (
@@ -88,35 +99,63 @@ const BestSellerSlider = () => {
                 </div>
             </div>
             <div className='products-slider-container'>
-            {loading && <Loader />} {/* Show loader when loading */}
-            <button className='product-slider-arrow left' onClick={handlePrevClick}>
-                <img src={arrowLeft} alt="left" />
-            </button>
-            <div className='best-seller-slider' style={{ transform: `translateX(${offset}%)` }} >
-                {productCardData.slice(currentIndex * itemsPerPage, (currentIndex + 1) * itemsPerPage).map((item, index) => (
-                    <div key={index} className='best-seller-product-card-div' onClick={() => handleProductClick(item)}>
+                {loading && <Loader />} {/* Show loader when loading */}
+                {/* <CheckSlider /> */}
+                <div className='best-seller-slider' style={{ transform: `translateX(${offset}%)` }} >
+                    {productCardData.slice(currentIndex * itemsPerPage, (currentIndex + 1) * itemsPerPage).map((item, index) => (
+                        <div key={index} className='best-seller-product-card-div' onClick={() => handleProductClick(item)}>
+                            <img src={item.mainImage} alt='img' className='best-seller-product-main-image' />
+                            <span className='product-rating-span'>
+                                {item.ratingStars.map((star, starIndex) => (
+                                    <img key={starIndex} src={star.starIcon} alt='star' />
+                                ))}
+                                <p>{item.reviews}</p>
+                            </span>
+                            <p className='productmain-name'>{item.productTitle}</p>
+                            <div className='price-and-heart'>
+                                <span>
+                                    <del>{item.defaultPrice}</del>
+                                    <p>{item.priceTag}</p>
+                                </span>
+                                <img src={heartIcon} alt='heart' />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* <div className='best-seller-slider' style={{ transform: `translateX(${offset}%)` }}>
+                    {productCardData
+                    .slice(currentIndex * itemsPerPage, (currentIndex + 1) * itemsPerPage)
+                    .map((item, index) => (
+                        <div key={index} className='best-seller-product-card-div' onClick={() => handleProductClick(item)}>
                         <img src={item.mainImage} alt='img' className='best-seller-product-main-image' />
                         <span className='product-rating-span'>
                             {item.ratingStars.map((star, starIndex) => (
-                                <img key={starIndex} src={star.starIcon} alt='star' />
+                            <img key={starIndex} src={star.starIcon} alt='star' />
                             ))}
                             <p>{item.reviews}</p>
                         </span>
                         <p className='productmain-name'>{item.productTitle}</p>
                         <div className='price-and-heart'>
                             <span>
-                                <del>{item.defaultPrice}</del>
-                                <p>{item.priceTag}</p>
+                            <del>{item.defaultPrice}</del>
+                            <p>{item.priceTag}</p>
                             </span>
                             <img src={heartIcon} alt='heart' />
                         </div>
-                    </div>
-                ))}
+                        </div>
+                    ))}
+                </div>
+                <div className='pagination-dots'>
+                    {Array.from({ length: totalPages }).map((_, index) => (
+                    <div
+                        key={index}
+                        className={`dot ${index === currentIndex ? 'active' : ''}`}
+                        onClick={() => handleDotClick(index)}
+                    />
+                    ))}
+                </div> */}
             </div>
-            <button className='product-slider-arrow right' onClick={handleNextClick}>
-                <img src={arrowRight} alt="right" />
-            </button>
-        </div>
         </div>
     </div>
   );

@@ -108,6 +108,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    height: 100%;
 }
 
 .cart-side-section-product-count p{
