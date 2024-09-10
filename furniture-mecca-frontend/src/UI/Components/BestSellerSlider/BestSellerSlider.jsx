@@ -1,17 +1,24 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './BestSellerSlider.css';
 import BestSellerSliderMainBanner from '../../../Assets/Furniture Mecca/Landing Page/best seller products/Bedroom Side Banners 2 (2).png';
+import bestSellerMainSecondImage from '../../../Assets/Furniture Mecca/Landing Page/best seller products/Bedroom Side Banners 1.png';
 import heartIcon from '../../../Assets/icons/like.png'
-import arrowLeft from '../../../Assets/icons/arrow-left.png'
-import arrowRight from '../../../Assets/icons/arrow-right.png'
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Loader from '../Loader/Loader';
-import CheckSlider from '../check-check/CheckSlider';
 
 
 
 const BestSellerSlider = () => {
+
+    const [width, setWidth] = useState(window.innerWidth);
+    useEffect(() => {
+        const handleResizer = () => setWidth(window.innerWidth);
+        window.addEventListener("resize", handleResizer);
+        return () => window.removeEventListener("resize", handleResizer)
+    } )
+
+    // console.log("browser width", width);
 
     const bestSellerNav = ['Living Room', 'Bedroom', 'Dining Room']
     
@@ -28,60 +35,45 @@ const BestSellerSlider = () => {
         }, 1000);
     }
     const productCardData = useSelector((state) => state.productCard.data)
+    console.log("products length after", productCardData.length)
     const handleProductClick = (item) => {
         navigate(`/single-product/${item.id}`, { state: { productCard: item } });
         console.log(`card clicked /single-product/${item.id}`)
     };
+    
+    // product slice to show 6 product maxx
 
+    let itemPerPage = productCardData.length;
+    if((width > 480) && (width < 995 )){
+        itemPerPage = 4;
+    }else if(width > 994){
+        itemPerPage = 6
+    }
     const [currentIndex, setCurrentIndex] = useState(0);
-    const itemsPerRow = 3;
-    const rows = 2;
-    const itemsPerPage = itemsPerRow * rows;
-    const totalItems = productCardData.length;
-    const maxIndex = Math.ceil(totalItems / itemsPerPage) - 1;
-    const sliderRef = useRef(null);
 
-    useEffect(() => {
-        if (sliderRef.current) {
-            const containerWidth = sliderRef.current.scrollWidth;
-            sliderRef.current.style.width = `${containerWidth}px`;
-        }
-    }, [productCardData]);
+    const totalPages = Math.ceil(productCardData.length / itemPerPage);
 
-    const handlePrevClick = () => {
-        setCurrentIndex(prevIndex => (prevIndex > 0 ? prevIndex - 1 : maxIndex));
-    };
-
-    const handleNextClick = () => {
-        setCurrentIndex(prevIndex => (prevIndex < maxIndex ? prevIndex + 1 : 0));
-    };
-
-    const offset = -currentIndex * 100; 
-
-
-    const handleLoader = (index) => {
+    const handleDotsClick = (index) => {
+        setCurrentIndex(index);
         setLoading(true); // Show loader
         setTimeout(() => {
             setActiveItem(index);
             setLoading(false); // Hide loader after 2 seconds
-        }, 2000);
-    };
+        }, 1000);
+    }
+    console.log("products length before", productCardData.length)
 
-//     const [currentIndex, setCurrentIndex] = useState(0);
+    const displayProducts = productCardData.slice(currentIndex * itemPerPage, (currentIndex + 1) * itemPerPage);
 
-//   const totalPages = Math.ceil(productCardData.length / itemsPerPage);
 
-//   const handleDotClick = (index) => {
-//     setCurrentIndex(index);
-//   };
 
-//   const offset = -currentIndex * 100; 
+    
 
 
   return (
     <div className="best-seller-slider-container">
         <div className='best-seller-slider-main-banner'>
-            <img src={BestSellerSliderMainBanner} alt='main banner' />
+            <img src={activeItem === 0 ?  BestSellerSliderMainBanner : bestSellerMainSecondImage} alt='main banner' />
         </div>
         <div className='best-seller-slider-div'>
             <div className='best-seller-slider-menu-bar'>
@@ -98,13 +90,18 @@ const BestSellerSlider = () => {
             ))}
                 </div>
             </div>
+            <div className='best-seller-slider-main-banner-mobile-view'>
+                <img src={activeItem === 0 ?  BestSellerSliderMainBanner : bestSellerMainSecondImage} alt='main banner' />
+            </div>
             <div className='products-slider-container'>
                 {loading && <Loader />} {/* Show loader when loading */}
-                {/* <CheckSlider /> */}
-                <div className='best-seller-slider' style={{ transform: `translateX(${offset}%)` }} >
-                    {productCardData.slice(currentIndex * itemsPerPage, (currentIndex + 1) * itemsPerPage).map((item, index) => (
-                        <div key={index} className='best-seller-product-card-div' onClick={() => handleProductClick(item)}>
-                            <img src={item.mainImage} alt='img' className='best-seller-product-main-image' />
+                <div className='best-seller-slider'>
+                    {/* {productCardData.slice(currentIndex * itemsPerPage, (currentIndex + 1) * itemsPerPage).map((item, index) => ( */}
+                    {displayProducts.map((item, index) => (
+                        <div key={index} className='best-seller-product-card-div' /* onClick={() => handleProductClick(item)} */ >
+                            <div className='best-seller-product-main-image-div'>
+                                <img src={item.mainImage} alt='img' className='best-seller-product-main-image' />
+                            </div>
                             <span className='product-rating-span'>
                                 {item.ratingStars.map((star, starIndex) => (
                                     <img key={starIndex} src={star.starIcon} alt='star' />
@@ -112,7 +109,7 @@ const BestSellerSlider = () => {
                                 <p>{item.reviews}</p>
                             </span>
                             <p className='productmain-name'>{item.productTitle}</p>
-                            <div className='price-and-heart'>
+                            <div className='price-and-heart'> 
                                 <span>
                                     <del>{item.defaultPrice}</del>
                                     <p>{item.priceTag}</p>
@@ -122,39 +119,15 @@ const BestSellerSlider = () => {
                         </div>
                     ))}
                 </div>
-
-                {/* <div className='best-seller-slider' style={{ transform: `translateX(${offset}%)` }}>
-                    {productCardData
-                    .slice(currentIndex * itemsPerPage, (currentIndex + 1) * itemsPerPage)
-                    .map((item, index) => (
-                        <div key={index} className='best-seller-product-card-div' onClick={() => handleProductClick(item)}>
-                        <img src={item.mainImage} alt='img' className='best-seller-product-main-image' />
-                        <span className='product-rating-span'>
-                            {item.ratingStars.map((star, starIndex) => (
-                            <img key={starIndex} src={star.starIcon} alt='star' />
-                            ))}
-                            <p>{item.reviews}</p>
-                        </span>
-                        <p className='productmain-name'>{item.productTitle}</p>
-                        <div className='price-and-heart'>
-                            <span>
-                            <del>{item.defaultPrice}</del>
-                            <p>{item.priceTag}</p>
-                            </span>
-                            <img src={heartIcon} alt='heart' />
-                        </div>
-                        </div>
-                    ))}
-                </div>
                 <div className='pagination-dots'>
-                    {Array.from({ length: totalPages }).map((_, index) => (
-                    <div
-                        key={index}
-                        className={`dot ${index === currentIndex ? 'active' : ''}`}
-                        onClick={() => handleDotClick(index)}
-                    />
-                    ))}
-                </div> */}
+                {Array.from({ length: totalPages }, (_, index) => (
+                    <span 
+                        key={index} 
+                        className={`dot ${currentIndex === index ? 'active' : ''}`} 
+                        onClick={() => handleDotsClick(index)}
+                    ></span>
+                ))}
+            </div>
             </div>
         </div>
     </div>

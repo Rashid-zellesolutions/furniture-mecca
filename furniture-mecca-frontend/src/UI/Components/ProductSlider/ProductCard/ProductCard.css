@@ -112,7 +112,7 @@
 @media only screen and (max-width: 700px){
     .product{
         width: 250px;
-        flex: 1 0 auto;
+        flex: none;
     }
     
     .product-img{
@@ -120,6 +120,30 @@
         height: 250px;
         overflow: hidden;
         position: relative;
+        min-width: 250px;
+        
+    }
+
+    .product-img-detail{
+        top: 5px;
+        right: 5px;
+        padding: 5px;
+    }
+
+    .product-img-detail h3 {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 10px;
+    }
+
+    .product-img-detail span {
+        font-size: 16px;
+        line-height: 10px;
+    }
+
+    .product-img-detail p {
+        font-size: 8px;
+        line-height: 10px;
     }
     
     .product-img img {

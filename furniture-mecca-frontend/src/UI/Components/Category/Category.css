@@ -62,7 +62,7 @@
     }
 }
 
-@media only screen and (min-width: 1460px) and (max-width: 1799px){
+@media only screen and (min-width: 1650px) and (max-width: 1799px){
     .category-cards-container{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -88,8 +88,23 @@
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px){
+    .category-main-container{
+        padding: 10px 10px 30px 10px;
+    }
+
+    .category-heading{
+        color: var(--text-color);
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
     .category-cards-container{
         grid-template-columns: auto;
+        gap: 5px;
     }
+
+
 }
 

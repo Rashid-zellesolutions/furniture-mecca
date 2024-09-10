@@ -8,6 +8,10 @@ import rightBannerTwo from '../../../Assets/Home-Page/hot-deals-banners/5 in 1 S
 
 const HottestDealsBanners = () => {
   return (
+    <>
+    <div className='mobile-view-hottest-deal-banner'>
+      <img src={centerBanner} alt='img' />
+    </div>
     <div className='hottest-deal-main-container'>
       <h3 className='hot-deal-main-heading'>Hottest Deal</h3>
       <div className='hot-deals-main-banner'>
@@ -24,6 +28,7 @@ const HottestDealsBanners = () => {
           </div>
       </div>
     </div>
+    </>
   )
 }
 

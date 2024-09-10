@@ -1,12 +1,11 @@
-import React, {useState, useEffect} from 'react'
-import Slider from "react-slick";
+import React, {useState, useRef, useEffect} from 'react'
 import './DealOfTheDay.css';
-import DealOfTheDayCard from './DealOfTheDayCard/DealOfTheDayCard';
 import { useProducts } from '../../../context/productsContext/productContext';
 
+import DealOfTheDayCard from './DealOfTheDayCard/DealOfTheDayCard';
+
 const DealOfTheDay = () => {
-    
-    
+
     // Deal of the day timer
       const calculateTimeLeft = () => {
     const targetDate = new Date("2024-09-14T21:00:00").getTime();
@@ -48,6 +47,9 @@ const DealOfTheDay = () => {
   // Destructure timeLeft
   const { days, hours, minutes, seconds } = timeLeft;
 
+  // products slider script
+  const itemsPerPage = 4;
+
   return (
     <div className='deal-of-the-day-main-container'>
         <fieldset className='deal-of-the-day-products-slider-main-container'>
@@ -59,7 +61,12 @@ const DealOfTheDay = () => {
                     </p> 
                 </div>
             </legend>
-            <DealOfTheDayCard />
+            <div className='deal-of-the-day-cards-container'>
+              
+                <DealOfTheDayCard />
+              
+            </div>
+            {/* <DealOfTheDayCard /> */}
         </fieldset>
     </div>
   )

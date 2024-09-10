@@ -14,6 +14,7 @@ import vikingImage from '../../../Assets/Furniture Mecca/Landing Page/feature pr
 
 // images for heading
 import HeroImage from '../../../Assets/Furniture Mecca/Landing Page/Slider/hp-fourth_hero_mo_desktop_1_3200x1388 (3).png';
+import mobileViewHeroImage from '../../../Assets/Furniture Mecca/Landing Page/Slider/mobile-view-banner.png';
 import GetTheScop from '../../Components/GetTheScop/GetTheScop';
 // import CustomerServicePanel from '../../Components/CustomerServicePanel/CustomerServicePanel';
 // import FurnitureProduct from '../../Components/FurnitureProducts/FurnitureProduct';
@@ -99,7 +100,7 @@ const categoryCardData = [
       <FinanceBannerSlider />
       <BestSellerSlider />
       {/* <FurnitureProduct /> */}
-      <ImageHeading img={HeroImage} alt={'bed image'} />
+      <ImageHeading img={HeroImage} mobileViewImage={mobileViewHeroImage} alt={'bed image'} />
       <ProductSlider cardData={productCardData} />
       <Comparision />
       {/* <DealDayCountDown /> */}
