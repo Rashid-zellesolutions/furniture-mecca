@@ -100,7 +100,19 @@ const products = [
 const DealOfTheDayCard = () => {
       // product slice to show 6 product maxx
 
-      const itemPerPage = 4;
+      let itemPerPage;
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize)
+  }, []);
+
+  if(width < 480){ 
+    itemPerPage = 2
+  }
       const [currentIndex, setCurrentIndex] = useState(0);
   
       const totalPages = Math.ceil(products.length / itemPerPage);
@@ -124,46 +136,48 @@ const DealOfTheDayCard = () => {
   const handleMouseLeave = () => {
     setImageHovered(null)
   }
+
+
     
   return (
     <div className='deal-of-the-day-card-main-div'>
-      <button className='deal-of-the-day-arrow deal-of-the-day-left ' onClick={handlePrevClick} disabled={currentIndex === 0}>
+       <div className="deal-of-the-day-slider-wrapper">
+      {/* <button className='deal-of-the-day-arrow deal-of-the-day-left ' onClick={handlePrevClick} disabled={currentIndex === 0}>
         <img src={leftArrow} alt='left' />
-      </button>
-        <div className="deal-of-the-day-slider-wrapper">
-        <div className="deal-of-the-day-slider" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-      {displayProducts.map((product, index) => (
-        <div key={product.id} className="deal-of-the-day-product-card">
-          <div className='deal-of-the-day-rating-div'>
-            {product.stars.map((star, index) => (
-              <img key={index} src={star.icon} alt='icon' className='deal-of-the-day-rating-star' />
-            ))}
-            <p >({product.rating})</p>
-          </div>
-          <h3 className='deal-of-the-day-product-name'>{product.name}</h3>
-          <div className='deal-of-the-day-prices'>
-            <del>$199.00</del>
-            <p>$1599.00</p>
-          </div>
-          <div className='deal-of-the-day-product-image-div' onMouseEnter={() => handleMouseEntered(index)} onMouseLeave={handleMouseLeave}>
-            <p className='deal-of-the-day-discount-tag'>-12%</p>
-            <img src={product.imageUrl} alt='img' className='deal-of-the-day-product-image' />
-            <div className={`deal-of-the-day-image-icons-section ${isImageHovered === index ? 'deal-of-the-day-show-icons' : ''}`}>
-              {cartAndHeartIcon.map((item, index) => (
-                <button key={index}>
-                  <img src={item} alt='cart' />
-                </button>
-              ))}
+      </button> */}
+        {/* <div className="deal-of-the-day-slider" style={{ transform: `translateX(-${currentIndex * 100}%)` }}> */}
+          {displayProducts.map((product, index) => (
+            <div key={product.id} className="deal-of-the-day-product-card">
+              <div className='deal-of-the-day-rating-div'>
+                {product.stars.map((star, index) => (
+                  <img key={index} src={star.icon} alt='icon' className='deal-of-the-day-rating-star' />
+                ))}
+                <p >({product.rating})</p>
+              </div>
+              <h3 className='deal-of-the-day-product-name'>{product.name}</h3>
+              <div className='deal-of-the-day-prices'>
+                <del>$199.00</del>
+                <p>$1599.00</p>
+              </div>
+              <div className='deal-of-the-day-product-image-div' onMouseEnter={() => handleMouseEntered(index)} onMouseLeave={handleMouseLeave}>
+                <p className='deal-of-the-day-discount-tag'>-12%</p>
+                <img src={product.imageUrl} alt='img' className='deal-of-the-day-product-image' />
+                <div className={`deal-of-the-day-image-icons-section ${isImageHovered === index ? 'deal-of-the-day-show-icons' : ''}`}>
+                  {cartAndHeartIcon.map((item, index) => (
+                    <button key={index}>
+                      <img src={item} alt='cart' />
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <hr className='deal-of-the-day-line' />
             </div>
-          </div>
-          <hr className='deal-of-the-day-line' />
-        </div>
-      ))}
-      </div>
-    </div>
-      <button className='deal-of-the-day-arrow deal-of-the-day-right' onClick={handleNextClick}>
+          ))}
+        {/* </div> */}
+      {/* <button className='deal-of-the-day-arrow deal-of-the-day-right' onClick={handleNextClick}>
         <img src={rightArrow} alt='right' />
-      </button>
+      </button>  */}
+      </div>
     </div>
     
   );

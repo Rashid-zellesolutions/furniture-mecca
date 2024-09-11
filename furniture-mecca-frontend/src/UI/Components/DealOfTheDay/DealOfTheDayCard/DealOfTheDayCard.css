@@ -2,16 +2,12 @@
     /* background-color: orange; */
     padding: 0 30px;
     position: relative;
+    overflow: hidden;
   }
 
   .deal-of-the-day-slider-wrapper {
-    /* display: flex; */
     width: 100%;
-    /* scroll-behavior: smooth; */
     overflow: hidden;
-    /* align-items: center; */
-    /* justify-content: space-between; */
-    /* gap: 20px; */
     position: relative;
   }
 
@@ -20,6 +16,7 @@
     transition: transform 0.5s ease;
     width: 100%;
     gap: 20px;
+    overflow: hidden;
   }
   
   .deal-of-the-day-product-card {
@@ -175,4 +172,28 @@
 .deal-of-the-day-right{
     right: 0px;
 }
-  
+
+@media only screen and (max-width: 480px){
+  .deal-of-the-day-main-container {
+    padding: 10px;
+  }
+  .deal-of-the-day-border-heading h3 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 23px;
+  }
+
+  .deal-of-the-day-products-slider-main-container {
+    padding: 0px;
+  }
+
+  .deal-of-the-day-card-main-div {
+    padding: 10px;
+  }
+
+  .deal-of-the-day-product-card {
+    flex: none;
+    width: 200px;
+  }
+
+}

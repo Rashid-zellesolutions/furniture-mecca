@@ -202,7 +202,7 @@
     display: none;
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 780px){
     .best-seller-slider-container{
         display: flex;
         flex-direction: column;
@@ -226,6 +226,11 @@
         line-height: 23px;
         font-weight: 700;
         color: var(--text-color);
+    }
+    .best-seller-menu-bar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
     .best-seller-menu-bar p {
@@ -313,6 +318,25 @@
         object-fit: contain;
     }
 
+}
+
+@media only screen and (min-width: 781px) and (max-width: 1024px){
+    .est-seller-slider-main-banner {
+        flex: 0 0 35%;
+    }
+
+    .best-seller-slider-menu-bar h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .best-seller-menu-bar p {
+        font-size:12px;
+    }
+
+    .best-seller-menu-bar p.active {
+        font-size: 15px;
+    }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px){

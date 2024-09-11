@@ -1,94 +1,47 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './BlogSlider.css';
-import arrowLeft from '../../../Assets/icons/arrow-left.png';
-import arrowRight from '../../../Assets/icons/arrow-right.png';
-import arrowLeftRed from '../../../Assets/icons/arrow-left-red.png';
-import arreowRightRed from '../../../Assets/icons/arrow-right-red.png';
-import blogOneImg from '../../../Assets/Furniture Mecca/Landing Page/blogs/Perks-Of-Using-High-Quality-Mattresses-For-Sleeping 1.png'
-import blogTwoImage from '../../../Assets/Furniture Mecca/Landing Page/blogs/Some-Basics-On-Keeping-Your-Living-Room-Furniture-Clean 1.png';
-import blogTheeImage from '../../../Assets/Furniture Mecca/Landing Page/blogs/Some-Basics-on-cleaning-Leather-Furniture 1.png';
-import { CgMenuLeftAlt } from "react-icons/cg";
+import diningRoomBlogImage from '../../../Assets/Furniture Mecca/Landing Page/blogs/Some-Basics-on-cleaning-Leather-Furniture 1.png';
+import livingRoomBlogImage from '../../../Assets/Furniture Mecca/Landing Page/blogs/Some-Basics-On-Keeping-Your-Living-Room-Furniture-Clean 1.png';
+import mattressBlogImage from '../../../Assets/Furniture Mecca/Landing Page/blogs/Perks-Of-Using-High-Quality-Mattresses-For-Sleeping 1.png';
+import CustomSlider from '../CostumSlider/CostumSlider';
+import BlogCard from './BlogCard';
 
 const BlogSlider = () => {
-    const [currentIndex, setCurrentIndex] = useState(0)
-    const blogSliderData = [
-        {img: blogOneImg, categoryIcon: <CgMenuLeftAlt size={15} />, category: 'Uncategorized 0', date: '20-08-2024', para: 'Five Things To Consider When Choosing Furniture For A Small Living Room', link: '#'},
-        {img: blogTwoImage, categoryIcon: <CgMenuLeftAlt size={15} />, category: 'Uncategorized 1', date: '21-02-2024', para: 'Your Furniture Show You As You Are', link: '#'},
-        {img: blogTheeImage, categoryIcon: <CgMenuLeftAlt size={15} />, category: 'Uncategorized 2', date: '01-05-2024', para: 'Add That "Wow Factor" To Your Home  - Tips And Tricks', link: '#'},
-        {img: blogOneImg, categoryIcon: <CgMenuLeftAlt size={15} />, category: 'Uncategorized 3', date: '12-07-2024', para: "Package Of All Living Room's Furniture For A Coordinated Look", link: '#'},
-    ];
 
-    // Duplicate the blogSliderData array to create an infinite loop effect
-    const infiniteSliderData = [...blogSliderData, ...blogSliderData];
+    const blogsData = [
+        {img: diningRoomBlogImage, category: 'Dining Room 1', title: 'Benifits Of Accent Furniture', createdBy: 'Furniture Mecca', comments: '4 comments'},
+        {img: livingRoomBlogImage, category: 'Dining Room 2', title: 'Benifits Of Accent Furniture', createdBy: 'Furniture Mecca', comments: '4 comments'},
+        {img: mattressBlogImage, category: 'Dining Room 3', title: 'Benifits Of Accent Furniture', createdBy: 'Furniture Mecca', comments: '4 comments'},
+        {img: diningRoomBlogImage, category: 'Dining Room 4', title: 'Benifits Of Accent Furniture', createdBy: 'Furniture Mecca', comments: '4 comments'},
+        {img: diningRoomBlogImage, category: 'Dining Room 5', title: 'Benifits Of Accent Furniture', createdBy: 'Furniture Mecca', comments: '4 comments'},
+        {img: diningRoomBlogImage, category: 'Dining Room 6', title: 'Benifits Of Accent Furniture', createdBy: 'Furniture Mecca', comments: '4 comments'},
+        {img: diningRoomBlogImage, category: 'Dining Room 7', title: 'Benifits Of Accent Furniture', createdBy: 'Furniture Mecca', comments: '4 comments'},
+        {img: diningRoomBlogImage, category: 'Dining Room 8', title: 'Benifits Of Accent Furniture', createdBy: 'Furniture Mecca', comments: '4 comments'},
+        {img: diningRoomBlogImage, category: 'Dining Room 9', title: 'Benifits Of Accent Furniture', createdBy: 'Furniture Mecca', comments: '4 comments'},
+        {img: diningRoomBlogImage, category: 'Dining Room 10', title: 'Benifits Of Accent Furniture', createdBy: 'Furniture Mecca', comments: '4 comments'},
+    ]
 
-    const [isHovered, setIsHovered] = useState(false);
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    }
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-    }
+    const slides = blogsData.map((item, index) => (
+        <BlogCard key={index} img={item.img} category={item.category} title={item.title} createdBy={item.createdBy} comments={item.comments} />
+      ));
 
-    const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % blogSliderData.length);
-    }
-    const handlePrev = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + blogSliderData.length) % blogSliderData.length)
-    }
-
-
-    const truncateTextByWords = (text, wordLimit) => {
-        if (typeof text !== 'string' || wordLimit <= 0) {
-            return '';
-        }
-    
-        const words = text.split(' ');
-    
-        if (words.length <= wordLimit) {
-            return text;
-        }
-    
-        return words.slice(0, wordLimit).join(' ') + '...';
-    }
     
 
     return (
-        <div className='blog-main-container'>
-            <div className='blog-heading-and-para'>
-                <h3>Exciting Blogs Created by <span> Furniture Mecca Outlet </span></h3>
-                <p>
-                    Captivating narratives by The Furniture Mecca, where each blog tells a 
-                    unique tale of style, comfort, and functionality. Discover the enchanting 
-                    stories behind every furnishing at The Furniture Mecca, turning your home 
-                    into a haven filled with both charm and character.
-                </p>
-            </div>
-            <div className='blog-slider-container'>
-            <button className='blog-slider-arrow left' onClick={handlePrev} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <img src={isHovered ? arrowLeftRed : arrowLeft} alt='left' />
-                </button>
-                <div className='blog-slider' style={{transform: `translateX(-${currentIndex * 37}%)`}} >
-                    {infiniteSliderData.map((item, index) => (
-                        <div className='blog-card'>
-                            <a href={item.link} className='blog-card-img' key={index}>
-                                <img src={item.img} alt='blog img' />
-                            </a>
-                            <div className='blog-para-and-category'>
-                                <p>{truncateTextByWords(item.para, 6)}</p>
-                                <div className='category-and-date'>
-                                    <span> {item.categoryIcon} {item.category}  </span>
-                                    <p>{item.date}</p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <button className='blog-slider-arrow right' onClick={handleNext} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <img src={isHovered ? arreowRightRed : arrowRight} alt='right' />
-                </button>
-            </div>
-            <div className='see-all-blog-button-container'>
-                <button>See All Blogs</button>
+        <div className='blogs-main-container'>
+            <h3>Exciting Blogs Created By <span>Furniture Mecca</span></h3>
+            <p className='blogs-main-para'>
+                Captivating narratives by Jasons Furniture Outlet, where each blog tells a unique tale of style,
+                comfort, and functionality. Discover the enchanting stories behind every furnishing at The Furniture Depots,
+                turning your home into a haven filled with both charm and character.
+            </p>
+            <div className='blog-cards-container'>
+                 <CustomSlider
+                    cards={slides}
+                    visibleCards={3}
+                    showArrows={true}
+                    showDots={true}
+                />
             </div>
         </div>
     );

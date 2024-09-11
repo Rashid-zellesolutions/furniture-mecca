@@ -14,6 +14,17 @@ import accent from '../../../Assets/Furniture Mecca/Landing Page/shop by categor
 import recliningFurniture from '../../../Assets/Furniture Mecca/Landing Page/shop by category/recliner-1 1.png';
 import outlet from '../../../Assets/Furniture Mecca/Landing Page/shop by category/catory-outlet 1.png';
 
+// Mobile view items
+import diningRoomSet from '../../../Assets/Furniture Mecca/category page/categories/mobile-view-images/Dining-Room-Sets-mobile.png';
+import pubHeightSet from '../../../Assets/Furniture Mecca/category page/categories/mobile-view-images/Pub-Height-Dining-Sets-mobile.png';
+import diningTable from '../../../Assets/Furniture Mecca/category page/categories/mobile-view-images/Dining-Tables-mobile.png';
+import diningChairs from '../../../Assets/Furniture Mecca/category page/categories/mobile-view-images/Dining-Chairs-Beches-mobile.png';
+import counterAndBars from '../../../Assets/Furniture Mecca/category page/categories/mobile-view-images/Counter-Bar-Stools-mobile.png';
+import smallSpaces from '../../../Assets/Furniture Mecca/category page/categories/mobile-view-images/Small-space-Dining-Mobile.png';
+import diningRoomCollection from '../../../Assets/Furniture Mecca/category page/categories/mobile-view-images/Dining-Rppm-Collection-mobile.png';
+import shopAllDining from '../../../Assets/Furniture Mecca/category page/categories/mobile-view-images/Shop-All-Dining-Mobile.png';
+import diningRoomOutlet from '../../../Assets/Furniture Mecca/category page/categories/mobile-view-images/Dining-Room-Outlet-mobile.png';
+
 const Category = ({title, categoryData }) => {
 
   // console.log("category data : ", categoryData)
@@ -32,18 +43,34 @@ const Category = ({title, categoryData }) => {
     {img: outlet, link: '/outlets'},
   ]
 
+  const mobileCategory = [
+    {img: diningRoomSet, link: '/living-room'}, 
+    {img: pubHeightSet, link: '/bedroom'},
+    {img: diningTable, link: '/dining-room'},
+    {img: diningChairs, link: '/mattresses'},
+    {img: counterAndBars, link: '#'},
+    {img: smallSpaces, link: '#'},
+    {img: diningRoomCollection, link: '#'},
+    {img: shopAllDining, link: '/accent-furniture-and-rugs'},
+    {img: diningRoomOutlet, link: '/kids'},
+  ]
+
   return (
     <div className='category-main-container'>
       <h3 className='category-heading'>{title}</h3>
         <div className='category-cards-container'>
-          {/* {categoryData && categoryData.map((items, index) => {
-            return <CategoryCard key={index} img={items.img} title={items.title} link={items.link}  />
-          })} */}
           {category.map((item, index) => (
             <a key={index} href={item.link}>
               <img src={item.img} alt='img' />
             </a>
           ))}
+        </div>
+        <div className='mobile-category-cards-container'>
+            {mobileCategory.map((items, index) => (
+              <a key={index} href={items.link}>
+                <img src={items.img} alt='img' />
+              </a>
+            ))}
         </div>
     </div>
   )
