@@ -1,7 +1,6 @@
 .slider {
     position: relative;
     width: 100%;
-    /* height: 360px;  */
     height: calc(100vw * 0.26355);
     margin: auto;
     overflow: hidden;
@@ -12,7 +11,6 @@
     transition: transform 0.5s ease-in-out;
     width: 100%;
     height: 100%;
-    /* height: 360px; */
 }
 
 
@@ -29,7 +27,7 @@
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 .arrow {
@@ -51,14 +49,87 @@
 }
 
 .left-arrow {
-    left: 30px !important;
+    left: 40px !important;
 }
 
 .right-arrow {
-    right: 50px !important;
+    right: 40px !important;
 }
 
-@media only screen and (max-width: 700px){
+/* mobile slider */
+.mobile-view-slider{
+    display: none;
+}
+
+.mobile-view-slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: auto;
+}
+
+.mobile-slide {
+    min-width: 100%;
+    height: auto; /* Ensure slides fill the container height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.mobile-arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    z-index: 2;
+    width: 35px;
+    height: 35px;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+
+}
+
+.mobile-arrow img{
+    width: auto;
+    height: 35px;
+    object-fit: contain;
+}
+
+.mobile-left-arrow{
+    left: 20px;
+}
+
+.mobile-right-arrow{
+    right: 20px;
+}
+
+
+@media only screen and (max-width: 480px) {
+    .slider {
+        display: none;
+    }
+    .mobile-view-slider{
+        display: flex;
+        position: relative;
+        width: 100%;
+        /* height: 360px; */
+        height: auto;
+        margin: auto;
+        overflow: hidden;
+    }
+
+}
+
+/* @media only screen and (max-width: 700px){
     .slide{
         display: none;
     }
@@ -81,11 +152,11 @@
         width: 30px;
         height: 30px;
     }
-}
+} */
 
-@media only screen and (max-width: 520px){
+/* @media only screen and (max-width: 520px){
     .arrow img{
         width: 25px;
         height: 25px;
     }
-}
+} */

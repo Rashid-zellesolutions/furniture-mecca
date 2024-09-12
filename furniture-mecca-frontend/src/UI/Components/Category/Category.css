@@ -86,8 +86,14 @@
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px){
+    .category-main-container{
+        /* padding: 10px 10px 30px 10px; */
+        padding: var(--global-padding);
+    }
+
     .category-cards-container{
         grid-template-columns: auto auto;
+        gap: 10px;
     }
 }
 
@@ -108,12 +114,14 @@
         /* grid-template-columns: auto auto;
         gap: 5px; */
         display: none;
+
     }
 
     .mobile-category-cards-container{
         display: grid;
         grid-template-columns: auto auto;
-        gap: 5px;
+        gap: 10px;
+        padding: 10px;
     }
 
     .mobile-category-cards-container a img{

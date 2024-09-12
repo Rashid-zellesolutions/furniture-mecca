@@ -72,6 +72,7 @@ const BestSellerSlider = () => {
 
   return (
     <div className="best-seller-slider-container">
+        <div className='best-seller-imaage-and-cards'>
         <div className='best-seller-slider-main-banner'>
             <img src={activeItem === 0 ?  BestSellerSliderMainBanner : bestSellerMainSecondImage} alt='main banner' />
         </div>
@@ -119,16 +120,18 @@ const BestSellerSlider = () => {
                         </div>
                     ))}
                 </div>
-                <div className='pagination-dots'>
-                {Array.from({ length: totalPages }, (_, index) => (
-                    <span 
-                        key={index} 
-                        className={`dot ${currentIndex === index ? 'active' : ''}`} 
-                        onClick={() => handleDotsClick(index)}
-                    ></span>
-                ))}
+                
             </div>
-            </div>
+        </div>
+        </div>
+        <div className='pagination-dots'>
+            {Array.from({ length: totalPages }, (_, index) => (
+                <span 
+                    key={index} 
+                    className={`dot ${currentIndex === index ? 'active' : ''}`} 
+                    onClick={() => handleDotsClick(index)}
+                ></span>
+            ))}
         </div>
     </div>
   );

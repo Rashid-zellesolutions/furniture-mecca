@@ -8,8 +8,8 @@
 
 .comparision-main-div h3{
     font-size: 25px;
-    line-height: 27px;
-    font-weight: 600;
+    line-height: 29px;
+    font-weight: 700;
     color: var(--text-color);
 }
 
@@ -49,8 +49,8 @@
 
     .comparision-main-div h3{
         font-size: 20px;
-        line-height: 27px;
-        font-weight: 600;
+        line-height: 30px;
+        font-weight: 700;
         color: var(--text-color);
         margin-left: 20px;
     }

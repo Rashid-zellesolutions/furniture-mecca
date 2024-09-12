@@ -16,7 +16,7 @@ import vikingImage from '../../../Assets/Furniture Mecca/Landing Page/feature pr
 import HeroImage from '../../../Assets/Furniture Mecca/Landing Page/Slider/hp-fourth_hero_mo_desktop_1_3200x1388 (3).png';
 import mobileViewHeroImage from '../../../Assets/Furniture Mecca/Landing Page/Slider/mobile-view-banner.png';
 import GetTheScop from '../../Components/GetTheScop/GetTheScop';
-// import CustomerServicePanel from '../../Components/CustomerServicePanel/CustomerServicePanel';
+import CustomerServicePanel from '../../Components/CustomerServicePanel/CustomerServicePanel';
 // import FurnitureProduct from '../../Components/FurnitureProducts/FurnitureProduct';
 import Slider from '../../../Global-Components/Slider/Slider';
 // import Shopvia from '../../Components/ShopViaBanner/Shopvia';
@@ -47,6 +47,7 @@ import InstaGallery from '../../Components/InstaGallery/InstaGallery';
 import FinanceBannerSlider from '../../Components/FinanceBannerSlider/FinanceBannerSlider';
 import Comparision from '../../Components/Comparision/Comparision';
 import DealOfTheDay from '../../Components/DealOfTheDay/DealOfTheDay';
+import TrendingNow from '../../Components/TrendingNow/TrendingNow';
 
 
 const Home = () => {
@@ -96,9 +97,10 @@ const categoryCardData = [
       <Slider />
       <ShipBanner bannerImg={shipBanner} paddindTrue={false} />
       <Category title={'Shop by Category'} categoryData={categoryCardData} />
-      <HottestDealsBanners />
+      {/* <HottestDealsBanners /> */}
+      <TrendingNow />
       <FinanceBannerSlider />
-      <BestSellerSlider />
+      {/* <BestSellerSlider /> */}
       {/* <FurnitureProduct /> */}
       <ImageHeading img={HeroImage} mobileViewImage={mobileViewHeroImage} alt={'bed image'} />
       <ProductSlider cardData={productCardData} />

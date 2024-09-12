@@ -151,8 +151,9 @@ import './CostumeSlider.css'; // Import the CSS file for styling
 import arrowLeft from '../../../Assets/icons/arrow-left.png';
 import arrowRight from '../../../Assets/icons/arrow-right.png';
 
-const CustomSlider = ({ cards, visibleCards, showArrows = true, showDots = true }) => {
+const CustomSlider = ({ cards, visibleCards, showArrows = true, showDots = true, autoSlide }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  // const [autoSlide, setAutoSlide] = useState(true)
 
   const totalSlides = Math.ceil(cards.length / visibleCards);
   const slidesToShow = visibleCards;
@@ -174,6 +175,18 @@ const CustomSlider = ({ cards, visibleCards, showArrows = true, showDots = true 
   const handleDotClick = (index) => {
     setCurrentIndex(index);
   };
+
+
+    useEffect(() => {
+      if(autoSlide) {
+        const interval = setInterval(handleNext, 3000);
+        return () => clearInterval(interval);
+      }
+    }, []);
+
+  
+
+
 
   return (
     <div className="costume-slider-container">

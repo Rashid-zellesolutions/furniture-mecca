@@ -76,7 +76,7 @@
     background: rgba(0,0,0,0.5); /* Semi-transparent background */
     color: #fff; /* White text color */
     border: none; /* No border */
-    padding: 10px; /* Space around the text */
+    /* padding: 10px;  */
     cursor: pointer; /* Shows a pointer cursor on hover */
     z-index: 2;
   }

@@ -163,12 +163,16 @@
     cursor: pointer;
 }
 
-
+@media only screen and (min-width: 481px){
+    .blogs-main-container{
+        padding: var(--global-padding);
+    }
+}
 
 @media only screen and (min-width: 781px) and (max-width: 1024px){
-    .blogs-main-container{
+    /* .blogs-main-container{
         padding: 50px 30px;
-    }
+    } */
 
     .blog-card{
         display: flex;
